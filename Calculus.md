@@ -12,7 +12,7 @@ $$
     \cos x & = 1 - \frac{x^2}{2} + \frac{x^4}{24} \\
     \tan x & = x + \frac{x^3}{3} + \frac{2 x^5}{15} \\
     \mathrm{e}^x & = 1 + x + \frac{x^2}{2} + \frac{x^3}{6} \\
-    \ln x & = x - \frac{x^2}{2} + \frac{x^3}{3} \\
+    \ln (1 + x) & = x - \frac{x^2}{2} + \frac{x^3}{3} \\
     \frac{1}{1 - x} & = 1 + x + x^2 \\
     \frac{1}{1 + x} & = 1 - x + x^2
 \end{align*}
@@ -39,14 +39,16 @@ $$ f'(x) \equiv \lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x} $$
 
 ### 高阶导数公式
 
-$$ \begin{align*}
+$$
+\begin{align*}
     \left[\frac{1}{x + a}\right]^{(n)} & = (-1)^n n! \frac{1}{(x + a)^{n+1}} \\
     \left[\begin{align*}
         \sin \\ \cos
     \end{align*} (a x + b)\right]^{(n)} & = a^n \begin{align*}
         \sin \\ \cos
     \end{align*} (a x + b + n \pi / 2)
-\end{align*} $$
+\end{align*}
+$$
 
 > 找微分中值定理的本质方法是微分方程法
 
@@ -67,10 +69,8 @@ $$ \int \frac{1}{1 + x^2} \mathrm{d}x = \arctan x + C, \int \frac{1}{\sqrt{1 - x
 
 - 奇偶性
 - 区间再现
-- $$ \int g(x) f(x) \mathrm{d}x \xlongequal{F(x) \equiv \int f(x) \mathrm{d}x} \left.\int g \mathrm{d}F = g F\right| - \int F \mathrm{d}g $$
-
-
 $$ \int_a^b f(x) \mathrm{d}x = \int_a^b f(a + b - x) \mathrm{d}x $$
+- $$ \int g(x) f(x) \mathrm{d}x \xlongequal{F(x) \equiv \int f(x) \mathrm{d}x} \left.\int g \mathrm{d}F = g F\right| - \int F \mathrm{d}g $$
 
 ### Hölder / Cauchy-Schwartz 不等式
 
