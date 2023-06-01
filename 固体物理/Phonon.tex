@@ -1,0 +1,305 @@
+\section{声子}
+
+\subsection{一维晶体}
+
+\subsubsection{单原子链}
+
+\begin{itemize}
+    \item 简谐近似
+    \item 最近邻近似
+\end{itemize}
+运动方程
+\[ m \ddot{x}_n = - \beta (x_n - x_{n-1}) - \beta (x_n - x_{n+1}) \]
+波长 $q$，平面波试探解
+\[ x_n = A \rme^{- \rmi (\omega t - n a q)} \]
+带入，得到色散关系
+\[ \omega = 2 \sqrt{\frac{\beta}{m}} \abs{\sin \frac{a q}{2}}, q \in \left(- \frac{\pi}{a}, \frac{\pi}{a}\right] \begin{cases}
+        q = 0                 & \Rightarrow \omega_{\min} = 0                                                                             \\
+        q = \pm \frac{\pi}{a} & \Rightarrow \omega_{\max} = 2 \sqrt{\frac{\beta}{m}} \text{ 短波极限 } \lambda_{\min} = \frac{2 \pi}{q} = 2 a
+    \end{cases} \]
+周期性边界条件
+\[ x_n = x_{n + N} \Rightarrow \rme^{\rmi N a q} = 1 \Rightarrow q = \frac{2 \pi}{a}\frac{s}{N}, s = - \qty(\frac{N}{2} - 1), - \qty(\frac{N}{2} - 2), \cdots \frac{N}{2} \]
+\begin{itemize}
+    \item 格波波矢只能取分立值，格波波矢个数 = 晶体元胞个数 $N$
+    \item 长波极限 {\color{gray}{「晶体可视为连续介质，格波可视为弹性波，弹性机械波一定是声学支」}} \[ q \to 0, \omega = 2 \sqrt{\frac{\beta}{m}} \abs{\sin \frac{a q}{2}} \approx 2 \sqrt{\frac{\beta}{m}} \abs{\frac{a q}{2}} = a \sqrt{\frac{\beta}{m}} \abs{q} \] 群速度 $v_{g} \equiv \pdv{\omega}{q} = a \sqrt{\frac{\beta}{m}}$ 杨氏模量 $v_{g} = \sqrt{\frac{Y}{\rho}}, \rho = \frac{m}{a} \Rightarrow Y = \beta a$
+\end{itemize}
+
+\subsubsection{双原子链}
+
+质量为 $m < M$，相邻原子间距为 $a$，晶格常数为 $2 a$，简谐近似、最近邻近似，运动方程
+\begin{alignat*}{10}
+    M & \ddot{x}_{2 n}     & = & - \beta (x_{2 n}     & - & x_{2 n + 1}) & - & \beta (x_{2 n}     & - & x_{2 n - 1} & ) \\
+    m & \ddot{x}_{2 n + 1} & = & - \beta (x_{2 n + 1} & - & x_{2 n + 2}) & - & \beta (x_{2 n + 1} & - & x_{2 n}     & )
+\end{alignat*}
+波长 $q$，平面波试探解
+\[ x_{2 n + 1} = A \rme^{- \rmi [\omega t - (2 n + 1) a q]}, x_{2 n} = B \rme^{- \rmi [\omega t - 2 n a q]} \]
+带入之后令 ${A, B}$ 的系数行列式为零，解得
+\[ \omega^2 = \frac{\beta}{m M} \qty[(m + M) \pm \sqrt{m^2 + M^2 + 2 m M \cos (2 a q)}], q \in \left(- \frac{\pi}{2 a}, \frac{\pi}{2 a}\right] \]
+正号为光学支格波，负号为声学支格波 {\textcolor{gray}{「一定要记住色散关系的函数图象」}}
+\begin{alignat*}{3}
+    \omega_{O, \max} = & \omega_{O}(q = 0) = \sqrt{\frac{2 \beta}{m M / (m + M)}}    , & \omega_{O, \min} = & \omega_{O}(q = \frac{\pi}{2 a}) = \sqrt{\frac{2 \beta}{m}} \\
+    \omega_{A, \max} = & \omega_{A}(q = \frac{\pi}{2 a}) = \sqrt{\frac{2 \beta}{M}}  , & \omega_{A, \min} = & \omega_{A}(q = 0) = 0
+\end{alignat*}
+周期性边界条件
+\[ x_{2 n} = x_{2 n + 2 N} \Rightarrow \rme^{\rmi 2 N a q} = 1 \Rightarrow q = \frac{\pi}{a} \frac{s}{N}, s = - \qty(\frac{N}{2} - 1), - \qty(\frac{N}{2} - 2), \cdots, \frac{N}{2} \]
+\begin{itemize}
+    \item 格波支数 = 原胞内原子自由度数 $d$，单原子链为 $1$，双原子链为 $2$；
+    \item 格波波矢个数 = 晶体元胞个数 $N$，单原子链为 $N$，双原子链为 $N$；
+    \item 振动频率个数 = 振动模式个数 = 晶体原子的自由度个数 $d \times N$，单原子链为 $N$，双原子链为 $2 N$
+\end{itemize}
+
+\paragraph{相邻原子}
+
+\[ \frac{A}{B} = \frac{2 \beta \cos a q}{2 \beta - m \omega^2} \Rightarrow \qty(\frac{A}{B})_{\text{A}} > 0, \qty(\frac{A}{B})_{\text{O}} > 0 \]
+声学支格波相邻原子同向运动，长声学波代表了原胞质心的运动；光学支格波相邻原子反向运动，长光学波代表了原胞中原子的相对运动
+
+\paragraph{极限情况}
+
+\begin{itemize}
+    \item 长声学波 \[ \omega_{\text{A}} = \sqrt{\frac{2 \beta}{m + M}} a q, v_g = \sqrt{\frac{2 \beta}{m + M}} a = \sqrt{\frac{Y}{\rho}}, \rho = \frac{m + M}{2 a}, Y = \beta a \]
+    \item 长光学波 \[ \omega_{\text{O}}^2 = 2 \beta \frac{m + M}{m M} \qty[1 - \frac{m M}{(m + M)^2} (a q)^2] \]
+    \item 短声学波：轻原子保持不动
+    \item 短光学波：重原子保持不动 - 布里渊区边界是两支驻波，两种原子独立振动
+\end{itemize}
+
+\subsection{高维晶体}
+
+$d$ 维晶体有 $N$ 个原胞 \textcolor{gray}{「注意这里是（固体物理学）原胞/初基晶胞，不是惯用晶胞/结晶学单胞」}，每个原胞中有 $n$ 个原子，一共有 $d \times n$ 支波
+\begin{itemize}
+    \item 晶格振动格波的支数 = $d \times n$ \begin{itemize}
+              \item 声学波 $d$ 支，$1$ 支纵波，$d - 1$支横波
+              \item 光学波 $(n - 1) d$ 支，$n - 1$ 支纵波，$(n - 1) (d - 1)$支横波
+          \end{itemize}
+    \item 晶格振动波矢的个数 = $N$
+    \item 晶格振动频率的个数 = $N \times d \times n$
+\end{itemize}
+
+\begin{framed}
+    $d = 3$ 维晶体
+    \begin{itemize}
+        \item 晶态 Ar 面心立方，每个原胞有 1 个原子，所以它的晶格振动有 3 个声学支和 0 个光学支
+        \item NaCl 晶体 = Na 的面心立方 + Cl 的面心立方，每个原胞有 2 个原子，所以它的晶格振动有有 3 个声学支和 3 个光学支
+        \item 金刚石 = 面心立方 + 位移后的面心立方，每个原胞有 2 个原子，所以它的晶格振动有有 3 个声学支和 3 个光学支\begin{description}
+                  \item[Q] 金刚石里面的所有原子都可以看成是面心立方的一个顶点，也可以看成是面心立方的一个面心，也可以看成惯用晶胞的一个卦限的中心，为什么一个基元里有两个原子？
+                  \item[A] 回到基元的定义，基元是晶体结构的最小重复单元，通过平移这个单元得能够得到整个晶体才称得上是一个基元
+              \end{description}
+    \end{itemize}
+
+    $d = 2$ 维晶体
+    \begin{itemize}
+        \item 石墨烯结构，每个原胞有 2 个原子，面内振动有 2 个声学支和 2 个光学支；沿高对称轴方向总共有 2 个横波和 2 个纵波
+    \end{itemize}
+\end{framed}
+
+{\color{gray}{
+\subsection{黄昆方程}
+
+\subsubsection{黄昆方程}
+
+长光学波中正负离子反向运动，宏观上出现极化 \textcolor{gray}{「黄昆方程可以处理离子晶体的长光学波」}
+
+内部电场 = 外部电场 + 极化电场
+\[ \vec{E}' = \vec{E} + c \frac{\vec{P}}{\varepsilon_0} \]
+立方晶格 $c = 1/3$；离子晶体的极化 = 离子位移极化 + 电子位移极化
+\[ \vec{P} = \vec{P}_{\alpha} + \vec{P}_{e} = \frac{e^*}{\Omega} (\underbrace{\vec{u}_{+} - \vec{u}_{-}}_{\equiv \vec{u}}) + \frac{1}{\Omega} (\underbrace{\alpha_{+} + \alpha_{-}}_{\equiv \alpha}) \vec{E}' \xLongrightarrow{\vec{E}' = \vec{E} + c \frac{\vec{P}}{\varepsilon_0}} \vec{P} = \frac{1}{\Omega} \frac{1}{1 - \frac{\alpha}{2 \varepsilon_0 \Omega}} (e^* \vec{u} + \alpha \vec{E}) \]
+
+考虑一维复式格子的运动方程，长光学波近似下重原子位移为 $\vec{u}_{+}$，轻原子位移为 $\vec{u}_{-}$
+\begin{align*}
+    M \ddot{\vec{u}}_{+}           & = 2 \beta (\vec{u}_{-} - \vec{u}_{+}) + e^* \vec{E}'        \\
+    m \ddot{\vec{u}}_{-}           & = 2 \beta (\vec{u}_{+} - \vec{u}_{-}) - e^* \vec{E}'        \\
+    \Rightarrow \mu \ddot{\vec{u}} & = - 2 \beta \vec{u} + e^* \vec{E}', \mu = \frac{m M}{m + M}
+\end{align*}
+
+黄昆方程 = 微观（离子相对位移） + 宏观（外电场）
+\begin{itemize}
+    \item 原子振动 = 准弹性恢复力 + 宏观电场力 $\ddot{\vec{W}} = b_{11} \vec{W} + b_{12} \vec{E}$
+    \item 晶体极化 = 离子位移极化 + 电场诱导电子位移极化 $\vec{P} = b_{21} \vec{W} + b_{22} \vec{E}, \vec{W} \equiv \vec{u} \sqrt{\mu / \Omega}$
+\end{itemize}
+
+\subsubsection{LST 关系}
+
+黄昆方程推导 LST 关系。考虑黄昆第一方程的无旋部分，对于本征振动 $\vec{E} = 0$
+\[ \ddot{\vec{W}}_T - b_{11} \vec{W}_T = 0 \Rightarrow \omega_{T 0}^2 = - b_{11} \]
+晶体内无自由电荷，故 $\nabla \cdot \vec{D} = \nabla \cdot (\varepsilon_0 \vec{E} + \vec{P}) = 0$，代入黄昆第二方程的有旋部分
+\[ \nabla \cdot [b_{21} \vec{W}_L + (\varepsilon_0 + b_{22}) \vec{E}_L] = 0 \Rightarrow \vec{E}_L = - \frac{b_{21}}{\varepsilon_0 + b_{22}} \vec{W}_L \]
+再代入黄昆第一方程的有旋部分
+\[ \ddot{\vec{W}}_L = b_{11} \vec{W}_L - \frac{b_{12}^2}{\varepsilon_0 + b_{22}} \vec{W}_L \Rightarrow \omega_{L 0}^2 = - b_{11} + \frac{b_{12}^2}{\varepsilon_0 + b_{22}} = \omega_{T 0}^2 +\frac{b_{12}^2}{\varepsilon_0 + b_{22}} \]
+静电场 $\ddot{\vec{W}} = 0$
+\[ \vec{W} = - \frac{b_{12}}{b_{11}} \vec{E} = \frac{b_{12}}{\omega_{T 0}^2} \vec{E} \Rightarrow \vec{P} = \qty(b_{22} + \frac{b_{12}^2}{\omega_{T 0}^2}) \vec{E} \]
+\[ \vec{P} = \varepsilon_0 (\varepsilon_s - 1) \vec{E} \Rightarrow b_{22} + \frac{b_{12}^2}{\omega_{T 0}^2} = \varepsilon_0 (\varepsilon_s - 1) \]
+高频电场，离子由于质量过大已跟不上高频的振动，$W = 0$，由黄昆第二方程
+\[ \vec{P} = \varepsilon_0 (\varepsilon_{\infty} - 1) \vec{E} = b_{22} \vec{E} \Rightarrow b_{22} = \varepsilon_0 (\varepsilon_{\infty} - 1) \Rightarrow b_{12}^2 = [\varepsilon_0 (\varepsilon_s - \varepsilon_{\infty})] \omega_{T 0}^2 \]
+由以上关系可以得到
+\[ \frac{\omega_{T 0}^2}{\omega_{L 0}^2} = \frac{\varepsilon_{\infty}}{\varepsilon_s} \]
+共价晶体有效电荷为零，有 $b_{12} = 0 \Rightarrow \omega_{L 0} = \omega_{T 0}$
+
+\begin{description}
+    \item[Q] ？？？为什么你一会儿静电场一会儿高频电场，推出来的结果可以混着用？
+    \item[A] 因为黄昆方程里面的系数都只和晶体自身性质有关，和外场无关
+\end{description}
+
+\subsubsection{极化激元}
+
+正负离子相对运动产生的极化和电磁波相互作用，引起远红外区的强吸收
+}}
+
+\subsection{确定晶格振动谱的实验方法}
+
+\textcolor{gray}{晶体中声子数不守恒}
+
+\paragraph{中子非弹性散射}
+
+中子与晶格的相互作用 $\rightarrow$ 中子吸收 / 发射声子，能量守恒和准动量守恒
+\begin{align*}
+    \frac{p'^2 - p^2}{2 m_n} & = \pm \hbar \omega(\vec{q})           \\
+    \vec{p}' - \vec{p}       & = \pm \hbar \vec{q} + \hbar \vec{K}_h
+\end{align*}
+中子三轴谱仪
+\begin{itemize}
+    \item 单色器（布拉格反射产生单色中子）、样品和分析器可分别绕轴转动
+    \item 单色器和分析器分别利用布拉格定律来选定确定动量和能量的中子的入射和出射
+    \item 慢中子的能量与声子的同数量级（$0.01$ eV），慢中子的波长与晶格常数同数量级
+\end{itemize}
+
+\paragraph{X 射线散射}
+
+\paragraph{光散射}
+
+光可以激发晶格振动，光子与晶格的相互作用 $\rightarrow$ 光子吸收 / 发射声子，能量守恒和「准」动量守恒
+\begin{align*}
+    \hbar \Omega' - \hbar \Omega   & = \pm \hbar \omega(\vec{q})           \\
+    \hbar \vec{k}' - \hbar \vec{k} & = \pm \hbar \vec{q} + \hbar \vec{K}_h
+\end{align*}
+可见光范围，只有布里渊区中心附近的长波声子可以与光子散射/同数量级，此时 $\hbar \vec{K}_h = 0$
+\begin{itemize}
+    \item 布里渊散射：光子与长声学波声子相互作用
+    \item 拉曼散射：光子与长光学波声子相互作用
+    \item 斯托克斯散射：出射频率 < 入射频率（发射声子）
+    \item 反斯托克斯散射：出射频率 > 入射频率（吸收声子）
+\end{itemize}
+
+\subsection{晶体比热}
+
+\[ C_V \equiv \qty(\pdv{E}{T})_{V}, C_V = C_V^{a} + C_V^{e} \]
+现在只考虑晶格振动/声子热容，忽略电子热容。求和化成积分
+\[ \sum \cdots = \iiint \cdots \frac{V}{(2 \pi)^3} \dd^3 \vec{q} = \int_0^{\omega_m} \cdots \rho(\omega) \dd \omega, \int_0^{\omega_m} \rho(\omega) \dd \omega\equiv d N n \]
+$d$ 维晶体有 $N$ 个原胞，每个原胞在中有 $n$ 个原子，简正模（频率） $\omega_i$ 的平均声子数为
+\[ n_i = \frac{1}{\rme^{\hbar \omega_i / k T} - 1} \]
+简正模（频率） $\omega_i$ 的总能量为
+\[ \bar{E}_i = \qty[\frac{1}{\rme^{\hbar \omega_i / k T} - 1} + 1/2] \hbar \omega_i \sim \frac{\hbar \omega_i}{\rme^{\hbar \omega_i / k T} - 1} \]
+晶体总能量（晶格振动能 / 声子总动能）及其热容
+\[ \bar{E} = \sum_{i = 1}^{d N n} \bar{E}_i = \cdots \Rightarrow \bar{E} = \int_0^{\omega_m} \frac{\hbar \omega_i}{\rme^{\hbar \omega_i / k T} - 1} \rho(\omega) \dd \omega, C_V = \qty(\pdv{E}{T})_{V} = \int_0^{\omega_m} k \frac{\rme^{\hbar \omega / k T}}{\qty(\rme^{\hbar \omega / k T} - 1)^2} \qty(\frac{\hbar \omega}{k T})^2 \rho(\omega) \dd \omega \]
+
+\subsubsection{态密度}
+
+\[ \rho(\omega) = \sum_{\alpha} \frac{V_c}{(2 \pi)^3} \int_{s_\alpha} \frac{\dd s}{\abs{\nabla_q \omega_\alpha (q)}} = \sum_{\alpha} \frac{S_c}{(2 \pi)^2} \int_{s_\alpha} \frac{\dd s}{\abs{\nabla_q \omega_\alpha (q)}} = \sum_{\alpha} \frac{L_c}{2 \pi} \int_{s_\alpha} \frac{\dd s}{\abs{\nabla_q \omega_\alpha (q)}} \]
+
+\begin{itemize}
+    \item 三维球表面积：$4 \pi r^2$
+    \item 二维圆周长：$2 \pi r$
+    \item 一维线端点：$2$
+\end{itemize}
+
+$\alpha$ 是格波的不同支
+
+\begin{framed}
+    \begin{multicols}{2}
+        一维单原子链
+        \[ \omega(q) = 2 \sqrt{\frac{\beta}{m}} \qty|\sin \frac{a q}{2}| = \omega_m \qty|\sin \frac{a q}{2}| \]
+        \begin{align*}
+            \rho(\omega) =       & \frac{L}{2 \pi} \int \frac{\dd s}{\qty|\nabla \omega(q)|}               \\
+            =                    & \frac{L}{2 \pi} \frac{2}{\nabla \omega(q)}                              \\
+            =                    & \frac{L}{2 \pi} \frac{2}{\frac{a}{2} \qty(\omega_m^2 - \omega^2)^{1/2}} \\
+            \xlongequal{L = N a} & \frac{2 N}{\pi} \qty(\omega_m^2 - \omega^2)^{-1/2}
+        \end{align*}
+
+        三维晶体 $\omega_\alpha = c q$
+        \begin{align*}
+            \rho(\omega) = & \frac{V_c}{(2 \pi)^3} \sum_{\alpha} \int \frac{\dd s}{\qty|\nabla_q \omega_{\alpha}(q)|} \\
+            =              & 3 \times \frac{V_c}{(2 \pi)^3} \frac{4 \pi q^2}{c}                                       \\
+            =              & 3 \times \frac{V_c}{2 \pi^2} \frac{\omega^2}{c^3}
+        \end{align*}
+    \end{multicols}
+\end{framed}
+
+\subsubsection{爱因斯坦模型}
+
+晶体由 $N$ 个原子组成，所有原子的振动独立，频率 $\omega$ 相等「因此没有考虑声子的色散」
+\[ \bar{E} = 3 N \qty[\frac{1}{\rme^{\hbar \omega / k T} - 1} + 1/2] \hbar \omega, C_V = 3 N k f_E(\frac{\hbar \omega}{k T}), f_E(x) \equiv \frac{x^2 \rme^x}{(\rme^x - 1)^2} \]
+高温极限
+\[ x \ll 1, T \gg \frac{\hbar \omega}{k} \Rightarrow f_E(x) = 1, C_V = 3 N k \]
+低温极限
+\[ x \gg 1, T \ll \frac{\hbar \omega}{k} \Rightarrow f_E(x) = x^2 \rme^{- x}, C_V = 3 N k \times \qty(\frac{\hbar \omega}{k T})^2 \rme^{- \frac{\hbar \omega}{k T}} \]
+适用于长光学波；而低温下晶体比热主要由长声学波确定，因此爱因斯坦模型与实验不符
+
+\subsubsection{德拜模型}
+
+晶体视为连续介质，格波视为弹性波「因此没有考虑光学支的贡献——低温下可以忽略光学支，但是高温下不可以忽略声学支」，色散关系 $\omega = v q$，一支纵波两支横波，纵波与横波的速率不同
+
+上面例子已经算过态密度
+\[ \rho \propto \omega^2 \]
+能量和比热
+\[ \bar{E} = \int_0^{\omega_D} \frac{\hbar \omega}{\rme^{\hbar \omega/k T} - 1} \rho(\omega) \dd \omega \Rightarrow C_V = 3 N k f_D(\frac{\hbar \omega_D}{k T}), f_D(x) \equiv \frac{3}{x^3} \int_0^x \frac{\tilde{x}^4 \rme^{\tilde{x}}}{\qty(\rme^{\tilde{x}} - 1)^2} \dd \tilde{x} \]
+高温极限
+\[ x \ll 1, T \gg \frac{\hbar \omega_D}{k} \Rightarrow f_D(x) = 1, C_V = 3 N k \]
+低温极限，只激发长声学波
+\[ x \gg 1, T \ll \frac{\hbar \omega_D}{k} \Rightarrow f_D(x) = \frac{4 \pi^4}{5} \frac{1}{x^3}, C_V = 3 N k \times \frac{4 \pi^4}{5} \qty(\frac{k T}{\hbar \omega_D})^3 \propto T^3 \]
+定性解释：德拜波矢球、热波矢球「注意，声子是玻色子，电子是费米子，波矢球内的所有声子都可以被热激发，但是只有球面上的电子可以被热激发」
+
+{\color{gray}声速降低，$\omega_D$ 减小，$T_D \equiv \hbar \omega_D / T$ 增大，晶格热容增大}
+
+\subsection{非简谐相互作用}
+
+势能 / 拉氏量中的高次项引入了声子间的相互作用，3顶点项表示的过程满足能量守恒和准动量守恒
+\begin{align*}
+    \hbar \omega_1 + \hbar \omega_2   & = \hbar \omega_3                                                                              \\
+    \hbar \vec{q}_1 + \hbar \vec{q}_2 & = \hbar \vec{q}_3 + \hbar \vec{K}_h \begin{cases}
+                                                                                \vec{K}_{h} = 0 \to \text{正常过程，对热阻没有贡献} \\
+                                                                                \vec{K}_{h} \neq 0 \to \text{倒逆过程，对热阻有贡献，要求声子波矢有倒格矢的一半的量级}
+                                                                            \end{cases}
+\end{align*}
+
+\subsubsection{热膨胀}
+
+\[ U(R_0 + \delta) = U(R_0) + \frac{1}{2!} \qty(\pdv[2]{U}{R})_{R_0} \delta^2 + \frac{1}{3!} \qty(\pdv[3]{U}{R})_{R_0} \delta^3 \sim c \delta^2 - g \delta^3 \]
+\[ \bar{\delta} = \frac{\int_{- \infty}^{\infty} \delta \rme^{- U(\delta)/k T} \dd \delta}{\int_{- \infty}^{\infty} \rme^{- U(\delta)/k T} \dd \delta} = \frac{3}{4} \frac{g}{c^2} k T \]
+线膨胀系数
+\[ \alpha = \frac{1}{R_0} \dv{\bar{\delta}}{T} = \frac{3}{4} \frac{g}{c^2 R_0} k \]
+\begin{itemize}
+    \item 势能只保留到二次方项时，线膨胀系数为零
+    \item 势能只保留到三次方项时，线膨胀系数与温度无关
+    \item 势能保留到三次方项以上时，线膨胀系数与温度有关
+\end{itemize}
+
+\subsubsection{热传导}
+
+\begin{itemize}
+    \item 晶格/声子热导：绝缘体、半导体
+    \item 电子热导：金属
+\end{itemize}
+理想气体热导率 $\to$ 声子热导率「平均自由程 $\lambda$ 是声子倒逆过程的平均自由程，平均速度 $\bar{v}$ 为固体中声速，与温度无关」
+\[ \kappa = \frac{1}{3} C_V \lambda \bar{v} \]
+高温极限
+\[ C_V = \text{const}, \bar{n} = \frac{1}{\rme^{\hbar \omega / k T} - 1} \approx \frac{k T}{\hbar \omega} \rightarrow \lambda \propto \frac{1}{\bar{n}} \propto \frac{1}{T} \Rightarrow \kappa \propto \frac{1}{T} \]
+低温极限，声子间散射变弱，此时 $\lambda$ 主要受晶体的杂质、缺陷和边界的影响
+\[ C_V \propto T^3, \lambda = \text{const} \Rightarrow \kappa \propto T^3 \]
+
+\subsubsection{晶体状态方程}
+
+\[ F = - k T \ln Z + U(V) \text{ 零温结合能}, Z = \sum_i Z_i = \sum_i \frac{\rme^{- \hbar \omega_i / 2 k T}}{1 - \rme^{- \hbar \omega_i / k T}} \]
+晶体状态方程（格林艾森方程）
+\begin{align*}
+    p =                                                    & - \qty(\dv{F}{V})_{T}                                                                           \\
+    =                                                      & - \frac{1}{V} \sum_i \bar{E}_i \dv{\ln \omega_i}{\ln V} - \qty(\dv{U}{V})_{T}                   \\
+    \xlongequal{- \dv*{\ln \omega_i}{\ln V} \equiv \gamma} & \frac{1}{V} \sum_i \bar{E}_i \gamma - \qty(\dv{U}{V})_{T}                                       \\
+    =                                                      & \gamma \frac{\bar{E}}{V} - \qty(\dv{U}{V})_{T} \Rightarrow \gamma = V \qty(\dv{p}{\bar{E}})_{V}
+\end{align*}
+格林艾森数 $\gamma$ 是与晶格的非线性振动有关，与振动频率无关的常数；将 $\dv*{U}{V}$ 在平衡体积 $V_0$ 附近展开
+\[ \pdv{U}{V} = \qty(\pdv{U}{V})_{V_0} + (V - V_0) \qty(\pdv[2]{U}{V})_{V_0} = (V - V_0) \qty(\pdv[2]{U}{V})_{V_0} \equiv K \frac{V - V_0}{V_0}\]
+\[\Rightarrow p = - K \frac{V - V_0}{V_0} + \gamma \frac{\bar{E}}{V} \]
+热膨胀是在不施加压力 $P = 0$ 时体积随温度的变化，上式对温度求导
+\[ K \frac{1}{V_0} \dv{V}{T} = \gamma \frac{C_V}{V} - \gamma \frac{\bar{E}}{V^2} \dv{V}{T}, C_V \equiv \dv{\bar{E}}{T} \]
+第二项可以忽略，得到格林艾森定律
+\[ \alpha = \frac{\gamma}{V K} C_V \]
+经典极限 $\bar{E} = C_V T$，得到实验常用物态方程
+\[ V = V_0 (1 + \alpha T - \kappa p) \]

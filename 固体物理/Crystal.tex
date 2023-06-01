@@ -1,0 +1,289 @@
+\section{晶体}
+
+\begin{itemize}
+    \item 晶体：长程有序
+    \item 非晶体：非长程有序
+    \item 准晶体：有长程取向性，没有长程的平移对称性
+\end{itemize}
+
+\subsection{晶体运动学}
+
+\paragraph{宏观特性}
+
+对称性、均匀性、各向异性、晶面角守恒、解理性、固定熔点……
+
+\subsubsection{基元、格点、晶格}
+
+\begin{itemize}
+    \item 基元：晶体的基本结构单元，晶体结构的最小重复单元 \begin{itemize}
+              \item 同一基元中不同原子周围情况不同，不同基元中同一原子周围情况相同
+          \end{itemize}
+    \item 格点：基元的抽象几何点
+    \item Bravais 晶格：格点在空间周期性排列形成的点阵，是一种数学抽象，不涉及具体原子
+    \item 简单晶格 / 复式晶格
+\end{itemize}
+
+\begin{center}
+    晶体 = 晶格 + 基元
+\end{center}
+
+\subsubsection{基矢、晶胞}
+
+基矢 = 初基平移矢量
+
+三种晶胞：\begin{itemize}
+    \item （固体物理学）原胞 / 初基晶胞：由三个基矢构成的平行六面体 \begin{itemize}
+              \item 组成晶格的最小体积单元
+              \item 格点只在原胞的顶点上，每个原胞包含一个格点 / 基元
+              \item 不同基矢的选取方式原胞形状不同，但体积相同
+              \item $\Omega = (\vec{a}_1, \vec{a}_2, \vec{a}_3) = \vec{a}_1 \cdot (\vec{a}_2 \times \vec{a}_3)$
+          \end{itemize}
+    \item Wigner-Seitz 晶胞：以一个格点为原点，作与其它格点连接的中垂面……「按照第一布里渊区的画法在位形空间中画出来」 \begin{itemize}
+              \item 组成晶格的最小体积单元
+              \item 格点只在原胞的内部，每个原胞包含一个格点，每个原胞包含一个基元
+              \item 体积与（固体物理学）原胞体积相同
+          \end{itemize}
+    \item 惯用晶胞 / 结晶学单胞：使三个基矢的方向尽可能地沿着空间对称轴的方向，能更明显地反映晶体的对称性和周期性 \begin{itemize}
+              \item 格点在原胞的内部和边界上，每个原胞可能包含多个格点 / 基元
+              \item $v = (a, b, c) = \vec{a} \cdot (\vec{b} \times \vec{c}) = n \Omega$
+          \end{itemize}
+\end{itemize}
+
+\subsubsection{晶体分类}
+
+\begin{itemize}
+    \item 对称性操作：平移对称操作 / 点对称操作（1、2、3、4、6旋转对称，镜面对称、中心对称 / 反演对称）\begin{itemize}
+              \item 点群对称性\begin{itemize}
+                        \item 二维晶体 4 晶系 5 Bravais 晶格
+                        \item 三维晶体 7 晶系 14 Bravais 晶格
+                    \end{itemize}
+          \end{itemize}
+    \item 晶体有 32 种点群，230 种空间群
+\end{itemize}
+\begin{align*}
+    \text{立方晶系} = & \text{简单立方（惯用晶胞有一个格点，原胞体积 = 惯用晶胞体积）}     \\
+    +             & \text{面心立方（惯用晶胞有四个格点，原胞体积 = 惯用晶胞体积 / 4）} \\
+    +             & \text{体心立方（惯用晶胞有两个格点，原胞体积 = 惯用晶胞体积 / 2）}
+\end{align*}
+
+
+几个例子（惯用晶胞把多种元素放在一起看，Bravais 晶格单独看基元）
+\begin{itemize}
+    \item CsCl：惯用晶胞是体心立方，Bravais 晶格是简单立方
+    \item NaCl：惯用晶胞是面心立方，Bravais 晶格是面心立方
+    \item 金刚石：惯用晶胞是面心立方，Bravais 晶格是面心立方
+    \item 钙钛矿：惯用晶胞是面心立方 + 体心立方，Bravais 晶格是简单立方
+\end{itemize}
+
+\subsubsection{配位数}
+
+\begin{itemize}
+    \item NaCl 6, CsCl 8, 金刚石 4
+    \item 六角密堆积（第一层和第三层对齐）/ 立方密堆积（第一层和第四层对齐） $\to$ 配位数 12，致密度大，结合能低，晶体结构稳定
+    \item 致密度：等体积最大硬球放在原子处，计算晶胞内硬球占据体积与晶胞体积之比
+    \item 金属：密堆积或体心立方
+\end{itemize}
+
+\subsubsection{晶向、晶面}
+
+\begin{itemize}
+    \item 晶列指数：晶列上一个格点到另一个格点上的位矢 $l_1' \vec{a}_1 + l_2' \vec{a}_2 + l_3' \vec{a}_3$，$l_1', l_2', l_3'$ 化为互质的 $l_1, l_2, l_3$，晶列指数为 $ [l_1 \ l_2 \ l_3] $，负号改为上横线
+    \item 晶面指数（密勒指数）：数一数三个晶轴上的截距 $\to$ 取截距的倒数 $\to$ 化为互质整数 $ (l_1 \ l_2 \ l_3) $，负号改为上横线
+    \item 等效晶面：由于对称性而等价的诸晶面 $\{l_1 \ l_2 \ l_3\}$
+\end{itemize}
+
+\subsection{晶体的傅里叶变换}
+
+\subsubsection{晶体衍射}
+
+X 射线衍射、电子衍射、中子衍射（适合研究磁性物质）
+
+\begin{itemize}
+    \item X 射线的波长要与晶体的晶格常数相当
+    \item 晶体可以是单晶的或粉末状的
+    \item 劳厄衍射斑点的样式反映了晶体的对称性
+\end{itemize}
+
+布拉格反射公式
+\[ 2 d_{h_1 h_2 h_3} \sin \theta = n \lambda \]
+
+$\Rightarrow \lambda \leq 2 d$ 不可以用可见光进行晶体衍射
+
+\[ d_{h_1 h_2 h_3} = \frac{2 \pi}{\abs{\vec{K}}} = \frac{a}{\sqrt{h_1^2 + h_2^2 + h_3^2}}, \vec{K} = h_1 \vec{b}_1 + h_2 \vec{b}_2 + h_3 \vec{b}_3 \]
+
+\subsubsection{傅立叶变换}
+
+\[ f(\vec{r}) = f(\vec{r} + \vec{R}_{l}) \Rightarrow f(\vec{r}) = \sum_h f(\vec{K}_{h}) \rme^{\rmi \vec{K}_{h} \cdot \vec{r}}, f(\vec{r} + \vec{R}_{l}) = \sum_h f(\vec{K}_{h}) \rme^{\rmi \vec{K}_{h} \cdot (\vec{r} + \vec{R}_{l})} \Rightarrow \vec{K}_{h} \cdot \vec{R}_{l} \in 2 \pi \times \mathbb{Z} \]
+
+\subsubsection{倒格子}
+
+正格基矢使用原胞基矢，倒格基矢由正格的原胞基矢确定
+\[ \vec{b}_1 = \frac{2 \pi}{\Omega} (\vec{a}_2 \times \vec{a}_3), \vec{b}_2 = \frac{2 \pi}{\Omega} (\vec{a}_3 \times \vec{a}_1), \vec{b}_3 = \frac{2 \pi}{\Omega} (\vec{a}_1 \times \vec{a}_2), \Omega = \vec{a}_1 \cdot (\vec{a}_2 \times \vec{a}_3) \]
+
+\[ \abs{\vec{b}_1} = 2 \pi \frac{\abs{\vec{a}_2 \times \vec{a}_3}}{\Omega} = \frac{2 \pi}{d_1}, \abs{\vec{b}_2} = \frac{2 \pi}{d_2} \abs{\vec{b}_3} = \frac{2 \pi}{d_3} \]
+
+一个倒格基矢和一组实晶面对应
+
+\begin{center}
+    晶体结构 $\to$ 正格 $\to$ 正格基矢 $\to$ 倒格基矢 $\to$ 倒格
+\end{center}
+
+\begin{itemize}
+    \item $\vec{a}_i \cdot \vec{b}_j = 2 \pi \delta_{i j}$ \textcolor{gray}{「用这个算倒格基矢也挺方便的，先确定方向再算大小」}
+    \item $\vec{R}_{l} \cdot \vec{K}_{h} \in 2 \pi \times \mathbb{Z}$
+    \item $\Omega^{*} \times \Omega = (2 \pi)^3$
+    \item 倒格矢 $\vec{K}_{h} = h_{1} \vec{b}_{1} + h_{2} \vec{b}_{2} + h_{3} \vec{b}_{3}$ 与正格中晶面族 $(h_{1} h_{2} h_{3})$ 正交，长度为 ${2 \pi} / d_{h_{1} h_{2} h_{3}}$
+\end{itemize}
+
+立方晶系
+\begin{itemize}
+    \item 简单立方的倒格是简单立方
+    \item 体心立方 $a$ 的倒格是面心立方 $4 \pi / a$
+    \item 面心立方 $a$ 的倒格是体心立方 $4 \pi / a$
+\end{itemize}
+
+劳厄衍射方程是布拉格反射公式的傅立叶变换
+\[ \vec{R}_{l} \cdot (\vec{k} - \vec{k}_{0}) \in 2 \pi \times \mathbb{Z} \Rightarrow \vec{k} - \vec{k}_{0} \propto \vec{K}_{h} \]
+
+\subsubsection{布里渊区}
+
+学会画布里渊区：布里渊区是倒格中的 Wigner-Seitz 晶胞
+
+\begin{itemize}
+    \item 第 $n + 1$ 布里渊区是从原点出发经过 $n$ 个中垂面才能到达的区域
+    \item 每个布里渊区的体积都等于倒格原胞的体积 \textcolor{gray}{「一个倒格子中，每个布里渊区的形状未必相同，但是体积都相同，经过适当平移，都可以移动到第一布里渊区与之重合」}
+    \item 简单立方的第一布里渊区是正方体，面心立方的第一布里渊区是截角八面体，体心立方的第一布里渊区是菱形十二面体
+    \item 劳厄衍射方程 $\to$ 波矢从原点指到第一布里渊区边界上的波可以发生布拉格反射
+\end{itemize}
+
+
+\paragraph{晶体 X 射线衍射}
+\begin{itemize}
+    \item 劳厄法 \begin{itemize}
+              \item 单晶体不动，入射光方向不变
+              \item 连续谱 X 射线
+              \item 衍射斑点分布 $\rightarrow$ 倒格点分布 $\rightarrow$ 倒格点对称性 $\rightarrow$ 晶格对称性
+          \end{itemize}
+    \item 转动单晶法 \begin{itemize}
+              \item 晶体转动
+              \item 单色 X 射线
+          \end{itemize}
+    \item 粉末法 \begin{itemize}
+              \item 取向各异的单晶粉末
+              \item 单色 X 射线
+          \end{itemize}
+\end{itemize}
+{\color{gray}{
+    作业里「X 射线衍射可以确定晶体的晶格常数和结构，但无法确定组成元素」这句话是错误的，尽管我还不知道为什么错了
+}}
+
+{\color{gray}{
+    \paragraph{原子散射因子和几何结构因子}
+
+    「类比光栅中的单缝衍射因子和缝间干涉因子」
+
+    复式晶格中不同原子的散射波之间可能干涉相消使得出现缺级
+
+    \begin{itemize}
+        \item 原子散射因子 = 原子内所有电子散射波振幅的叠加 / 一个电子散射波的振幅 = $\iiint \rho(\vec{r}) \rme^{\rmi 2 \pi (\Delta \vec{S} \cdot \vec{r})} \dd V$，$\Delta \vec{S} \equiv f$ 是波矢方向的改变量
+        \item 几何结构因子 = 原胞内所有原子的散射波在所考虑方向上的振幅 / 一个电子散射波的振幅 = $\sum_{j} f_{j} \rme^{\rmi \frac{2 \pi}{\lambda} \Delta \vec{S} \cdot \vec{r}_{j}}$
+    \end{itemize}
+}}
+
+\subsection{晶体成分的相互作用}
+
+\begin{itemize}
+    \item 范德瓦耳斯晶体 {\color{gray}{（结合能最低）}} - 范德瓦尔斯力 - 晶体 Ar
+    \item 离子晶体 - 离子键 - NaCl
+    \item 金属晶体 - 金属键 - Na
+    \item 共价晶体 - 共价键 - 金刚石
+\end{itemize}
+
+{\color{gray}{
+    \begin{itemize}
+        \item 晶体单质中可能存在多种化学键
+        \item 离子晶体和共价晶体是相对而言的
+        \item 所有晶体的结合类型本质上都是库仑相互作用的表现
+    \end{itemize}
+}}
+
+\subsubsection{结合能}
+
+晶体的结合能是将自由原子结合成晶体所释放的能量，也是将晶体分解为自由原子所吸收的能量
+
+原子间的相互作用 = 库仑力（吸引 + 排斥） + 泡利不相容原理
+\[ u(r) = - \frac{A}{r^{m}} + \frac{B}{r^{n}} \]
+$N$ 个原子的相互作用
+\[ U(r) = \frac{1}{2} \sum^{N}_{i \neq j} \sum^{N}_{j = 1} u(r_{i j}) \approx \frac{N}{2} \sum^{N}_{j' = 1} u(r_{i j}) \]
+晶体的结合能等于晶体中原子相互作用能的负值 $E_b = - U(r_0) > 0$
+
+结合能与晶格常数
+\[ \qty(\pdv{U(r)}{r})_{r = a} = 0 \]
+结合能与体积弹性模量
+\[ K = - V \qty(\pdv{P}{V})_{T} = V \qty(\pdv[2]{U}{V})_V = V_0 \qty(\pdv[2]{U}{V})_{V_0}, \qty(\pdv{U}{V})_{V = V_0} = 0 \]
+\[ V = N v = N \beta R^3, K = V_0 \qty(\pdv[2]{U}{V})_{V_0} = \frac{1}{9 N \beta R_0} \qty(\pdv[2]{U}{R})_{R_0}, \qty(\pdv{U}{R})_{R = R_0} = 0 \]
+
+\subsubsection{离子晶体}
+
+\begin{itemize}
+    \item 碱金属 / 碱土金属 + 卤族元素
+    \item 复式格子（NaCl, CsCl, ZnS / 闪锌矿）
+    \item 离子键
+    \item 最大配位数 8
+    \item 结构稳定，导电性差，熔点高，硬度高，膨胀系数小
+\end{itemize}
+
+两个离子之间的相互作用能（$r_{ij}$ 任意两个离子间距）
+\[ u(r_{i j}) = \frac{q^2}{4 \pi \varepsilon_0 r_{i j}} + \frac{b}{r_{i j}^n} \]
+$N$ 个离子的离子晶体的结合能（$R$ 最近邻离子间距，未必是晶格常数！）
+\[ U = \frac{N}{2} \sum^{N}_{j'} \qty[\frac{q^2}{4 \pi \varepsilon_0 r_{i j}} + \frac{b}{r_{i j}^n}] = - \frac{N}{2} \qty[\frac{\mu q^2}{4 \pi \varepsilon_0 R} - \frac{B}{R^n}], r_{i j} \equiv a_j R, \mu \equiv \sum^{N}_{j'} \frac{\pm 1}{a_j}, B \equiv \sum^{N}_{j'} \frac{b}{a^n_j} \]
+平均一对离子的结合能
+\[ \frac{\mu q^2}{4 \pi \varepsilon_0 R_0} - \frac{B}{R_0^n} \]
+$R$ 是最近邻离子间的距离，$\mu > 0$ 是马德隆常数，仅与晶体几何结构有关的常数
+\[ \qty(\pdv{U}{R})_{R = R_0} = 0 \Rightarrow R_0 = \qty(\frac{4 \pi \varepsilon_0 n}{\mu q^2} B)^{\frac{1}{n-1}} \Rightarrow E_b = - U(R_0) = \frac{N \mu q^2}{8 \pi \varepsilon_0 R_0} \qty(1 - \frac{1}{n}) \]
+\[ K = V_0 \qty(\pdv[2]{U}{V})_{V_0} = \frac{1}{9 N \beta R_0} \qty(\pdv[2]{U}{R})_{R_0} = \frac{\mu q^2}{72 \beta \pi \varepsilon_0 R_0^4} (n - 1) \]
+
+\begin{framed}
+    一维离子晶体的马德隆常数
+    \[ \mu = 2 \times \qty(1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \cdots) = 2 \ln 2 \]
+
+    NaCl 的马德隆常数
+    \[ \mu = - \sum_{n_1, n_2, n_3}' \frac{(-1)^{n_1 + n_2 + n_3}}{\sqrt{n_1^2 + n_2^2 + n_3^2}} \]
+\end{framed}
+
+\subsubsection{非极性分子晶体}
+
+\begin{itemize}
+    \item 具有饱和电子结构的原子或分子
+    \item 范德瓦尔斯力 = 分子偶极矩（极性分子有固有偶极矩，非极性分子受电场极化产生感应偶极矩）的静电吸引力
+    \item 通常取密堆积，配位数 12
+    \item 结合能小，熔点和沸点都很低，硬度比较小
+\end{itemize}
+
+一对分子间的相互作用势能（雷纳德-琼斯势）：{\color{gray}{半经典推导：两个靠近的正负电子对展开成耦合谐振子，进行简正模变换，再量子化，有关于距离的相互作用能}}
+\[ u(r) = - \frac{A}{r^6} + \frac{B}{r^{12}} = 4 \varepsilon \qty[\qty(\frac{\sigma}{r})^{12} - \qty(\frac{\sigma}{r})^6], \sigma \equiv \qty(\frac{B}{A})^{1/6}, \varepsilon \equiv \frac{A^2}{4 B} \]
+N 个分子总相互作用能
+\[ U(r) = \frac{N}{2} u(r) = \cdots = 2 N \varepsilon \qty[A_{12} \qty(\frac{\sigma}{r})^{12} - A_{6} \qty(\frac{\sigma}{r})^6], A_{12} = \sum_{j'} \frac{1}{a^{12}_j}, A_{6} = \sum_{j'} \frac{1}{a^6_j} \]
+\[ \Rightarrow R_0 = \qty(\frac{2 A_{12}}{A_6})^{1/6} \sigma, E_b = - U_0 = \frac{\varepsilon A_6^2}{2 A_{12}} N, K = V_0 \qty(\pdv[2]{U}{V})_{V_0} = \frac{1}{9 N \beta R_0} \qty(\pdv[2]{U}{r})_{R_0} = \frac{2 \sqrt{2} \varepsilon}{\beta \sigma^3} A_{12} \qty(\frac{A_6}{A_{12}})^{5/2} \]
+
+\subsubsection{共价晶体、金属晶体、氢键晶体}
+
+\begin{itemize}
+    \item 共价晶体（原子晶体）\begin{itemize}
+              \item IV 族元素晶体、III-V 族元素的化合物
+              \item 共价键（结合强）\begin{itemize}
+                        \item 饱和性（轨道杂化、配位数较低）、方向性
+                    \end{itemize}
+              \item 高力学强度，高熔点，高沸点，低挥发性，低导电率和导热率
+          \end{itemize}
+    \item 金属晶体\begin{itemize}
+              \item 第 I 族、第 II 族及过渡元素晶体
+              \item 金属键
+              \item 密堆积（配位数 12） / 体心立方（配位数 8）
+              \item 良好的导电性和导热性，较好的延展性，硬度大，熔点高
+          \end{itemize}
+    \item 氢键晶体\begin{itemize}
+              \item 氢原子同时与两个负电性较大，而原子半径较小的原子（O、F、N等）结合
+              \item 饱和性
+          \end{itemize}
+\end{itemize}

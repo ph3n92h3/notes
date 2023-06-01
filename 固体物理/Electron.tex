@@ -1,0 +1,530 @@
+\section{电子}
+
+\subsection{Sommerfeld theory}
+
+\subsubsection{能量状态}
+
+三维无限深方势阱
+\begin{itemize}
+    \item 周期/行波边界条件 \[ \psi (\vec{r}) = \psi (\vec{r} + \vec{n} L)， \vec{n} \in \mathbb{Z}^3 \Rightarrow \vec{k} = \frac{2 \pi \vec{n}}{L}, \vec{n} \in \mathbb{Z}^3 \]
+    \item 硬墙/驻波边界条件 \[ 0 = \psi (0, y, z) = \psi (x, 0, z) = \psi (x, y, 0) = \psi (L, y, z) = \psi (x, L, z) = \psi (x, y, L) \Rightarrow \vec{k} = \frac{\pi \vec{n}}{L}, \vec{n} \in \mathbb{Z}_+^3 \]
+\end{itemize}
+
+$\vec{k} = 2 \pi \vec{n} / L$，$\vec{k}$ 空间中
+\begin{itemize}
+    \item 每个状态点占有体积：$(2 \pi / L)^3$
+    \item 状态密度：$(L / 2 \pi)^3$
+    \item $\dd[3]{\vec{k}}$ 中的 $\vec{k}$ 状态数：$\mathrm{d} Z_0 = (L / 2 \pi)^3 \dd[3]{\vec{k}}$
+    \item $\dd[3]{\vec{k}}$ 中的电子状态数：$\mathrm{d} Z_0 = 2 (L / 2 \pi)^3 \dd[3]{\vec{k}}$
+\end{itemize}
+
+能态密度（2 来自于电子有两个自旋态）
+\[ D(E) = \dv{Z}{E} = 2 \frac{V_c}{(2 \pi)^3} \int_S \frac{\mathrm{d} s}{\qty|\nabla_{\vec{k}} E|} \]
+\begin{framed}
+    三维 Schrödinger 电子气（$E = \hbar^2 k^2 / 2 m$）态密度
+    \[ D(E) = 2 \frac{V_c}{(2 \pi)^3} \int_S \frac{\mathrm{d} s}{\qty|\nabla_{\vec{k}} E|} = \frac{\sqrt{2} V_c}{\pi^2} \frac{m^{3/2}}{\hbar^3} E^{1/2} \propto E^{1/2} \]
+
+    二维 Schrödinger 电子气（$E = \hbar^2 k^2 / 2 m$）态密度
+    \[ D(E) = 2 \frac{S_c}{(2 \pi)^2} \int_S \frac{\mathrm{d} s}{\qty|\nabla_{\vec{k}} E|} = \frac{S_c}{\pi} \frac{m}{\hbar^2} \propto E^0 \]
+
+    一维 Schrödinger 电子气（$E = \hbar^2 k^2 / 2 m$）态密度
+    \[ D(E) = 2 \frac{L_c}{2 \pi} \int_S \frac{\mathrm{d} s}{\qty|\nabla_{\vec{k}} E|} = \frac{\sqrt{2} L_c}{\pi} \frac{m^{1/2}}{\hbar} E^{-1/2} \propto E^{-1/2} \]
+
+    三维 Dirac 电子气（$E = \hbar |k| v$）态密度
+    \[ D(E) = 2 \frac{V_c}{(2 \pi)^3} \int_S \frac{\mathrm{d} s}{\qty|\nabla_{\vec{k}} E|} = \frac{V_c}{\pi^2} \frac{1}{\hbar^3 v^3} E^2 \propto E^2 \]
+
+    二维 Dirac 电子气（$E = \hbar |k| v$）态密度
+    \[ D(E) = 2 \frac{S_c}{(2 \pi)^2} \int_S \frac{\mathrm{d} s}{\qty|\nabla_{\vec{k}} E|} = \frac{S_c}{\pi} \frac{1}{\hbar^2 v^2} E \propto E^1 \]
+
+    一维 Dirac 电子气（$E = \hbar |k| v$）态密度
+    \[ D(E) = 2 \frac{L_c}{2 \pi} \int_S \frac{\mathrm{d} s}{\qty|\nabla_{\vec{k}} E|} = \frac{2 L_c}{\pi} \frac{1}{\hbar v} \propto E^0 \]
+\end{framed}
+核心公式
+\[ f_{\text{FD}}(E) = \frac{1}{\rme^{(E - \mu) / k T} + 1}, N = \int_0^\infty f(E) D(E) \dd E, \text{总能量} = \int_0^\infty E f(E) D(E) \dd E \]
+零温 $T = 0$
+\[ \mu(T = 0) \equiv E_\text{F}, N = \int_0^\infty f(E) D(E) \dd E = \int_0^{E_\text{F}} D(E) \dd E \]
+以后均忽略 $\mu$ 随温度的变化，即认为 $\mu(T) = \mu(T = 0) \equiv E_\text{F}$
+\begin{framed}
+    三维 Schrödinger 电子气（$E = \hbar^2 k^2 / 2 m$）\[ N = \int_0^{E_\text{F}} D(E) \mathrm{d}E \propto E_\text{F}^{3/2} \propto k_\text{F}^3 \Rightarrow E_\text{F} = \frac{\hbar^2 k_\text{F}^2}{2 m} = \frac{\hbar^2}{2 m} (3 n \pi^2)^{2/3}, k_\text{F} = (3 n \pi^2)^{1/3} \] \[ \text{总能量} = \int_0^\infty E f(E) D(E) \mathrm{d}E = \int_0^{E_\text{F}} E D(E) \mathrm{d}E = \frac{3}{5} N E_\text{F} \]
+\end{framed}
+
+\subsubsection{热容}
+
+\[ \text{总能量} = \int_0^\infty E f(E) D(E) \mathrm{d}E = \int_0^\infty E \times \frac{1}{\rme^{(E - E_\text{F}) / k T} + 1} \times \frac{\sqrt{2} V_c}{\pi^2} \frac{m^{3/2}}{\hbar^3} E^{1/2} \mathrm{d} E \]
+低温极限 $k T \ll E_\text{F}$
+\[ \text{总能量} \xlongequal{\text{Sommerfeld 积分}} N \times \qty[\frac{3}{5} E_\text{F} + \frac{\pi^2}{4} \frac{(k T)^2}{E_\text{F}}], N = N_0 \times Z = \text{原子个数} \times \text{每个原子的价电子数} \]
+\[ C_V^{\text{e}} = \qty(\frac{\partial \text{总能量}}{\partial T})_V = \frac{\pi^2}{2} N k \frac{T}{T_\text{F}} \xlongequal{N = \frac{2}{3} E_{\text{F}} D(E_\text{F})} \frac{\pi^2}{3} k^2 D(E_\text{F}) T \propto D(E_\text{F}) T \]
+\[ \begin{cases}
+        \text{高温：} & C_V = C_V^{\text{a}} = \text{const}                      \\
+        \text{低温：} & C_V = C_V^{\text{e}} + C_V^{\text{a}} = \gamma T + b T^3
+    \end{cases} \]
+
+\subsubsection{功函数 \& 接触电势差}
+
+能量关系
+\begin{itemize}
+    \item 电子基态：$0$
+    \item 费米能：$E_\text{F}$
+    \item 自由电子：$\chi$
+    \item 逸出功 $\varphi = \chi - E_{\text{F}} \Rightarrow$ 发射电子条件 $\varphi = \chi - E_{\text{F}} < m v^2 / 2 - E_{\text{F}} $
+\end{itemize}
+
+热电子发射（电子从外界获得热能逸出金属）电流密度
+\[ j \propto T^2 \rme^{- \varphi / k T} \]
+{\color{gray} \[ j = \int_{ m v_x^2 / 2 > \chi} \frac{m \dd v_x}{h} \int_{- \infty}^{\infty} \frac{m \dd v_y}{h} \int_{- \infty}^{\infty} \frac{m \dd v_z}{h} e v_x \times 2 \frac{1}{\rme^{(m v^2 / 2 - E_\text{F}) / k T} + 1} \]}
+接触电势差：两块不同的金属接触，彼此带电产生不同的电势
+\[ V_A - V_B = \frac{\varphi_B - \varphi_A}{e} \rightarrow \Delta V = \Delta \varphi / e \]
+功函数小，费米能级高，电子流出，带正电，电势高；功函数大，费米能级低，电子流入，带负电
+
+\subsubsection{导率}
+
+金属的电导和热导都分别与电子和声子都有关系，他们之间也有关系
+
+{\color{gray}
+\paragraph{玻尔兹曼方程} 稳定状态
+\[ 0 = \pdv{f}{x} = \left.\pdv{f}{x}\right|_{\text{碰撞}} + \left.\pdv{f}{x}\right|_{\text{漂移}} = \qty[- \dot{\vec{r}} \cdot \nabla_{\vec{r}} f - \dot{\vec{k}} \cdot \nabla_{\vec{k}} f] + \qty[\text{通过碰撞进入 } \dd[3]{\vec{k}} - \text{ 通过碰撞离开 } \dd[3]{\vec{k}}] \]
+
+\paragraph{弛豫时间近似}
+
+弛豫时间说的是电子和晶格两次碰撞之间的平均时间间隔，在这个时间里电子在电场作用下加速
+
+\subparagraph{无外场，无温度梯度}
+\[ \left.\pdv{f}{t}\right|_{\text{漂移}} = 0, \pdv{f}{t} = \left.\pdv{f}{t}\right|_{\text{碰撞}} = - \frac{f - f_0}{\tau(k)} \]
+
+\subparagraph{有外场，有温度梯度}
+\begin{itemize}
+    \item 有外场和温度梯度，系统的分布会偏离平衡进行漂移
+    \item 有碰撞，就会使漂移受到遏制，达到稳定分布
+    \item 室温下碰撞来自于电子声子相互作用，低温下碰撞来自于杂质、缺陷
+\end{itemize}
+\[ - \frac{f - f_0}{\tau(k)} = \dot{\vec{r}} \cdot \nabla_{\vec{r}} f + \dot{\vec{k}} \cdot \nabla_{\vec{k}} f = \frac{1}{\hbar} \qty(\nabla_{\vec{k}} E \cdot \nabla_{\vec{r}} T) \pdv{f}{T} - \frac{e}{\hbar} \qty(\vec{E} + \vec{v} \times \vec{B}) \cdot \nabla_{\vec{k}} f \]
+}
+
+\paragraph{电导率}
+
+\subparagraph{经典理论}
+
+\[ j = n e \bar{v}\]
+
+\subparagraph{统计理论}
+
+\[ f(\vec{k}) \xlongequal{\text{玻尔兹曼方程}} f_0(\vec{k}) + \frac{e \tau}{\hbar} \vec{E} \cdot \nabla_{\vec{k}} f_0 \xlongequal{\nabla_{\vec{k}} f_0 = \nabla_{\vec{k}}E \pdv{f_0}{E} = \hbar \vec{v} \pdv{f_0}{E}} f_0(\vec{k}) + e \tau (\vec{E} \cdot \vec{v}) \pdv{f_0}{E} \]
+
+\[ \vec{j} = \int -e \vec{v} \frac{2 f(\vec{k})}{(2 \pi)^3} \dd[3]{\vec{k}} = \dots \xLongrightarrow{\vec{E} = E_x \hat{x}} \sigma = \frac{e^2}{4 \pi} \int_{S_\text{F}} \tau v_x^2 \frac{\mathrm{d} s}{|\nabla_{\vec{k}} E|} = \frac{n e^2 \tau_{\text{F}}}{m^*} \propto \tau_{\text{F}} \]
+
+{\color{gray}金属晶体温度升高，电子弛豫时间减小，电导减小}
+
+\paragraph{热导率}
+
+\[ f(\vec{k}) \xlongequal{\text{玻尔兹曼方程}} f_0 - \tau v_x \qty[\dv{T}{x} \pdv{f}{T} - e E_x \pdv{f}{E}] \approx f_0 + \tau v_x \qty{e E_x + \qty[T \pdv{T} \qty(\frac{E_{\text{F}}}{T}) + \frac{E}{T}] \dv{T}{x}} \pdv{f_0}{E} \]
+\[ j_x = \int - e v_x f(\vec{k}) \frac{2}{(2 \pi)^3} \dd[3]{\vec{k}} = \text{温差电场引起的漂移电流} + \text{温度梯度引起的扩散电流} \]
+稳定热传导 = 无电流（$j_x = 0$） + 有热流（电子温度 $\to$ 能量不同）
+\[ q_x = \int \frac{1}{2} m^* v^2 \cdot v_x \cdot \frac{2 f(\vec{k})}{(2 \pi)^3} \dd[3]{\vec{k}} = \dots = - \chi \dv{T}{x}, \chi = \frac{k^2 \pi^2 n \tau_\text{F}}{3 m^*} T \propto \tau_\text{F} T \Rightarrow \frac{\chi}{\sigma} = \frac{\pi^2}{3} \qty(\frac{k}{e})^2 T \propto T \]
+
+\subsection{Bloch theory}
+
+\subsubsection{Bloch 定理}
+
+周期性势场中的 Schrödinger 方程
+\[ \qty[\frac{p^2}{2 m} + V(\vec{r})] \psi = E \psi, V(\vec{r}) = V(\vec{r} + \vec{R}_n) \]
+
+Bloch 定理
+\[ \psi(\vec{r} + \vec{R}_n) = \rme^{\rmi \vec{k} \cdot \vec{R}_n} \psi(\vec{r}), \vec{R}_n = n_1 \vec{a}_1 + n_2 \vec{a}_2 + n_3 \vec{a}_3, \vec{k} = \frac{l_1 \vec{b}_1}{N_1} + \frac{l_2 \vec{b}_2}{N_2} + \frac{l_3 \vec{b}_3}{N_3} \]
+等价于
+\[ \psi(\vec{r}) = \rme^{\rmi \vec{k} \cdot \vec{r}} u_{\vec{k}}(\vec{r}), u_{\vec{k}}(\vec{r}) = u_{\vec{k}}(\vec{r} + \vec{R}_n) \]
+对于一维原子链的证明
+\begin{align*}
+    \begin{cases}
+        \text{几率相等：}\qty|\psi(x + n a)| = \qty|\psi(x)| \\
+        \text{周期性边界条件：}\psi(x + N a) = \psi(x)          \\
+    \end{cases} \Rightarrow & \psi(x + a) = C_a \psi(x), (C_a)^N = 1                               \\
+    \Rightarrow                                        & C_a = \rme^{\rmi k a}                     \\
+    \text{ i.e. }                                      & \psi(x + R_n) = \rme^{\rmi k R_n} \psi(x)
+\end{align*}
+从第一种表述到第二种表述
+\begin{align*}
+                & \psi(\vec{r}) \equiv \rme^{\rmi \vec{k} \cdot \vec{r}} u_{\vec{k}}(\vec{r}) \Rightarrow \psi(\vec{r} + \vec{R}_n) \equiv \rme^{\rmi \vec{k} \cdot (\vec{r} + \vec{R}_n)} u_{\vec{k}}(\vec{r} + \vec{R}_n) \xlongequal{\text{Bloch}} \rme^{\rmi \vec{k} \cdot \vec{R}_n} \rme^{\rmi \vec{k} \cdot \vec{r}} u_{\vec{k}}(\vec{r}) \\
+    \Rightarrow & u_{\vec{k}}(\vec{r}) = u_{\vec{k}}(\vec{r} + \vec{R_n}) \Rightarrow \psi(\vec{r}) = \rme^{\rmi \vec{k} \cdot \vec{r}} u_{\vec{k}}(\vec{r})
+\end{align*}
+
+布洛赫函数的平面波因子 $\rme^{\rmi \vec{k} \cdot \vec{r}}$ 描述晶体中电子的共有化运动；周期函数因子 $u_{\vec{k}}(\vec{r})$ 描述电子在原胞中的运动，取决于原胞中的势场
+
+周期性边界条件
+\[ \psi(\vec{r} + \sum_i N_i \vec{a}_i) = \psi(\vec{r}) \Rightarrow \rme^{\rmi \vec{k} \cdot \sum_i N_i \vec{a}_i} = 1 \]
+$ \Rightarrow \vec{k} $ 在第一布里渊区内取均匀分布离散值，第一布里渊区内电子波矢数 = 晶体原胞数，一个波矢代表点体积 $(2 \pi)^3 / V_c$，电子波矢密度 $V_c / (2 \pi)^3$
+
+{\color{gray}
+        证明 $\psi_{\vec{k}}(\vec{r}) = \psi_{\vec{k} + \vec{K}_n}(\vec{r})$
+        \begin{align*}
+            \psi_{\vec{k}}(\vec{r}) =                           & \rme^{\rmi \vec{k} \cdot \vec{r}} u_{\vec{k}}(\vec{r})                                                \\
+            \equiv                                              & \rme^{\rmi \vec{k} \cdot \vec{r}} \sum_h a(\vec{k} + \vec{K}_h) \rme^{\rmi \vec{K}_h \cdot \vec{r}}   \\
+            =                                                   & \sum_h a(\vec{k} + \vec{K}_h) \rme^{\rmi (\vec{k} + \vec{K}_h) \cdot \vec{r}}                         \\
+            \Rightarrow \psi_{\vec{k} + \vec{K}_n}(\vec{r}) =   & \sum_h a(\vec{k} + \vec{K}_n + \vec{K}_h) \rme^{\rmi (\vec{k} + \vec{K}_n + \vec{K}_h) \cdot \vec{r}} \\
+            \xlongequal{\vec{K}_l \equiv \vec{K}_n + \vec{K}_h} & \sum_l a(\vec{k} + \vec{K}_l) \rme^{\rmi (\vec{k} + \vec{K}_l) \cdot \vec{r}}                         \\
+            =                                                   & \psi_{\vec{k}}(\vec{r})
+        \end{align*}
+    }
+
+\begin{center}
+    势场是实空间中的周期函数，可以用倒格矢展开；\\
+    波函数是倒空间中的周期函数，可以用正格矢展开。
+\end{center}
+
+\subsubsection{近自由电子近似}
+
+一维周期弱场
+\[ \qty[\frac{p^2}{2 m} + V(x)]\psi_{k}(x) = E_{k} \psi_{k}(x) \]
+\[ V(x + a) = V(x), \bar{V} = \frac{1}{a} \int_{- a / 2}^{a / 2} V(x) \dd{x} \equiv 0 \]
+晶体中周期函数的展开
+\[ \Gamma(\vec{r}) = \sum_{\vec{K}_n} \Gamma_{\vec{K}_n} \rme^{\rmi \vec{K}_n \cdot \vec{r}} \]
+一维势场
+\[ V(x) = \sum_{K_n} V_{K_n} \rme^{\rmi K_n x} = \sum_n V_n \rme^{\rmi \times \frac{2 \pi}{a} n \times x}, V_n = \frac{1}{a} \int_{- a / 2}^{a / 2} V(x) \rme^{- \rmi \frac{2 \pi}{a} n x} \dd{x} \]
+\[ V(x) \in \mathbb{R} \Rightarrow V_{-n} = V_{n}^* \]
+
+\paragraph{微扰理论}
+
+\[ H = H_0 + H' = \frac{p^2}{2 m} + V(x) = - \frac{\hbar^2}{2 m} \dv[2]{x} + \sum_{n'} V_n \rme^{\rmi \times \frac{2 \pi}{a} n \times x} \]
+
+\subparagraph{零级}
+
+\[ \psi_{k}^{0}(x) = \frac{1}{\sqrt{L}} \rme^{\rmi k x}, E_{k}^0 = \frac{\hbar^2 k^2}{2 m} \]
+
+\subparagraph{非简并微扰理论}
+
+\[ \mel{k'}{V(x)}{k} = \begin{cases}
+        V_n & \text{ if } k' - k = \frac{2 \pi}{a} n \\
+        0   & \text{ otherwise }
+    \end{cases} \]
+\begin{multicols}{2}
+    \begin{align*}
+        \Rightarrow E_{k} = & E_k^0 + E_k^1 + E_k^2                                                                                                  \\
+        =                   & \frac{\hbar^2 k^2}{2 m} + \sum_{k'} \mel{k'}{V(x)}{k} + \sum_{k'} \frac{\qty|\mel{k'}{V(x)}{k}|^2}{E_{k'}^0 - E_{k}^0} \\
+        =                   & \frac{\hbar^2 k^2}{2 m} + 0 + \sum_n \frac{\qty|V_n|^2}{\frac{\hbar^2}{2 m} \qty[k^2 - (k + \frac{2 \pi}{a} n)^2]}     \\
+    \end{align*}
+
+    \begin{align*}
+        \Rightarrow \psi_{k}(x) = & \psi_{k}^0(x) + \psi_{k}^1(x)                                                      \\
+        =                         & \psi_{k}^0(x) + \sum_{k'} \frac{\mel{k'}{V(x)}{k}}{E_{k'}^0 - E_{k}^0} \psi_{k'}^0 \\
+        =                         & \frac{1}{\sqrt{L}} \rme^{\rmi k x} \times \qty[1 + \sum_n \dots]                   \\
+        \equiv                    & \rme^{\rmi k x} u_k(x)
+    \end{align*}
+\end{multicols}
+
+由上式 $ k = - n \pi / a $ 时发散，需要简并微扰理论
+
+\subparagraph{简并微扰理论}
+
+\[ \psi_k^0(x) = A \psi_{k = - (1 - \Delta) \times n \pi / a}^0(x) + B \psi_{k = (1 - \Delta) \times n \pi / a}^0(x) \]
+代回 Schrödinger 方程，做两次内积，得到久期/特征方程
+\[ \det \mqty[E_k^0 - E & V_n^* \\ V_n & E_{k'}^0 - E] = 0 \Rightarrow E_{\pm} = T_n \qty(1 + \Delta^2) \pm \sqrt{4 T_n^2 \Delta^2 + \qty|V_n|^2}, T_n = \frac{\hbar^2}{2 m} \qty(\frac{n \pi}{a})^2 \]
+\[ E_+ - E_- = 2 \sqrt{\qty|V_n|^2 + 4 T_n^2 \Delta^2} \geq E_g \equiv 2 \qty|V_n| \]
+\begin{description}
+    \item[$k = n \pi / a$] 出现禁带，宽度为 $2 \qty|V_n|$
+    \item[靠近 $k = n \pi / a$] 能带底是向上抛物线，能带顶是向下抛物线
+    \item[远离 $k = n \pi / a$] 与自由电子类似
+\end{description}
+从物理上分析：考虑右行入射波和左行反射波叠加形成两种驻波，势能不同
+
+\paragraph{三种能带图}
+
+\begin{description}
+    \item[扩展区图] 不同的布里渊区，不同的能带
+    \item[简约区图] 简约/第一布里渊区，所有能带
+    \item[周期区图] 每个布里渊区，所有能带
+\end{description}
+
+\subsubsection{平面波方法}
+
+不同能带计算方法的波函数基组和势能模型的选取不同。
+
+\[ H = H_0 + H' = \frac{p^2}{2 m} + V(\vec{r}) \]
+\[ V(\vec{r}) = V(\vec{r} + \vec{R_n}) \Rightarrow V(\vec{r}) = \sum_{\vec{K}_n}' V(\vec{K}_n) \rme^{\rmi \vec{K}_n \cdot \vec{r}} \]
+
+\paragraph{零级}
+
+\[ \psi_{\vec{k}}^0 (\vec{r}) = \frac{1}{\sqrt{V}} \rme^{\rmi \vec{k} \cdot \vec{r}}, E_{\vec{k}}^0 = \frac{\hbar^2 k^2}{2 m}, V \equiv N \Omega \]
+\[ \psi_{\vec{k}}(\vec{r}) = \rme^{\rmi \vec{k} \cdot \vec{r}} u_{\vec{k}} (\vec{r}) \xlongequal{\text{傅里叶}} \frac{1}{\sqrt{V}} \rme^{\rmi \vec{k} \cdot \vec{r}} \sum_{\vec{K}_n} a(\vec{K}_n) \rme^{\rmi \vec{K}_n \cdot \vec{r}} \]
+代回 Schrödinger 方程，点乘 $ \rme^{- \rmi \vec{K}_n \cdot \vec{r}} $ 再积分，得到中心方程（动量表象 Schrödinger 方程）
+\[ \qty[\frac{\hbar^2}{2 m} (\vec{K}_n + \vec{k})^2 - E(\vec{k})] a(\vec{K}_n) + \sum_{l \neq n} V(\vec{K}_n - \vec{K}_l) a(\vec{K}_l) = 0 \]
+有解条件：
+\[ \det \qty[A_{mn}] = 0, A_{mn} = \begin{cases}
+        \frac{\hbar^2}{2 m} (\vec{K}_m + \vec{k})^2 - E(\vec{k}) & \text{ if } m = n    \\
+        V(\vec{K}_m - \vec{K}_n)                                 & \text{ if } m \neq n
+    \end{cases} \]
+求解此方程即可得到电子的能带 $E(\vec{k})$，$\vec{K}_n$ 有无穷多个取值，取有限个可作为近似
+
+\paragraph{非简并微扰理论}
+
+近自由电子近似，势场 $V(\vec{K}_m - \vec{K}_n)$ 是一阶小量，电子波函数接近平面波
+\[ a(\vec{K}_l) = \begin{cases}
+        \mathcal{O}(1) & \text{ if } \vec{K}_l = 0    \\
+        \text{一阶小量}    & \text{ if } \vec{K}_l \neq 0
+    \end{cases} \]
+一阶中心方程
+\[ \qty[\frac{\hbar^2}{2 m} \qty(\vec{K}_n - \vec{k})^2 - \frac{\hbar^2 k^2}{2 m}] a(\vec{K}) + V(\vec{K}_n) a(0) = 0 \Rightarrow a(\vec{K}_n) = \frac{V(\vec{K}_n)}{\frac{\hbar^2 k^2}{2 m} - \frac{\hbar^2}{2 m}\qty(\vec{K}_n + \vec{k})^2} a(0) \sim \frac{V(\vec{K}_n)}{\frac{\hbar^2 k^2}{2 m} - \frac{\hbar^2}{2 m}\qty(\vec{K}_n + \vec{k})^2} \]
+
+
+\paragraph{简并微扰理论}
+
+\[ \qty(\vec{K}_n + \vec{k})^2 \approx k^2 \Rightarrow a(\vec{K}_n) \sim a(0) \]
+\begin{alignat*}{4}
+    \qty[\frac{\hbar^2 k^2}{2 m} - E(\vec{k})] & a(0) + & V(- \vec{K}_n)                             & a(\vec{K}_n) = & 0 \\
+    V(\vec{K}_n)                               & a(0) + & \qty[\frac{\hbar^2 k^2}{2 m} - E(\vec{k})] & a(\vec{K}_n) = & 0
+\end{alignat*}
+系数行列式为零，得到
+\[ E_{\pm}(\vec{k}) = \frac{\hbar^2 k^2}{2 m} \pm \qty|V(\vec{K}_n)| \]
+回到之前的简并微扰情况，禁带宽度
+\[ E_g = 2 \qty|V(\vec{K}_n)| \]
+禁带位置类似劳厄衍射条件
+\[ \qty(\vec{K}_n + \vec{k})^2 = k^2 \Rightarrow \vec{K}_n \cdot \qty(\vec{k} + \frac{\vec{K}_n}{2}) = 0 \]
+
+\begin{framed}
+    简并微扰理论求正方晶格 $U(x, y) = - 4 U_0 \cos (2 \pi x / a) \cos (2 \pi y / a)$ 在布里渊区顶点 $(\pi / a, \pi / a)$ 处的能隙
+    \[ U(x, y) = - U_0 \qty[\rme^{\rmi \frac{2 \pi}{a} (x + y)} + \rme^{\rmi \frac{2 \pi}{a} (x - y)} + \rme^{\rmi \frac{2 \pi}{a} (- x + y)} + \rme^{\rmi \frac{2 \pi}{a} (- x - y)}] \]
+    能隙位置
+    \[ \vec{K}_{mn} = \qty(m, n) \times 2 \pi / a, \vec{k} = \qty(k_x, k_y), \qty(\vec{k} + \vec{K}_{mn})^2 = k^2 \Rightarrow k_x = - m \pi / a, k_y = - n \pi / a \]
+    \[ U_{m n} = \frac{1}{a^2} \int_{-a/2}^{a/2} \dd{x} \int_{-a/2}^{a/2} \dd{y} U(x, y) \rme^{- \rmi \frac{2 \pi}{a} (m x + n y)} \]
+    \[ U_{m = -1, n = -1} = - U_0 \Rightarrow E_g = 2 \qty|U_{m = -1, n = -1}| = 2 U_0 \]
+    \begin{description}
+        \item[Q] 为什么 $k = (\pi / a, \pi / a)$，$U_{mn}$ 的值却是 $\vec{K}_{mn} = (- 2 \pi / a, - 2 \pi / a)$ 处的？
+        \item[A] 因为这两个东西没有关系，$k$ 是电子的波矢，$K$ 是晶格倒空间里的坐标。——这也是为什么一般书里都写「$V_n$」而不是「$V(K_n)$」，只要这个 $n$ 对得上号就行了，$k$ 和 $K$ 之间没有什么关系。另一方面，在推导的时候需要做内积，出现了 \[ \mel{k}{V(x)}{k'} = \int \psi_{k}^{n*} V(x) \psi_{k'}^{n} \dd{x} \xlongequal{\psi_{k}^n = \rme^{\rmi k x}} \int V(x) \rme^{\rmi (k' - k) x} \dd{x} \] 由于 $V(x)$ 是周期为 $a$ 的函数，仅当 $k' - k = n \times 2 \pi / a$ 时该积分不为零，于是出现了 $2 \pi / a$ 而不是 $\pi / a$. 看来归根到底还是和晶体周期性有关。
+    \end{description}
+\end{framed}
+
+\paragraph{三维能带与一维能带}
+
+不同的三维能带可以发生能带之间的交叠
+\begin{itemize}
+    \item $\to$ 半金属
+    \item 碱土金属本该是绝缘体，但是实际上是导电性不太好的金属
+\end{itemize}
+
+\subsubsection{紧束缚近似}
+
+紧束缚近似\textcolor{gray}{原子轨道线性组合法}：零级近似是孤立原子的电子态，其他原子的作用视为微扰
+\[ V(\vec{r}) = V^{\text{at}}(\vec{r} - \vec{R}_n) + \sum_{\vec{R}_m}' V^{\text{at}}(\vec{r} - \vec{R}_m) \]
+\[ H = H_0 + H' = \qty[\frac{p^2}{2 m} + V^{\text{at}}(\vec{r} - \vec{R}_n)] + \sum_{\vec{R}_m}' V^{\text{at}}(\vec{r} - \vec{R}_m) \]
+\begin{alignat*}{5}
+    \text{孤立原子：} & H_0 &  & \varphi (\vec{r} - \vec{R}_n) &  & = &  & E^{\text{at}} &  & \varphi (\vec{r} - \vec{R}_n) \\
+    \text{晶体电子：} & H   &  & \psi (\vec{k}, \vec{r})       &  & = &  & E(\vec{k})    &  & \psi (\vec{k}, \vec{r})
+\end{alignat*}
+正交归一
+\[ \int_{V \equiv N \Omega} \varphi^*(\vec{r} - \vec{R}_m) \varphi(\vec{r} - \vec{R}_{n}) \dd \tau \approx \delta_{mn} \]
+波函数 $\varphi(\vec{r} - \vec{R}_i), i = 1, \cdots, N$ 对应于相同的能量，因此是 $N$ 重\textbf{简并}的，加入\textbf{微扰}，波函数为
+\[ \psi(\vec{k}, \vec{r}) = \sum_{\vec{R}_n} C_n \varphi (\vec{r} - \vec{R}_n) \xlongequal{C_n = \frac{1}{\sqrt{N}} \rme^{\rmi \vec{k} \cdot \vec{R_n}}, \qty|C_n|^2 = \frac{1}{N}} \frac{1}{\sqrt{N}} \sum_{\vec{R}_n} \rme^{\rmi \vec{k} \cdot \vec{R_n}} \varphi (\vec{r} - \vec{R}_n) \text{ 「Bloch 和」} \]
+Bloch 和 带入 Schrödinger 方程，做内积，得到
+\[ E_{\alpha}(\vec{k}) = E_{\alpha}^{\text{at}} - J_{ss} - \sum_{\vec{R}_n}' \rme^{\rmi \vec{k} \cdot \qty(\vec{R}_n - \vec{R}_{s})} J_{sn}, -J_{sn} \equiv \int_V \varphi_{\alpha}^{\text{at}*} (\vec{r} - \vec{R}_{s}) \sum' V^{\text{at}} (\vec{r} - \vec{R}_{m}) \varphi_{\alpha}^{\text{at}} (\vec{r} - \vec{R}_{n}) \dd \tau \]
+近邻近似
+\[ E_{\alpha}(\vec{k}) = E_{\alpha}^{\text{at}} - J_{ss} - \sum_{\text{近邻} \vec{R}_n}' \rme^{\rmi \vec{k} \cdot \qty(\vec{R}_n - \vec{R}_{s})} J_{sn} \]
+
+\begin{framed}
+    紧束缚近似计算能带宽度，简单立方晶格，孤立原子 s 态，三维
+    \begin{align*}
+        E_{\alpha}(\vec{k}) =   & E_{\alpha}^{\text{at}} - J_{ss} - \sum_{\text{近邻} \vec{R}_n}' \rme^{\rmi \vec{k} \cdot \qty(\vec{R}_n - \vec{R}_{s})} J_{sn}                                          \\
+        \xlongequal{\text{对称性}} & E_{\alpha}^{\text{at}} - J_{ss} - J \sum_{\text{近邻} \vec{R}_n}' \rme^{\rmi \vec{k} \cdot \qty(\vec{R}_n - \vec{R}_{s})}                                               \\
+        =                       & E_{\alpha}^{\text{at}} - J_{ss} - J \qty[\rme^{\rmi k_x a} + \rme^{- \rmi k_x a} + \rme^{\rmi k_y a} + \rme^{- \rmi k_y a} + \rme^{\rmi k_z a} + \rme^{- \rmi k_z a}] \\
+        =                       & E_{\alpha}^{\text{at}} - J_{ss} - 2 J \qty[\cos k_x a + \cos k_y a + \cos k_z a]                                                                                      \\
+        =                       & \begin{cases}
+                                      E_{\alpha\min} = E_{\alpha}(k_x = k_y = k_z = 0)                 & = E_{\alpha}^{\text{at}} -J_{ss} - 6 J \\
+                                      E_{\alpha\min} = E_{\alpha}(k_x = k_y = k_z = \pm \frac{\pi}{a}) & = E_{\alpha}^{\text{at}} -J_{ss} + 6 J
+                                  \end{cases} \Rightarrow \Delta E = E_{\alpha\max} - E_{\alpha\min} = 12 J
+    \end{align*}
+
+    二维
+    \[ \Delta E = 8 J \]
+
+    一维
+    \[ \Delta E = 4 J \]
+\end{framed}
+
+孤立原子的能级与晶体中的电子能带相对应，决定能带宽度的因素
+\begin{itemize}
+    \item 交叠积分越大，能带越宽
+    \item 最近邻格点的数目，即配位数越大，能带越宽
+\end{itemize}
+
+\textcolor{gray}{
+    \begin{itemize}
+        \item p 态电子，d 态电子：此时孤立原子态是简并的，能带可能与孤立原子某个能级对应，也可能与杂化轨道能级对应；内层电子轨道波函数与其他原子交叠较少，形成的能带较窄，外层的电子轨道波函数与其他原子交叠较多，形成的能带较宽，可能出现能带交叠
+        \item 复式格子：紧束缚波函数需要先对孤立原子的某能级的所有简并态求和，再对晶体所有原子求和
+    \end{itemize}
+}
+
+{\color{gray}
+    \paragraph{Wannier 函数} Bloch 波函数是 $\vec{k}$ 空间的周期函数，按正格矢展开，展开系数为 Wannier 函数
+    \[ \psi(\vec{r}, \vec{k}) = \frac{1}{\sqrt{N}} \sum_{\vec{R}_m} a_n(\vec{R}_m, \vec{r}) \rme^{\rmi \vec{k} \cdot \vec{R}_m} \]
+    \[ a_n(\vec{R}_m, \vec{r})  = \frac{1}{\sqrt{N}} \sum_{k \in \text{布里渊区}} \rme^{- \rmi \vec{k} \cdot \vec{R}_m} \psi(\vec{r}, \vec{k}) = \frac{1}{\sqrt{N}} \sum_{k \in \text{布里渊区}} \psi(\vec{r} - \vec{R_m}, \vec{k}) = a(\vec{r} - \vec{R}_m) \]
+}
+
+\subsubsection{费米面及其研究方法}
+
+\paragraph{费米面}
+
+费米面是等能面；改变电子浓度，费米能变化，费米面的形状和大小也会发生变化。现在仍然不考虑化学势随温度的变化，电子在 $\vec{k}$ 空间中从基态开始向外按部就班排布。
+
+\subparagraph{自由电子费米面}
+
+二维晶格，$N$ 个原胞，每个原胞 $\eta$ 个电子，总电子数
+\[ \eta N = 2 \times \frac{\pi k_{\text{F}}^2}{(2 \pi)^2 / S} \Rightarrow k_{\text{F}} = \qty(\eta \times 2 \pi \frac{N}{S})^{1/2} \equiv \qty(\eta \times 2 \pi n)^{1/2} \]
+正方晶格，晶格常数 $a$
+\[ k_{\text{F}} = \qty(\eta \times 2 \pi \frac{N}{S})^{1/2} \xlongequal{N = S / a^2} \qty(\frac{\eta \times 2 \pi}{a^2})^{1/2} \]
+三维晶格，$N$ 个原胞，每个原胞 $\eta$ 个电子，总电子数
+\[ \eta N = 2 \times \frac{4 \pi k_{\text{F}}^3 / 3}{(2 \pi)^3 / V} \Rightarrow k_{\text{F}} = \qty(\eta \times 3 \pi^2 \frac{N}{V})^{1/3} \equiv \qty(\eta \times 3 \pi^2 n)^{1/3} \]
+简单立方晶格，晶格常数 $a$
+\[ k_{\text{F}} = \qty(\eta \times 3 \pi^2 \frac{N}{V})^{1/3} \xlongequal{N = V / a^3} \qty(\frac{\eta \times 3 \pi^2}{a^3})^{1/3} \]
+
+\begin{framed}
+    \begin{description}
+        \item[$\eta = 1$, ] $k_{\text{F}} = \frac{\sqrt 2 \pi}{a} < \frac{b}{2}$，费米面（费米圆）完全在第一布里渊区里
+        \item[$\eta = 2, 3$, ] $\frac{b}{2} < k_{\text{F}} < \frac{\sqrt{2} b}{2}$，费米面（费米圆）没有完全覆盖第一布里渊区，但是已经到达第二布里渊区
+        \item[$\eta = 4, 5$, ] $\frac{\sqrt{2}b}{2} < k_{\text{F}} < b$，费米面（费米圆）完全覆盖第一布里渊区，没有完全覆盖第二布里渊区，到达第三和第四布里渊区
+    \end{description}
+
+    构造自由电子费米面的步骤见课件
+\end{framed}
+
+\subparagraph{近自由电子费米面}
+
+构造近自由电子费米面的步骤
+\begin{enumerate}
+    \item 构造自由电子费米面
+    \item 修正：费米面与布里渊区边界正交，尖角钝化
+\end{enumerate}
+
+\paragraph{费米面研究方法}
+
+实验方法 \textcolor{gray}{玩的都是磁场}
+\begin{itemize}
+    \item 回旋共振
+    \item De Hass - Van Alphen 效应：低温强磁场，金属磁化率随磁场倒数做周期性振荡
+    \item Shubnikov - De Hass 效应：低温强磁场，金属电导率随磁场倒数做周期性振荡
+    \item 磁致电阻
+\end{itemize}
+
+\subparagraph{磁场、近自由电子、半经典理论}
+
+\[ R = \frac{m v}{e B}, \omega = \frac{e B}{m}, E = \frac{1}{2} m v^2 \]
+\[ E = \qty(n + \frac{1}{2}) \hbar \omega \Rightarrow k = \frac{1}{\hbar} \sqrt{2 m \times \qty(n + \frac{1}{2}) \hbar \omega}, \Phi = \pi R^2 B = \qty(n + \frac{1}{2}) \phi_0, \phi_0 = \frac{h}{e} \]
+\[ S = \pi k^2 = \qty(n + \frac{1}{2}) \frac{2 \pi e}{\hbar} B \Rightarrow \Delta S = \frac{2 \pi e}{\hbar} B \Rightarrow \text{轨道简并度 } D = \frac{\Delta S}{(2 \pi / L)^2} = \frac{L^2 B}{\phi_0} \text{ ，未考虑自旋} \]
+
+\subparagraph{磁场、近自由电子、量子理论}
+
+\[ \vec{B} = (B, 0, 0) \Rightarrow \vec{A} = (- B y, 0, 0) \Rightarrow H = \frac{(\vec{p} + e \vec{A})^2}{2 m} = \frac{1}{2 m} \qty[\qty(p_x - e B y)^2 + p_y^2 + p_z^2] \]
+\[ [H, p_x] = [H, p_z] = 0 \Rightarrow \psi = \rme^{\rmi \qty(k_x x + k_z z)} \varphi(y) \]
+带回 Schrödinger 方程，得到 Landau 能级
+\[ E = \qty(n + \frac{1}{2}) \hbar \omega_c + \frac{\hbar^2 k_z^2}{2 m}, \omega_c = \frac{e B}{m} \]
+电子的能量由连续的能谱变成一维的磁子能带，轨道简并度 \textcolor{gray}{简并度与能级无关}
+\[ D = \frac{L_x L_y B}{\phi_0} \text{ ，未考虑自旋} \]
+
+\subparagraph{De Hass - Van Alphen 效应}
+
+\[ N(E, k_z) \dd k_z = 2 D \frac{L_z}{2 \pi} \dd k_z = \frac{e B}{\pi h} L_x L_y L_z \dd k_z \]
+\begin{align*}
+    n(E, k_z) \dd E =  & \frac{\omega}{\pi^2 \hbar^2} \qty(\frac{m}{2})^{3/2} \qty[E - \qty(n + \frac{1}{2}) \hbar \omega_c]^{- 1 / 2} \dd E                               \\
+    \Rightarrow n(E) = & \sum_{n \text{位于} E \text{以下的所有能带}} \frac{\omega}{\pi^2 \hbar^2} \qty(\frac{m}{2})^{3/2} \qty[E - \qty(n + \frac{1}{2}) \hbar \omega_c]^{- 1 / 2}
+\end{align*}
+态密度峰值位置
+\[ E = \qty(n + \frac{1}{2}) \hbar \omega_c \]
+\[ \Delta\qty(\frac{1}{B}) = \frac{e \hbar}{m E_{\text{F}}} \xlongequal[E_{\text{F}} = \hbar^2 k_{\text{F}}^2 / 2 m]{S_{\text{F}} = \pi k_{\text{F}}^2} \frac{2 \pi e}{\hbar S_{\text{F}}} \]
+
+\subparagraph{磁击穿}
+
+磁场从弱磁场开始增强，电子可以在不同能带的轨道间跃迁（磁击穿）；对于强磁场，晶体内部周期性势场相对磁场是微扰，晶体能带转变为近自由电子朗道能级。
+
+{\color{gray}
+金属态的费米面是二维曲面，石墨烯的费米面收缩为零维节点，拓扑半金属态的费米面收缩为一维节线或零维节点，绝缘态无费米面但有化学势
+
+金属 - 半导体异质结：肖特基势垒，肖特基二极管
+}
+
+\subsection{Semiconductor}
+
+\subsubsection{导体、半导体、绝缘体}
+
+一些概念：绝缘体、金属、半金属（half-metal）、本征半导体、满带、半满带、空带、禁带、带隙、价带、导带
+
+{\color{gray}
+\begin{itemize}
+    \item semi-metal：零能隙半导体、Dirac 半金属
+    \item half-metal：能带之前存在交叠
+\end{itemize}
+}
+
+\begin{framed}
+    四种能带比较：
+    \begin{itemize}
+        \item 导体能带 \begin{itemize}
+                  \item 导带部分填充：每个原胞一个原子，每个原子一个价电子，最高带半满，导电
+                  \item 价带导带交叠：每个原胞有偶数个价电子，最高带全满，价带导带交叠允许电子转移，电子空穴同时导电；若能带交叠程度较小则导电性差
+              \end{itemize}
+        \item 绝缘体能带：导带与价带间的禁带很宽，一般温度下难以激发
+        \item 半导体能带：导带与价带间的禁带较窄
+    \end{itemize}
+    设晶体有 $N$ 个原胞，则一个能带含有 $2 N$ 个电子轨道，填满一个能带需要 $2 N$ 个电子；仅凭这一点，一个原胞内有奇数个电子则是导体，一个原胞内有偶数个电子则是绝缘体
+\end{framed}
+
+\subsubsection{电子的准经典运动}
+
+准经典近似：$\Delta k$ 远小于布里渊区尺寸，电子波包实空间尺寸远大于晶体的原胞
+\[ \vec{v} = \frac{1}{\hbar} \nabla_{\vec{k}}E, v = \frac{1}{\hbar} \dv{E(k)}{k} = \dv{\omega}{k} \]
+电子有效质量
+\[ E(k) = \frac{\hbar^2 k^2}{2 m^*} \Rightarrow m^* = \frac{\hbar^2}{\dv*[2]{E(k)}{k}}, \qty(\frac{1}{m^*})_{\alpha\beta} = \frac{1}{\hbar^2}\pdv{E}{k_{\alpha}}{k_{\beta}} \]
+\begin{framed}
+    \begin{itemize}
+        \item 电子的加速度一般与外场力方向不一致：废话，因为电子不只受到外场力
+        \item 有效质量与电子的状态有关，而且可以是正值，也可以是负值：废话，有效质量说的就是电子位置的周期性场的情况
+        \item 晶格对电子的作用越弱，有效质量与真实质量的差别就越小：废话，没有晶格的时候有效质量就是真实质量
+    \end{itemize}
+\end{framed}
+
+Bloch 振荡
+\[ \hbar \dv{k}{t} = e E \Rightarrow \Delta k = \frac{e E}{\hbar} \Delta t \Rightarrow T = \frac{2 \pi / a}{e E / \hbar} = \frac{h}{e E a} \]
+\begin{itemize}
+    \item 恒定电场下，电子在波矢空间匀速运动，电子始终保持在同一个能带内
+    \item 若电场足够强，电子会在能带间隧穿「Zener 效应」
+    \item 受声子、杂质、缺陷等影响，电子平均自由程较小，实际晶体中很难观测到电子布洛赫振荡
+    \item 半满带，外电场改变电子的对称分布，导电
+\end{itemize}
+
+\subsubsection{半导体电子论}
+
+一些概念：直接带隙、间接带隙、本征/纯净半导体、n 型/电子型半导体、p 型/空穴型半导体
+
+能量零点选在价带顶
+\[ E_v = - \frac{\hbar^2 k^2}{2 m_h^*}, E_c = E_g + \frac{\hbar^2 k^2}{2 m_e^*} \]
+
+\paragraph{空穴}
+
+\begin{itemize}
+    \item 几乎满带上的空轨道（能态）
+    \item 一个空穴在外电场或外磁场中的行为犹如它带有正电荷 e
+    \item 重空穴（仍比电子真实质量轻）、轻空穴、自旋劈裂带
+\end{itemize}
+
+\paragraph{半导体中电子在磁场中的运动}
+
+$ \vec{B} $ 沿 z 方向
+
+\[ \hbar \dv{\vec{k}}{t} = m^* \dv{\vec{v}}{t} = - e \vec{v} \times \vec{B} \Rightarrow \omega = \frac{e B}{m^*}, R = \frac{m v}{e B} \]
+
+\[ E = (n + \frac{1}{2}) \hbar \omega + \frac{\hbar^2 k_z^2}{2 m^*}, \omega = \frac{e B}{m^*} \]
+
+\subsubsection{掺杂}
+
+一些概念：半导体中的杂质和缺陷、施主杂质、施主杂质能级、受主杂质、受主杂质能级
+
+\paragraph{载流子浓度}
+
+导带电子浓度
+\[ n = \int_{E_c}^{\infty} 4 \pi \frac{(2 m_e)^{3/2}}{h^3} (E - E_c)^{1/2} \times \frac{1}{\rme^{(E - \mu) / k T} + 1} \dd{E} \approx C_- \rme^{- (E_c - \mu) / k T}, C_- = 2 \qty(\frac{m_e k T}{2 \pi \hbar^2})^{3/2} \]
+价带空穴浓度
+\[ p \approx C_+ \rme^{- (\mu - E_v) / k T}, C_+ = 2 \qty(\frac{m_h k T}{2 \pi \hbar^2})^{3/2} \]
+\[ \Rightarrow n p \approx C_- C_+ \rme^{- E_g / k T} \]
+
+本征半导体 $ n = p $，则 $ m_e = m_h \Rightarrow C_- = C_+, \mu = E_g / 2 $
+
+\paragraph{pn 结}
+
+{\color{gray}
+    \subsection{半导体异质结}
+}
