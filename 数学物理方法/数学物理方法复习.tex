@@ -49,26 +49,26 @@
     \item 留数定理：$\oint_lf(z)\mathrm{d}z=2\pi\mathrm{i}\sum^n_{j=1}\mathrm{Res}f(b_j)$
     \item 求留数：$\begin{cases}\text{单极点}:&\mathrm{Res}f(z_0)=a_1=\lim_{z\to z_0}(z-z_0)f(z)\\ m \text{阶极点}:&\mathrm{Res}f(z_0)=a_1=\lim_{z\to z_0}\frac{1}{(m-1)!}\{\frac{\mathrm{d}^{m-1}}{\mathrm{d}z^{m-1}}[(z-z_0)^mf(z)]\}\end{cases}$
     \item 计算实变函数定积分：\begin{enumerate}
-        \item $\int^{\infty}_{-\infty}f(x)\mathrm{d}x=2\pi\mathrm{i}\{f(z) \text{在上半平面所有奇点的留数之和}\}$
-        \item $\int^{2\pi}_0R(\cos\theta,\sin\theta)\mathrm{d}\theta=\oint_{\|z\|=1}R(\frac{z+z^{-1}}{2}, \frac{z-z^{-1}}{2\mathrm{i}})\frac{\mathrm{d}z}{\mathrm{i}z}$
-        \item $\begin{cases}偶函数：\int^\infty_0F(x)\cos mx\mathrm{d}x=\pi\mathrm{i} \times \{F(z)\mathrm{e}^{\mathrm{i}mz}\text{在上半平面所有奇点的留数之和}\}\\ 奇函数：\int^\infty_0G(x)\sin mx\mathrm{d}x=\pi \times \{G(z)\mathrm{e}^{\mathrm{i}mz}\text{在上半平面所有奇点的留数之和}\}\end{cases}$
-        \item 实轴上有单极点：$+\pi\mathrm{i}\cdot$ 实轴上奇点留数之和
-    \end{enumerate}
+              \item $\int^{\infty}_{-\infty}f(x)\mathrm{d}x=2\pi\mathrm{i}\{f(z) \text{在上半平面所有奇点的留数之和}\}$
+              \item $\int^{2\pi}_0R(\cos\theta,\sin\theta)\mathrm{d}\theta=\oint_{\|z\|=1}R(\frac{z+z^{-1}}{2}, \frac{z-z^{-1}}{2\mathrm{i}})\frac{\mathrm{d}z}{\mathrm{i}z}$
+              \item $\begin{cases}偶函数：\int^\infty_0F(x)\cos mx\mathrm{d}x=\pi\mathrm{i} \times \{F(z)\mathrm{e}^{\mathrm{i}mz}\text{在上半平面所有奇点的留数之和}\}\\ 奇函数：\int^\infty_0G(x)\sin mx\mathrm{d}x=\pi \times \{G(z)\mathrm{e}^{\mathrm{i}mz}\text{在上半平面所有奇点的留数之和}\}\end{cases}$
+              \item 实轴上有单极点：$+\pi\mathrm{i}\cdot$ 实轴上奇点留数之和
+          \end{enumerate}
 \end{itemize}
 
 \subsection{积分变换}
 
 \begin{enumerate}
     \item 傅里叶级数（周期为$2l$）\begin{itemize}
-        \item $$f(x)=a_0+\sum^\infty_{k=1}(a_k\cos \frac{k\pi x}{l}+b_k\sin\frac{k\pi x}{l})$$ $$a_0=\frac{1}{2l}\int^l_{-l}f(\xi)\mathrm{d}\xi,a_k=\frac{1}{l}\int^l_{-l}f(\xi)\cos\frac{k\pi x}{l}\mathrm{d}\xi,b_k=\frac{1}{l}\int^l_{-l}f(\xi)\sin\frac{k\pi x}{l}\mathrm{d}\xi$$
-        \item 奇函数，偶函数
-        \item $$f(x)=\sum^\infty_{k=-\infty}c_k\mathrm{e}^{\mathrm{i}\frac{k\pi x}{l}},c_k=\frac{1}{2l}\int^\infty_{-\infty}f(\xi)\mathrm{e}^{-\mathrm{i}\frac{k\pi x}{l}}\mathrm{d}\xi$$
-    \end{itemize}
+              \item $$f(x)=a_0+\sum^\infty_{k=1}(a_k\cos \frac{k\pi x}{l}+b_k\sin\frac{k\pi x}{l})$$ $$a_0=\frac{1}{2l}\int^l_{-l}f(\xi)\mathrm{d}\xi,a_k=\frac{1}{l}\int^l_{-l}f(\xi)\cos\frac{k\pi x}{l}\mathrm{d}\xi,b_k=\frac{1}{l}\int^l_{-l}f(\xi)\sin\frac{k\pi x}{l}\mathrm{d}\xi$$
+              \item 奇函数，偶函数
+              \item $$f(x)=\sum^\infty_{k=-\infty}c_k\mathrm{e}^{\mathrm{i}\frac{k\pi x}{l}},c_k=\frac{1}{2l}\int^\infty_{-\infty}f(\xi)\mathrm{e}^{-\mathrm{i}\frac{k\pi x}{l}}\mathrm{d}\xi$$
+          \end{itemize}
     \item 傅里叶变换 \begin{itemize}
-        \item $$f(x)=\int^\infty_0A(\omega)\cos(\omega x)\mathrm{d}\omega+\int^\infty_0B(\omega)\sin(\omega x)\mathrm{d}\omega$$ $$A(\omega)=\frac{1}{\pi}\int^\infty_{-\infty}=f(\xi)\cos(\omega x)\mathrm{d}\xi,B(\omega)=\frac{1}{\pi}\int^\infty_{-\infty}=f(\xi)\sin(\omega x)\mathrm{d}\xi$$
-        \item 奇函数，偶函数
-        \item $$f(x)=\int^\infty_{-\infty}F(\omega)\mathrm{e}^{\mathrm{i}\omega x}\mathrm{d}\omega,F(\omega)=\frac{1}{2\pi}\int^\infty_{-\infty}f(x)\mathrm{e}^{-\mathrm{i}\omega x}\mathrm{d}x$$
-    \end{itemize}
+              \item $$f(x)=\int^\infty_0A(\omega)\cos(\omega x)\mathrm{d}\omega+\int^\infty_0B(\omega)\sin(\omega x)\mathrm{d}\omega$$ $$A(\omega)=\frac{1}{\pi}\int^\infty_{-\infty}=f(\xi)\cos(\omega x)\mathrm{d}\xi,B(\omega)=\frac{1}{\pi}\int^\infty_{-\infty}=f(\xi)\sin(\omega x)\mathrm{d}\xi$$
+              \item 奇函数，偶函数
+              \item $$f(x)=\int^\infty_{-\infty}F(\omega)\mathrm{e}^{\mathrm{i}\omega x}\mathrm{d}\omega,F(\omega)=\frac{1}{2\pi}\int^\infty_{-\infty}f(x)\mathrm{e}^{-\mathrm{i}\omega x}\mathrm{d}x$$
+          \end{itemize}
     \item $\delta$ 函数：$\mathscr{F}[\delta(x)]=\frac{1}{2\pi},\mathscr{F}[\mathrm{H}(x)]=\frac{1}{2}\delta(\omega)-\frac{\mathrm{i}}{2\pi}\mathscr{P}\frac{1}{\omega}$
     \item 拉普拉斯变换 $$\bar f(p)=\int^\infty_0f(t)\mathrm{e}^{-pt}\mathrm{d}t$$
 \end{enumerate}
@@ -115,18 +115,18 @@ $$ u=\frac{1}{2}[\varphi(x+at)+\varphi(x-at)]+\frac{1}{2a}\int^{x+at}_{x-at}\psi
 
 \begin{enumerate}
     \item 方程非齐次、边界条件齐次 \begin{itemize}
-        \item 模仿常数变易法
-        \item 这时候边界条件不为 0 时，可以分解方程为一个是方程非齐次、边界条件为 0，一个是方程齐次、边界条件不为 0
-        \item 冲量定理法
-    \end{itemize}
+              \item 模仿常数变易法
+              \item 这时候边界条件不为 0 时，可以分解方程为一个是方程非齐次、边界条件为 0，一个是方程齐次、边界条件不为 0
+              \item 冲量定理法
+          \end{itemize}
     \item 方程齐次，边界条件非齐次 \begin{itemize}
-        \item 先拆出来一个 $w(x, t)$ 把非齐次的边界条件顶住，得到一个关于 $v(x, t)$ 的边界条件其次的问题
-        \item 这个问题的方程可能就是非齐次的了，转化成了上面那种情况，可能需要再拆一次方程
-    \end{itemize}
+              \item 先拆出来一个 $w(x, t)$ 把非齐次的边界条件顶住，得到一个关于 $v(x, t)$ 的边界条件其次的问题
+              \item 这个问题的方程可能就是非齐次的了，转化成了上面那种情况，可能需要再拆一次方程
+          \end{itemize}
     \item 泊松方程 \begin{itemize}
-        \item 先找一个特解把非齐次项顶住，得到一个 Laplace equation 问题
-        \item 再次转化为第一种情况的问题
-    \end{itemize}
+              \item 先找一个特解把非齐次项顶住，得到一个 Laplace equation 问题
+              \item 再次转化为第一种情况的问题
+          \end{itemize}
 \end{enumerate}
 
 \subsection{二阶常微分方程级数解法}
@@ -171,24 +171,24 @@ $$ u=\frac{1}{2}[\varphi(x+at)+\varphi(x-at)]+\frac{1}{2a}\int^{x+at}_{x-at}\psi
 
 \begin{enumerate}
     \item $\nu$ 阶贝塞尔方程，$\nu$ 非整数 \begin{itemize}
-        \item $\nu$ 阶贝塞尔函数：$J_\nu(x)=\sum^\infty_{k=0}(-1)^k\frac{1}{k!\Gamma(\nu+k+1)}(\frac{x}{2})^{2k+\nu}$
-        \item $\nu$ 阶诺伊曼函数：$N_\nu(x)=\frac{J_\nu(x)\cos(\nu\pi)-J_{-\nu}(x)}{\sin(\nu \pi)}$
-        \item 通解：$y(x)=C_1J_\nu(x)+C_2J_{-\nu}(x)$ 或 $y(x)=C_1J_\nu(x)+C_2N_\nu(x)$
-    \end{itemize}
+              \item $\nu$ 阶贝塞尔函数：$J_\nu(x)=\sum^\infty_{k=0}(-1)^k\frac{1}{k!\Gamma(\nu+k+1)}(\frac{x}{2})^{2k+\nu}$
+              \item $\nu$ 阶诺伊曼函数：$N_\nu(x)=\frac{J_\nu(x)\cos(\nu\pi)-J_{-\nu}(x)}{\sin(\nu \pi)}$
+              \item 通解：$y(x)=C_1J_\nu(x)+C_2J_{-\nu}(x)$ 或 $y(x)=C_1J_\nu(x)+C_2N_\nu(x)$
+          \end{itemize}
     \item 整数 $m$ 阶贝塞尔方程 \begin{itemize}
-        \item $m$ 阶诺伊曼函数：$N_m(x)=\lim_{\nu\to m}N_\nu(x)=\lim_{\nu\to m}\frac{J_\nu(x)\cos(\nu\pi)-J_{-\nu}(x)}{\sin(\nu \pi)}$
-        \item 通解：$y(x)=C_1J_m(x)+C_2N_m(x)$
-    \end{itemize}
+              \item $m$ 阶诺伊曼函数：$N_m(x)=\lim_{\nu\to m}N_\nu(x)=\lim_{\nu\to m}\frac{J_\nu(x)\cos(\nu\pi)-J_{-\nu}(x)}{\sin(\nu \pi)}$
+              \item 通解：$y(x)=C_1J_m(x)+C_2N_m(x)$
+          \end{itemize}
     \item $l+1/2$ 阶贝塞尔方程 \begin{itemize}
-        \item 通解：$y(x)=C_1J_{l+1/2}(x)+C_2J_{-(l+1/2)}(x)$
-        \item $J_{1/2}(x)=\sqrt{\frac{2}{\pi x}}\sin x, J_{-(1/2)}(x)=\sqrt{\frac{2}{\pi x}}\cos x$
-    \end{itemize}
+              \item 通解：$y(x)=C_1J_{l+1/2}(x)+C_2J_{-(l+1/2)}(x)$
+              \item $J_{1/2}(x)=\sqrt{\frac{2}{\pi x}}\sin x, J_{-(1/2)}(x)=\sqrt{\frac{2}{\pi x}}\cos x$
+          \end{itemize}
     \item $x=0$ 处的自然边界条件 \begin{itemize}
-        \item 去掉 $N_0(x), N_m(x), N_\nu(x), J_{-\nu}(x)$，留下 $J_0(x), J_m(x), J_\nu(x)$
-    \end{itemize}
+              \item 去掉 $N_0(x), N_m(x), N_\nu(x), J_{-\nu}(x)$，留下 $J_0(x), J_m(x), J_\nu(x)$
+          \end{itemize}
     \item $\nu$ 阶虚宗量贝塞尔方程 \begin{itemize}
-        \item 做变换：$x=-i\xi$
-    \end{itemize}
+              \item 做变换：$x=-i\xi$
+          \end{itemize}
 \end{enumerate}
 
 \subsubsection{广义傅里叶级数}
@@ -209,10 +209,10 @@ $$f_m=\frac{1}{N_m^2}\int^b_a\rho(\xi)y_m(\xi)f(\xi)\mathrm{d}\xi$$
     \item generalized Fourier series $$f(x)=\sum^\infty_{l=0}f_lP_l(x)$$ $$f_l=\frac{2l+1}{2}\int^1_{-1}P_l(x)f(x)\mathrm{d}x$$
     \item 母函数 $$r<R,\frac{1}{\sqrt{R^2-2rR\cos\theta+r^2}}=\sum^\infty_{l=0}\frac{r^l}{R^{l+1}}P_l(\cos\theta)$$ $$r>R,\frac{1}{\sqrt{R^2-2rR\cos\theta+r^2}}=\sum^\infty_{l=0}\frac{R^l}{r^{l+1}}P_l(\cos\theta)$$
     \item 递推关系 $$(l+1)P_{l+1}(x)-(2l+1)xP_l(x)+lP_{l-1}(x)=0$$ $$\int^1_{-1}xP_l(x)P_k(x)\mathrm{d}x=
-    \begin{cases}
-        \frac{2(k+1)}{[2(k+1)+1](2k+1)},& l=k+1\\
-        \frac{2k}{4k^2-1},& l=k-1
-    \end{cases}$$
+              \begin{cases}
+                  \frac{2(k+1)}{[2(k+1)+1](2k+1)}, & l=k+1 \\
+                  \frac{2k}{4k^2-1},               & l=k-1
+              \end{cases}$$
 \end{enumerate}
 
 \subsubsection{轴对称球坐标 Laplace equation}
@@ -248,20 +248,20 @@ $$u(r, \theta, \varphi)=\sum^\infty_{l=0}\sum^l_{m=0}r^l[A^m_l\cos m\varphi+B^m_
 
 \begin{enumerate}
     \item 表达式 \begin{itemize}
-        \item $Y(\theta, \varphi)=P^m_l(\cos\theta)(A\cos m\varphi+B\sin m\varphi), l=0, 1, 2, \dots, m=0, 1, 2, \dots,l$，$2l+1$ 个
-        \item 复数形式：$Y(\theta, \varphi)=P^{\|m\|}_l(\cos\theta)\mathrm{e}^{\mathrm{i}m\varphi}, l=0, 1, 2, \dots, m=0, 1, 2, \dots,l$
-    \end{itemize}
+              \item $Y(\theta, \varphi)=P^m_l(\cos\theta)(A\cos m\varphi+B\sin m\varphi), l=0, 1, 2, \dots, m=0, 1, 2, \dots,l$，$2l+1$ 个
+              \item 复数形式：$Y(\theta, \varphi)=P^{\|m\|}_l(\cos\theta)\mathrm{e}^{\mathrm{i}m\varphi}, l=0, 1, 2, \dots, m=0, 1, 2, \dots,l$
+          \end{itemize}
     \item 正交归一 \begin{itemize}
-        \item 这里说的实数形式的模说的是 $Y^m_l(\theta, \varphi)=P^m_l(\cos\theta)\cos(m\varphi)$
-        \item $$\iint_sY^m_l(\theta, \varphi)Y^{n^*}_l(\theta, \varphi)\sin\theta\mathrm{d}\theta\mathrm{d}\varphi=
-        \begin{cases}\frac{(l+m)!}{(l-m)!}\frac{2\pi(1+\delta_{m0})}{2l+1}, &\text{实数形式}\\
-        \frac{(l+\|m\|)!}{(l-\|m\|)!}\frac{4\pi}{2l+1},&\text{复数形式}
-        \end{cases}$$
-    \end{itemize}
+              \item 这里说的实数形式的模说的是 $Y^m_l(\theta, \varphi)=P^m_l(\cos\theta)\cos(m\varphi)$
+              \item $$\iint_sY^m_l(\theta, \varphi)Y^{n^*}_l(\theta, \varphi)\sin\theta\mathrm{d}\theta\mathrm{d}\varphi=
+                        \begin{cases}\frac{(l+m)!}{(l-m)!}\frac{2\pi(1+\delta_{m0})}{2l+1}, & \text{实数形式} \\
+             \frac{(l+\|m\|)!}{(l-\|m\|)!}\frac{4\pi}{2l+1},        & \text{复数形式}
+                        \end{cases}$$
+          \end{itemize}
     \item generalized Fourier series \begin{itemize}
-        \item 实数形式
-        \item 复数形式
-    \end{itemize}
+              \item 实数形式
+              \item 复数形式
+          \end{itemize}
     \item 正交归一化球函数
 \end{enumerate}
 
@@ -271,14 +271,14 @@ $$u(r, \theta, \varphi)=\sum^\infty_{l=0}\sum^l_{m=0}r^l[A^m_l\cos m\varphi+B^m_
 
 \begin{enumerate}
     \item 表达式 \begin{itemize}
-        \item $\nu$ 阶贝塞尔函数：$J_\nu(x)=\sum^\infty_{k=0}(-1)^k\frac{1}{k!\Gamma(\nu+k+1)}(\frac{x}{2})^{2k+\nu}$
-        \item $\nu$ 阶诺伊曼函数：$N_\nu(x)=\frac{J_\nu(x)\cos(\nu\pi)-J_{-\nu}(x)}{\sin(\nu \pi)}$
-        \item 两种汉克尔函数：$H^{(1, 2)}(x)=J_\nu(x)(+, -)\mathrm{i}N_\nu(x)$
-    \end{itemize}
+              \item $\nu$ 阶贝塞尔函数：$J_\nu(x)=\sum^\infty_{k=0}(-1)^k\frac{1}{k!\Gamma(\nu+k+1)}(\frac{x}{2})^{2k+\nu}$
+              \item $\nu$ 阶诺伊曼函数：$N_\nu(x)=\frac{J_\nu(x)\cos(\nu\pi)-J_{-\nu}(x)}{\sin(\nu \pi)}$
+              \item 两种汉克尔函数：$H^{(1, 2)}(x)=J_\nu(x)(+, -)\mathrm{i}N_\nu(x)$
+          \end{itemize}
     \item 自然边界条件 \begin{itemize}
-        \item $x=0$（柱内）：去掉 $N_0(x), N_m(x), N_\nu(x), J_{-\nu}(x)$，留下 $J_0(x), J_m(x), J_\nu(x)$
-        \item $x=\infty$（柱外）：保留 $J_\nu(x)和N_\nu(x)$ 或 $H^{(1)}(x)和H^{(2)}(x)$
-    \end{itemize}
+              \item $x=0$（柱内）：去掉 $N_0(x), N_m(x), N_\nu(x), J_{-\nu}(x)$，留下 $J_0(x), J_m(x), J_\nu(x)$
+              \item $x=\infty$（柱外）：保留 $J_\nu(x)和N_\nu(x)$ 或 $H^{(1)}(x)和H^{(2)}(x)$
+          \end{itemize}
     \item 递推关系 $$Z_{\nu-1}(x)-Z_{\nu+1}(x)=2Z'_\nu(x)$$ $$Z_{\nu-1}(x)+Z_{\nu+1}(x)=2\nu\frac{Z_\nu(x)}{x}$$
     \item 计算积分：$$\frac{\mathrm{d}}{\mathrm{d}x}[x^\nu J_\nu(x)]=x^\nu J_{\nu-1}(x)$$ $$\frac{\mathrm{d}}{\mathrm{d}x}[x^{-\nu}J_\nu(x)]=-x^{-\nu}J_{\nu+1}(x)$$
 \end{enumerate}
@@ -294,16 +294,16 @@ $$u(r, \theta, \varphi)=\sum^\infty_{l=0}\sum^l_{m=0}r^l[A^m_l\cos m\varphi+B^m_
 性质：
 \begin{enumerate}
     \item 三类齐次边界条件：$[\alpha\frac{\mathrm{d}R(\rho)}{\mathrm{d}\rho}+\beta R(\rho)]\|_{\rho=a}=0$ \begin{itemize}
-        \item $R(\rho)\|_{\rho=a}=J_m(\sqrt{\mu}\rho)\|_{\rho=a}=0: \sqrt{\mu^{(m)}_n}a=x^{(m)}_n,\mu^{(m)}_n=(\frac{x^{(m)}_n}{a})^2, R(\rho)=J_m(\frac{x^{(m)}_n}{a}\rho)$
-        \item $R'(\rho)\|_{\rho=a}=J_m'(\sqrt{\mu}\rho)\|_{\rho=a}=0: \sqrt{\mu^{(m)}_n}a=\tilde x^{(m)}_n,\mu^{(m)}_n=(\frac{\tilde x^{(m)}_n}{a})^2, R(\rho)=J_m(\frac{\tilde x^{(m)}_n}{a}\rho)$
-        \item $[R(\rho)+HR'(\rho)]\|_{\rho=a}=[J_m(\sqrt{\mu}\rho)+H\sqrt{\mu}J_m'(\sqrt{\mu}\rho)]\|_{\rho=a}=0$，利用递推关系导出：$J_m'(x)=m\frac{J_m(x)}{x}-J_{m+1}(x)$，进而有 $J_m(\sqrt\mu a)=\frac{H\sqrt\mu J_{m+1}(\sqrt\mu a)}{1+Hm/a}$，根为 $\hat x^{(m)}_n$，则 $\mu^{(m)}_n=(\frac{\hat x^{(m)}}{a})^2$
-    \end{itemize}
+              \item $R(\rho)\|_{\rho=a}=J_m(\sqrt{\mu}\rho)\|_{\rho=a}=0: \sqrt{\mu^{(m)}_n}a=x^{(m)}_n,\mu^{(m)}_n=(\frac{x^{(m)}_n}{a})^2, R(\rho)=J_m(\frac{x^{(m)}_n}{a}\rho)$
+              \item $R'(\rho)\|_{\rho=a}=J_m'(\sqrt{\mu}\rho)\|_{\rho=a}=0: \sqrt{\mu^{(m)}_n}a=\tilde x^{(m)}_n,\mu^{(m)}_n=(\frac{\tilde x^{(m)}_n}{a})^2, R(\rho)=J_m(\frac{\tilde x^{(m)}_n}{a}\rho)$
+              \item $[R(\rho)+HR'(\rho)]\|_{\rho=a}=[J_m(\sqrt{\mu}\rho)+H\sqrt{\mu}J_m'(\sqrt{\mu}\rho)]\|_{\rho=a}=0$，利用递推关系导出：$J_m'(x)=m\frac{J_m(x)}{x}-J_{m+1}(x)$，进而有 $J_m(\sqrt\mu a)=\frac{H\sqrt\mu J_{m+1}(\sqrt\mu a)}{1+Hm/a}$，根为 $\hat x^{(m)}_n$，则 $\mu^{(m)}_n=(\frac{\hat x^{(m)}}{a})^2$
+          \end{itemize}
     \item 正交 $$\int^a_0J_m(\sqrt{\mu_n}\rho)J_m(\sqrt{\mu_l}\rho)\rho\mathrm{d}\rho=0, n\neq l$$
     \item 三类边界条件下的模 $$\int^a_0[J_m(\sqrt{\mu^{(m)}_n}\rho)]^2\rho\mathrm{d}\rho=[N^{(m)}_n]^2=\frac{1}{2}(a^2-\frac{m^2}{\mu^{(m)}_n})[J_m(\sqrt{\mu^{(m)}_n}a)]^2+\frac{1}{2}a^2[J'_m(\sqrt{\mu^{(m)}_n}a)]^2$$ \begin{itemize}
-        \item 第一类边界条件下的：$[N^{(m)}_n]^2=\frac{1}{2}a^2[J_{m+1}(\sqrt{\mu^{(m)}_n}a)]^2$
-        \item 第二类边界条件下的：$[N^{(m)}_n]^2=\frac 1 2(a^2-\frac{m^2}{\mu^{(m)}_n})[J_m(\sqrt{\mu^{(m)}_n}a)]^2$
-        \item 第三类边界条件下的：$[N^{(m)}_n]^2=\frac 1 2(a^2-\frac{m^2}{\mu^{(m)}_n}+\frac{a^2}{\mu^{(m)}_nH})[J_m(\sqrt{\mu^{(m)}_n}a)]^2$
-    \end{itemize}
+              \item 第一类边界条件下的：$[N^{(m)}_n]^2=\frac{1}{2}a^2[J_{m+1}(\sqrt{\mu^{(m)}_n}a)]^2$
+              \item 第二类边界条件下的：$[N^{(m)}_n]^2=\frac 1 2(a^2-\frac{m^2}{\mu^{(m)}_n})[J_m(\sqrt{\mu^{(m)}_n}a)]^2$
+              \item 第三类边界条件下的：$[N^{(m)}_n]^2=\frac 1 2(a^2-\frac{m^2}{\mu^{(m)}_n}+\frac{a^2}{\mu^{(m)}_nH})[J_m(\sqrt{\mu^{(m)}_n}a)]^2$
+          \end{itemize}
     \item generalized Fourier series $$f(x)=\sum^\infty_{n=1}f_nJ_m(\sqrt{\mu^{(m)}_n}\rho)$$ $$f_n=\frac{1}{[N^{(m)}_n]^2}\int^a_0f(\rho)J_m(\sqrt{\mu^{(m)}_n}\rho)\rho\mathrm{d}\rho$$
     \item 母函数 $$\mathrm{e}^{\frac{1}{2}x(z-\frac{1}{z})}=\sum^\infty_{m=-\infty}J_m(x)z^m$$
     \item 加法公式 $$J_m(a+b)=\sum^\infty_{k=-\infty}J_k(a)J_{m-k}(b)$$

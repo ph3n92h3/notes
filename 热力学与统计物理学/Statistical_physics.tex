@@ -9,67 +9,67 @@
 暂未考虑自旋自由度。
 
 \begin{framed}
-经典粒子的（半经典）态密度：（自由度 $r$）\[
-\Sigma(E) = \int \dots \int_{H \leq E}\dd{q_1} \dots \dd{q_r} \dd{p_1} \dots \dd{p_r},\ D(E) = \frac{1}{h^r} \dv{\Sigma(E)}{E}
-\]
+    经典粒子的（半经典）态密度：（自由度 $r$）\[
+        \Sigma(E) = \int \dots \int_{H \leq E}\dd{q_1} \dots \dd{q_r} \dd{p_1} \dots \dd{p_r},\ D(E) = \frac{1}{h^r} \dv{\Sigma(E)}{E}
+    \]
 
-\begin{itemize}
-    \item 三维经典自由粒子 $r = 3$
-\end{itemize} \[
-H = \frac{1}{2 m} \qty(p_x^2 + p_y^2 + p_z^2)
-\] \[
-\Sigma(E) = \iiint_V \dd{q_x} \dd{q_y} \dd{q_z} \iiint_{H \leq E} \dd{p_x} \dd{p_y} \dd{p_z} \xlongequal{\text{后面那个事对有某个半径的三维球的积分}} \frac{4 \pi V}{3} (2 m E)^{3 / 2}
-\] \[
-D(E) = \frac{1}{h^3} \dv{\Sigma(E)}{E} = \frac{2 \pi V}{h^3} (2 m)^{3 / 2} E^{1 / 2}
-\]
-\begin{itemize}
-    \item 二维经典自由粒子 $r = 2$ ：$D(E) = \frac{2 \pi m S}{h^2}$
-    \item 一维经典自由粒子 $r = 1$ ：$D(E) = \frac{L}{h} \sqrt{2 m} E^{- 1 / 2}$
-\end{itemize}
-\begin{itemize}
-    \item 一维谐振子（$r = 1$）
-\end{itemize} \[
-H = \frac{p^2}{2 m} + \frac{m \omega^2 x^2}{2}
-\] \[
-\Sigma = \int \dd{q} \int_{H \leq E} \dd{p} \xlongequal{\text{其实事二维相空间中的一个椭圆的面积}} \frac{2 \pi E}{\omega}
-\] \[
-D(E) = h^{-1} \dv{\Sigma(E)}{E} = \frac{1}{\hbar \omega}
-\]
-\begin{itemize}
-    \item 三维相对论性自由粒子 $r = 3$
-\end{itemize} \[
-H = + \sqrt{p^2 c^2 + m^2 c^4}
-\] \[
-\Sigma(E) = \iiint_V \dd{q_x} \dd{q_y} \dd{q_z} \iiint_{H \leq E} \dd{p_x} \dd{p_y} \dd{p_z} = \frac{4 \pi V}{3} \qty(\frac{E^2 - m^2 c^2}{c^2})^{3 / 2}
-\] \[
-D(E) = h^{-3} \dv{\Sigma(E)}{E} = \frac{4 \pi V E \sqrt{E^2 - m^2 c^4}}{h^3 c^3}
-\]
-\begin{itemize}
-    \item 二维相对论性自由粒子 $r = 2$：$D(E) = \frac{2 \pi S}{h^2 c^2} E$
-    \item 一维相对论性自由粒子 $r = 1$：$D(E) = \frac{2 L}{h c} \frac{E}{\sqrt{E^2 - m^2 c^4}}$
-\end{itemize}
+    \begin{itemize}
+        \item 三维经典自由粒子 $r = 3$
+    \end{itemize} \[
+        H = \frac{1}{2 m} \qty(p_x^2 + p_y^2 + p_z^2)
+    \] \[
+        \Sigma(E) = \iiint_V \dd{q_x} \dd{q_y} \dd{q_z} \iiint_{H \leq E} \dd{p_x} \dd{p_y} \dd{p_z} \xlongequal{\text{后面那个事对有某个半径的三维球的积分}} \frac{4 \pi V}{3} (2 m E)^{3 / 2}
+    \] \[
+        D(E) = \frac{1}{h^3} \dv{\Sigma(E)}{E} = \frac{2 \pi V}{h^3} (2 m)^{3 / 2} E^{1 / 2}
+    \]
+    \begin{itemize}
+        \item 二维经典自由粒子 $r = 2$ ：$D(E) = \frac{2 \pi m S}{h^2}$
+        \item 一维经典自由粒子 $r = 1$ ：$D(E) = \frac{L}{h} \sqrt{2 m} E^{- 1 / 2}$
+    \end{itemize}
+    \begin{itemize}
+        \item 一维谐振子（$r = 1$）
+    \end{itemize} \[
+        H = \frac{p^2}{2 m} + \frac{m \omega^2 x^2}{2}
+    \] \[
+        \Sigma = \int \dd{q} \int_{H \leq E} \dd{p} \xlongequal{\text{其实事二维相空间中的一个椭圆的面积}} \frac{2 \pi E}{\omega}
+    \] \[
+        D(E) = h^{-1} \dv{\Sigma(E)}{E} = \frac{1}{\hbar \omega}
+    \]
+    \begin{itemize}
+        \item 三维相对论性自由粒子 $r = 3$
+    \end{itemize} \[
+        H = + \sqrt{p^2 c^2 + m^2 c^4}
+    \] \[
+        \Sigma(E) = \iiint_V \dd{q_x} \dd{q_y} \dd{q_z} \iiint_{H \leq E} \dd{p_x} \dd{p_y} \dd{p_z} = \frac{4 \pi V}{3} \qty(\frac{E^2 - m^2 c^2}{c^2})^{3 / 2}
+    \] \[
+        D(E) = h^{-3} \dv{\Sigma(E)}{E} = \frac{4 \pi V E \sqrt{E^2 - m^2 c^4}}{h^3 c^3}
+    \]
+    \begin{itemize}
+        \item 二维相对论性自由粒子 $r = 2$：$D(E) = \frac{2 \pi S}{h^2 c^2} E$
+        \item 一维相对论性自由粒子 $r = 1$：$D(E) = \frac{2 L}{h c} \frac{E}{\sqrt{E^2 - m^2 c^4}}$
+    \end{itemize}
 \end{framed}
 
 \begin{framed}
-量子粒子的态密度：\[
-g(\varepsilon) = \dv{n(\varepsilon)}{\varepsilon}
-\]
+    量子粒子的态密度：\[
+        g(\varepsilon) = \dv{n(\varepsilon)}{\varepsilon}
+    \]
 
-\begin{itemize}
-    \item （一维）谐振子\[
-    \varepsilon = \qty(n + \frac{1}{2}) \hbar \omega
-    \] \[
-    n(\varepsilon) = \frac{\varepsilon}{\hbar \omega} - \frac{1}{2},\ g(\varepsilon) = \dv{n(\varepsilon)}{\varepsilon} = \frac{1}{\hbar \omega}
-    \]
-    \item 高维谐振子注意简并度。对于 $s$ 个谐振子，第 $N$ 个能级的情况（$E = (N + s / 2) \hbar \omega$），相当于把 $N$ 分为 $s$ 个非负整数的和，相当于把 $N + s$ 分为 $s$ 个正整数的和，相当于在 $N + s - 1$ 个小球直接插入 $s - 1$ 个隔板，即 $C_{N + s - 1}^{s - 1} = C_{N + s - 1}^N$。
-    \item 二维谐振子 \[
-    \varepsilon = \varepsilon_1 + \varepsilon_2 = (n_1 + \frac{1}{2}) \hbar \omega_1 + (n_2 + \frac{1}{2}) \hbar \omega_2
-    \] \[
-    n(\varepsilon) \underbrace{\qty(= \sum_{n_1 = 0}^{n} \sum_{n_2 = 0}^{n - n_1} 1)}_{\text{这个式子有点问题，但是有助于理解}} = \int_0^{\varepsilon} \frac{\dd{\varepsilon_1}}{\hbar \omega_1} \int_0^{\varepsilon - \varepsilon_1} \frac{\dd{\varepsilon_2}}{\hbar \omega_2} = \frac{\varepsilon ^2}{2 \omega_1 \omega_2 \hbar ^2}
-    \] \[
-    g(\varepsilon) = \dv{n (\varepsilon)}{\varepsilon} = \frac{\varepsilon}{\omega_1 \omega_2 \hbar ^2}
-    \]
-\end{itemize}
+    \begin{itemize}
+        \item （一维）谐振子\[
+                  \varepsilon = \qty(n + \frac{1}{2}) \hbar \omega
+              \] \[
+                  n(\varepsilon) = \frac{\varepsilon}{\hbar \omega} - \frac{1}{2},\ g(\varepsilon) = \dv{n(\varepsilon)}{\varepsilon} = \frac{1}{\hbar \omega}
+              \]
+        \item 高维谐振子注意简并度。对于 $s$ 个谐振子，第 $N$ 个能级的情况（$E = (N + s / 2) \hbar \omega$），相当于把 $N$ 分为 $s$ 个非负整数的和，相当于把 $N + s$ 分为 $s$ 个正整数的和，相当于在 $N + s - 1$ 个小球直接插入 $s - 1$ 个隔板，即 $C_{N + s - 1}^{s - 1} = C_{N + s - 1}^N$。
+        \item 二维谐振子 \[
+                  \varepsilon = \varepsilon_1 + \varepsilon_2 = (n_1 + \frac{1}{2}) \hbar \omega_1 + (n_2 + \frac{1}{2}) \hbar \omega_2
+              \] \[
+                  n(\varepsilon) \underbrace{\qty(= \sum_{n_1 = 0}^{n} \sum_{n_2 = 0}^{n - n_1} 1)}_{\text{这个式子有点问题，但是有助于理解}} = \int_0^{\varepsilon} \frac{\dd{\varepsilon_1}}{\hbar \omega_1} \int_0^{\varepsilon - \varepsilon_1} \frac{\dd{\varepsilon_2}}{\hbar \omega_2} = \frac{\varepsilon ^2}{2 \omega_1 \omega_2 \hbar ^2}
+              \] \[
+                  g(\varepsilon) = \dv{n (\varepsilon)}{\varepsilon} = \frac{\varepsilon}{\omega_1 \omega_2 \hbar ^2}
+              \]
+    \end{itemize}
 
 \end{framed}
 
@@ -84,13 +84,13 @@ g(\varepsilon) = \dv{n(\varepsilon)}{\varepsilon}
     \centering
     \begin{tabular}{|c|c|c|}
         \hline
-        & 全同粒子系统 & 可分辨粒子系统 \\
+              & 全同粒子系统                                                                                                     & 可分辨粒子系统                                                                    \\
         \hline
-        量子态 & $\ket{\Psi_{\text{s, IP}}} = \ket{n_1, \dots, n_{\sigma}, \dots, n_m}$ & $\ket{\Psi_{\text{s, MB}}} = \ket{\psi_1, \dots, \psi_{i}, \dots, \psi_N}$ \\
+        量子态   & $\ket{\Psi_{\text{s, IP}}} = \ket{n_1, \dots, n_{\sigma}, \dots, n_m}$                                     & $\ket{\Psi_{\text{s, MB}}} = \ket{\psi_1, \dots, \psi_{i}, \dots, \psi_N}$ \\
         \hline
-        能量 & $E_{s} = \sum_{\sigma = 1}^{M} \varepsilon_{\sigma} n_{\sigma},\ N_{s} = \sum_{\sigma = 1}^{M} n_{\sigma}$ & $E = \sum_{i = 1}^N \varepsilon_{i}$ \\
+        能量    & $E_{s} = \sum_{\sigma = 1}^{M} \varepsilon_{\sigma} n_{\sigma},\ N_{s} = \sum_{\sigma = 1}^{M} n_{\sigma}$ & $E = \sum_{i = 1}^N \varepsilon_{i}$                                       \\
         \hline
-        微观状态数 & 玻色子：$C_{N + M - 1}^{N} = \frac{(N + M - 1)!}{N! (M - 1)!}$，费米子：$C_{M}^{N} = \frac{M!}{N! (M - N)!}$ & $M^N$ \\
+        微观状态数 & 玻色子：$C_{N + M - 1}^{N} = \frac{(N + M - 1)!}{N! (M - 1)!}$，费米子：$C_{M}^{N} = \frac{M!}{N! (M - N)!}$        & $M^N$                                                                      \\
         \hline
     \end{tabular}
     \caption{全同粒子系统关注单粒子态，可分辨粒子系统关注粒子。}
@@ -102,7 +102,7 @@ g(\varepsilon) = \dv{n(\varepsilon)}{\varepsilon}
     \centering
     \begin{tabular}{|c|c|c|}
         \hline
-        & 全同粒子系统 & 可分辨粒子系统 \\
+              & 全同粒子系统                                                            & 可分辨粒子系统                                             \\
         \hline
         微观状态数 & 玻色子：$\prod_l C_{g_l + a_l - 1}^{a_l}$，费米子：$\prod_l C_{g_l}^{a_l}$ & $\frac{N!}{\prod_{l} a_l!} \prod_{l} g_{l}^{a_{l}}$ \\
         \hline
@@ -126,7 +126,7 @@ g(\varepsilon) = \dv{n(\varepsilon)}{\varepsilon}
 
 $\Omega$ 不具有广延性（悲），但 $\ln{\Omega}$ 具有。
 \[
-S = k \ln{\Omega},\ \dd{S} \equiv \frac{1}{T} \qty(\dd{E} + p \dd{V} - \mu \dd{N}) \Rightarrow \beta = \frac{1}{k T} = \frac{1}{k} \qty(\pdv{S}{E})_{V, N} \equiv \qty(\pdv{\ln{\Omega}}{E})_{V, N}
+    S = k \ln{\Omega},\ \dd{S} \equiv \frac{1}{T} \qty(\dd{E} + p \dd{V} - \mu \dd{N}) \Rightarrow \beta = \frac{1}{k T} = \frac{1}{k} \qty(\pdv{S}{E})_{V, N} \equiv \qty(\pdv{\ln{\Omega}}{E})_{V, N}
 \]
 至于化学势，可以解释成“等温等压下增加一个粒子所需的能量”（大概）。
 
@@ -138,13 +138,13 @@ S = k \ln{\Omega},\ \dd{S} \equiv \frac{1}{T} \qty(\dd{E} + p \dd{V} - \mu \dd{N
     \centering
     \begin{tabular}{|c|c|c|}
         \hline
-        约束条件 & 系综 & 特性函数 \\
+        约束条件          & 系综    & 特性函数           \\
         \hline
-        $(E, V, N)$ & 微正则系综 & $S(E, V, N)$ \\
+        $(E, V, N)$   & 微正则系综 & $S(E, V, N)$   \\
         \hline
-        $(T, V, N)$ & 正则系综 & $F(T, V, N)$ \\
+        $(T, V, N)$   & 正则系综  & $F(T, V, N)$   \\
         \hline
-        $(T, V, \mu)$ & 巨正则系综 & $J(T, V, \mu)$\\
+        $(T, V, \mu)$ & 巨正则系综 & $J(T, V, \mu)$ \\
         \hline
     \end{tabular}
 \end{table}
@@ -159,79 +159,79 @@ S = k \ln{\Omega},\ \dd{S} \equiv \frac{1}{T} \qty(\dd{E} + p \dd{V} - \mu \dd{N
 \subsection{配分函数}
 
 \[
-\text{系统}(E_s) + \text{恒温热源} (E_r = E_0 - E_s, \Omega_r(E_0 - E_s)) = \text{孤立系统} (E_0, \Omega_0)
+    \text{系统}(E_s) + \text{恒温热源} (E_r = E_0 - E_s, \Omega_r(E_0 - E_s)) = \text{孤立系统} (E_0, \Omega_0)
 \] \[
-\ln{\Omega_r (E_0 - E_s)} = \ln{\Omega_r (E_0)} - \pdv{\ln{\Omega_r}}{E} E_s = \ln{\Omega_r (E_0)} - \frac{E_s}{k T}
+    \ln{\Omega_r (E_0 - E_s)} = \ln{\Omega_r (E_0)} - \pdv{\ln{\Omega_r}}{E} E_s = \ln{\Omega_r (E_0)} - \frac{E_s}{k T}
 \] 系统处于某个态 $s$，即热源处于某个态 $r$ 的概率 \[
-\rho_s = \frac{\Omega_r (E_0 - E_s)}{\Omega_0} \propto \mathrm{e}^{- \beta E_s}
+    \rho_s = \frac{\Omega_r (E_0 - E_s)}{\Omega_0} \propto \mathrm{e}^{- \beta E_s}
 \]
 
 \begin{framed}
-证明：$S = - k \sum_s \rho_s \ln{\rho_s}$
-\[\begin{aligned}
-    S = S_0 - S_r = & k \ln{\Omega} - \sum_s \rho_s \times k \ln{\Omega} = k \ln{\Omega} - \sum_s \rho_s \times k \ln{\Omega_r} = k \ln{\Omega} - \sum_s \rho_s \times k \ln{\rho_s \Omega_0}\\
-    & = k \ln{\Omega} - k \ln{\Omega} \sum_s \rho_s - \sum_s \rho_s \times k \ln{\rho_s} = - k \sum_s \rho_s \ln{\rho_s}
-\end{aligned}\]
+    证明：$S = - k \sum_s \rho_s \ln{\rho_s}$
+    \[\begin{aligned}
+            S = S_0 - S_r = & k \ln{\Omega} - \sum_s \rho_s \times k \ln{\Omega} = k \ln{\Omega} - \sum_s \rho_s \times k \ln{\Omega_r} = k \ln{\Omega} - \sum_s \rho_s \times k \ln{\rho_s \Omega_0} \\
+                            & = k \ln{\Omega} - k \ln{\Omega} \sum_s \rho_s - \sum_s \rho_s \times k \ln{\rho_s} = - k \sum_s \rho_s \ln{\rho_s}
+        \end{aligned}\]
 \end{framed}
 
 将此概率归一化，则有归一化因子，即配分函数：\[
-Z = \sum_s \mathrm{e}^{- \beta E_s}
+    Z = \sum_s \mathrm{e}^{- \beta E_s}
 \] \begin{itemize}
     \item 全同粒子系统：\[
-    E_s = \sum_{\text{所有态} \sigma = 1}^M n_\sigma \varepsilon_\sigma,\ Z_{\text{IP}} = \sum_{\text{所有分布情况}} \mathrm{e}^{- \beta \sum_{\sigma = 1}^M n_\sigma \varepsilon_\sigma} \text{ with } N \equiv \sum_{\sigma = 1}^M n_\sigma
-    \] 经典极限下，$Z_{\text{IP}} = \frac{Z_{\text{MB}}}{N!} = \frac{Z_1^N}{N!}$
+              E_s = \sum_{\text{所有态} \sigma = 1}^M n_\sigma \varepsilon_\sigma,\ Z_{\text{IP}} = \sum_{\text{所有分布情况}} \mathrm{e}^{- \beta \sum_{\sigma = 1}^M n_\sigma \varepsilon_\sigma} \text{ with } N \equiv \sum_{\sigma = 1}^M n_\sigma
+          \] 经典极限下，$Z_{\text{IP}} = \frac{Z_{\text{MB}}}{N!} = \frac{Z_1^N}{N!}$
     \item 可分辨粒子系统：\[
-    E_s = \sum_{i = 1}^N \varepsilon_i, Z_{\text{MB}} = \sum_{\text{所有情况}} \mathrm{e}^{- \beta \sum_{i = 1}^N \varepsilon_i} = \sum_{\text{所有情况}} \prod_{i = 1}^N \mathrm{e}^{- \beta \varepsilon_i} = \prod_{i = 1}^N \sum_{\sigma = 1}^M \mathrm{e}^{- \beta \varepsilon_\sigma} = \qty[\sum_{\sigma = 1}^M \mathrm{e}^{- \beta \varepsilon_\sigma}]^N \equiv Z_1^N
-    \]
+              E_s = \sum_{i = 1}^N \varepsilon_i, Z_{\text{MB}} = \sum_{\text{所有情况}} \mathrm{e}^{- \beta \sum_{i = 1}^N \varepsilon_i} = \sum_{\text{所有情况}} \prod_{i = 1}^N \mathrm{e}^{- \beta \varepsilon_i} = \prod_{i = 1}^N \sum_{\sigma = 1}^M \mathrm{e}^{- \beta \varepsilon_\sigma} = \qty[\sum_{\sigma = 1}^M \mathrm{e}^{- \beta \varepsilon_\sigma}]^N \equiv Z_1^N
+          \]
 \end{itemize}
 单粒子配分函数：
 \[
-Z_1 = \sum_{\text{态} \sigma} \mathrm{e}^{- \beta \varepsilon_\sigma} = \sum_{\text{能级} l} g_l \mathrm{e}^{- \beta \varepsilon_l} = \int D(\varepsilon) \mathrm{e}^{- \beta \varepsilon} \dd{\varepsilon}
+    Z_1 = \sum_{\text{态} \sigma} \mathrm{e}^{- \beta \varepsilon_\sigma} = \sum_{\text{能级} l} g_l \mathrm{e}^{- \beta \varepsilon_l} = \int D(\varepsilon) \mathrm{e}^{- \beta \varepsilon} \dd{\varepsilon}
 \]
 
 \begin{framed}
-求一些系统的单粒子配分函数
+    求一些系统的单粒子配分函数
 
-\begin{itemize}
-    \item 一维谐振子 \[
-    Z_1 = \sum_{n = 1}^{\infty} \mathrm{e}^{- \beta \qty(n + \frac{1}{2}) \hbar \omega} = \frac{\mathrm{e}^{- \beta \hbar \omega / 2}}{1 - \mathrm{e}^{- \beta \hbar \omega}}
-    \]
-    \item 双能级系统，能级 $(0, \Delta)$，简并度 $(g_1, g_2)$ \[
-    Z_1 = \sum_{l = 1}^2 g_l \mathrm{e}^{- \beta \varepsilon_l} = g_1 + g_2 \mathrm{e}^{- \beta \Delta}
-    \]
-    \item 三维经典自由粒子 \[
-    D(\varepsilon) = \frac{2 \pi V}{h^3} (2 m)^{3/2} \varepsilon^{1/2} \Rightarrow Z_1 = \frac{2 \pi V (2 m)^{3/2}}{h^3} \int_0^{\infty} \varepsilon^{1/2} \mathrm{e}^{- \beta \varepsilon} \dd{\varepsilon} = \frac{V}{\lambda^3},\ \lambda \equiv \frac{h}{\sqrt{2 \pi m k T}}
-    \] or \[
-    Z_1 = \sum_{\vec{k}} \mathrm{e}^{- \frac{\beta \hbar^2 k^2}{2 m}} = \int \frac{\dd{\vec{k}}}{(2 \pi)^3 / V} \mathrm{e}^{- \frac{\beta \hbar^2 k^2}{2 m}} = \frac{V}{(2 \pi)^3} \qty[\int_{- \infty}^{\infty} \dd{k_x} \mathrm{e}^{- \frac{\beta \hbar^2}{2 m} k_x^2}]^3 = \dots
-    \]
-    \item 二维经典自由粒子 \[
-    Z_1 = \frac{A}{\lambda^2}
-    \]
-    \item 一维经典自由粒子 \[
-    Z_1 = \frac{L}{\lambda}
-    \]
-    \item 三维极端相对论性自由粒子 \[
-    Z_1 = \frac{8 \pi V}{h^3 c^3 \beta^3}
-    \]
-    \item 二维极端相对论性自由粒子 \[
-    Z_1 = \frac{2 \pi S}{h^2 c^2 \beta^2}
-    \]
-    \item 一维极端相对论性自由粒子 \[
-    Z_1 = \frac{2 L}{h c \beta}
-    \]
-\end{itemize}
+    \begin{itemize}
+        \item 一维谐振子 \[
+                  Z_1 = \sum_{n = 1}^{\infty} \mathrm{e}^{- \beta \qty(n + \frac{1}{2}) \hbar \omega} = \frac{\mathrm{e}^{- \beta \hbar \omega / 2}}{1 - \mathrm{e}^{- \beta \hbar \omega}}
+              \]
+        \item 双能级系统，能级 $(0, \Delta)$，简并度 $(g_1, g_2)$ \[
+                  Z_1 = \sum_{l = 1}^2 g_l \mathrm{e}^{- \beta \varepsilon_l} = g_1 + g_2 \mathrm{e}^{- \beta \Delta}
+              \]
+        \item 三维经典自由粒子 \[
+                  D(\varepsilon) = \frac{2 \pi V}{h^3} (2 m)^{3/2} \varepsilon^{1/2} \Rightarrow Z_1 = \frac{2 \pi V (2 m)^{3/2}}{h^3} \int_0^{\infty} \varepsilon^{1/2} \mathrm{e}^{- \beta \varepsilon} \dd{\varepsilon} = \frac{V}{\lambda^3},\ \lambda \equiv \frac{h}{\sqrt{2 \pi m k T}}
+              \] or \[
+                  Z_1 = \sum_{\vec{k}} \mathrm{e}^{- \frac{\beta \hbar^2 k^2}{2 m}} = \int \frac{\dd{\vec{k}}}{(2 \pi)^3 / V} \mathrm{e}^{- \frac{\beta \hbar^2 k^2}{2 m}} = \frac{V}{(2 \pi)^3} \qty[\int_{- \infty}^{\infty} \dd{k_x} \mathrm{e}^{- \frac{\beta \hbar^2}{2 m} k_x^2}]^3 = \dots
+              \]
+        \item 二维经典自由粒子 \[
+                  Z_1 = \frac{A}{\lambda^2}
+              \]
+        \item 一维经典自由粒子 \[
+                  Z_1 = \frac{L}{\lambda}
+              \]
+        \item 三维极端相对论性自由粒子 \[
+                  Z_1 = \frac{8 \pi V}{h^3 c^3 \beta^3}
+              \]
+        \item 二维极端相对论性自由粒子 \[
+                  Z_1 = \frac{2 \pi S}{h^2 c^2 \beta^2}
+              \]
+        \item 一维极端相对论性自由粒子 \[
+                  Z_1 = \frac{2 L}{h c \beta}
+              \]
+    \end{itemize}
 \end{framed}
 
 \subsection{热力学函数}
 
 \[
-U = \sum_s \rho_s E_s = - \pdv{\beta} \ln{Z}
+    U = \sum_s \rho_s E_s = - \pdv{\beta} \ln{Z}
 \] \[
-p = \sum_s \rho_s \qty(- \pdv{E_s}{V}) = \frac{1}{\beta} \pdv{V} \ln{Z}
+    p = \sum_s \rho_s \qty(- \pdv{E_s}{V}) = \frac{1}{\beta} \pdv{V} \ln{Z}
 \] \[
-\dd{S} = \frac{1}{T} (\dd{U} + p \dd{V}) \Rightarrow S = k \qty(\ln{Z} - \beta \pdv{\beta} \ln{Z})
+    \dd{S} = \frac{1}{T} (\dd{U} + p \dd{V}) \Rightarrow S = k \qty(\ln{Z} - \beta \pdv{\beta} \ln{Z})
 \] \[
-F = - k T \ln{Z}
+    F = - k T \ln{Z}
 \]
 
 \subsection{二能级系统}
@@ -241,35 +241,35 @@ F = - k T \ln{Z}
 \subsection{理想气体}
 
 \[
-Z_1 = \frac{V}{\lambda^3},\ \lambda = \frac{h}{\sqrt{2 \pi m k T}}
+    Z_1 = \frac{V}{\lambda^3},\ \lambda = \frac{h}{\sqrt{2 \pi m k T}}
 \]
 
 全同粒子的经典极限（注意到此时有 Gibbs 修正因子） \[
-Z_N = \frac{Z_1^N}{N!} = \frac{V^N}{\lambda^{3 N} N!}
+    Z_N = \frac{Z_1^N}{N!} = \frac{V^N}{\lambda^{3 N} N!}
 \] \[
-F = - k T \ln{Z_N} \xlongequal{N \gg 1, \ln{N!} = N (\ln{N} - 1)} - N k T \ln{\frac{V}{N \lambda^3}} - N k T
+    F = - k T \ln{Z_N} \xlongequal{N \gg 1, \ln{N!} = N (\ln{N} - 1)} - N k T \ln{\frac{V}{N \lambda^3}} - N k T
 \] \[
-U = - \pdv{\beta} \ln{Z} = \frac{3}{2} N k T,\ p = - \pdv{F}{V} = \frac{N k T}{V},\ S = - \pdv{F}{T} = N k \qty[\frac{5}{2} + \ln{\frac{V}{N \lambda^3}}]
+    U = - \pdv{\beta} \ln{Z} = \frac{3}{2} N k T,\ p = - \pdv{F}{V} = \frac{N k T}{V},\ S = - \pdv{F}{T} = N k \qty[\frac{5}{2} + \ln{\frac{V}{N \lambda^3}}]
 \] \[
-C_V = \frac{3}{2} N k
+    C_V = \frac{3}{2} N k
 \]
 
 可分辨粒子 \[
-Z_N = Z_1^N,\ S_{\text{MB}} = N k \qty[\frac{3}{2} + \ln{\frac{V}{\lambda^3}}]
+    Z_N = Z_1^N,\ S_{\text{MB}} = N k \qty[\frac{3}{2} + \ln{\frac{V}{\lambda^3}}]
 \] 不满足广延性，即 Gibbs 佯谬。
 
 \begin{framed}
     以上相当于三维经典自由粒子组成的理想气体。
     \begin{itemize}
         \item 二维经典自由粒子 \[
-        \ln{Z_N} = N \ln \qty[\frac{2 \pi m S}{N h^2 \beta}] + N,\ p S = N k T,\ E = N k T
-        \]
+                  \ln{Z_N} = N \ln \qty[\frac{2 \pi m S}{N h^2 \beta}] + N,\ p S = N k T,\ E = N k T
+              \]
         \item 一维经典自由粒子 \[
-        \ln{Z_N} = N \ln \qty[\frac{\sqrt{2 \pi m} L}{N h} \beta^{- 1 / 2}] + N,\ p L = N k T,\ E = \frac{1}{2} N k T
-        \]
+                  \ln{Z_N} = N \ln \qty[\frac{\sqrt{2 \pi m} L}{N h} \beta^{- 1 / 2}] + N,\ p L = N k T,\ E = \frac{1}{2} N k T
+              \]
         \item 三维极端相对论性自由粒子 \[
-        \ln{Z_N} = N \ln \qty[\frac{8 \pi V}{N h^3 c^3 \beta^3}] + N,\ p V = N k T,\ E = 3 N k T
-        \]
+                  \ln{Z_N} = N \ln \qty[\frac{8 \pi V}{N h^3 c^3 \beta^3}] + N,\ p V = N k T,\ E = 3 N k T
+              \]
     \end{itemize}
 \end{framed}
 
@@ -278,65 +278,65 @@ Z_N = Z_1^N,\ S_{\text{MB}} = N k \qty[\frac{3}{2} + \ln{\frac{V}{\lambda^3}}]
 \subsubsection{顺磁性固体}
 
 电子的角动量和磁矩：\[
-\vec{\mu} = - g \frac{e}{2 m} \vec{J},\ g = \begin{cases}
-    1,\ \text{orbit}\\
-    2,\ \text{spin}
-\end{cases}\] \[
-H = - \vec{\mu} \cdot \vec{B} = \pm \mu_B B
+    \vec{\mu} = - g \frac{e}{2 m} \vec{J},\ g = \begin{cases}
+        1,\ \text{orbit} \\
+        2,\ \text{spin}
+    \end{cases}\] \[
+    H = - \vec{\mu} \cdot \vec{B} = \pm \mu_B B
 \] \[
-Z_1 = \mathrm{e}^{+ \beta \mu_{B} B} + \mathrm{e}^{- \beta \mu_{B} B} = 2 \cosh \qty(\beta \mu_B B) \Rightarrow Z_N = Z_1^N = 2^N \cosh^N \qty(\beta \mu_B B)
+    Z_1 = \mathrm{e}^{+ \beta \mu_{B} B} + \mathrm{e}^{- \beta \mu_{B} B} = 2 \cosh \qty(\beta \mu_B B) \Rightarrow Z_N = Z_1^N = 2^N \cosh^N \qty(\beta \mu_B B)
 \] \begin{align*}
-    F = & - k T \ln{Z_N} = - N k T \ln \qty[\cosh \qty(\beta \mu_B B)] - N k T \ln{2}\\
-    U = & - \pdv{\beta} \ln{Z_N} = - N \mu_B B \tanh \qty(\beta \mu_B B) \Rightarrow M = \frac{U}{- B} = \dots\\
-    \chi \equiv & \pdv{M}{H} = \mu_0 \pdv{M}{B} = \frac{N \beta \mu \mu_B^2}{\cosh^2 \qty(\beta \mu_B B)} \xrightarrow[\text{Curie law}]{\beta \mu_B B \to 0} \frac{N \mu_0 \mu_B^2}{k T}\\
-    S = & - \qty(\pdv{F}{T})_{B, N} = N k \ln \qty[2 \cosh \qty(\frac{\mu_B B}{k T})] - \frac{N \mu_B B}{T} \tanh \qty(\frac{\mu_B B}{k T})
+    F =         & - k T \ln{Z_N} = - N k T \ln \qty[\cosh \qty(\beta \mu_B B)] - N k T \ln{2}                                                                                             \\
+    U =         & - \pdv{\beta} \ln{Z_N} = - N \mu_B B \tanh \qty(\beta \mu_B B) \Rightarrow M = \frac{U}{- B} = \dots                                                                    \\
+    \chi \equiv & \pdv{M}{H} = \mu_0 \pdv{M}{B} = \frac{N \beta \mu \mu_B^2}{\cosh^2 \qty(\beta \mu_B B)} \xrightarrow[\text{Curie law}]{\beta \mu_B B \to 0} \frac{N \mu_0 \mu_B^2}{k T} \\
+    S =         & - \qty(\pdv{F}{T})_{B, N} = N k \ln \qty[2 \cosh \qty(\frac{\mu_B B}{k T})] - \frac{N \mu_B B}{T} \tanh \qty(\frac{\mu_B B}{k T})
 \end{align*}
 
 \begin{framed}
-自旋量子数为 $s = 1$ 的顺磁性固体 \[
-H = - 2 \mu_B B,\ 0,\ 2 \mu_B B
-\] \[
-Z_1 = \mathrm{e}^{+ 2 \beta \mu_B B} + 1 + \mathrm{e}^{- 2 \beta \mu_B B} = 1 + 2 \cosh \qty(2 \beta \mu_B B),\ Z_N = Z_1^N
-\] \begin{align*}
-F = & - N k T \ln \qty[1 + 2 \cosh \qty(2 \beta \mu_B B)]\\
-U = & - 4 N \mu_B B \frac{\sinh (2 \beta \mu_B B )}{2 \cosh (2 \beta \mu_B B)+1}\\
-S = & - \pdv{F}{T} = k N \ln \left[2 \cosh \left(\frac{2 \mu_B B}{k T}\right)+1\right] - \frac{4 N \mu_B B}{T} \frac{\sinh \left(\frac{2 \mu_B B}{k T}\right)}{2 \cosh \left(\frac{2 \mu_B B}{k T}\right)+1}
-\end{align*}
+    自旋量子数为 $s = 1$ 的顺磁性固体 \[
+        H = - 2 \mu_B B,\ 0,\ 2 \mu_B B
+    \] \[
+        Z_1 = \mathrm{e}^{+ 2 \beta \mu_B B} + 1 + \mathrm{e}^{- 2 \beta \mu_B B} = 1 + 2 \cosh \qty(2 \beta \mu_B B),\ Z_N = Z_1^N
+    \] \begin{align*}
+        F = & - N k T \ln \qty[1 + 2 \cosh \qty(2 \beta \mu_B B)]                                                                                                                                                    \\
+        U = & - 4 N \mu_B B \frac{\sinh (2 \beta \mu_B B )}{2 \cosh (2 \beta \mu_B B)+1}                                                                                                                             \\
+        S = & - \pdv{F}{T} = k N \ln \left[2 \cosh \left(\frac{2 \mu_B B}{k T}\right)+1\right] - \frac{4 N \mu_B B}{T} \frac{\sinh \left(\frac{2 \mu_B B}{k T}\right)}{2 \cosh \left(\frac{2 \mu_B B}{k T}\right)+1}
+    \end{align*}
 \end{framed}
 
 \subsubsection{固体振动：Einstein 模型}
 
 一维谐振子：\[
-\varepsilon_n = \qty(n + \frac{1}{2}) \hbar \omega
+    \varepsilon_n = \qty(n + \frac{1}{2}) \hbar \omega
 \] \[
-E = \sum_{i = 1}^{3 N} \qty(n_i + \frac{1}{2}) \hbar \omega
+    E = \sum_{i = 1}^{3 N} \qty(n_i + \frac{1}{2}) \hbar \omega
 \] \[
-Z_1 = \frac{\mathrm{e}^{- \beta \hbar \omega / 2}}{1 - \mathrm{e}^{- \beta \hbar \omega}} \Rightarrow Z_N = Z_1^{3 N} = \qty[\frac{\mathrm{e}^{- \beta \hbar \omega / 2}}{1 - \mathrm{e}^{- \beta \hbar \omega}}]^{3 N}
+    Z_1 = \frac{\mathrm{e}^{- \beta \hbar \omega / 2}}{1 - \mathrm{e}^{- \beta \hbar \omega}} \Rightarrow Z_N = Z_1^{3 N} = \qty[\frac{\mathrm{e}^{- \beta \hbar \omega / 2}}{1 - \mathrm{e}^{- \beta \hbar \omega}}]^{3 N}
 \] \begin{align*}
-U = & - \pdv{\beta} \ln{Z} = \frac{3}{2} N \hbar \omega + \frac{3 N \hbar \omega}{\mathrm{e}^{\beta \hbar \omega} - 1} = \begin{cases}
-\frac{3}{2} N \hbar \omega, & T \to 0\\
-\frac{3}{2} N \hbar \omega + 3 N k T = 3 N k T, & T \to \infty
-\end{cases}\\
-C_V = & \qty(\pdv{U}{T})_V = 3 N k \qty(\frac{\Theta_T}{T})^2 \frac{\mathrm{e}^{\Theta_T / T}}{\qty(\mathrm{e}^{\Theta_T / T} - 1)^2} = \begin{cases}
-3 N k \qty(\frac{\Theta_T}{T})^2 \mathrm{e}^{- \frac{\Theta_T}{T}}, & T \to 0\\
-3 N k, & T \to \infty
-\end{cases} ,\ \Theta_T \equiv \frac{\hbar \omega}{k}
+    U =   & - \pdv{\beta} \ln{Z} = \frac{3}{2} N \hbar \omega + \frac{3 N \hbar \omega}{\mathrm{e}^{\beta \hbar \omega} - 1} = \begin{cases}
+                                                                                                                                   \frac{3}{2} N \hbar \omega,                     & T \to 0      \\
+                                                                                                                                   \frac{3}{2} N \hbar \omega + 3 N k T = 3 N k T, & T \to \infty
+                                                                                                                               \end{cases}                                  \\
+    C_V = & \qty(\pdv{U}{T})_V = 3 N k \qty(\frac{\Theta_T}{T})^2 \frac{\mathrm{e}^{\Theta_T / T}}{\qty(\mathrm{e}^{\Theta_T / T} - 1)^2} = \begin{cases}
+                                                                                                                                                3 N k \qty(\frac{\Theta_T}{T})^2 \mathrm{e}^{- \frac{\Theta_T}{T}}, & T \to 0      \\
+                                                                                                                                                3 N k,                                                              & T \to \infty
+                                                                                                                                            \end{cases} ,\ \Theta_T \equiv \frac{\hbar \omega}{k}
 \end{align*}
 
 \subsubsection{固体振动：Debye 模型}
 
 固体内的波可以视作声子的运动，声子是一个奇怪的东西，它的自旋可以理解为 1，并且不同自旋态的速度不同。在频率空间中，可以仿照三维极端相对论性气体来计算得到态密度 \[
-D(\varepsilon) = \pdv{\Sigma}{\varepsilon} = \frac{4 \pi V}{h^3 c^3} \varepsilon^2 \Rightarrow D(\omega) = \pdv{\Sigma}{\omega} = \frac{V}{2 \pi^2 c^3} \omega^2
+    D(\varepsilon) = \pdv{\Sigma}{\varepsilon} = \frac{4 \pi V}{h^3 c^3} \varepsilon^2 \Rightarrow D(\omega) = \pdv{\Sigma}{\omega} = \frac{V}{2 \pi^2 c^3} \omega^2
 \] 似乎应该有 $g(\omega) = (2 s + 1) D(\omega)$，但是由于不同自旋的速度不同，所以实际上是 \[
-g(\omega) = V \qty(\frac{\omega^2}{2 \pi^2 c_{\text{l}}^3} + \frac{\omega^2}{\pi^2 c_{\text{t}}^3})
+    g(\omega) = V \qty(\frac{\omega^2}{2 \pi^2 c_{\text{l}}^3} + \frac{\omega^2}{\pi^2 c_{\text{t}}^3})
 \]
 粒子数（注意我们在计算态密度时区分了声子的不同自旋态，所以这里总粒子数事 $3 N$ 而不是 $N$） \[
-3 N = \int_0^{\omega_{\text{D}}} g(\omega) \dd{\omega} \Rightarrow \omega_{\text{D}}^3 = 18 \pi^2 \frac{N}{V} \qty(\frac{1}{c_{\text{l}}^3} + \frac{2}{c_{\text{t}}^3})^{- 1}\] \[g(\omega) = 9 N \frac{\omega^2}{\omega_{\text{D}}^3},\ \omega < \omega_{\text{D}}
+    3 N = \int_0^{\omega_{\text{D}}} g(\omega) \dd{\omega} \Rightarrow \omega_{\text{D}}^3 = 18 \pi^2 \frac{N}{V} \qty(\frac{1}{c_{\text{l}}^3} + \frac{2}{c_{\text{t}}^3})^{- 1}\] \[g(\omega) = 9 N \frac{\omega^2}{\omega_{\text{D}}^3},\ \omega < \omega_{\text{D}}
 \] \begin{align*}
-E = & \int_0^{\omega_{\text{D}}} \expval{\varepsilon} (\omega) g(\omega) \dd{\omega}\\
-C_V = & \pdv{E}{T} = 3 N k \times \frac{3}{x_0^3} \int_0^{x_0} \frac{x^4 \mathrm{e}^{x}}{\qty(\mathrm{e}^{x} - 1)^2} \dd{x},\ x_0 = \frac{\hbar \omega_{\text{D}}}{k T}\\
-C_V \xlongequal{x_0 \to 0} & 3 N k \times \qty(1 - \frac{x_0^2}{20})\\
-C_V \xlongequal{x_0 \to \infty} & 3 N k \times \frac{4 \pi^4}{5 x_0^3} \propto T^3
+    E =                             & \int_0^{\omega_{\text{D}}} \expval{\varepsilon} (\omega) g(\omega) \dd{\omega}                                                                                  \\
+    C_V =                           & \pdv{E}{T} = 3 N k \times \frac{3}{x_0^3} \int_0^{x_0} \frac{x^4 \mathrm{e}^{x}}{\qty(\mathrm{e}^{x} - 1)^2} \dd{x},\ x_0 = \frac{\hbar \omega_{\text{D}}}{k T} \\
+    C_V \xlongequal{x_0 \to 0}      & 3 N k \times \qty(1 - \frac{x_0^2}{20})                                                                                                                         \\
+    C_V \xlongequal{x_0 \to \infty} & 3 N k \times \frac{4 \pi^4}{5 x_0^3} \propto T^3
 \end{align*}
 
 \section{巨正则系综}
@@ -347,94 +347,94 @@ C_V \xlongequal{x_0 \to \infty} & 3 N k \times \frac{4 \pi^4}{5 x_0^3} \propto T
 
 \subsubsection{巨配分函数}
 \[
-\text{系统}(E_s, N_s) + \text{恒温热源、恒化学势粒子源}(E_r = E_0 - E_s, N_r = N_0 - N_s, \Omega(E_r, N_r)) = \text{孤立系统}(E_0, N_0, \Omega_0)
+    \text{系统}(E_s, N_s) + \text{恒温热源、恒化学势粒子源}(E_r = E_0 - E_s, N_r = N_0 - N_s, \Omega(E_r, N_r)) = \text{孤立系统}(E_0, N_0, \Omega_0)
 \] \[
-\ln{\Omega_r(E_0 - E_s, N_0 - N_s)} = \ln{\Omega_r(E_0, N_0)} - \pdv{\ln{\Omega_r}}{E} E_s - \pdv{\ln{\Omega_r}}{N} N_s = \ln{\Omega_r(E_0, N_0)} - \frac{E_s}{k T} + \frac{\mu N}{k T}
+    \ln{\Omega_r(E_0 - E_s, N_0 - N_s)} = \ln{\Omega_r(E_0, N_0)} - \pdv{\ln{\Omega_r}}{E} E_s - \pdv{\ln{\Omega_r}}{N} N_s = \ln{\Omega_r(E_0, N_0)} - \frac{E_s}{k T} + \frac{\mu N}{k T}
 \] 系统处于某个态 $s$，即热源处于某个态 $r$ 的概率 \[
-\rho_s = \frac{\Omega_r(E_0 - E_s, N_0 - N_s)}{\Omega_0} \propto \mathrm{e}^{- \beta (E_s - \mu N_s)}
+    \rho_s = \frac{\Omega_r(E_0 - E_s, N_0 - N_s)}{\Omega_0} \propto \mathrm{e}^{- \beta (E_s - \mu N_s)}
 \] 将此概率归一化，则有归一化因子，即巨配分函数： \[
-Z_{\text{GC}} = \sum_s \mathrm{e}^{- \beta (E_s - \mu N_s)} = \sum_{\text{所有占据的情况} \sigma} \mathrm{e}^{- \sum_{\sigma} \beta (\varepsilon_\sigma - \mu) n_{\sigma}} = \prod_{\sigma} \sum_{n_{\sigma}} \mathrm{e}^{- \beta (\varepsilon_{\sigma} - \mu) n_{\sigma}} \equiv \prod_{\sigma} Z_{\sigma}
+    Z_{\text{GC}} = \sum_s \mathrm{e}^{- \beta (E_s - \mu N_s)} = \sum_{\text{所有占据的情况} \sigma} \mathrm{e}^{- \sum_{\sigma} \beta (\varepsilon_\sigma - \mu) n_{\sigma}} = \prod_{\sigma} \sum_{n_{\sigma}} \mathrm{e}^{- \beta (\varepsilon_{\sigma} - \mu) n_{\sigma}} \equiv \prod_{\sigma} Z_{\sigma}
 \] 单粒子态配分函数 \begin{align*}
-& Z_{\sigma} = \qty[1 - g_{\pm} \mathrm{e}^{- \beta (\varepsilon_{\sigma} - \mu)}]^{- g_{\pm}},\ \begin{cases}
-    g_+ \equiv + 1,\ \text{玻色子}\\
-    g_- \equiv - 1,\ \text{费米子}
-\end{cases}\\
-\Rightarrow & \ln{Z_{\text{GC}}} = - g_{\pm} \sum_{\sigma} \ln \qty[1 - g_{\pm} \mathrm{e}^{- \beta (\varepsilon_{\sigma} - \mu)}] = - g_{\pm} \sum_{\sigma} \ln \qty[1 - g_{\pm} \mathrm{e}^{\alpha - \beta \varepsilon_{\sigma}}],\ \alpha \equiv \beta \mu
-\end{align*} 
+                & Z_{\sigma} = \qty[1 - g_{\pm} \mathrm{e}^{- \beta (\varepsilon_{\sigma} - \mu)}]^{- g_{\pm}},\ \begin{cases}
+                                                                                                                     g_+ \equiv + 1,\ \text{玻色子} \\
+                                                                                                                     g_- \equiv - 1,\ \text{费米子}
+                                                                                                                 \end{cases}                                                                                                                      \\
+    \Rightarrow & \ln{Z_{\text{GC}}} = - g_{\pm} \sum_{\sigma} \ln \qty[1 - g_{\pm} \mathrm{e}^{- \beta (\varepsilon_{\sigma} - \mu)}] = - g_{\pm} \sum_{\sigma} \ln \qty[1 - g_{\pm} \mathrm{e}^{\alpha - \beta \varepsilon_{\sigma}}],\ \alpha \equiv \beta \mu
+\end{align*}
 通常我们不用真的做出这个求和。另外，巨正则系综和正则系综的关系、巨配分函数和配分函数的关系 \[
-Z_{\text{GC}} = \sum_{\text{所有态} s} \mathrm{e}^{- \beta (E_s - \mu N_s)} = \sum_{N = 0}^{\infty} \sum_{s_N} \mathrm{e}^{- \beta (E_{s_N} - \mu N)} = \sum_{N = 0}^{\infty} \mathrm{e}^{\beta \mu N} \qty(\sum_{s_N} \mathrm{e}^{- \beta E_{s_N}}) = \sum_{N = 0}^{\infty} z^N Z_N
+    Z_{\text{GC}} = \sum_{\text{所有态} s} \mathrm{e}^{- \beta (E_s - \mu N_s)} = \sum_{N = 0}^{\infty} \sum_{s_N} \mathrm{e}^{- \beta (E_{s_N} - \mu N)} = \sum_{N = 0}^{\infty} \mathrm{e}^{\beta \mu N} \qty(\sum_{s_N} \mathrm{e}^{- \beta E_{s_N}}) = \sum_{N = 0}^{\infty} z^N Z_N
 \]
 
 \subsubsection{热力学函数}
 
 从现在开始明确，在巨正则系综里我们不使用变量 $(\beta, V, \mu)$，而使用 $(\alpha, \beta, V)$。
 \[
-Z_{\text{GC}}(\alpha, \beta, V) = \sum_{s} \mathrm{e}^{\alpha N_s - \beta E_s},\ \alpha \equiv \beta \mu
+    Z_{\text{GC}}(\alpha, \beta, V) = \sum_{s} \mathrm{e}^{\alpha N_s - \beta E_s},\ \alpha \equiv \beta \mu
 \] \[
-J = - k T \ln{Z_{\text{GC}}} = - \frac{g_{\pm}}{\beta} \sum_{\sigma} \ln \qty[1 - g_{\pm} \mathrm{e}^{\alpha - \beta \varepsilon_{\sigma}}]
+    J = - k T \ln{Z_{\text{GC}}} = - \frac{g_{\pm}}{\beta} \sum_{\sigma} \ln \qty[1 - g_{\pm} \mathrm{e}^{\alpha - \beta \varepsilon_{\sigma}}]
 \] \[
-S = - \qty(\pdv{J}{T})_{V, \mu},\ p = - \qty(\pdv{J}{V})_{\mu, T},\ N = - \qty(\pdv{J}{\mu})_{T, V},\ U = J + T S + \mu N
+    S = - \qty(\pdv{J}{T})_{V, \mu},\ p = - \qty(\pdv{J}{V})_{\mu, T},\ N = - \qty(\pdv{J}{\mu})_{T, V},\ U = J + T S + \mu N
 \] \begin{align*}
-N \equiv & \sum_{s} \rho_s N_s = \pdv{\alpha} \ln{Z_{\text{GC}}(\alpha, \beta, V)}\\
-U \equiv & \sum_{s} \rho_s E_s = - \pdv{\beta} \ln{Z_{\text{GC}}(\alpha, \beta, V)}\\
-p \equiv & \sum_{s} \rho_s \qty(- \pdv{E_s}{V})_{S, N}= \frac{1}{\beta} \pdv{V} \ln{Z_{\text{GC}} (\alpha, \beta, V)}\\
-\text{单粒子态的平均占据数} \bar{n} \equiv & \sum_{s} \rho_s n_s = - \frac{1}{\beta} \pdv{\varepsilon_s} \ln{Z_{\text{GC}}}
+    N \equiv                         & \sum_{s} \rho_s N_s = \pdv{\alpha} \ln{Z_{\text{GC}}(\alpha, \beta, V)}                                    \\
+    U \equiv                         & \sum_{s} \rho_s E_s = - \pdv{\beta} \ln{Z_{\text{GC}}(\alpha, \beta, V)}                                   \\
+    p \equiv                         & \sum_{s} \rho_s \qty(- \pdv{E_s}{V})_{S, N}= \frac{1}{\beta} \pdv{V} \ln{Z_{\text{GC}} (\alpha, \beta, V)} \\
+    \text{单粒子态的平均占据数} \bar{n} \equiv & \sum_{s} \rho_s n_s = - \frac{1}{\beta} \pdv{\varepsilon_s} \ln{Z_{\text{GC}}}
 \end{align*}
 
 
 \begin{framed}
-$Z_{\text{GC}} = Z_{\text{GC}} (\alpha, \beta, V)$，求熵 $S = k \qty[\ln{Z_{\text{GC}}} - \alpha \pdv{\alpha} \ln{Z_{\text{GC}}} - \beta \pdv{\beta} \ln{Z_{\text{GC}}}]$ \begin{align*}
-    \dd{S} = & \frac{1}{T} \dd{U} + \frac{p}{T} \dd{V} - \frac{\mu}{T} \dd{N}\\
-    = & - \frac{1}{T} \dd{\qty[\pdv{\beta} \ln{Z_{\text{GC}}}]} + \frac{1}{T} \qty[ \frac{1}{\beta} \pdv{V} \ln{Z_{\text{GC}}}] \dd{V} - \frac{\mu}{T} \dd{\qty[\pdv{\alpha} \ln{Z_{\text{GC}}}]}\\
-    \frac{\dd{S}}{k} = & - \beta \dd{\qty[\pdv{\beta} \ln{Z_{\text{GC}}}]} + \pdv{V} \ln{Z_{\text{GC}}} \dd{V} - \alpha \dd{\qty[\pdv{\alpha} \ln{Z_{\text{GC}}}]}\\
-    = & \pdv{V} \ln{Z_{\text{GC}}} \dd{V} + \pdv{\alpha} \ln{Z_{\text{GC}}} \dd{\alpha} + \pdv{\beta} \ln{Z_{\text{GC}}} \dd{\beta} - \dd{\qty[\beta \pdv{\beta} \ln{Z_{\text{GC}}}]}- \dd{\qty[\alpha \pdv{\alpha} \ln{Z_{\text{GC}}}]}\\
-    = & \dd{\qty[\ln{Z_{\text{GC}}} - \alpha \pdv{\alpha} \ln{Z_{\text{GC}}} - \beta \pdv{\beta} \ln{Z_{\text{GC}}}]}
-\end{align*}
+    $Z_{\text{GC}} = Z_{\text{GC}} (\alpha, \beta, V)$，求熵 $S = k \qty[\ln{Z_{\text{GC}}} - \alpha \pdv{\alpha} \ln{Z_{\text{GC}}} - \beta \pdv{\beta} \ln{Z_{\text{GC}}}]$ \begin{align*}
+        \dd{S} =           & \frac{1}{T} \dd{U} + \frac{p}{T} \dd{V} - \frac{\mu}{T} \dd{N}                                                                                                                                                                   \\
+        =                  & - \frac{1}{T} \dd{\qty[\pdv{\beta} \ln{Z_{\text{GC}}}]} + \frac{1}{T} \qty[ \frac{1}{\beta} \pdv{V} \ln{Z_{\text{GC}}}] \dd{V} - \frac{\mu}{T} \dd{\qty[\pdv{\alpha} \ln{Z_{\text{GC}}}]}                                        \\
+        \frac{\dd{S}}{k} = & - \beta \dd{\qty[\pdv{\beta} \ln{Z_{\text{GC}}}]} + \pdv{V} \ln{Z_{\text{GC}}} \dd{V} - \alpha \dd{\qty[\pdv{\alpha} \ln{Z_{\text{GC}}}]}                                                                                        \\
+        =                  & \pdv{V} \ln{Z_{\text{GC}}} \dd{V} + \pdv{\alpha} \ln{Z_{\text{GC}}} \dd{\alpha} + \pdv{\beta} \ln{Z_{\text{GC}}} \dd{\beta} - \dd{\qty[\beta \pdv{\beta} \ln{Z_{\text{GC}}}]}- \dd{\qty[\alpha \pdv{\alpha} \ln{Z_{\text{GC}}}]} \\
+        =                  & \dd{\qty[\ln{Z_{\text{GC}}} - \alpha \pdv{\alpha} \ln{Z_{\text{GC}}} - \beta \pdv{\beta} \ln{Z_{\text{GC}}}]}
+    \end{align*}
 \end{framed}
 
 \subsection{统计分布方法：理论}
 
 \begin{framed}
-推导出 BS 和 FD 分布。\[
-\ln{Z_{\text{GC}}} = - g_{\pm} \sum_{\sigma} \ln \qty[1 - g_{\pm} \mathrm{e}^{\alpha - \beta \varepsilon_{\sigma}}]
-\] \begin{align*}
-    N = & \pdv{\alpha} \ln{Z_{\text{GC}}} = - g_{\pm} \sum_{\sigma} \frac{- g_{\pm} \mathrm{e}^{\alpha - \beta \varepsilon_{\sigma}}}{1 - g_{\pm} \mathrm{e}^{\alpha - \beta \varepsilon_{\sigma}}} = \sum_{\sigma} f_{\sigma, \pm}\\
-    E = & - \pdv{\beta} \ln{Z_{\text{GC}}} = g_{\pm} \sum_{\sigma} \frac{g_{\pm} \varepsilon_{\sigma} \mathrm{e}^{\alpha - \beta \varepsilon_{\sigma}}}{1 - g_{\pm} \mathrm{e}^{\alpha - \beta \varepsilon_{\sigma}}} = \sum_{\sigma} \varepsilon_{\sigma} f_{\sigma, \pm}
-\end{align*} 其中 \[
-f_{\sigma, \pm} = \frac{1}{\mathrm{e}^{\beta \varepsilon_{\sigma} - \alpha} - g_{\pm} }
-\]
+    推导出 BS 和 FD 分布。\[
+        \ln{Z_{\text{GC}}} = - g_{\pm} \sum_{\sigma} \ln \qty[1 - g_{\pm} \mathrm{e}^{\alpha - \beta \varepsilon_{\sigma}}]
+    \] \begin{align*}
+        N = & \pdv{\alpha} \ln{Z_{\text{GC}}} = - g_{\pm} \sum_{\sigma} \frac{- g_{\pm} \mathrm{e}^{\alpha - \beta \varepsilon_{\sigma}}}{1 - g_{\pm} \mathrm{e}^{\alpha - \beta \varepsilon_{\sigma}}} = \sum_{\sigma} f_{\sigma, \pm}                                        \\
+        E = & - \pdv{\beta} \ln{Z_{\text{GC}}} = g_{\pm} \sum_{\sigma} \frac{g_{\pm} \varepsilon_{\sigma} \mathrm{e}^{\alpha - \beta \varepsilon_{\sigma}}}{1 - g_{\pm} \mathrm{e}^{\alpha - \beta \varepsilon_{\sigma}}} = \sum_{\sigma} \varepsilon_{\sigma} f_{\sigma, \pm}
+    \end{align*} 其中 \[
+        f_{\sigma, \pm} = \frac{1}{\mathrm{e}^{\beta \varepsilon_{\sigma} - \alpha} - g_{\pm} }
+    \]
 \end{framed}
 
 \begin{framed}
-统计分布与熵
-\begin{itemize}
-    \item 量子情况
-\end{itemize} \[
-f_{\sigma, \pm} = \frac{1}{\mathrm{e}^{\beta \varepsilon_{\sigma} - \alpha} - g_{\pm} } \Rightarrow \mathrm{e}^{\alpha - \beta \varepsilon_{\sigma}} = \frac{f_{\sigma, \pm}}{1 + g_{\pm} f_{\sigma, \pm}}
-\] \begin{align*}
-    \ln{Z_{\text{GC}}} = & - g_{\pm} \sum_{\sigma} \ln \qty[1 - g_{\pm} \mathrm{e}^{\alpha - \beta \varepsilon_{\sigma}}] = g_{\pm} \sum_{\sigma} \ln \qty[1 + g_{\pm} f_{\sigma, \pm}]\\
-    - \beta \pdv{\beta} \ln{Z_{\text{GC}}} = & \sum_{\sigma} \beta \varepsilon_{\sigma} f_{\sigma, \pm}\\
-    - \alpha \pdv{\alpha} \ln{Z_{\text{GC}}} = & \sum_{\sigma} - \alpha f_{\sigma, \pm}\\
-    \frac{S}{k} = & \dd{\qty[\ln{Z_{\text{GC}}} - \alpha \pdv{\alpha} \ln{Z_{\text{GC}}} - \beta \pdv{\beta} \ln{Z_{\text{GC}}}]}\\
-    = & \sum_{\sigma} g_{\pm} \ln \qty[1 + g_{\pm} f_{\sigma, \pm}] + (\beta \varepsilon_{\sigma} - \alpha) f_{\sigma, \pm}\\
-    = & \sum_{\sigma} - f_{\sigma, \pm} \ln{f_{\sigma, \pm}} + \qty(g_{\pm} + f_{\sigma, \pm}) \ln \qty[ 1 + g_{\pm} f_{\sigma, \pm} ]
-\end{align*}
-\begin{itemize}
-    \item 经典情况
-\end{itemize} \[
-f_{\sigma} = \mathrm{e}^{\alpha - \beta \varepsilon_{\sigma}}
-\] \begin{align*}
-    \ln{Z_{\text{GC}}} = & \sum_{\sigma} f_{\sigma}\\
-    - \beta \pdv{\beta} \ln{Z_{\text{GC}}} = & \sum_{\sigma} \beta \varepsilon_{\sigma} f_{\sigma}\\
-    - \alpha \pdv{\alpha} \ln{Z_{\text{GC}}} = & \sum_{\sigma} - \alpha f_{\sigma}\\
-    \frac{S}{k} = & \dd{\qty[\ln{Z_{\text{GC}}} - \alpha \pdv{\alpha} \ln{Z_{\text{GC}}} - \beta \pdv{\beta} \ln{Z_{\text{GC}}}]}\\
-    = & \sum_{\sigma} f_{\sigma} + (\beta \varepsilon_{\sigma} - \alpha) f_{\sigma}\\
-    = & \sum_{\sigma} f_{\sigma} - f_{\sigma} \ln{f_{\sigma}}
-\end{align*}
+    统计分布与熵
+    \begin{itemize}
+        \item 量子情况
+    \end{itemize} \[
+        f_{\sigma, \pm} = \frac{1}{\mathrm{e}^{\beta \varepsilon_{\sigma} - \alpha} - g_{\pm} } \Rightarrow \mathrm{e}^{\alpha - \beta \varepsilon_{\sigma}} = \frac{f_{\sigma, \pm}}{1 + g_{\pm} f_{\sigma, \pm}}
+    \] \begin{align*}
+        \ln{Z_{\text{GC}}} =                       & - g_{\pm} \sum_{\sigma} \ln \qty[1 - g_{\pm} \mathrm{e}^{\alpha - \beta \varepsilon_{\sigma}}] = g_{\pm} \sum_{\sigma} \ln \qty[1 + g_{\pm} f_{\sigma, \pm}] \\
+        - \beta \pdv{\beta} \ln{Z_{\text{GC}}} =   & \sum_{\sigma} \beta \varepsilon_{\sigma} f_{\sigma, \pm}                                                                                                     \\
+        - \alpha \pdv{\alpha} \ln{Z_{\text{GC}}} = & \sum_{\sigma} - \alpha f_{\sigma, \pm}                                                                                                                       \\
+        \frac{S}{k} =                              & \dd{\qty[\ln{Z_{\text{GC}}} - \alpha \pdv{\alpha} \ln{Z_{\text{GC}}} - \beta \pdv{\beta} \ln{Z_{\text{GC}}}]}                                                \\
+        =                                          & \sum_{\sigma} g_{\pm} \ln \qty[1 + g_{\pm} f_{\sigma, \pm}] + (\beta \varepsilon_{\sigma} - \alpha) f_{\sigma, \pm}                                          \\
+        =                                          & \sum_{\sigma} - f_{\sigma, \pm} \ln{f_{\sigma, \pm}} + \qty(g_{\pm} + f_{\sigma, \pm}) \ln \qty[ 1 + g_{\pm} f_{\sigma, \pm} ]
+    \end{align*}
+    \begin{itemize}
+        \item 经典情况
+    \end{itemize} \[
+        f_{\sigma} = \mathrm{e}^{\alpha - \beta \varepsilon_{\sigma}}
+    \] \begin{align*}
+        \ln{Z_{\text{GC}}} =                       & \sum_{\sigma} f_{\sigma}                                                                                      \\
+        - \beta \pdv{\beta} \ln{Z_{\text{GC}}} =   & \sum_{\sigma} \beta \varepsilon_{\sigma} f_{\sigma}                                                           \\
+        - \alpha \pdv{\alpha} \ln{Z_{\text{GC}}} = & \sum_{\sigma} - \alpha f_{\sigma}                                                                             \\
+        \frac{S}{k} =                              & \dd{\qty[\ln{Z_{\text{GC}}} - \alpha \pdv{\alpha} \ln{Z_{\text{GC}}} - \beta \pdv{\beta} \ln{Z_{\text{GC}}}]} \\
+        =                                          & \sum_{\sigma} f_{\sigma} + (\beta \varepsilon_{\sigma} - \alpha) f_{\sigma}                                   \\
+        =                                          & \sum_{\sigma} f_{\sigma} - f_{\sigma} \ln{f_{\sigma}}
+    \end{align*}
 \end{framed}
 统计分布方法的两个核心公式：
 \begin{align*}
-    N = & \int g(\varepsilon) f(\varepsilon) \dd{\varepsilon}\\
+    N = & \int g(\varepsilon) f(\varepsilon) \dd{\varepsilon}             \\
     E = & \int \varepsilon g(\varepsilon) f(\varepsilon) \dd{\varepsilon}
 \end{align*}
 
@@ -443,65 +443,65 @@ f_{\sigma} = \mathrm{e}^{\alpha - \beta \varepsilon_{\sigma}}
 \subsubsection{二能级系统}
 
 通过能量零点的选择使得两个能级为 $(+ \varepsilon, - \varepsilon)$，而它们的简并度为 $(g_1, g_2)$。\begin{align*}
-    \ln{Z_{\text{GC}}} = & - g_{\pm} g_1 \ln \qty[1 - g_{\pm} \mathrm{e}^{\alpha - \beta \varepsilon}] - g_{\pm} g_2 \ln \qty[1 - g_{\pm} \mathrm{e}^{\alpha + \beta \varepsilon}]\\
-    N = & \pdv{\alpha} \ln{Z_{\text{GC}}} = \frac{g_1}{\mathrm{e}^{+ \beta \varepsilon - \alpha} - g_{\pm}} + \frac{g_2}{\mathrm{e}^{- \beta \varepsilon - \alpha} - g_{\pm}}\\
-    E = & - \pdv{\beta} \ln{Z_{\text{GC}}} = \frac{g_1 \varepsilon}{\mathrm{e}^{+ \beta \varepsilon - \alpha} - g_{\pm}} - \frac{g_2 \varepsilon}{\mathrm{e}^{- \beta \varepsilon - \alpha} - g_{\pm}}
+    \ln{Z_{\text{GC}}} = & - g_{\pm} g_1 \ln \qty[1 - g_{\pm} \mathrm{e}^{\alpha - \beta \varepsilon}] - g_{\pm} g_2 \ln \qty[1 - g_{\pm} \mathrm{e}^{\alpha + \beta \varepsilon}]                                      \\
+    N =                  & \pdv{\alpha} \ln{Z_{\text{GC}}} = \frac{g_1}{\mathrm{e}^{+ \beta \varepsilon - \alpha} - g_{\pm}} + \frac{g_2}{\mathrm{e}^{- \beta \varepsilon - \alpha} - g_{\pm}}                          \\
+    E =                  & - \pdv{\beta} \ln{Z_{\text{GC}}} = \frac{g_1 \varepsilon}{\mathrm{e}^{+ \beta \varepsilon - \alpha} - g_{\pm}} - \frac{g_2 \varepsilon}{\mathrm{e}^{- \beta \varepsilon - \alpha} - g_{\pm}}
 \end{align*}
 这个结果显然和统计分布方法所得到的一样。
 
 \subsubsection{三维经典自由气体}
 
 \begin{align*}
-    D(\varepsilon) = & \frac{2 \pi V}{h^3} (2 m)^{3/2} \varepsilon^{1/2}\\
-    Z_1 = & \int_0^{\infty} D(\varepsilon) \mathrm{e}^{- \beta \varepsilon} \dd{\varepsilon} = \frac{V}{\lambda^3},\ \lambda = \frac{h}{\sqrt{2 \pi m k T}}\\
-    Z_N = & \frac{Z_1^N}{N!}\\
-    Z_{\text{GC}} = & \sum_{N = 0}^{\infty} z^N Z_N = \exp \qty[z Z_1],\\
-    \ln{Z_{\text{GC}}} = & z Z_1 = \mathrm{e}^{\alpha} \frac{V}{h^3} \qty(\frac{2 \pi m}{\beta})^{3/2}\\
-    N = & \pdv{\alpha} \ln{Z_{\text{GC}}} = \ln{Z_{\text{GC}}}\\
-    E = & - \pdv{\beta} \ln{Z_{\text{GC}}} = \frac{3}{2} \frac{\ln{Z_{\text{GC}}}}{\beta} = \frac{3}{2} N k T\\
-    C_V = & \pdv{E}{T} = \frac{3}{2} N k\\
-    p = & \frac{1}{\beta} \pdv{V} \ln{Z_{\text{GC}}} = \frac{\ln{Z_{\text{GC}}}}{\beta V} \Rightarrow p V = N k T\\
-    S = & k \qty[\ln{Z_{\text{GC}}} - \alpha \pdv{\alpha} \ln{Z_{\text{GC}}} - \beta \pdv{\beta} \ln{Z_{\text{GC}}}]\\
-    = & k \qty[\ln{Z_{\text{GC}}} - \alpha \ln{Z_{\text{GC}}} + \beta \frac{3}{2} \frac{1}{\beta} \ln{Z_{\text{GC}}}]\\
-    = & k \qty[N - \alpha N +\frac{3}{2} N] = N k \qty[\frac{5}{2} - \alpha]
+    D(\varepsilon) =     & \frac{2 \pi V}{h^3} (2 m)^{3/2} \varepsilon^{1/2}                                                                                               \\
+    Z_1 =                & \int_0^{\infty} D(\varepsilon) \mathrm{e}^{- \beta \varepsilon} \dd{\varepsilon} = \frac{V}{\lambda^3},\ \lambda = \frac{h}{\sqrt{2 \pi m k T}} \\
+    Z_N =                & \frac{Z_1^N}{N!}                                                                                                                                \\
+    Z_{\text{GC}} =      & \sum_{N = 0}^{\infty} z^N Z_N = \exp \qty[z Z_1],                                                                                               \\
+    \ln{Z_{\text{GC}}} = & z Z_1 = \mathrm{e}^{\alpha} \frac{V}{h^3} \qty(\frac{2 \pi m}{\beta})^{3/2}                                                                     \\
+    N =                  & \pdv{\alpha} \ln{Z_{\text{GC}}} = \ln{Z_{\text{GC}}}                                                                                            \\
+    E =                  & - \pdv{\beta} \ln{Z_{\text{GC}}} = \frac{3}{2} \frac{\ln{Z_{\text{GC}}}}{\beta} = \frac{3}{2} N k T                                             \\
+    C_V =                & \pdv{E}{T} = \frac{3}{2} N k                                                                                                                    \\
+    p =                  & \frac{1}{\beta} \pdv{V} \ln{Z_{\text{GC}}} = \frac{\ln{Z_{\text{GC}}}}{\beta V} \Rightarrow p V = N k T                                         \\
+    S =                  & k \qty[\ln{Z_{\text{GC}}} - \alpha \pdv{\alpha} \ln{Z_{\text{GC}}} - \beta \pdv{\beta} \ln{Z_{\text{GC}}}]                                      \\
+    =                    & k \qty[\ln{Z_{\text{GC}}} - \alpha \ln{Z_{\text{GC}}} + \beta \frac{3}{2} \frac{1}{\beta} \ln{Z_{\text{GC}}}]                                   \\
+    =                    & k \qty[N - \alpha N +\frac{3}{2} N] = N k \qty[\frac{5}{2} - \alpha]
 \end{align*}
 
 \subsubsection{三维极端相对论性自由气体}
 
 \begin{align*}
-    D(\varepsilon) = & \frac{4 \pi \varepsilon^2}{h^3 c^3}\\
-    Z_1 = & \frac{8 \pi V}{h^3 c^3 \beta^3}\\
-    \ln{Z_{\text{GC}}} = & \mathrm{e}^{\alpha} \frac{8 \pi V}{h^3 c^3 \beta^3}\\
-    N = & \pdv{\alpha} \ln{Z_{\text{GC}}} = \ln{Z_{\text{GC}}}\\
-    E = & - \pdv{\beta} \ln{Z_{\text{GC}}} = 3 \frac{\ln{Z_{\text{GC}}}}{\beta} = 3 N k T\\
-    C_V = & \pdv{E}{T} = 3 N k\\
-    p = & \frac{1}{\beta} \pdv{V} \ln{Z_{\text{GC}}} = \frac{\ln{Z_{\text{GC}}}}{\beta V} \Rightarrow p V = N k T\\
-    S = & k \qty[\ln{Z_{\text{GC}}} - \alpha \pdv{\alpha} \ln{Z_{\text{GC}}} - \beta \pdv{\beta} \ln{Z_{\text{GC}}}]\\
-    = & k \qty[\ln{Z_{\text{GC}}} - \alpha \ln{Z_{\text{GC}}} + \beta \frac{3}{\beta} \ln{Z_{\text{GC}}}]\\
-    = & k \qty[N - \alpha N + 3 N] = N k \qty[4 - \alpha]
+    D(\varepsilon) =     & \frac{4 \pi \varepsilon^2}{h^3 c^3}                                                                        \\
+    Z_1 =                & \frac{8 \pi V}{h^3 c^3 \beta^3}                                                                            \\
+    \ln{Z_{\text{GC}}} = & \mathrm{e}^{\alpha} \frac{8 \pi V}{h^3 c^3 \beta^3}                                                        \\
+    N =                  & \pdv{\alpha} \ln{Z_{\text{GC}}} = \ln{Z_{\text{GC}}}                                                       \\
+    E =                  & - \pdv{\beta} \ln{Z_{\text{GC}}} = 3 \frac{\ln{Z_{\text{GC}}}}{\beta} = 3 N k T                            \\
+    C_V =                & \pdv{E}{T} = 3 N k                                                                                         \\
+    p =                  & \frac{1}{\beta} \pdv{V} \ln{Z_{\text{GC}}} = \frac{\ln{Z_{\text{GC}}}}{\beta V} \Rightarrow p V = N k T    \\
+    S =                  & k \qty[\ln{Z_{\text{GC}}} - \alpha \pdv{\alpha} \ln{Z_{\text{GC}}} - \beta \pdv{\beta} \ln{Z_{\text{GC}}}] \\
+    =                    & k \qty[\ln{Z_{\text{GC}}} - \alpha \ln{Z_{\text{GC}}} + \beta \frac{3}{\beta} \ln{Z_{\text{GC}}}]          \\
+    =                    & k \qty[N - \alpha N + 3 N] = N k \qty[4 - \alpha]
 \end{align*}
 
 \subsubsection{弱简并气体}
 
 弱简并近似: \begin{align*}
-    \ln{Z_{\text{GC}}} = & - g_{\pm} \sum_{\sigma} \ln \qty[1 - g_{\pm} z \mathrm{e}^{- \beta \varepsilon_{\sigma}}]\\
-    \xlongequal{z \ll 1} & - g_{\pm} \sum_{\sigma} \qty[- g_{\pm} z \mathrm{e}^{- \beta \varepsilon_{\sigma}} - \frac{1}{2} z^2 \mathrm{e}^{- 2 \beta \varepsilon_{\sigma}}]\\
-    = & \sum_{\sigma} \qty[z \mathrm{e}^{- \beta \varepsilon_{\sigma}} + \frac{1}{2} g_{\pm} z^2 \mathrm{e}^{- 2 \beta \varepsilon_{\sigma}}]\\
-    = & \frac{V z}{\lambda^3} \qty(1 + \frac{g_{\pm}}{4 \sqrt{2}} z) = \frac{V}{h^3} \qty(\frac{2 \pi m}{\beta})^{3/2} \mathrm{e}^{\alpha} \qty(1 + \frac{g_{\pm}}{4 \sqrt{2}} \mathrm{e}^{\alpha})
+    \ln{Z_{\text{GC}}} = & - g_{\pm} \sum_{\sigma} \ln \qty[1 - g_{\pm} z \mathrm{e}^{- \beta \varepsilon_{\sigma}}]                                                                                                   \\
+    \xlongequal{z \ll 1} & - g_{\pm} \sum_{\sigma} \qty[- g_{\pm} z \mathrm{e}^{- \beta \varepsilon_{\sigma}} - \frac{1}{2} z^2 \mathrm{e}^{- 2 \beta \varepsilon_{\sigma}}]                                           \\
+    =                    & \sum_{\sigma} \qty[z \mathrm{e}^{- \beta \varepsilon_{\sigma}} + \frac{1}{2} g_{\pm} z^2 \mathrm{e}^{- 2 \beta \varepsilon_{\sigma}}]                                                       \\
+    =                    & \frac{V z}{\lambda^3} \qty(1 + \frac{g_{\pm}}{4 \sqrt{2}} z) = \frac{V}{h^3} \qty(\frac{2 \pi m}{\beta})^{3/2} \mathrm{e}^{\alpha} \qty(1 + \frac{g_{\pm}}{4 \sqrt{2}} \mathrm{e}^{\alpha})
 \end{align*}
 \begin{framed}
-\begin{align*}
-    Z_1 \equiv \sum_{\sigma} \mathrm{e}^{- \beta \varepsilon_{\sigma}} = & \int \frac{\dd[3]{k}}{(2 \pi)^3 / V} \mathrm{e}^{- \beta \varepsilon_k} = \frac{V}{\lambda^3} = \frac{V}{h^3} \qty(\frac{2 \pi m}{\beta})^{3/2}\\
-    \sum_{\sigma} \mathrm{e}^{- 2 \beta \varepsilon_{\sigma}} = & V \qty(\frac{\sqrt{2 \pi m}}{h \sqrt{2 \beta}})^{3} = \frac{V}{2 \sqrt{2} \lambda^3}
-\end{align*}
+    \begin{align*}
+        Z_1 \equiv \sum_{\sigma} \mathrm{e}^{- \beta \varepsilon_{\sigma}} = & \int \frac{\dd[3]{k}}{(2 \pi)^3 / V} \mathrm{e}^{- \beta \varepsilon_k} = \frac{V}{\lambda^3} = \frac{V}{h^3} \qty(\frac{2 \pi m}{\beta})^{3/2} \\
+        \sum_{\sigma} \mathrm{e}^{- 2 \beta \varepsilon_{\sigma}} =          & V \qty(\frac{\sqrt{2 \pi m}}{h \sqrt{2 \beta}})^{3} = \frac{V}{2 \sqrt{2} \lambda^3}
+    \end{align*}
 \end{framed}
 
 热力学量：\begin{align*}
-    N = & \pdv{\alpha} \ln{Z_{\text{GC}}} = \ln{Z_{\text{GC}}} \frac{1 + \frac{g_{\pm}}{2 \sqrt{2}} \mathrm{e}^{\alpha}}{1 + \frac{g_{\pm}}{4 \sqrt{2}} \mathrm{e}^{\alpha}} \approx \ln{Z_{\text{GC}}} \qty[1 + \frac{g_{\pm}}{4 \sqrt{2}} \mathrm{e}^{\alpha}] \\
-    E = & - \pdv{\beta} \ln{Z_{\text{GC}}} = \frac{3}{2} \frac{\ln{Z_{\text{GC}}}}{\beta} \approx \frac{3}{2} N k T \qty[1 - \frac{g_{\pm}}{4 \sqrt{2}} \mathrm{e}^{\alpha}]\\
-    C_V = & \qty(\pdv{E}{T})_{V, N} \approx \frac{3}{2} N k \qty(1 + \frac{g_{\pm}}{8 \sqrt{2}} n \lambda^3)\\
-    p = & \frac{1}{\beta} \pdv{V} \ln{Z_{\text{GC}}} = \frac{\ln{Z_{\text{GC}}}}{\beta V} \approx n k T \qty[1 - \frac{g_{\pm}}{4 \sqrt{2}} \mathrm{e}^{\alpha}]\\
-    S = & N k \qty[\frac{5}{2} \frac{1 + \frac{g_{\pm}}{4 \sqrt{2}} \mathrm{e}^{\alpha}}{1 + \frac{g_{\pm}}{2 \sqrt{2}} \mathrm{e}^{\alpha}} - \alpha] \approx N k \qty[\frac{5}{2} \qty(1 - \frac{g_{\pm}}{4 \sqrt{2}} \mathrm{e}^{\alpha}) - \alpha]
+    N =   & \pdv{\alpha} \ln{Z_{\text{GC}}} = \ln{Z_{\text{GC}}} \frac{1 + \frac{g_{\pm}}{2 \sqrt{2}} \mathrm{e}^{\alpha}}{1 + \frac{g_{\pm}}{4 \sqrt{2}} \mathrm{e}^{\alpha}} \approx \ln{Z_{\text{GC}}} \qty[1 + \frac{g_{\pm}}{4 \sqrt{2}} \mathrm{e}^{\alpha}] \\
+    E =   & - \pdv{\beta} \ln{Z_{\text{GC}}} = \frac{3}{2} \frac{\ln{Z_{\text{GC}}}}{\beta} \approx \frac{3}{2} N k T \qty[1 - \frac{g_{\pm}}{4 \sqrt{2}} \mathrm{e}^{\alpha}]                                                                                     \\
+    C_V = & \qty(\pdv{E}{T})_{V, N} \approx \frac{3}{2} N k \qty(1 + \frac{g_{\pm}}{8 \sqrt{2}} n \lambda^3)                                                                                                                                                       \\
+    p =   & \frac{1}{\beta} \pdv{V} \ln{Z_{\text{GC}}} = \frac{\ln{Z_{\text{GC}}}}{\beta V} \approx n k T \qty[1 - \frac{g_{\pm}}{4 \sqrt{2}} \mathrm{e}^{\alpha}]                                                                                                 \\
+    S =   & N k \qty[\frac{5}{2} \frac{1 + \frac{g_{\pm}}{4 \sqrt{2}} \mathrm{e}^{\alpha}}{1 + \frac{g_{\pm}}{2 \sqrt{2}} \mathrm{e}^{\alpha}} - \alpha] \approx N k \qty[\frac{5}{2} \qty(1 - \frac{g_{\pm}}{4 \sqrt{2}} \mathrm{e}^{\alpha}) - \alpha]
 \end{align*}
 
 \subsection{统计分布方法：应用}
@@ -511,110 +511,110 @@ f_{\sigma} = \mathrm{e}^{\alpha - \beta \varepsilon_{\sigma}}
 “费米子在零温下从相空间的零点开始向外堆积”那种做法显然更物理，但是直接用统计分布的做法更加清晰直接。
 
 \[
-f(\varepsilon) = \frac{1}{\mathrm{e}^{\beta (\varepsilon - \mu)} + 1} \xrightarrow{T \to 0, \beta \to \infty} \begin{cases}
-1,\ \varepsilon < \mu_0\\
-0,\ \varepsilon > \mu_0
-\end{cases},\ \mu_0 \equiv \mu(T = 0)
+    f(\varepsilon) = \frac{1}{\mathrm{e}^{\beta (\varepsilon - \mu)} + 1} \xrightarrow{T \to 0, \beta \to \infty} \begin{cases}
+        1,\ \varepsilon < \mu_0 \\
+        0,\ \varepsilon > \mu_0
+    \end{cases},\ \mu_0 \equiv \mu(T = 0)
 \] 区分考虑了自旋和不考虑自旋的态密度 \[
-g(\varepsilon) = (2 s + 1) D(\varepsilon) = (2 s + 1) \frac{V}{4 \pi^2 \hbar^3} (2 m)^{3/2} \varepsilon^{1/2}
+    g(\varepsilon) = (2 s + 1) D(\varepsilon) = (2 s + 1) \frac{V}{4 \pi^2 \hbar^3} (2 m)^{3/2} \varepsilon^{1/2}
 \] \begin{align*}
-    N = N_0 = & \int_{0}^{\infty} g(\varepsilon) f(\varepsilon) \dd{\varepsilon} = (2 s + 1) \frac{V}{4 \pi^2 \hbar^3} (2 m)^{3/2} \int_{0}^{\mu_0} \varepsilon^{1/2} \dd{\varepsilon} = \frac{(2 s + 1) V}{6 \pi^2 \hbar^3} (2 m)^{3 / 2} \mu_{0}^{3/2}\\
-    E_0 = & \int_{0}^{\infty} \varepsilon g(\varepsilon) f(\varepsilon) \dd{\varepsilon} = (2 s + 1) \frac{V}{4 \pi^2 \hbar^3} (2 m)^{3/2} \int_{0}^{\mu_0} \varepsilon^{3/2} \dd{\varepsilon} = \frac{(2 s + 1) V}{10 \pi^2 \hbar^3} (2 m)^{3/2} \mu_0^{5/2}
+    N = N_0 = & \int_{0}^{\infty} g(\varepsilon) f(\varepsilon) \dd{\varepsilon} = (2 s + 1) \frac{V}{4 \pi^2 \hbar^3} (2 m)^{3/2} \int_{0}^{\mu_0} \varepsilon^{1/2} \dd{\varepsilon} = \frac{(2 s + 1) V}{6 \pi^2 \hbar^3} (2 m)^{3 / 2} \mu_{0}^{3/2}          \\
+    E_0 =     & \int_{0}^{\infty} \varepsilon g(\varepsilon) f(\varepsilon) \dd{\varepsilon} = (2 s + 1) \frac{V}{4 \pi^2 \hbar^3} (2 m)^{3/2} \int_{0}^{\mu_0} \varepsilon^{3/2} \dd{\varepsilon} = \frac{(2 s + 1) V}{10 \pi^2 \hbar^3} (2 m)^{3/2} \mu_0^{5/2}
 \end{align*} \[
-\frac{\hbar^2 k_{\text{F}}^2}{2 m} \equiv \varepsilon_{\text{F}} \equiv \mu_0 = \frac{\hbar^2}{2 m} \qty(\frac{6 \pi^2 n}{2 s + 1})^{2/3},\ E = \frac{3}{5} N \varepsilon_{\text{F}}
+    \frac{\hbar^2 k_{\text{F}}^2}{2 m} \equiv \varepsilon_{\text{F}} \equiv \mu_0 = \frac{\hbar^2}{2 m} \qty(\frac{6 \pi^2 n}{2 s + 1})^{2/3},\ E = \frac{3}{5} N \varepsilon_{\text{F}}
 \] \[
-p_0 = - \qty(\pdv{E_0}{V})_{S, N} = \frac{2}{3} \frac{E_0}{V}
+    p_0 = - \qty(\pdv{E_0}{V})_{S, N} = \frac{2}{3} \frac{E_0}{V}
 \]
 
 \subsubsection{强简并费米气体：有限低温}
 
 索末菲展开（推导见维基百科“索末菲展开”页面）：\[
-\int_{- \infty}^{\infty} \frac{H(\varepsilon)}{\mathrm{e}^{\beta (\varepsilon - \mu)} + 1} \dd{\varepsilon} \xlongequal{\beta \gg 1} \int_{- \infty}^{\mu} H(\varepsilon) \dd{\varepsilon} + \frac{\pi^2}{6} (\frac{1}{\beta})^2 H'(\mu) + \mathcal{O} \qty(\frac{1}{\beta \mu})^4
+    \int_{- \infty}^{\infty} \frac{H(\varepsilon)}{\mathrm{e}^{\beta (\varepsilon - \mu)} + 1} \dd{\varepsilon} \xlongequal{\beta \gg 1} \int_{- \infty}^{\mu} H(\varepsilon) \dd{\varepsilon} + \frac{\pi^2}{6} (\frac{1}{\beta})^2 H'(\mu) + \mathcal{O} \qty(\frac{1}{\beta \mu})^4
 \] 注意这个积分是从 $- \infty$ 开始的，因此我们需要一个拓展的态密度 \[
-g(\varepsilon) = (2 s + 1) D(\varepsilon) = \begin{cases}
-(2 s + 1) \frac{V}{4 \pi^2 \hbar^3} (2 m)^{3/2} \varepsilon^{1/2}, & \ \varepsilon \geq 0\\
-0, & \ \varepsilon < 0
-\end{cases} \] \begin{align*}
-    N = & \int_{- \infty}^{\infty} g(\varepsilon) f(\varepsilon) \dd{\varepsilon} = \frac{(2 s + 1) V}{4 \pi^2 \hbar^3} (2 m)^{3 / 2} \int_{- \infty}^{\infty} \varepsilon^{1 / 2} f(\varepsilon) \dd{\varepsilon}\\
-    = & \frac{(2 s + 1) V}{4 \pi^2 \hbar^3} (2 m)^{3 / 2} \qty[\int_0^{\mu} \varepsilon^{1/2} \dd{\varepsilon} + \frac{\pi^2}{6 \beta^2} \left.\dv{\varepsilon} \varepsilon^{1/2} \right|_{\mu}]\\
-    = & \frac{(2 s + 1) V}{4 \pi^2 \hbar^3} (2 m)^{3 / 2} \qty[\frac{2}{3} \mu^{3/2} + \frac{\pi^2}{6 \beta^2} \frac{1}{2} \mu^{- 1 / 2}]\\
-    \Rightarrow \varepsilon_{\text{F}}^{3/2} = & \mu^{3/2} + \frac{\pi^2}{8 \beta^2} \mu^{- 1 / 2}\\
-    \Rightarrow \mu^{3/2} \approx & \varepsilon_{\text{F}}^{3/2} - \frac{\pi^2}{8 \beta^2} \varepsilon_{\text{F}}^{- 1 / 2} = \varepsilon_{\text{F}}^{3/2} \qty[1 - \frac{\pi^2}{8 \beta^2} \varepsilon_{\text{F}}^{- 2}]\\
-    \Rightarrow \mu = & \varepsilon_{\text{F}} \qty[1 - \frac{\pi^2}{8 \beta^2} \varepsilon_{\text{F}}^{- 2}]^{2 / 3} \approx \varepsilon_{\text{F}} \qty[1 - \frac{\pi^2}{12} \qty(\frac{k T}{\varepsilon_{\text{F}}})^2]\\
-    E = & \int_{- \infty}^{\infty} \varepsilon g(\varepsilon) f(\varepsilon) \dd{\varepsilon} = \frac{(2 s + 1) V}{4 \pi^2 \hbar^3} (2 m)^{3 / 2} \int_{- \infty}^{\infty} \varepsilon^{3 / 2} f(\varepsilon) \dd{\varepsilon}\\
-    = & \frac{(2 s + 1) V}{4 \pi^2 \hbar^3} (2 m)^{3 / 2} \qty[\int_0^{\mu} \varepsilon^{3/2} \dd{\varepsilon} + \frac{\pi^2}{6 \beta^2} \left.\dv{\varepsilon} \varepsilon^{3/2} \right|_{\mu}]\\
-    = & \frac{(2 s + 1) V}{4 \pi^2 \hbar^3} (2 m)^{3 / 2} \qty[\frac{2}{5} \mu^{5/2} + \frac{\pi^2}{6 \beta^2} \frac{3}{2} \mu^{1 / 2}]\\
-    = & \frac{3}{5} N \varepsilon_{\text{F}} \times \qty(\frac{\mu}{\varepsilon_{\text{F}}})^{5/2} \qty[1 + \frac{5 \pi^2}{8} \qty(\frac{k T}{\mu})^{2}]\\
-    \approx & \frac{3}{5} N \varepsilon_{\text{F}} \times \qty[1 + \frac{5 \pi^2}{12} \qty(\frac{k T}{\varepsilon_{\text{F}}})^2]\\
-    C_V = & \pdv{E}{T} \approx N k \frac{\pi^2}{2} \frac{k T}{\varepsilon_{\text{F}}}
+    g(\varepsilon) = (2 s + 1) D(\varepsilon) = \begin{cases}
+        (2 s + 1) \frac{V}{4 \pi^2 \hbar^3} (2 m)^{3/2} \varepsilon^{1/2}, & \ \varepsilon \geq 0 \\
+        0,                                                                 & \ \varepsilon < 0
+    \end{cases} \] \begin{align*}
+    N =                                        & \int_{- \infty}^{\infty} g(\varepsilon) f(\varepsilon) \dd{\varepsilon} = \frac{(2 s + 1) V}{4 \pi^2 \hbar^3} (2 m)^{3 / 2} \int_{- \infty}^{\infty} \varepsilon^{1 / 2} f(\varepsilon) \dd{\varepsilon}             \\
+    =                                          & \frac{(2 s + 1) V}{4 \pi^2 \hbar^3} (2 m)^{3 / 2} \qty[\int_0^{\mu} \varepsilon^{1/2} \dd{\varepsilon} + \frac{\pi^2}{6 \beta^2} \left.\dv{\varepsilon} \varepsilon^{1/2} \right|_{\mu}]                             \\
+    =                                          & \frac{(2 s + 1) V}{4 \pi^2 \hbar^3} (2 m)^{3 / 2} \qty[\frac{2}{3} \mu^{3/2} + \frac{\pi^2}{6 \beta^2} \frac{1}{2} \mu^{- 1 / 2}]                                                                                    \\
+    \Rightarrow \varepsilon_{\text{F}}^{3/2} = & \mu^{3/2} + \frac{\pi^2}{8 \beta^2} \mu^{- 1 / 2}                                                                                                                                                                    \\
+    \Rightarrow \mu^{3/2} \approx              & \varepsilon_{\text{F}}^{3/2} - \frac{\pi^2}{8 \beta^2} \varepsilon_{\text{F}}^{- 1 / 2} = \varepsilon_{\text{F}}^{3/2} \qty[1 - \frac{\pi^2}{8 \beta^2} \varepsilon_{\text{F}}^{- 2}]                                \\
+    \Rightarrow \mu =                          & \varepsilon_{\text{F}} \qty[1 - \frac{\pi^2}{8 \beta^2} \varepsilon_{\text{F}}^{- 2}]^{2 / 3} \approx \varepsilon_{\text{F}} \qty[1 - \frac{\pi^2}{12} \qty(\frac{k T}{\varepsilon_{\text{F}}})^2]                   \\
+    E =                                        & \int_{- \infty}^{\infty} \varepsilon g(\varepsilon) f(\varepsilon) \dd{\varepsilon} = \frac{(2 s + 1) V}{4 \pi^2 \hbar^3} (2 m)^{3 / 2} \int_{- \infty}^{\infty} \varepsilon^{3 / 2} f(\varepsilon) \dd{\varepsilon} \\
+    =                                          & \frac{(2 s + 1) V}{4 \pi^2 \hbar^3} (2 m)^{3 / 2} \qty[\int_0^{\mu} \varepsilon^{3/2} \dd{\varepsilon} + \frac{\pi^2}{6 \beta^2} \left.\dv{\varepsilon} \varepsilon^{3/2} \right|_{\mu}]                             \\
+    =                                          & \frac{(2 s + 1) V}{4 \pi^2 \hbar^3} (2 m)^{3 / 2} \qty[\frac{2}{5} \mu^{5/2} + \frac{\pi^2}{6 \beta^2} \frac{3}{2} \mu^{1 / 2}]                                                                                      \\
+    =                                          & \frac{3}{5} N \varepsilon_{\text{F}} \times \qty(\frac{\mu}{\varepsilon_{\text{F}}})^{5/2} \qty[1 + \frac{5 \pi^2}{8} \qty(\frac{k T}{\mu})^{2}]                                                                     \\
+    \approx                                    & \frac{3}{5} N \varepsilon_{\text{F}} \times \qty[1 + \frac{5 \pi^2}{12} \qty(\frac{k T}{\varepsilon_{\text{F}}})^2]                                                                                                  \\
+    C_V =                                      & \pdv{E}{T} \approx N k \frac{\pi^2}{2} \frac{k T}{\varepsilon_{\text{F}}}
 \end{align*}
 
 \subsubsection{强简并玻色气体：BEC}
 
 将系统的基态能量记作 $\varepsilon_0$, 观察玻色爱因斯坦分布及其粒子数 \[
-f(\varepsilon) = \frac{1}{\mathrm{e}^{\beta (\varepsilon - \mu)} - 1},\ N = \int_{\varepsilon_0}^{\infty} \frac{g(\varepsilon)}{\mathrm{e}^{\beta (\varepsilon - \mu)} - 1} \dd{\varepsilon}
+    f(\varepsilon) = \frac{1}{\mathrm{e}^{\beta (\varepsilon - \mu)} - 1},\ N = \int_{\varepsilon_0}^{\infty} \frac{g(\varepsilon)}{\mathrm{e}^{\beta (\varepsilon - \mu)} - 1} \dd{\varepsilon}
 \] 欲保持粒子数不变，则 $T \downarrow \Rightarrow \mu \uparrow$，可能 $\exists\  T_c$ s.t. $\mu(T_c) = \varepsilon_0$，我们要求 \[
-\mu(T) = \begin{cases}
-\text{某函数},\ & T > T_c\\
-\varepsilon_0,\ & T < T_c
-\end{cases} \] $T < T_c$ 时有 \[
-N = N(T) = N_0(T) + \int_{\varepsilon_0 + 0}^{\infty} \frac{g(\varepsilon)}{\mathrm{e}^{\beta (\varepsilon - \varepsilon_0)} - 1} \dd{\varepsilon} \xlongequal{\text{假设} g(\varepsilon = \varepsilon_0) = 0} N_0(T) + \int_{\varepsilon_0}^{\infty} \frac{g(\varepsilon)}{\mathrm{e}^{\beta (\varepsilon - \varepsilon_0)} - 1} \dd{\varepsilon}
+    \mu(T) = \begin{cases}
+        \text{某函数},\     & T > T_c \\
+        \varepsilon_0,\  & T < T_c
+    \end{cases} \] $T < T_c$ 时有 \[
+    N = N(T) = N_0(T) + \int_{\varepsilon_0 + 0}^{\infty} \frac{g(\varepsilon)}{\mathrm{e}^{\beta (\varepsilon - \varepsilon_0)} - 1} \dd{\varepsilon} \xlongequal{\text{假设} g(\varepsilon = \varepsilon_0) = 0} N_0(T) + \int_{\varepsilon_0}^{\infty} \frac{g(\varepsilon)}{\mathrm{e}^{\beta (\varepsilon - \varepsilon_0)} - 1} \dd{\varepsilon}
 \] 而 \[
-N = N(T_c) = \int_{\varepsilon_0}^{\infty} \frac{g(\varepsilon)}{\mathrm{e}^{\beta_c (\varepsilon - \varepsilon_0)} - 1} \dd{\varepsilon}
+    N = N(T_c) = \int_{\varepsilon_0}^{\infty} \frac{g(\varepsilon)}{\mathrm{e}^{\beta_c (\varepsilon - \varepsilon_0)} - 1} \dd{\varepsilon}
 \] 你会发现老师的讲义中用的是分离的能级，而我写的是连续的能级。这实际上在概率论中有专门的介绍：如何处理一个既有离散取值又有连续取值的随机变量。然而，在物理中追究这种数学细节是得不偿失的。
 \begin{framed}
-桜井雪子：请问有没有更直接的引入 BEC 的讲法？
+    桜井雪子：请问有没有更直接的引入 BEC 的讲法？
 
-夏宁：可以从非对角长程序的角度引入
+    夏宁：可以从非对角长程序的角度引入
 
-oy：他说的确实是对的（）
+    oy：他说的确实是对的（）
 
-TDLI-xiao：他说的确实没错，当年是这么学的
+    TDLI-xiao：他说的确实没错，当年是这么学的
 \end{framed}
 
 \begin{align*}
-    E = & N_0(T) \varepsilon_0 + \int_{\varepsilon_0 + 0}^{\infty} \frac{\varepsilon g(\varepsilon)}{\mathrm{e}^{\beta (\varepsilon - \varepsilon_0)} - 1} \dd{\varepsilon}\\
-    C_V = & \qty(\pdv{E}{T})_{V, N}\\
-    p = & - \qty(\pdv{E}{V})_{N, S}
+    E =   & N_0(T) \varepsilon_0 + \int_{\varepsilon_0 + 0}^{\infty} \frac{\varepsilon g(\varepsilon)}{\mathrm{e}^{\beta (\varepsilon - \varepsilon_0)} - 1} \dd{\varepsilon} \\
+    C_V = & \qty(\pdv{E}{T})_{V, N}                                                                                                                                           \\
+    p =   & - \qty(\pdv{E}{V})_{N, S}
 \end{align*}
 
 \begin{framed}
-$g(\varepsilon) = A \varepsilon^{\alpha},\ \varepsilon_0 = 0$，实际上要求 $\alpha > 0$ \[
-N = \int_0^{\infty} \frac{A \varepsilon^{\alpha}}{\mathrm{e}^{\beta_c \varepsilon} - 1} \dd{\varepsilon} = N_0(T) + \int_0^{\infty} \frac{A \varepsilon^{\alpha}}{\mathrm{e}^{\beta \varepsilon} - 1} \dd{\varepsilon}
-\] \[
-N = A \beta_c ^{-\alpha -1} \Gamma (\alpha +1) \text{Li}_{\alpha +1}(1) = N_0(T) + A \beta ^{-\alpha -1} \Gamma (\alpha +1) \text{Li}_{\alpha +1}(1)
-\] \[
-T_c = \frac{1}{k} \qty[\frac{N}{A \Gamma (\alpha +1) \text{Li}_{\alpha +1}(1)}]^{\frac{1}{1 + \alpha}}
-\]  \[
-\frac{N_0(T)}{N} = 1 - \qty(\frac{T}{T_c})^{1 + \alpha}
-\] \begin{align*}
-E = & \int_0^{\infty} \frac{\varepsilon \times A \varepsilon^{\alpha}}{\mathrm{e}^{\beta \varepsilon} - 1} \dd{\varepsilon} = A \Gamma (\alpha +2) \text{Li}_{\alpha +2}(1) \beta ^{-\alpha -2}\\
-C_V = & \pdv{E}{T} = A \Gamma (\alpha +2) \text{Li}_{\alpha +2}(1) k (k T)^{\alpha + 1}
-\end{align*} 对于理想气体还可以算压强。
+    $g(\varepsilon) = A \varepsilon^{\alpha},\ \varepsilon_0 = 0$，实际上要求 $\alpha > 0$ \[
+        N = \int_0^{\infty} \frac{A \varepsilon^{\alpha}}{\mathrm{e}^{\beta_c \varepsilon} - 1} \dd{\varepsilon} = N_0(T) + \int_0^{\infty} \frac{A \varepsilon^{\alpha}}{\mathrm{e}^{\beta \varepsilon} - 1} \dd{\varepsilon}
+    \] \[
+        N = A \beta_c ^{-\alpha -1} \Gamma (\alpha +1) \text{Li}_{\alpha +1}(1) = N_0(T) + A \beta ^{-\alpha -1} \Gamma (\alpha +1) \text{Li}_{\alpha +1}(1)
+    \] \[
+        T_c = \frac{1}{k} \qty[\frac{N}{A \Gamma (\alpha +1) \text{Li}_{\alpha +1}(1)}]^{\frac{1}{1 + \alpha}}
+    \]  \[
+        \frac{N_0(T)}{N} = 1 - \qty(\frac{T}{T_c})^{1 + \alpha}
+    \] \begin{align*}
+        E =   & \int_0^{\infty} \frac{\varepsilon \times A \varepsilon^{\alpha}}{\mathrm{e}^{\beta \varepsilon} - 1} \dd{\varepsilon} = A \Gamma (\alpha +2) \text{Li}_{\alpha +2}(1) \beta ^{-\alpha -2} \\
+        C_V = & \pdv{E}{T} = A \Gamma (\alpha +2) \text{Li}_{\alpha +2}(1) k (k T)^{\alpha + 1}
+    \end{align*} 对于理想气体还可以算压强。
 \end{framed}
 
 \begin{table}[H]
     \centering
     \begin{tabular}{|c|c|c|c|}
         \hline
-        $\alpha$ & $\frac{1}{2}$ & 1 & 2 \\
+        $\alpha$ & $\frac{1}{2}$                                                                 & 1                                                     & 2                                                           \\
         \hline
-        $T_c$ & $\frac{1}{k} \qty[\frac{N}{A} \frac{2}{\sqrt{\pi} \zeta(\frac{3}{2})}]^{2/3}$ & $\frac{1}{k} \qty[\frac{N}{A} \frac{6}{\pi^2}]^{1/2}$ & $\frac{1}{k} \qty[\frac{N}{A} \frac{1}{2 \zeta (3)}]^{1/3}$\\
+        $T_c$    & $\frac{1}{k} \qty[\frac{N}{A} \frac{2}{\sqrt{\pi} \zeta(\frac{3}{2})}]^{2/3}$ & $\frac{1}{k} \qty[\frac{N}{A} \frac{6}{\pi^2}]^{1/2}$ & $\frac{1}{k} \qty[\frac{N}{A} \frac{1}{2 \zeta (3)}]^{1/3}$ \\
         \hline
     \end{tabular}
 \end{table}
 
 \begin{framed}
-一维谐振子：$g(\varepsilon) = 1 / \hbar \omega, \varepsilon_0 = \hbar \omega / 2$ 
-\[
-N = \sum_{n = 0}^{\infty} \frac{1}{\mathrm{e}^{\beta_c (\varepsilon_n - \frac{\hbar \omega}{2})} - 1} = N_0(T) + \sum_{n = 1}^{\infty} \frac{1}{\mathrm{e}^{\beta (\varepsilon_n - \frac{\hbar \omega}{2})} - 1}
-\]
-% \[
-% N = \sum_{n = 0}^{\infty} \frac{1}{\mathrm{e}^{n \beta_c \hbar \omega} - 1} = N_0(T) + \sum_{n = 1}^{\infty} \frac{1}{\mathrm{e}^{n \beta \hbar \omega} - 1}
-% \]
-\[
-N = \frac{1}{\hbar \omega} \int_{\hbar \omega / 2}^{\infty} \frac{\dd{\varepsilon}}{\exp \qty[\beta_c \qty(\varepsilon - \frac{\hbar \omega}{2})] - 1} = N_0(T) + \frac{1}{\hbar \omega} \int_{\hbar \omega / 2}^{\infty} \frac{\dd{\varepsilon}}{\exp \qty[\beta \qty(\varepsilon - \frac{\hbar \omega}{2})] - 1}
-\] 这一积分发散，因此一维谐振子系统不存在 BEC。
+    一维谐振子：$g(\varepsilon) = 1 / \hbar \omega, \varepsilon_0 = \hbar \omega / 2$
+    \[
+        N = \sum_{n = 0}^{\infty} \frac{1}{\mathrm{e}^{\beta_c (\varepsilon_n - \frac{\hbar \omega}{2})} - 1} = N_0(T) + \sum_{n = 1}^{\infty} \frac{1}{\mathrm{e}^{\beta (\varepsilon_n - \frac{\hbar \omega}{2})} - 1}
+    \]
+    % \[
+    % N = \sum_{n = 0}^{\infty} \frac{1}{\mathrm{e}^{n \beta_c \hbar \omega} - 1} = N_0(T) + \sum_{n = 1}^{\infty} \frac{1}{\mathrm{e}^{n \beta \hbar \omega} - 1}
+    % \]
+    \[
+        N = \frac{1}{\hbar \omega} \int_{\hbar \omega / 2}^{\infty} \frac{\dd{\varepsilon}}{\exp \qty[\beta_c \qty(\varepsilon - \frac{\hbar \omega}{2})] - 1} = N_0(T) + \frac{1}{\hbar \omega} \int_{\hbar \omega / 2}^{\infty} \frac{\dd{\varepsilon}}{\exp \qty[\beta \qty(\varepsilon - \frac{\hbar \omega}{2})] - 1}
+    \] 这一积分发散，因此一维谐振子系统不存在 BEC。
 \end{framed}
 
 \section{番外篇}
@@ -622,15 +622,15 @@ N = \frac{1}{\hbar \omega} \int_{\hbar \omega / 2}^{\infty} \frac{\dd{\varepsilo
 \subsection{热力学涨落}
 
 某个热力学量的热力学涨落就事它的标准差：\[
-\sigma_{O} = \sqrt{\overline{\qty(O - \bar{O})^2}} = \sqrt{\overline{O^2} - \bar{O}^2}
+    \sigma_{O} = \sqrt{\overline{\qty(O - \bar{O})^2}} = \sqrt{\overline{O^2} - \bar{O}^2}
 \] 粒子数 \[
-\bar{N} = \sum_s \rho_s N_s = \frac{1}{Z_{\text{GC}}} \pdv{Z_{\text{GC}}}{\alpha},\ \overline{N^2} = \sum_s \rho_s N_s^2 = \frac{1}{Z_{\text{GC}}}\pdv[2]{Z_{\text{GC}}}{\alpha} = \frac{1}{Z_{\text{GC}}} \pdv{\qty(Z_{\text{GC}} \bar{N})}{\alpha} = \bar{N}^2 + \pdv{\bar{N}}{\alpha} \Rightarrow \sigma_{N} = \sqrt{\pdv{\bar{N}}{\alpha}}
+    \bar{N} = \sum_s \rho_s N_s = \frac{1}{Z_{\text{GC}}} \pdv{Z_{\text{GC}}}{\alpha},\ \overline{N^2} = \sum_s \rho_s N_s^2 = \frac{1}{Z_{\text{GC}}}\pdv[2]{Z_{\text{GC}}}{\alpha} = \frac{1}{Z_{\text{GC}}} \pdv{\qty(Z_{\text{GC}} \bar{N})}{\alpha} = \bar{N}^2 + \pdv{\bar{N}}{\alpha} \Rightarrow \sigma_{N} = \sqrt{\pdv{\bar{N}}{\alpha}}
 \] 能量 \[
-\sigma_{E} = \sqrt{- \pdv{\bar{E}}{\beta}}
+    \sigma_{E} = \sqrt{- \pdv{\bar{E}}{\beta}}
 \] 对于三维经典理想气体 \[
-\sigma_{N} = \sqrt{\pdv{\bar{N}}{\alpha}} = \sqrt{\bar{N}},\ \sigma_{E} = \sqrt{- \pdv{\bar{E}}{\beta}} = \frac{\sqrt{6}}{2} \sqrt{\bar{N}} k T
+    \sigma_{N} = \sqrt{\pdv{\bar{N}}{\alpha}} = \sqrt{\bar{N}},\ \sigma_{E} = \sqrt{- \pdv{\bar{E}}{\beta}} = \frac{\sqrt{6}}{2} \sqrt{\bar{N}} k T
 \] 即 \[
-\frac{\sigma_{N}}{\bar{N}} = \frac{1}{\sqrt{\bar{N}}} \to 0,\ \frac{\sigma_{E}}{\bar{E}} = \frac{\sqrt{6}}{3 \sqrt{\bar{N}}} \to 0
+    \frac{\sigma_{N}}{\bar{N}} = \frac{1}{\sqrt{\bar{N}}} \to 0,\ \frac{\sigma_{E}}{\bar{E}} = \frac{\sqrt{6}}{3 \sqrt{\bar{N}}} \to 0
 \]
 
 \subsection{Ising 模型}
@@ -638,21 +638,21 @@ N = \frac{1}{\hbar \omega} \int_{\hbar \omega / 2}^{\infty} \frac{\dd{\varepsilo
 这一段完全事抄的林宗涵先生的书……
 
 \[
-H = - J \sum_{\expval{i j}}s_i s_j - \mu \mathcal{H} \sum_{i = 1}^N s_i = - \sum_i \mu s_i \qty[\mathcal{H} + \frac{J}{\mu} \sum_j \ ' s_j]
+    H = - J \sum_{\expval{i j}}s_i s_j - \mu \mathcal{H} \sum_{i = 1}^N s_i = - \sum_i \mu s_i \qty[\mathcal{H} + \frac{J}{\mu} \sum_j \ ' s_j]
 \] \[
-H_{\text{MF}} = - \sum_i \mu s_i \qty[\mathcal{H} + \bar{h}],\ \bar{h} \equiv \frac{z J}{\mu} \bar{s}
+    H_{\text{MF}} = - \sum_i \mu s_i \qty[\mathcal{H} + \bar{h}],\ \bar{h} \equiv \frac{z J}{\mu} \bar{s}
 \] 现在系统又变成了和顺磁性固体类似的系统 \[
-Z_N = \qty[2 \cosh \qty(\frac{\mu \mathcal{H}}{k T} + \frac{z J}{k T} \bar{s})]^N
+    Z_N = \qty[2 \cosh \qty(\frac{\mu \mathcal{H}}{k T} + \frac{z J}{k T} \bar{s})]^N
 \] \[
-F = - k T \ln{Z_N},\ \bar{\mathcal{M}} = N \mu \bar{s} = - \pdv{F}{\mathcal{H}} \Rightarrow \bar{s} = \tanh \qty(\frac{\mu \mathcal{H}}{k T} + \frac{z J}{k T} \bar{s})
+    F = - k T \ln{Z_N},\ \bar{\mathcal{M}} = N \mu \bar{s} = - \pdv{F}{\mathcal{H}} \Rightarrow \bar{s} = \tanh \qty(\frac{\mu \mathcal{H}}{k T} + \frac{z J}{k T} \bar{s})
 \] 接下来的讨论大概是这样：\begin{itemize}
     \item $\mathcal{H} = 0$（自发磁化） \begin{itemize}
-        \item 低温下三个解，两个是自发磁化，不同温度下解的情况
-        \item 高温下一个解，不物理
-        \item 从低温向临界温度趋近时物理量的行为
-    \end{itemize}
+              \item 低温下三个解，两个是自发磁化，不同温度下解的情况
+              \item 高温下一个解，不物理
+              \item 从低温向临界温度趋近时物理量的行为
+          \end{itemize}
     \item $\mathcal{H} \neq 0$ \begin{itemize}
-        \item 直接取零级近似得到一个解
-        \item 讨论临界温度附近时物理量的行为
-    \end{itemize}
+              \item 直接取零级近似得到一个解
+              \item 讨论临界温度附近时物理量的行为
+          \end{itemize}
 \end{itemize}
