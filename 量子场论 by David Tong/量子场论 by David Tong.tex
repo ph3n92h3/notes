@@ -1,0 +1,985 @@
+\documentclass{article}
+
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+\usepackage{ctex} % [UTF8]
+
+\setCJKmainfont{Noto Serif CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\setCJKmonofont{Noto Sans Mono CJK SC}
+
+% \usepackage{algorithm2e}
+\usepackage{cancel}
+\usepackage{emoji}
+\usepackage{extarrows}
+% \usepackage{float}
+\usepackage{framed}
+% \usepackage{minted}
+\usepackage{physics}
+% \usepackage{unicode-math}
+\usepackage{upgreek}
+
+\newcommand{\rme}{\mathrm{e}}
+\newcommand{\rmi}{\mathrm{i}}
+
+\title{QFT by David Tong}
+\author{桜井\ 雪子}
+\date{}
+
+\begin{document}
+\maketitle
+
+\setcounter{section}{-1}
+
+\section{前言}
+
+\begin{quote}
+  自然界中沒有哪怕一個真正的單粒子系統，甚至連少體系統都沒有。虛粒子對和的出現和漲落告訴我們，粒子數不變的日子一去不復返了…… ——Viki Weisskopf
+\end{quote}
+
+\begin{itemize}
+  \item 很多時候我們的成長都付出了相當沉重的代價，例如犧牲掉我們過去所認爲是相當美的東西，最終使得我們無比懷念的日子都一去不復返了。這一切都值得嗎？物理學的經驗告訴我們，值得，至少是大多數情況下。
+\end{itemize}
+
+這個前言兼目錄把之前零散的文章匯集起來，并且做一説明。
+
+一個有志於從事廣義相對論相關領域研究的年輕人爲什麽會轉來讀這本講量子場論的講義呢？實際上只是因爲讀完了一本書后不想立即讀下一本了，加之這本講義的長度比較適合換腦子的時候讀，我便選擇了它。
+
+我不説明的話，可能很多人不知道我每篇都在寫一些什麽東西。好吧，其實它們是我對於原作者（David Tong，我親切地稱之爲“佟大爲”）省去的或描述了但是語焉不詳的一些步驟的補充。這個補充的過程是充滿樂趣的，即使有了這幾篇文章，我希望後來的讀者仍然應該首先嘗試自己進行推導。我曾經犯過這樣一個天大的錯誤，即覺得書上那些推導自己看一遍就會了。這個壞習慣從某種意義上說毀掉了我，我希望説出這句話之後會有更少的人避免他，會有更少的人不再繼續欺騙自己。
+
+同時，有幾處細節我自己仍然不敢肯定，或者還沒有來得及找相關的文獻研究，歡迎讀者補充 :)
+
+\section{經典場論}
+
+$$\eta^{\mu\nu}=\eta_{\mu\nu}=\begin{pmatrix}
+    + &   &   &   \\
+      & - &   &   \\
+      &   & - &   \\
+      &   &   & -
+  \end{pmatrix}$$
+
+$$\partial_{\mu}=(\frac{\partial}{\partial t},\nabla),\ \partial^{\mu}=(\frac{\partial}{\partial t},-\nabla)$$
+
+\subsection{場的動力學}
+
+$$\varphi_a(\vec{x},t)$$
+
+$$L=\int\mathrm{d}^3x\mathcal{L}(\varphi_a,\partial_a\varphi)$$
+
+$$S=\int_{t_{1}}^{t_{2}}\mathrm{d}t\int \mathrm{d}^{3} x \mathcal{L}=\int \mathrm{d}^{4} x \mathcal{L}$$
+
+$$\begin{aligned}
+    0=\delta S & =\int\mathrm{d}^4x[\frac{\partial\mathcal{L}}{\partial\varphi_a}\delta\varphi_a+\frac{\partial\mathcal{L}}{\partial(\partial_\mu\varphi_a)}\delta(\partial_\mu\varphi_a)]                                                                           \\
+               & =\int\mathrm{d}^4x[\frac{\partial\mathcal{L}}{\partial\varphi_a}-\partial_\mu(\frac{\partial\mathcal{L}}{\partial(\partial_\mu\varphi_a)})]\delta\varphi_a+\partial_\mu(\frac{\partial\mathcal{L}}{\partial(\partial_\mu\varphi_a)}\delta\varphi_a)
+  \end{aligned}$$
+
+$$\partial_\mu(\frac{\partial\mathcal{L}}{\partial(\partial_\mu\varphi_a)})-\frac{\partial\mathcal{L}}{\partial\varphi_a}=0$$
+
+$$\frac{\partial}{\partial t}(\frac{\partial\mathcal{L}}{\partial(\frac{\partial}{\partial t}\phi_{a})})-\nabla(\frac{\partial\mathcal{L}}{\partial(\nabla\phi_{a})})-\frac{\partial\mathcal{L}}{\partial\phi_{a}}=0$$
+
+\subsection{Klein-Gordon 方程}
+
+$$\mathcal{L}=\frac{1}{2}\eta^{\mu\nu}\partial_{\mu}\phi\partial_{\nu}\phi-\frac{1}{2}m^2\phi^2$$
+
+$$\frac{\partial\mathcal{L}}{\partial\phi}=-m^2\phi,\ \frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi)}=\partial^{\mu}\phi=(\dot{\phi},-\nabla\phi)$$
+
+$$\partial_{\mu}\partial^{\mu}\phi+m^2\phi=0$$
+
+$$\mathcal{L}=\frac{1}{2}\partial_{\mu}\phi\partial^{\mu}\phi-V(\phi)\Rightarrow\partial_{\mu}\partial^{\mu}\phi+\frac{\partial V}{\partial\phi}=0$$
+
+\subsection{一階拉格朗日量}
+
+$$\mathcal{L}=\frac{\mathrm{i}}{2}(\psi^{\star}\dot{\psi}-\dot{\psi}^{\star}\psi)-\nabla\psi^{\star}\cdot\nabla\psi-m\psi^{\star}\psi$$
+
+將 $\psi$ 與 $\psi^{\star}$ 視爲獨立對象
+
+$$\frac{\partial\mathcal{L}}{\partial\psi^{\star}}=\frac{\mathrm{i}}{2}\dot{\psi}-m\psi,\ \frac{\partial\mathcal{L}}{\partial\dot{\psi}^{\star}}=-\frac{\mathrm{i}}{2}\psi,\ \frac{\partial\mathcal{L}}{\partial(\nabla\psi^{\star})}=-\nabla\psi$$
+
+$$\frac{\partial}{\partial t}(-\frac{\mathrm{i}}{2}\psi)-\nabla(-\nabla\psi)-(\frac{\mathrm{i}}{2}\dot{\psi}-m\psi)=0\Rightarrow\frac{\mathrm{i}}{2}\psi=\nabla^2\psi+m\psi$$
+
+\subsection{Maxwell 方程}
+
+$$\mathcal{L}=-\frac{1}{2}(\partial_{\mu}A_{\nu})(\partial^{\mu}A^{\nu})+\frac{1}{2}(\partial_{\mu}A^{\mu})^2=-\frac{1}{2}(\partial_{\mu}A_{\nu})(\partial^{\mu}A^{\nu})+\frac{1}{2}(\eta^{\mu\nu}\partial_{\mu}A_{\nu})^2$$
+
+$$\frac{\partial\mathcal{L}}{\partial A^{\mu}}=0$$
+
+$$\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}A_{\nu})}=-\partial^{\mu}A^{\nu}+\eta^{\mu\nu}(\eta^{\mu\nu}\partial_{\mu}A_{\nu})=-\partial^{\mu}A^{\nu}+\eta^{\mu\nu}(\partial_{\rho}A^{\rho})$$
+
+$$\partial_{\mu}(\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}A_{\nu})})=-\partial^2A^{\nu}+\partial^{\nu}(\partial_{\rho}A^{\rho})=-\partial_{\mu}(\partial^{\mu}A^{\nu}-\partial^{\nu}A^{\mu})\equiv-\partial_{\mu}F^{\mu\nu}$$
+
+\begin{itemize}
+  \item 三維形式：
+\end{itemize}
+
+$$F_{\mu\nu}=\partial_{\mu}A_{\nu}-\partial_{\nu}A_{\mu},A^{\mu}(\vec{x},t)=(\phi,\vec{A}),\vec{E}=-\nabla\phi-\frac{\partial\vec{A}}{\partial t},\vec{B}=\nabla\times\vec{A}$$
+
+$$\nabla\cdot\vec{B}=\nabla\cdot(\nabla\times\vec{A})=0,\ \nabla\times\vec{E}=\nabla\times(-\nabla\phi-\frac{\partial\vec{A}}{\partial t})=-\frac{\partial}{\partial t}(\nabla\times\vec{A})=-\frac{\partial\vec{B}}{\partial t}$$
+
+$$\partial_{\mu}F^{\mu\nu}\Rightarrow\nabla\cdot\vec{E}=0,\ \frac{\partial\vec{E}}{\partial t}=\nabla\times\vec{B}$$
+
+\begin{itemize}
+  \item 等價形式：
+\end{itemize}
+
+$$\begin{aligned}
+    \mathcal{L}= & -\frac{1}{4}F_{\mu\nu}F^{\mu\nu}=-\frac{1}{4}(\partial_{\mu}A_{\nu}-\partial_{\nu}A_{\mu})(\partial^{\mu}A^{\nu}-\partial^{\nu}A^{\mu}) \\
+    =            & -\frac{1}{4}[(\partial_{\mu}A_{\nu})(\partial^{\mu}A^{\nu})+(\partial_{\nu}A_{\mu})(\partial^{\nu}A^{\mu})]                             \\
+                 & +\frac{1}{4}[(\partial_{\mu}A_{\nu})(\partial^{\nu}A^{\mu})+(\partial_{\nu}A_{\mu})(\partial^{\mu}A^{\nu})]
+  \end{aligned}$$
+
+$$(\partial_{\mu}A_{\nu})(\partial^{\mu}A^{\nu})+(\partial_{\nu}A_{\mu})(\partial^{\nu}A^{\mu})=2(\partial_{\mu}A_{\nu})(\partial^{\mu}A^{\nu})$$
+
+$$\begin{aligned}
+    (\partial_{\mu}A_{\nu})(\partial^{\nu}A^{\mu})+(\partial_{\nu}A_{\mu})(\partial^{\mu}A^{\nu}) & \xlongequal{\mathrm{phy}}-A_{\nu}(\partial_{\mu}\partial^{\nu}A^{\mu})-A_{\nu}(\partial_{\nu}\partial^{\mu}A^{\nu}) \\
+                                                                                                  & =-2A_{\mu}\partial^{\mu}\partial_{\nu}A^{\nu}                                                                       \\
+                                                                                                  & =-2[\partial^{\mu}(A_{\mu}\partial_{\nu}A^{\nu})-(\partial^{\mu}A_{\mu})(\partial_{\nu}A^{\mu})]                    \\
+                                                                                                  & \xlongequal{\mathrm{phy}}2(\partial^{\mu}A_{\mu})^2
+  \end{aligned}$$
+
+\subsection{Lorentz 不變性}
+
+$$\Lambda^{\mu}_{\ \ \sigma}\eta^{\sigma\tau}\Lambda^{\nu}_{\ \ \tau}=\eta^{\mu\nu}$$
+
+$$x^{\mu}\to(x')^{\mu}=\Lambda^{\mu}_{\ \ \nu}x^\nu,\ \phi(x)\to\phi'(x)=\phi(\Lambda^{-1}x)$$
+
+\begin{itemize}
+  \item Klein-Gordon 方程
+\end{itemize}
+
+$$\phi(x)\to\phi'(x)=\phi(y),\ y=\Lambda^{-1}x$$
+
+$$(\partial_{\mu}\phi)(x)\to(\Lambda^{-1})^{\nu}_{\ \ \mu}(\partial_{\nu}\psi)(y)$$
+
+$$\mathcal{L}_{\mathrm{deriv}}(x)=\partial_{\mu}\phi(x)\partial_{\nu}\phi(x)\eta^{\mu\nu}\to(\Lambda^{-1})^{\rho}_{\ \ \mu}(\partial_{\rho}\phi)(y)(\Lambda^{-1})^{\sigma}_{\ \ \nu}(\partial_{\sigma}\phi)(y)\eta^{\mu\nu}=(\partial_{\rho}\phi)(y)(\partial_{\sigma}\phi)(y)\eta^{\rho\sigma}=\mathcal{L}_{\mathrm{deriv}}(y)$$
+
+\begin{itemize}
+  \item 一階的動力學：不是 Lorentz 不變的
+  \item Maxwell 方程：是
+\end{itemize}
+
+\subsection{對稱性}
+
+\subsubsection{Noether 定理}
+
+\begin{quote}
+  拉格朗日量的任一連續對稱性給出一個守恆荷。
+\end{quote}
+
+$$\delta\mathcal{L}=\frac{\partial{\mathcal{L}}}{\partial\phi_{a}}\delta\phi_{a}+\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_a)}\partial_{\mu}(\delta\phi_a)=\partial_{\mu}(\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_{a})}\delta\phi_a)$$
+
+稱變換 $\delta\phi_a(x)=X_{a}(\phi)$ 對稱，若同時 $\delta\mathcal{L}=\partial_{\mu}F^{\mu}$；則：
+
+$$\partial_{\mu}j^{\mu}=0,\ j^{\mu}=\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_{a})X_{a}(\phi)}-F^{\mu}(\phi)$$
+
+\subsubsection{平移和能量動量張量}
+
+$$\Lambda:\ x^{\mu}\to x^{\nu}-\epsilon^{\nu}\Rightarrow\Lambda^{-1}:\ x^{\nu}\to x^{\nu}+\epsilon^{\nu}$$
+
+$$\phi_{a}(x)\to\phi'_{a}(x)=\phi_{a}(\Lambda^{-1}x)=\phi_{a}(x^{\nu}+\epsilon^{\nu})\xlongequal{\mathrm{Taylor}}\phi_{a}(x)+\epsilon^{\nu}\partial_{\nu}\phi_{a}(x),\ \mathcal{L}(x)\to\mathcal{L}(x)+\epsilon^{\nu}\partial_{\nu}\mathcal{L}(x)$$
+
+$$\delta\phi_a(x)=\epsilon^{\nu}\partial_{\nu}\phi_{a}(x),\ \delta\mathcal{L}=\epsilon^{\mu}\partial_{\mu}\mathcal{L}(x),\ F^{\mu}=\epsilon^{\mu}\mathcal{L}(x)$$
+
+$$(j^{\mu})_{\nu}=\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_{a})}\partial_{\nu}\phi_{a}(x)-\delta^{\mu}_{\nu}\mathcal{L}\equiv T^{\mu}_{\ \ \ \nu}$$
+
+對於 $L\mathcal{L}=\frac{1}{2}\partial_{\mu}\phi\partial^{\mu}\phi-\frac{1}{2}m^2\phi^2$：
+
+$$T^{\mu\nu}=\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi_{a})}\partial^{\nu}\phi_{a}-\eta^{\mu\nu}\mathcal{L}=\partial^{\mu}\phi\partial^{\nu}\phi-\eta^{\mu\nu}\mathcal{L}$$
+
+$$\begin{aligned}
+    \partial_{\mu}T^{\mu\nu} & =\partial_{\mu}(\partial^{\mu}\phi\partial^{\nu}\phi)-\partial^{\nu}(\frac{1}{2}\partial_{\mu}\phi\partial^{\mu}\phi-\frac{1}{2}m^2\phi^2)                          \\
+                             & =\partial^2\phi\partial^{\nu}\phi+m^2\phi\partial^{\nu}\phi+\partial^{\mu}\phi\partial_{\mu}\partial^{\nu}\phi-\partial^{\nu}\partial_{\mu}\phi\partial^{\mu}\phi=0
+  \end{aligned}$$
+
+\subsubsection{Lorentz 變換和角動量}
+
+$$\Lambda^{\mu}_{\ \ \nu}=\delta^{\mu}_{\ \ \nu}+\omega^{\mu}_{\ \ \nu}$$
+
+$$\begin{aligned}
+    \eta^{\mu\nu} & =(\delta^{\mu}_{\ \ \sigma}+\omega^{\mu}_{\ \ \sigma})\eta^{\sigma\tau}(\delta^{\nu}_{\ \ \tau}+\omega^{\nu}_{\ \ \tau})                           \\
+                  & =\eta^{\mu\nu}+\omega^{\mu}_{\ \ \sigma}\eta^{\sigma\tau}\delta^{\nu}_{\ \ \tau}+\delta^{\mu}_{\ \ \sigma}\eta^{\sigma\tau}\omega^{\nu}_{\ \ \tau} \\
+                  & =\eta^{\mu\nu}+\omega^{\mu\nu}+\omega^{\nu\mu}
+  \end{aligned}\\\Rightarrow\omega^{\mu\nu}+\omega^{\nu\mu}=0$$
+
+$$\phi(x)\to\phi'(x)=\phi(\Lambda^{-1}x)=\phi(x^{\mu}-\omega^{\mu}_{\ \ \nu}x^{\nu})\xlongequal{\mathrm{Taylor}}\phi(x^{\mu})-\omega^{\mu}_{\ \ \nu}x^{\nu}\partial_{\mu}\phi(x)$$
+
+$$\delta\phi=-\omega^{\mu}_{\ \ \nu}x^{\nu}\partial_{\mu}\phi$$
+
+$$\delta\mathcal{L}=-\omega^{\mu}_{\ \ \nu}x^{\nu}\partial_{\mu}\mathcal{L}\xlongequal{\omega^{\mu}_{\ \ \nu}(\partial_{\mu}x^{\nu})=\omega^{\mu}_{\ \ \nu}\delta_{\mu}^{\ \ \nu}=0}\partial_{\mu}[-\omega^{\mu}_{\ \ \nu}x^{\nu}\mathcal{L}]$$
+
+$$j^{\mu}=-\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi)}\omega^{\rho}_{\ \ \nu}x^{\nu}\partial_{\rho}\phi+\omega^{\mu}_{\ \ \nu}x^{\nu}\mathcal{L}=-\omega^{\rho}_{\ \ \nu}[\frac{\partial\mathcal{L}}{\partial(\partial_{\mu}\phi)}\partial_{\rho}\phi-\delta^{\mu}_{\ \ \rho}\mathcal{L}]x^{\nu}=-\omega^{\rho}_{\ \ \nu}T^{\mu}_{\ \ \rho}x^{\nu}$$
+
+$$(\mathcal{J^{\mu}})^{\rho\sigma}=x^{\rho}T^{\mu\sigma}-x^{\sigma}T^{\mu\rho}$$
+
+$$\partial_{\mu}(\mathcal{J^{\mu}})^{\rho\sigma}=(\delta_{\mu}^{\ \ \rho}T^{\mu\sigma}+x^{\rho}\partial_{\mu}T^{\mu\sigma})-(\delta_{\mu}^{\ \ \sigma}T^{\mu\rho}+x^{\sigma}\partial_{\mu}T^{\mu\rho})$$
+
+\subsubsection{内稟對稱性：}
+
+考慮一複場：$\phi(x)\equiv(\phi_1(x)+\mathrm{i}\phi_2(x))/\sqrt{2},\ \mathcal{L}=\partial_{\mu}\phi^{\star}\partial^{\mu}\psi-V(|\psi|^2),\ |\psi|^2=\psi^{\star}\psi$，自由度為 $2$，視 $\psi$ 與 $\psi^{\star}$ 獨立：
+
+$$\partial_{\mu}\partial^{\mu}\psi+\frac{\partial V(\psi^{\star}\psi)}{\partial\psi^{\star}}=0$$
+
+$$\psi\to\mathrm{e}^{\mathrm{i}\alpha}\psi=(1+\mathrm{i}\alpha)\psi,\ \delta\psi=\mathrm{i}\alpha\psi,\ \delta\psi^{\star}=-\mathrm{i}\alpha\psi,\ \delta\mathcal{L}=0$$
+
+$$j^{\mu}=\mathrm{i}(\partial^{\mu}\psi^{\star})\psi-\mathrm{i}\psi^{\star}(\partial^{\mu}\psi)$$
+
+之後將會看到，這一守恆量是電荷或粒子數。
+
+\subsection{Hamiltonian 理論}
+
+路徑積分形式需要用到拉格朗日量，而正則量子化需要用到哈密頓量。我們選擇後者。
+
+$$\pi^{a}(x)\equiv\frac{\partial\mathcal{L}}{\partial\dot{\phi}_a}$$
+
+$$\mathcal{H}=\pi^a(x)\dot{\phi}_{a}(x)-\mathcal{L}(x),\ H=\int\mathrm{d}^3x\ \mathcal{H}$$
+
+$$\dot{\psi}(\vec{x},t)=\frac{\partial\mathcal{H}}{\partial\pi(\vec{x},t)},\ \dot\pi(\vec{x},t)=\frac{\partial\mathcal{H}}{\partial\phi(\vec{x},t)}$$
+
+\section{自由場}
+
+\begin{quote}
+  一位年輕的理論物理學家的職業生涯就是在不斷提高的的抽象層次中處理諧振子。——Sidney Coleman
+\end{quote}
+
+從這篇文章開始，不再單純地抄書，主要記錄一些補充的推導過程。
+
+\subsection{熱身}
+
+$$[q_{a},q_{b}]=[p^{a},p^{b}]=0,\ [q_{a},p^b]=\mathrm{i}\delta^b_a$$
+
+類比：
+
+$$[\phi_a(\vec{x}),\phi_b(\vec{y})]=[\pi^a(\vec{x}),\pi^b(\vec{y})]=0, [\phi_{a}(\vec{x}),\pi^b(\vec{y})]=\mathrm{i}\delta^{(3)}(\vec{x}-\vec{y})\delta^b_a$$
+
+$$\partial_{\mu}\partial^{\mu}\phi(\vec{x},t)+m^2\phi(\vec{x},t)=0$$
+
+$$\phi(\vec{x},t)=\int\frac{\mathrm{d}^3p}{(2\pi)^3}\mathrm{e}^{\mathrm{i}\vec{p}\cdot\vec{x}}\phi(\vec{p},t)$$
+
+$$\begin{aligned}
+    0 & =\int\frac{\mathrm{d}^3p}{(2\pi)^3}\{\partial_{\mu}\partial^{\mu}[\mathrm{e}^{\mathrm{i}\vec{p}\cdot\vec{x}}\phi(\vec{p},t)]+m^2\mathrm{e}^{\mathrm{i}\vec{p}\cdot\vec{x}}(\vec{p},t)\}               \\
+      & =\int\frac{\mathrm{d}^3p}{(2\pi)^3}\{(\frac{\partial^2}{\partial t^2}-\nabla^2)[\mathrm{e}^{\mathrm{i}\vec{p}\cdot\vec{x}}\phi(\vec{p},t)]+m^2\mathrm{e}^{\mathrm{i}\vec{p}\cdot\vec{x}}(\vec{p},t)\} \\
+      & =\mathrm{e}^{i\vec{p}\cdot\vec{x}}\frac{\partial^2}{\partial t^2}\phi(\vec{p},t)+\mathrm{e}^{i\vec{p}\cdot\vec{x}}\vec{p}^2\phi(\vec{p},t)+\mathrm{e}^{i\vec{p}\cdot\vec{x}}m^2\phi(\vec{p},t)        \\
+    0 & =(\frac{\partial^2}{\partial t^2}+\vec{p}^2+m^2)\phi(\vec{p},t)
+  \end{aligned}$$
+
+$$\omega_{\vec{p}}=\sqrt{\vec{p}^2+m^2}$$
+
+\subsection{自由標量場正則量子化的一些細節}
+
+$$\begin{aligned}
+    \phi(\vec{x}) & =\int\frac{\mathrm{d}^3p}{(2\pi)^3}\frac{1}{\sqrt{2\omega_{\vec{p}}}}(a_{\vec{p}}\mathrm{e}^{\mathrm{i}\vec{p}\cdot\vec{x}}+a_{\vec{p}}^{\dagger}\mathrm{e}^{-\mathrm{i}\vec{p}\cdot\vec{x}})             \\
+    \pi(\vec{x})  & =\int\frac{\mathrm{d}^3p}{(2\pi)^3}(-\mathrm{i})\sqrt{\frac{\omega_{\vec{p}}}{2}}(a_{\vec{p}}\mathrm{e}^{\mathrm{i}\vec{p}\cdot\vec{x}}-a_{\vec{p}}^{\dagger}\mathrm{e}^{-\mathrm{i}\vec{p}\cdot\vec{x}})
+  \end{aligned}$$
+
+\subsubsection{反粒子竟是我自己？！}
+
+$$\phi(\vec{x})=\phi^{\dagger}(\vec{x})$$
+
+\subsubsection{場算符的對易關係和產生湮滅算符的對易關係的關係？}
+
+$$\begin{aligned}
+                    & [\phi(\vec{x}),\phi(\vec{y})]=[\pi(\vec{x}),\pi(\vec{y})]=0,\ [\phi(\vec{x}),\pi(\vec{y})]=\mathrm{i}\delta^{(3)}(\vec{x}-\vec{y})                    \\
+    \Leftrightarrow & [a_{\vec{p}},a_{\vec{q}}]=[a_{\vec{p}}^{\dagger},a_{\vec{q}}^{\dagger}]=0,\ [a_{\vec{p}},a_{\vec{p}}^{\dagger}]=(2\pi)^2\delta^{(3)}(\vec{p}-\vec{q})
+  \end{aligned}$$
+
+$$\begin{aligned}
+    [a_{\vec{p}},a_{\vec{p}}^{\dagger}] & =(2\pi)^2\delta^{(3)}(\vec{p}-\vec{q})\quad\Rightarrow                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              \\
+    [\phi(\vec{x}),\phi(\vec{y})]       & =\int\frac{\mathrm{d}^3p\mathrm{d}^3q}{(2\pi)^6}\frac{-\mathrm{i}}{2}\sqrt{\frac{\omega_{\vec{q}}}{\omega_{\vec{p}}}}\left([a_{\vec{p}},a_{\vec{p}}]\mathrm{e}^{\mathrm{i}\vec{p}\cdot\vec{x}+\mathrm{i}\vec{q}\cdot\vec{y}}-[a_{\vec{p}},a_{\vec{q}}^{\dagger}]\mathrm{e}^{\mathrm{i}\vec{p}\cdot\vec{x}-\mathrm{i}\vec{q}\cdot\vec{y}}+[a_{\vec{p}}^{\dagger},a_{\vec{q}}]\mathrm{e}^{-\mathrm{i}\vec{p}\cdot\vec{x}+\mathrm{i}\vec{q}\cdot\vec{y}}-[a_{\vec{p}}^{\dagger},a_{\vec{q}}^{\dagger}]\mathrm{e}^{-\mathrm{i}\vec{p}\cdot\vec{x}-\mathrm{i}\vec{q}\cdot\vec{y}}\right) \\
+                                        & =\int\frac{\mathrm{d}^3p\mathrm{d}^3q}{(2\pi)^6}\frac{-\mathrm{i}}{2}\sqrt{\frac{\omega_{\vec{q}}}{\omega_{\vec{p}}}}\left(-[a_{\vec{p}},a_{\vec{q}}^{\dagger}]\mathrm{e}^{\mathrm{i}\vec{p}\cdot\vec{x}-\mathrm{i}\vec{q}\cdot\vec{y}}+[a_{\vec{p}}^{\dagger},a_{\vec{q}}]\mathrm{e}^{-\mathrm{i}\vec{p}\cdot\vec{x}+\mathrm{i}\vec{q}\cdot\vec{y}}\right)                                                                                                                                                                                                                         \\
+                                        & =  \int\frac{\mathrm{d}^3p\mathrm{d}^3q}{(2\pi)^6}\frac{-\mathrm{i}}{2}\sqrt{\frac{\omega_{\vec{q}}}{\omega_{\vec{p}}}}\left(-(2\pi)^3\delta^{(3)}(\vec{p}-\vec{q})\mathrm{e}^{\mathrm{i}\vec{p}\cdot\vec{x}-\mathrm{i}\vec{q}\cdot\vec{y}}-(2\pi)^3\delta^{(3)}(\vec{p}-\vec{q})\mathrm{e}^{-\mathrm{i}\vec{p}\cdot\vec{x}+\mathrm{i}\vec{q}\cdot\vec{y}}\right)                                                                                                                                                                                                                   \\
+                                        & =\int\frac{\mathrm{d}^3p}{(2\pi)^3}\frac{-\mathrm{i}}{2}\left[-\mathrm{e}^{\mathrm{i}\vec{p}\cdot(\vec{x}-\vec{y})}-\mathrm{e}^{\mathrm{i}\vec{p}\cdot(\vec{y}-\vec{x})}\right]                                                                                                                                                                                                                                                                                                                                                                                                     \\
+                                        & \xlongequal{\delta^{(3)}(\vec{x})= \int\frac{\mathrm{d}^3p}{(2\pi)^3}\mathrm{e}^{\mathrm{i}\vec{p}\cdot\vec{x}}} \mathrm{i}\delta^{(3)}(\vec{x}-\vec{y})
+  \end{aligned}$$
+
+\subsubsection{計算哈密頓量中的“三重積分”}
+
+$$\begin{aligned}
+    H= & \frac{1}{2} \int d^{3} x \pi^{2}+(\nabla \phi)^{2}+m^{2} \phi^{2}                                                                                                                                                                                                                                                                          \\
+    =  & \frac{1}{2} \int \frac{d^{3} x d^{3} p d^{3} q}{(2 \pi)^{6}}\left[-\frac{\sqrt{\omega_{\vec{p}} \omega_{\vec{q}}}}{2}\left(a_{\vec{p}} e^{i \vec{p} \cdot \vec{x}}-a_{\vec{p}}^{\dagger} e^{-i \vec{p} \cdot \vec{x}}\right)\left(a_{\vec{q}} e^{i \vec{q} \cdot \vec{x}}-a_{\vec{q}}^{\dagger} e^{-i \vec{q} \cdot \vec{x}}\right)\right. \\
+       & +\frac{1}{2 \sqrt{\omega_{\vec{p}} \omega_{\vec{q}}}}\left(i \vec{p} a_{\vec{p}} e^{i \vec{p} \cdot \vec{x}}-i \vec{p} a_{\vec{p}}^{\dagger} e^{-i \vec{p} \cdot \vec{x}}\right) \cdot\left(i \vec{q} a_{\vec{q}} e^{i \vec{q} \cdot \vec{x}}-i \vec{q} a_{\vec{q}}^{\dagger} e^{-i \vec{q} \cdot \vec{x}}\right)                          \\
+       & \left.+\frac{m^{2}}{2 \sqrt{\omega_{\vec{p}} \omega_{\vec{q}}}}\left(a_{\vec{p}} e^{i \vec{p} \cdot \vec{x}}+a_{\vec{p}}^{\dagger} e^{-i \vec{p} \cdot \vec{x}}\right)\left(a_{\vec{q}} e^{i \vec{q} \cdot \vec{x}}+a_{\vec{q}}^{\dagger} e^{-i \vec{q} \cdot \vec{x}}\right)\right]
+  \end{aligned}$$
+
+實際上，這很爽。
+
+\begin{enumerate}
+  \item 展開：$$\begin{aligned}
+              & \left(a_{\vec{p}} e^{i \vec{p} \cdot \vec{x}}-a_{\vec{p}}^{\dagger} e^{-i \vec{p} \cdot \vec{x}}\right)\left(a_{\vec{q}} e^{i \vec{q} \cdot \vec{x}}-a_{\vec{q}}^{\dagger} e^{-i \vec{q} \cdot \vec{x}}\right)                                                                                                                                       \\
+            = & a_{\vec{p}}a_{\vec{q}}\mathrm{e}^{\mathrm{i}(\vec{p}+\vec{q})\cdot\vec{x}}+a_{\vec{p}}^{\dagger}a_{\vec{q}}^{\dagger}\mathrm{e}^{-\mathrm{i}(\vec{p}+\vec{q})\cdot\vec{x}}-a_{\vec{p}}^{\dagger}a_{\vec{q}}\mathrm{e}^{\mathrm{i}(\vec{q}-\vec{p})\cdot\vec{x}}-a_{\vec{p}}a_{\vec{q}}^{\dagger}\mathrm{e}^{\mathrm{i}(\vec{p}-\vec{q})\cdot\vec{x}}
+          \end{aligned}$$
+  \item $$\int\frac{\mathrm{d}^3x}{(2\pi)^3}\mathrm{e}^{\mathrm{i}(\vec{p}+\vec{q})\cdot\vec{x}}=\delta^{(3)}\left(\vec{p}+\vec{q}\right)$$
+  \item $$\int\mathrm{d}^3q\sqrt{\omega_{\vec{p}}\omega_{\vec{q}}}a_{\vec{p}}a_{\vec{q}}\delta^{(3)}\left(\vec{p}+\vec{q}\right)=\omega_{\vec{p}}a_{\vec{p}}a_{-\vec{p}}$$
+\end{enumerate}
+
+$$H=\frac{1}{2}\int\frac{\mathrm{d}^3p}{(2\pi)^3}\omega_{\vec{p}}\left[a_{\vec{p}}a_{\vec{p}}^{\dagger}+a_{\vec{p}}^{\dagger}a_{\vec{p}}\right]=\int\frac{\mathrm{d}^3p}{(2\pi)^3}\omega_{\vec{p}}\left[a_{\vec{p}}^{\dagger}a_{\vec{p}}+\frac{1}{2}(2\pi)^3\delta^{(3)}(0)\right]$$
+
+normal ordering:
+
+$$H=\frac{1}{2}(\omega q-\mathrm{i}p)(\omega q+\mathrm{i}p)\Rightarrow H=\int\frac{\mathrm{d}^3p}{(2\pi)^3}\omega_{\vec{p}}a_{\vec{p}}^{\dagger}a_{\vec{p}},\ H\left|0\right\rangle=0$$
+
+\subsection{看見真空就趕緊對易子！}
+
+$$\vec{P}\equiv-\int\mathrm{d}^3x\ \pi\nabla\phi=\int\frac{\mathrm{d}^3p}{(2\pi)^3}\vec{p}a_{\vec{p}}^{\dagger}a_{\vec{p}},\ \left|\vec{p}\right\rangle=a_{\vec{p}}^{\dagger}\left|0\right\rangle$$
+
+$$\begin{aligned}
+    \vec{P}\left|\vec{p}\right\rangle & =\int\frac{\mathrm{d}^3p}{(2\pi)^3}\vec{p}a_{\vec{p}}^{\dagger}a_{\vec{p}}a_{\vec{p}}^{\dagger}\left|0\right\rangle                                                                                                                                                                                         \\
+                                      & \xlongequal{a_{\vec{p}}a_{\vec{p}}^{\dagger}=a_{\vec{p}}^{\dagger}a_{\vec{p}}+(2\pi)^3\delta^{(3)}(0)}\int\frac{\mathrm{d}^3p}{(2\pi)^3}\vec{p}a_{\vec{p}}^{\dagger}a_{\vec{p}}^{\dagger}a_{\vec{p}}\left|0\right\rangle+\int\mathrm{d}^3p\ \vec{p}\delta^{(3)}(0)a_{\vec{p}}^{\dagger}\left|0\right\rangle \\
+                                      & \xlongequal{a_{\vec{p}}\left|0\right\rangle=0}\vec{p}\left|\vec{p}\right\rangle
+  \end{aligned}$$
+
+\subsection{在證明相對論性歸一化因子的過程中：}
+
+$$\delta[f(x)]=\sum_{\{x_i|f(x_i)=0\text{（要求單根！）}\}}\frac{1}{|f'(x_i)|}\delta(x-x_i)$$
+
+$$\begin{aligned}
+    \delta(p_0^2-\vec{p}^2-m^2) & =\delta(p_0^2-E_{\vec{p}}^2)                                          \\
+                                & =\frac{\delta(p_0-E_{\vec{p}})+\delta(p_0+E_{\vec{p}})}{2E_{\vec{p}}}
+  \end{aligned}$$
+
+$$\left.\int\mathrm{d}^4p\ \delta(p_0^2-\vec{p}^2-m^2)\right|_{p_0>0}=\left.\int\frac{\mathrm{d}^3p}{2p_0}\right|_{p_0=E_{\vec{p}}}$$
+
+$$\left|p\right\rangle=\sqrt{2E_{\vec{p}}}\left|\vec{p}\right\rangle$$
+
+\subsection{Heisenberg 運動方程的計算}
+
+這裏只寫出一個罷：
+
+$$\begin{aligned}
+    \dot{\pi}=\mathrm{i}[H,\pi] & =\mathrm{i}\left[\frac{1}{2}\int\mathrm{d}^3y\ \pi(y)^2+\nabla\phi(y)^2+m^2\phi(y)^2,\pi(x)\right]                          \\
+                                & =\frac{\mathrm{i}}{2}\int\mathrm{d}^3y\ \left([\nabla\phi(y)^2,\pi(x)]+m^2[\phi(y)^2,\pi(x)]\right)                         \\
+                                & =\frac{\mathrm{i}}{2}\int\mathrm{d}^3y\ \left(2\nabla_y\phi(y)\nabla_y[\phi(y),\pi(x)]+m^2\ 2\phi(y)[\phi(y),\pi(x)]\right)
+  \end{aligned}$$
+
+其中有這麽一步：
+
+$$\begin{aligned}
+    \int\mathrm{d}^3y\left(\nabla_y\delta^{(3)}(\vec{x}-\vec{y})\right)\nabla_y\phi(y) & =\int\mathrm{d}^3y\nabla_y\left(\delta^{(3)}(\vec{x}-\vec{y})\nabla_y\phi(y)\right)-\int\mathrm{d}^3y\ \delta^{(3)}(\vec{x}-\vec{y})\left(\nabla_y^2\phi(y)\right) \\
+                                                                                       & =-\nabla^2\phi(x)
+  \end{aligned}$$
+
+\subsection{計算 Feynman 傳播子的一種形式}
+
+$$D(x-y)\equiv\int\frac{\mathrm{d}^3}{(2\pi)^3}\frac{1}{2E_{\vec{p}}}\mathrm{e}^{-\mathrm{i}p\cdot(x-y)}$$
+
+$$\Delta_F(x-y)=\left\langle0\right|T\phi(x)\phi(y)\left|0\right\rangle=\begin{cases}
+    D(x-y) & x^0>y^0 \\
+    D(y-x) & y^0>x^0
+  \end{cases},\ T\phi(x)\phi(y)=\begin{cases}
+    \phi(x)\phi(y) & x^0>y^0 \\
+    \phi(y)\phi(x) & y^0>x^0
+  \end{cases}$$
+
+証：$\Delta_F(x-y)=\int\frac{\mathrm{d}^4}{(2\pi)^4}\frac{\mathrm{i}}{p^2-m^2}\mathrm{e}^{-\mathrm{i}p\cdot(x-y)}$
+
+實際上只不過是複變函數的留數定理，只需注意：\begin{enumerate}
+  \item 注意選擇積分路徑的方向。爲了使得 $\mathrm{e}^{-\mathrm{i}p^0(x^py^p)}\to 0$，選擇實軸和包圍下半平面的大圓。
+  \item 注意繞過實軸上的奇點的方向。
+\end{enumerate}
+
+$$\Delta_F(x-y)=\pi\mathrm{i}\left(-\mathrm{Res}f(+E_{\vec{p}})+\mathrm{Res}f(-E_{\vec{p}})\right)$$
+
+$$f(p_0)=\int\frac{\mathrm{d}^3p}{(2\pi)^4}\frac{i}{(p_0+E_{\vec{p}})(p_0-E_{\vec{p}})}\mathrm{e}^{-\mathrm{i}p\cdot(x-y)}$$
+
+由於兩個都是單機點：$$\mathrm{Res}f(z_0)=\lim_{z\to z_0}[(z-z_0)f(z)]$$
+
+\subsection{關於回到非相對論量子力學的情形}
+
+關於回到非相對論量子力學的情形，只需注意到幾個定義，則相應的推導問題不大：
+
+$$\psi^{\dagger}(\vec{x})=\int\frac{\mathrm{d}^3p}{(2\pi)^3}a_{\vec{p}}^{\dagger}\mathrm{e}^{-\mathrm{i}\vec{p}\cdot\vec{x}}$$
+
+$$\vec{P}=\int\frac{\mathrm{d}^3p}{(2\pi)^3}\ \vec{p}a_{\vec{p}}^{\dagger}a_{\vec{p}},\ \vec{X}=\int\mathrm{d}^3x\ \vec{x}\psi^{\dagger}(\vec{x})\psi(\vec{x})$$
+
+$$\vec{P}\left|\vec{p}\right\rangle=\vec{p}\left|\vec{p}\right\rangle,\ \vec{X}\left|\vec{x}\right\rangle=\vec{x}\left|\vec{x}\right\rangle$$
+
+坐標表象下：
+
+$$\left|\varphi\right\rangle=\int\mathrm{d}^3x\ \varphi(\vec{x})\left|\vec{x}\right\rangle$$
+
+唉，似乎一些數學公式顯示效果並不好。
+
+\section{相互作用場}
+
+\subsection{本章思路}
+
+\begin{enumerate}
+  \item 相互作用繪景
+  \item 求解相互作用繪景下的運動方程 $\rightarrow$ Dyson 公式/演化算符 $$\left|\psi(t)\right\rangle_I=U(t,t_0)\left|\psi(t,t_0)\right\rangle_I,\ U(t,t_0)=T\exp\left(-\mathrm{i}\int^t_{t_0}H_I(t')\mathrm{d}t'\right)$$
+  \item 希望得到的形式：$\left\langle f\right|a_1^{\dagger}a_2^{\dagger}\dots a_1a_2\left|i\right\rangle$ 即 normal ordering $\rightarrow$ Wick 定理
+  \item 推导出 Feynman 规则
+\end{enumerate}
+
+\subsection{使用微擾理論}
+
+由量綱分析知，對於 $\mathcal{L}=\frac{1}{2}\partial_{\mu}\phi\partial^{\mu}\phi-\frac{1}{2}m^2\phi^2-\sum_{n\leq 3}\frac{\lambda_n}{n!}\phi^n$，在低能情況下，只有 $n=3\text{ or }4$ 是需要考慮的。
+
+\subsection{相互作用繪景}
+
+$$
+  H=H_0+H_{\mathrm{int}}
+$$
+
+$$
+  H_{\mathrm{int}}\equiv(H_{\mathrm{int}})_I=\mathrm{e}^{\mathrm{i}H_0t}(H_{\mathrm{int}})_S\mathrm{e}^{-\mathrm{i}H_0t}
+$$
+
+$$
+  \mathrm{i}\frac{\mathrm{d}\left|\psi\right\rangle_I}{\mathrm{d}t}=H_I(t)\left|\psi\right\rangle_I
+$$
+
+\subsection{第一次求解振幅}
+
+複標量場和實標量場耦合：$H_{\mathrm{int}}=g\int\mathrm{d}^3x\ \psi^{\dagger}\psi\phi$
+
+$$
+  \left|i\right\rangle=\sqrt{2E_{\vec{p}}}\ a_{\vec{p}}^{\dagger}\left|0\right\rangle,\ \left|f\right\rangle=\sqrt{4E_{\vec{q}_1}E_{\vec{q}_2}}\ b_{\vec{q}_1}^{\dagger}c_{\vec{q}_2}^{\dagger}\left|0\right\rangle
+$$
+
+計算到一階項：
+
+$$
+  \begin{aligned}
+    \left\langle f\right|U(+\infty,-\infty)\left|i\right\rangle & \equiv\left\langle f\right|1-\mathrm{i}\int\mathrm{d}t\ H_I(t)\left|i\right\rangle=\left\langle f\right|-\mathrm{i}\int\mathrm{d}t\ H_I(t)\left|i\right\rangle                                                                                     \\
+                                                                & =-\mathrm{i}\left\langle f\right|\int\mathrm{d}t\ H_I(t)\left|i\right\rangle                                                                                                                                                                       \\
+                                                                & =-\mathrm{i}\left\langle f\right|\int\mathrm{d}t\ d\int\mathrm{d}^3x\ \psi^{\dagger}(x)\psi(x)\phi(x)\left|i\right\rangle                                                                                                                          \\
+                                                                & =-\mathrm{i}g\left\langle f\right|\int\mathrm{d}^4x\ \psi^{\dagger}(x)\psi(x)\phi(x)\left|i\right\rangle                                                                                                                                           \\
+                                                                & =-\mathrm{i}g\left\langle f\right|\int\mathrm{d}^4x\ \psi^{\dagger}(x)\psi(x)\int\frac{\mathrm{d}^3k}{(2\pi)^3}\frac{\sqrt{2E_{\vec{p}}}}{\sqrt{2E_{\vec{k}}}}a_{\vec{k}}a_{\vec{p}}^{\dagger}\mathrm{e}^{-\mathrm{i}k\cdot x}\left|0\right\rangle \\
+  \end{aligned}
+$$
+
+爲什麽只寫出來半個 $\phi(x)$ 的展開式？因爲另外半個：
+
+$$
+  \begin{aligned}
+      & \left\langle f\right|\int\mathrm{d}^4x\ \psi^{\dagger}(x)\psi(x)\int\frac{\mathrm{d}^3k}{(2\pi)^3}\frac{\sqrt{2E_{\vec{p}}}}{\sqrt{2E_{\vec{k}}}}a_{\vec{k}}^{\dagger}a_{\vec{p}}^{\dagger}\mathrm{e}^{\mathrm{i}k\cdot x}\left|0\right\rangle                                                                                              \\
+    = & \left\langle 0\right|a_{\vec{k}}^{\dagger}\sqrt{4E_{\vec{q}_1}E_{\vec{q}_2}}b_{\vec{q}_1}c_{\vec{q}_2}\int\mathrm{d}^4x\ \psi^{\dagger}(x)\psi(x)\int\frac{\mathrm{d}^3k}{(2\pi)^3}\frac{\sqrt{2E_{\vec{p}}}}{\sqrt{2E_{\vec{k}}}}a_{\vec{p}}^{\dagger}\mathrm{e}^{\mathrm{i}k\cdot x}\left|0\right\rangle\text{，直接移過去了，因爲 a、b、c 之間的對易子為 0} \\
+    = & 0
+  \end{aligned}
+$$
+
+回來繼續：
+
+$$
+  \begin{aligned}
+                                                                                                                         & -\mathrm{i}g\left\langle f\right|\int\mathrm{d}^4x\ \psi^{\dagger}(x)\psi(x)\int\frac{\mathrm{d}^3k}{(2\pi)^3}\frac{\sqrt{2E_{\vec{p}}}}{\sqrt{2E_{\vec{k}}}}a_{\vec{k}}a_{\vec{p}}^{\dagger}\mathrm{e}^{-\mathrm{i}k\cdot x}\left|0\right\rangle                                                                     \\
+    \xlongequal{a_{\vec{k}}a_{\vec{p}}^{\dagger}=a_{\vec{p}}^{\dagger}a_{\vec{k}}+(2\pi)^3\delta^{(3)}(\vec{p}-\vec{k})} & -\mathrm{i}g\left\langle f\right|\int\mathrm{d}^4x\ \psi^{\dagger}(x)\psi(x)\int\frac{\mathrm{d}^3k}{(2\pi)^3}\frac{\sqrt{2E_{\vec{p}}}}{\sqrt{2E_{\vec{k}}}}(2\pi)^3\delta^{(3)}(\vec{p}-\vec{k})\mathrm{e}^{-\mathrm{i}k\cdot x}\left|0\right\rangle                                                                \\
+    =                                                                                                                    & -\mathrm{i}g\left\langle f\right|\int\mathrm{d}^4x\ \psi^{\dagger}(x)\psi(x)\mathrm{e}^{-\mathrm{i}p\cdot x}\left|0\right\rangle                                                                                                                                                                                      \\
+    =                                                                                                                    & -\mathrm{i}g\left\langle 0\right|\int\frac{\mathrm{d}^4x\mathrm{d}^3k_{1}\mathrm{d}^3k_{2}}{(2\pi)^6}\frac{\sqrt{E_{\vec{q}_1}E_{\vec{q}_2}}}{\sqrt{E_{\vec{k}_1}E_{\vec{k}_2}}}b_{\vec{q}_1}c_{\vec{q}_2}c_{\vec{k}_1}^{\dagger}b_{\vec{k}_2}^{\dagger}\mathrm{e}^{\mathrm{i}(k_1+k_2-p)\cdot x}\left|0\right\rangle \\
+    =                                                                                                                    & -\mathrm{i}g\left\langle 0\right|\int\mathrm{d}^4x\ \mathrm{e}^{\mathrm{i}(q_1+q_2-p)\cdot x}\left|0\right\rangle                                                                                                                                                                                                     \\
+    =                                                                                                                    & -\mathrm{i}g(2\pi)^4\delta^{(4)}(q_1+q_2-p)
+  \end{aligned}
+$$
+
+\subsection{Wick 定理計算核子散射 $\psi\psi\to\psi\psi$}
+
+$$
+  \left|i\right\rangle=\sqrt{2E_{\vec{p}_1}}\sqrt{2E_{\vec{p}_2}}b_{\vec{p}_1}^{\dagger}b_{\vec{p}_2}^{\dagger}\left|0\right\rangle\equiv\left|p_1,p_2\right\rangle,\ \left|f\right\rangle=\sqrt{2E_{\vec{p}_1'}}\sqrt{2E_{\vec{p}_2'}}b_{\vec{p}_1'}^{\dagger}b_{\vec{p}_2'}^{\dagger}\left|0\right\rangle\equiv\left|p_1',p_2'\right\rangle
+$$
+
+振幅：
+
+$$
+  \frac{(-\mathrm{i}g)^2}{2}\int\mathrm{d}^4x_1\mathrm{d}^4x_2T\left(\psi^{\dagger}(x_1)\psi(x_1)\phi(x_1)\psi^{\dagger}(x_2)\psi(x_2)\phi(x_2)\right)
+$$
+
+由 Wick 定理做替換，之後會留下的非零項只有 $:\psi^{\dagger}(x_1)\psi(x_1)\psi^{\dagger}(x_2)\psi(x_2):\overbrace{\phi(x_1)\phi(x_2)}$，因爲先要湮滅初態的兩個核子，再生成模態的兩個核子，對於其他的項，會產生介子 which 不是我們想要的。
+
+注 \emoji{pig}：那個式子 \emoji{lion} 上方的大括號是 \texttt{\textbackslash overbrace{}}
+
+其他的就正常運算應該沒什麽問題吧，有這麽一項 $\left\langle0\right|\psi(x)\left|p\right\rangle=\mathrm{e}^{-\mathrm{i}p\cdot x}$，它來自：
+
+$$
+  \begin{aligned}
+    \left\langle0\right|\psi(x)\left|p\right\rangle & = \left\langle0\right|\int\frac{\mathrm{d}^3p}{(2\pi)^3}\frac{1}{\sqrt{2E_{\vec{p}}}}\left(b_{\vec{p}}\mathrm{e}^{-\mathrm{i}p\cdot x}+c_{\vec{p}}^{\dagger}\mathrm{e}^{+\mathrm{i}p\cdot x}\right)\sqrt{2E_{\vec{p}}}b_{\vec{p}}^{\dagger}\left|0\right\rangle
+  \end{aligned}
+$$
+
+後面不用我繼續寫了罷。還想指出一點，抽象出來就是這麽個東西：
+
+$$
+  \begin{aligned}
+                                              & \int_{-\infty}^{\infty}\mathrm{d}x\ f(x)\delta(x-x_1)\delta(x-x_2) \\
+    \xlongequal{F(x)\equiv f(x)\delta(x-x_1)} & \int_{-\infty}^{\infty}\mathrm{d}x\ F(x)\delta(x-x_2)              \\
+    =                                         & F(x_2)                                                             \\
+    =                                         & f(x_2)\delta(x_2-x_1)=f(x_1)\delta(x_2-x_1)
+  \end{aligned}
+$$
+
+\subsection{Feynman 圖}
+
+\begin{quote}
+  像近年來的硅芯片一樣，Feynman 圖為大衆帶來了計算。—— Julian Schwinger
+\end{quote}
+
+$$H_{\mathrm{int}}=g\int\mathrm{d}^3x\ \psi^{\dagger}\psi\phi$$
+
+\subsubsection{怎麽畫}
+
+“怎麽畫”指怎麽將想要計算的物理過程轉化爲 Feynman 圖，以運用相應的規則寫出散射振幅表達式。
+
+\begin{enumerate}
+  \item 初態、末態的每個粒子對應一條入射、出射綫（外部綫）；
+  \item 介子（from 實標量場）用點綫，核子（from 複標量場）用實綫；（這裏的介子和核子不是現實生活中的那個）
+  \item 為每條綫假設一個動量（大小和方向），類似於電路中的“參考方向”；
+  \item 實綫（核子）上標注箭頭以指明其荷：\begin{itemize}
+          \item 初態 $\psi$ 用入射箭頭，初態 $\bar\psi$ 用出射箭頭；
+          \item 末態 $\psi$ 用出射箭頭，末態 $\bar\psi$ 用入射箭頭；
+          \item 總是，$\psi$ 是比較自然的，$\bar\psi$ 是反著的；
+        \end{itemize}
+  \item 對於現在的情況，用三價的頂點將他們連接起來。
+\end{enumerate}
+
+在畫圖過程中請考慮對稱性。
+
+\subsubsection{怎麽算：Feynman 法則}
+
+“怎麽算”指在已經存在一個 Feynman 圖之後怎麽將它轉化爲對應物理過程的散射振幅。
+
+\begin{enumerate}
+  \item 每條内部綫添加一個動量 $\vec{k}$；（内部綫指非入射、出射的綫）
+  \item 在每個頂點上，可以寫下因子 $(-\mathrm{i}g)(2\pi)^4\delta^{(4)}\left(\sum_ik_i\right)$，其實就是動量守恆；
+  \item 對於每個内部的點綫，我們知道這是一個動量為 $\vec{k}$ 的介子，可以寫下因子 $\int\frac{\mathrm{d}^2k}{(2\pi)^4}\frac{\mathrm{i}}{k^2-m^2+\mathrm{i}\epsilon}$；對於核子（實綫），仍然有這個因子，但記得用核子的質量。
+  \item 有圈的情況，進行積分 $\int\mathrm{d}^2k/(2\pi)^4$
+\end{enumerate}
+
+這是對於我們現在要處理的哈密頓量的 Feynman 法則，對於以後會見到的其它粒子，會有額外的規則。
+
+注 \emoji{pig}：不考慮非連通圖，不考慮外部綫上有圈的非截斷圖。
+
+\begin{itemize}
+  \item 介紹完 Feynman 圖之後就是一些介紹性的内容，客觀上來説其中一些東西説的是不夠清楚的。無可指摘，因爲他們還有下一個學期的課程 “AQFT（高等量子場論）”，而我讀這本講義也是只是在學習 GR 之間做一個調劑。更詳細的内容理應不在這裏出現。
+\end{itemize}
+
+\subsection{一個積分}
+
+佟大爲在用一些奇妙的方法，我不管了，我直接梁昆淼了:
+
+$$
+  \begin{aligned}
+      & \int^{\infty}_0\mathrm{d}k\ \frac{k}{k^2+m^2}\sin(kr)                                                                               \\
+    = & \pi\times\left\{\frac{k}{k^2+m^2}\ \mathrm{e}^{\mathrm{i}kr}\text{ 在上半平面所有奇點的留數之和}\right\}                                          \\
+    = & \pi\times\mathrm{Res}\left.\left[\frac{k}{(k+\mathrm{i}m)(k-\mathrm{i}m)}\ \mathrm{e}^{\mathrm{i}kr}\right]\right|_{k=\mathrm{i}m}  \\
+    = & \pi\times\lim_{k\to\mathrm{i}m}\left[(k-\mathrm{i}m)\cdot\frac{k}{(k+\mathrm{i}m)(k-\mathrm{i}m)}\ \mathrm{e}^{\mathrm{i}kr}\right] \\
+    = & \pi\times\frac{1}{2}\mathrm{e}^{-mr}
+  \end{aligned}
+$$
+
+- 下一章介紹 Dirac 方程，估計代數内容會比較多，我很期待。\emoji{smile}
+
+\section{Dirac 方程}
+
+\begin{quote}
+  Dirac 方程中隐藏的东西比作者1928年写下它时预想的要多得多。Dirac 本人在一次谈话中说，他的方程式比作者更聪明。然而，应该补充的是，Dirac 发现了大部分额外的见解。——Weisskopf 評 Dirac
+\end{quote}
+
+\subsection{定義和性質}
+
+$$
+  \{\gamma^{\mu},\gamma^{\nu}\}\equiv2\eta^{\mu\nu}\bf{1}
+$$
+
+\begin{itemize}
+  \item $$(\gamma^0)^2=1,\ (\gamma^i)^2=-1$$
+  \item $$
+          \gamma^0=\begin{pmatrix}
+            0 & \bf{1} \\ \bf{1} & 0
+          \end{pmatrix},\ \gamma^i=\begin{pmatrix}
+            0 & \sigma^i \\ -\sigma^i & 0
+          \end{pmatrix}
+        $$
+  \item $$
+          \sigma^1=\begin{pmatrix}
+            0 & 1 \\ 1 & 0
+          \end{pmatrix},\ \sigma^2=\begin{pmatrix}
+            0 & -\mathrm{i} \\ \mathrm{i} & 0
+          \end{pmatrix},\ \sigma^3=\begin{pmatrix}
+            1 & 0 \\ 0 & -1
+          \end{pmatrix},\ \{\sigma^i,\sigma^j\}=2\delta^{ij}
+        $$
+  \item $$S^{\rho\sigma}=\frac{1}{4}[\gamma^{\rho},\gamma^{\sigma}]=\frac{1}{2}\gamma^{\rho}\gamma^{\sigma}-\frac{1}{2}\eta^{\rho\sigma}$$ $$[S^{\mu\nu},\gamma^{\rho}]=\gamma^{\mu}\eta^{\nu\rho}-\gamma^{\nu}\eta^{\rho\mu}$$ $$[S^{\mu\nu},S^{\rho\sigma}]=\eta^{\nu\rho}S^{\mu\sigma}-\eta^{\mu\rho}S^{\nu\sigma}+\eta^{\mu\sigma}S^{\nu\rho}-\eta^{\nu\sigma}S^{\mu\rho}$$
+  \item Dirac spinor: $$\phi^\alpha(x)\to S[\Lambda]^{\alpha}_{\ \ \beta}\psi^{\beta}(\Lambda^{-1}x),\ \Lambda=\exp\left(\frac{1}{2}\Omega_{\rho\sigma}\mathcal{M}^{\rho\sigma}\right),\ S[\Lambda]=\exp\left(\frac{1}{2}\Omega_{\rho\sigma}S^{\rho\sigma}\right)$$
+  \item $$\left(\gamma^{\mu}\right)^{\dagger}=\gamma^0\gamma^\mu\gamma^0,\ \left(S^{\mu\nu}\right)^{\dagger}=-\gamma^0S^{\mu\nu}\gamma^0,\ S[\Lambda]^{\dagger}=\gamma^0S[\Lambda]^{-1}\gamma^0$$
+\end{itemize}
+
+\subsection{Dirac 方程的另一半}
+
+$$
+  \mathcal{L}=\bar{\psi}(\mathrm{i}\gamma^{\mu}\partial_{\mu}-m)\psi
+$$
+
+$$
+  \Rightarrow(\mathrm{i}\gamma^{\mu}\partial_{\mu}-m)\psi,\ (\mathrm{i}\partial_{\mu}\bar{\psi}\gamma^{\mu}+m)\bar{\psi}=0
+$$
+
+\subsection{Dirac spinor 滿足 Klein-Gordon 方程}
+
+$$
+  \begin{aligned}
+                & (\mathrm{i}\gamma^{\mu}\partial_{\mu}-m)\psi=0                                         \\
+    \Rightarrow & (\mathrm{i}\gamma^{\nu}\partial_{\nu}+m)(\mathrm{i}\gamma^{\mu}\partial_{\mu}-m)\psi=0 \\
+    \Rightarrow & -(\gamma^{\nu}\gamma^{\mu}\partial_{\nu}\gamma_{\mu}+m^2)\psi=0
+  \end{aligned}
+$$
+
+$$
+  \begin{aligned}
+      & \gamma^{\nu}\gamma^{\mu}\partial_{\nu}\partial_{\mu}\xlongequal{\text{輪換指標}}\gamma^{\mu}\gamma^{\nu}\partial_{\mu}\partial_{\nu}\xlongequal{\text{偏導數可交換順序}}\gamma^{\mu}\gamma^{\nu}\partial_{\nu}\partial_{\mu} \\
+    = & \frac{1}{2}\left(\gamma^{\mu}\gamma^{\nu}+\gamma^{\nu}\gamma^{\mu}\right)\partial_{\mu}\partial_{\nu}=\frac{1}{2}\left\{\gamma^{\mu},\gamma^{\nu}\right\}\partial_{\mu}\partial_{\nu}                            \\
+    = & \eta^{\mu\nu}\partial_{\mu}\partial_{\nu}=\partial_{\mu}\partial^{\mu}
+  \end{aligned}
+$$
+
+$$
+  -(\partial_{\mu}\partial^{\mu}+m^2)\psi=0
+$$
+
+注 \emoji{pig}：我的 `markdown` 編輯器似乎不支持 `slashed` 宏包？總之，我使用 `cancel{}` 來表示 Diarc slash：$A_{\mu}\gamma^{\mu}\equiv\cancel{A}$。
+
+\subsection{Weyl 方程的導出}
+
+發現 Lortenz 群的 Dirac 旋量表示是可約的，可以分解爲只作用在貳份量旋量上的兩個不可約表示。
+
+$$
+  \psi=\begin{pmatrix}
+    u_+ \\ u_-
+  \end{pmatrix}
+$$
+
+$$
+  \begin{aligned}
+                                                                            & (\mathrm{i}\cancel{\partial}-m)\psi=0\quad\Rightarrow                                                                                                                                              \\
+    \mathcal{L}=0=                                                          & \bar{\psi}(\mathrm{i}\cancel{\partial}-m)\psi=\mathrm{i}\bar{\psi}\cancel{\partial}\psi-m\bar{\psi}\psi                                                                                            \\
+    =                                                                       & \mathrm{i}\psi^{\dagger}\gamma^0\gamma^\mu\partial_{\mu}\psi-m\psi^{\dagger}\gamma^0\psi=\mathrm{i}\psi^{\dagger}\gamma^0(\gamma^0\partial_0+\gamma^i\partial_{i})\psi-m\psi^{\dagger}\gamma^0\psi \\
+    =                                                                       & \mathrm{i}\begin{pmatrix}
+                                                                                          u_+^{\dagger} & u_-^{\dagger}
+                                                                                        \end{pmatrix}\begin{pmatrix}
+                                                                                                       0 & \bf{1} \\\bf{1} & 0
+                                                                                                     \end{pmatrix}\begin{pmatrix}
+                                                                                                                    0 & \bf{1} \\\bf{1} & 0
+                                                                                                                  \end{pmatrix}\begin{pmatrix}
+                                                                                                                                 \partial_0u_+ \\\partial_0u_-
+                                                                                                                               \end{pmatrix}
+    \\ & -\mathrm{i}\begin{pmatrix}
+      u_+^{\dagger} & u_-^{\dagger}
+    \end{pmatrix}\begin{pmatrix}
+      0 & \bf{1} \\\bf{1} & 0
+    \end{pmatrix}\begin{pmatrix}
+      0 & \sigma^i \\-\sigma_i & 0
+    \end{pmatrix}\begin{pmatrix}
+      \partial_iu_+ \\\partial_i u_-
+    \end{pmatrix}
+    \\ & -m\begin{pmatrix}
+      u_+^{\dagger} & u_-^{\dagger}
+    \end{pmatrix}\begin{pmatrix}
+      0 & \bf{1} \\\bf{1} & 0
+    \end{pmatrix}\begin{pmatrix}
+      u_+ \\u_-
+    \end{pmatrix}\\
+    \xlongequal{\sigma^{\mu}=(1,\sigma^i),\bar{\sigma}^{\mu}=(1,-\sigma^i)} & \mathrm{i}u_-^{\dagger}\sigma^{\mu}\partial_{\mu}u_-+\mathrm{i}u_+^{\dagger}\bar{\sigma}^{\mu}\partial_{\mu}u_{+}-m(u_+^{\dagger}u_-+u_-^{\dagger}u_+)                                             \\
+    \Rightarrow\xlongequal{m=0}\Rightarrow                                  & \mathrm{i}\bar{\sigma}^{\mu}\partial_{\mu}u_+=0,\ \mathrm{i}\sigma^{\mu}\partial_{\mu}u_-=0
+  \end{aligned}
+$$
+
+\subsection{$\gamma^5$}
+
+\begin{itemize}
+  \item $$\gamma^5=-\mathrm{i}\gamma^0\gamma^1\gamma^2\gamma^3$$
+  \item $$\{\gamma^5,\gamma^\mu\}=0,\ (\gamma^5)^2=+1$$
+  \item $$[S_{\mu\nu},\gamma^5]=0$$
+  \item $$P_{\pm}=\frac{1}{2}(1\pm\gamma^5),\ P_{\pm}^2=P_{\pm},\ P_+P_-=0$$
+  \item 分清誰是標量誰是矢量誰是張量誰是贋標量誰是軸矢量
+\end{itemize}
+
+\subsection{關於 charge conjugate 的一個證明}
+
+$$
+  (\gamma^0)^{\dagger}=\gamma^0,\ (\gamma^i)^{\dagger}=-\gamma^i
+$$
+
+$$
+  \psi^{(c)}=C\psi^{\star},\ C^{\dagger}C=1,\ C^{\dagger}\gamma^{\mu}C=-(\gamma^{\mu})^{\star}
+$$
+
+$$
+  C^{\dagger}C=1\Rightarrow\xlongequal{\text{？我還不知道這是否一般地成立}}\Rightarrow CC^{\dagger}=1
+$$
+
+$$
+  \begin{aligned}
+    C^{\dagger}S^{\mu\nu}C= & C^{\dagger}\frac{1}{4}(\gamma^{\mu}\gamma^{\nu}-\gamma^{\nu}\gamma^{\mu})C                                              \\
+    =                       & \frac{1}{4}C^{\dagger}\gamma^{\mu}CC^{\dagger}\gamma^{\nu}C-\frac{1}{4}C^{\dagger}\gamma^{\nu}CC^{\dagger}\gamma^{\mu}C \\
+    =                       & \frac{1}{4}(\gamma^{\mu})^{\star}(\gamma^{\nu})^{\star}-\frac{1}{4}(\gamma^{\nu})^{\star}(\gamma^{\mu})^{\star}         \\
+    =                       & (\frac{1}{4}(\gamma^{\mu}\gamma^{\nu}-\gamma^{\nu}\gamma^{\mu}))^{\star}=(S^{\mu\nu})^{\star}
+  \end{aligned}
+$$
+
+$$
+  C^{\dagger}S[\Lambda]C=(S[\Lambda])^{\star}\Rightarrow\cancel{CC^{\dagger}}S[\Lambda]C=C(S[\Lambda])^{\star}
+$$
+
+\subsection{螺旋度（Helicity）}
+
+竟然一筆帶過了……
+
+$$
+  h=\frac{\mathrm{i}}{2}\epsilon_{ijk}\hat{p}^iS^{jk}=\frac{1}{2}\hat{p}_i\begin{pmatrix}
+    \sigma^i & 0 \\ 0 & \sigma^i
+  \end{pmatrix}
+$$
+
+\section{量子化 Dirac 場}
+
+\begin{quote}
+  這一次，狄拉克比邏輯更接近真理。——Pauli 評 Dirac
+\end{quote}
+
+\subsection{指標運算和矢量運算的一個小 tip}
+
+$$
+  \begin{aligned}
+      & \int\frac{\mathrm{d}^3p}{(2\pi)^3}\frac{1}{2E_{\vec{p}}}\left((\cancel{p}+m)\gamma^0\mathrm{e}^{\mathrm{i}\vec{p}\cdot(\vec{x}-\vec{y})}+(\cancel{p}-m)\gamma^0\mathrm{e}^{-\mathrm{i}\vec{p}\cdot(\vec{x}-\vec{y})}\right) \\
+    = & \int\frac{\mathrm{d}^3p}{(2\pi)^3}\frac{1}{2E_{\vec{p}}}\left((p_0\gamma^0+p_i\gamma^i+m)\gamma^0+(p_0\gamma^0-p_i\gamma^i-m)\gamma^0\right)\mathrm{e}^{+\mathrm{i}\vec{p}\cdot(\vec{x}-\vec{y})}
+  \end{aligned}
+$$
+
+因爲：
+
+$$
+  \begin{aligned}
+                                    & \int\frac{\mathrm{d}^3p}{(2\pi)^3}\frac{1}{2E_{\vec{p}}}\left(\cancel{p}-m\right)\gamma^0\mathrm{e}^{-\mathrm{i}\vec{p}\cdot(\vec{x}-\vec{y})}                           \\
+    =                               & \int\frac{\mathrm{d}^3p}{(2\pi)^3}\frac{1}{2E_{\vec{p}}}\left(p_0\gamma^0+p_i\gamma^i-m\right)\gamma^0\mathrm{e}^{-\mathrm{i}\vec{p}\cdot(\vec{x}-\vec{y})}              \\
+    =                               & \int\frac{\mathrm{d}^3p}{(2\pi)^3}\frac{1}{2E_{\vec{p}}}\left(p_0\gamma^0-\vec{p}\cdot\vec{\gamma}-m\right)\gamma^0\mathrm{e}^{-\mathrm{i}\vec{p}\cdot(\vec{x}-\vec{y})} \\
+    \xlongequal{\vec{p}\to-\vec{p}} & \int\frac{\mathrm{d}^3p}{(2\pi)^3}\frac{1}{2E_{\vec{p}}}\left(p_0\gamma^0+\vec{p}\cdot\vec{\gamma}-m\right)\gamma^0\mathrm{e}^{+\mathrm{i}\vec{p}\cdot(\vec{x}-\vec{y})} \\
+    =                               & \int\frac{\mathrm{d}^3p}{(2\pi)^3}\frac{1}{2E_{\vec{p}}}\left(p_0\gamma^0-p_i\gamma^i-m\right)\gamma^0\mathrm{e}^{+\mathrm{i}\vec{p}\cdot(\vec{x}-\vec{y})}              \\
+  \end{aligned}
+$$
+
+其中：
+
+$$
+  \cancel{p}=p_{\mu}\gamma^{\mu}=p_0\gamma^0+p_i\gamma^i
+$$
+
+$$
+  \vec{p}\cdot\vec{\gamma}=\sum_{i=1}^3p^i\gamma^i=-p_i\gamma^i
+$$
+
+同理：
+
+$$
+  \partial_i\mathrm{e}^{+\vec{p}\cdot\vec{x}}=\partial_i\mathrm{e}^{-p_ix^i}=-p_i\mathrm{e}^{-p_ix^i}
+$$
+
+\begin{itemize}
+  \item 有一點，佟大爲很難讓我滿意，即：賦予場算符對易關係之後求產生湮滅算符的對易關係時，他從來都是先告訴你正確的結果，然後展示一下正確的結果（產生湮滅算符的對易關係）確實能給出他的條件（場算符的對易關係）。這可不能稱作是證明。
+\end{itemize}
+
+\subsection{Dyson-Wick 方法求解散射振幅}
+
+\begin{itemize}
+  \item 這是我自己起的名字，意思就是第三章中的那種方法，先用 Dyson 公式得到演化算符，再將其 Taylor 展開，用 Wick 定理和物理過程進行化簡，最後用對易關係和 $\delta$ 函數的定義及性質進行化簡。
+\end{itemize}
+
+\subsubsection{費米子的傳播子 $S_F(x-y)$}
+
+$$
+  \begin{aligned}
+    \left\langle0\right|\psi_{\alpha}(x)\bar{\psi}_{\beta}(y)\left|0\right\rangle=\left\langle0\right|\sum_{s,r} & \int\frac{\mathrm{d}^3p}{(2\pi)^3}\frac{1}{\sqrt{2E_{\vec{p}}}}\left[b_{\vec{p}}^su^s(\vec{p})\mathrm{e}^{-\mathrm{i}p\cdot x}+c_{\vec{p}}^{s\dagger}v^s(\vec{p})\mathrm{e}^{+\mathrm{i}p\cdot x}\right]                                   \\
+    \times                                                                                                       & \int\frac{\mathrm{d}^3q}{(2\pi)^3}\frac{1}{\sqrt{2E_{\vec{q}}}}\left[b_{\vec{q}}^{r\dagger}\bar{u}^r(\vec{q})\mathrm{e}^{+\mathrm{i}q\cdot y}+c_{\vec{q}}^{r}\bar{v}^r(\vec{q})\mathrm{e}^{-\mathrm{i}q\cdot y}\right]\left|0\right\rangle
+  \end{aligned}
+$$
+
+由于后面的 $\left|0\right\rangle$，$c_{\vec{q}}^r$ 没了；由于前面的 $\left\langle0\right|$，$c_{\vec{p}}^{s\dagger}$ 没了。
+
+$$
+  \begin{aligned}
+    \left\langle0\right|\psi_{\alpha}(x)\bar{\psi}_{\beta}(y)\left|0\right\rangle=                                                        & \left\langle0\right|\sum_{s,r}\int\frac{\mathrm{d}^3p\mathrm{d}^3q}{(2\pi)^6}\frac{1}{\sqrt{4E_{\vec{p}}E_{\vec{q}}}}\left(b_{\vec{p}}^sb_{\vec{q}}^{r\dagger}u^s(\vec{p})\bar{u}^r(\vec{q})\mathrm{e}^{-\mathrm{i}p\cdot x}\mathrm{e}^{+\mathrm{i}q\cdot y}\right)\left|0\right\rangle              \\
+    \xlongequal{b_{\vec{p}}^sb_{\vec{q}}^{r\dagger}=b_{\vec{q}}^{r\dagger}b_{\vec{p}}^s+(2\pi)^3\delta^{sr}\delta^{(3)}(\vec{p}-\vec{q})} & \left\langle0\right|\sum_{s,r}\int\frac{\mathrm{d}^3p\mathrm{d}^3q}{(2\pi)^6}\frac{1}{\sqrt{4E_{\vec{p}}E_{\vec{q}}}}\left((2\pi)^3\delta^{sr}\delta^{(3)}(\vec{p}-\vec{q})u^s(\vec{p})\bar{u}^r(\vec{q})\mathrm{e}^{-\mathrm{i}p\cdot x}\mathrm{e}^{+\mathrm{i}q\cdot y}\right)\left|0\right\rangle \\
+    =                                                                                                                                     & \sum_s\int\frac{\mathrm{d}^3p}{(2\pi)^3}\frac{1}{2E_{\vec{p}}}u^s(\vec{p})\bar{u}^s(\vec{p})\mathrm{e}^{-\mathrm{i}p\cdot(x-y)}                                                                                                                                                                      \\
+    \xlongequal{\sum^su^s(\vec{p})\bar{u}^s(\vec{p})=\cancel{p}+m}                                                                        & \int\frac{\mathrm{d}^3p}{(2\pi)^3}\frac{1}{2E_{\vec{p}}}(\cancel{p}+m)_{\alpha\beta}\ \mathrm{e}^{-\mathrm{i}p\cdot(x-y)}
+  \end{aligned}
+$$
+
+同理：
+
+$$\left\langle0\right|\bar{\psi}_{\beta}(y)\psi_{\alpha}(x)\left|0\right\rangle=\int\frac{\mathrm{d}^3p}{(2\pi)^3}\frac{1}{2E_{\vec{p}}}(\cancel{p}-m)_{\alpha\beta}\ \mathrm{e}^{+\mathrm{i}p\cdot(x-y)}$$
+
+$$
+  S_F(x-y)=\left\langle0\right|T\psi(x)\bar{\psi}(y)\left|0\right\rangle\equiv\begin{cases}
+    \left\langle0\right|+\psi(x)\bar{\psi}(y)\left|0\right\rangle & x^0>y^0 \\ \left\langle0\right|-\psi(x)\bar{\psi}(y)\left|0\right\rangle & x^0<y^0
+  \end{cases}
+$$
+
+$$
+  S_F(x-y)=\mathrm{i}\int\frac{\mathrm{d}^4p}{(2\pi)^4}\mathrm{e}^{-\mathrm{i}p\cdot(x-y)}\frac{\gamma\cdot p+m}{p^2-m^2+\mathrm{i}\epsilon}
+$$
+
+$$
+  (\mathrm{i}\cancel{\partial}_x-m)S_F(x-y)=\mathrm{i}\delta^{(4)}(x-y)
+$$
+
+$$
+  \overbrace{\psi(x)\bar\psi(y)}=T(\psi(x)\bar\psi(y))-:\psi(x)\bar\psi(y):\ =S_F(x-y)
+$$
+
+\subsubsection{注意順序}
+
+在處理費米子時有很多需要注意的順序，剛開始時容易忘記的有：
+
+\begin{itemize}
+  \item $$\left|f\right\rangle=\sqrt{4E_{\vec{p}'}E_{\vec{q}'}}b_{\vec{p}'}^{s'\dagger}b_{\vec{q}'}^{r'\dagger}\left|0\right\rangle\to\left\langle f\right|=\left\langle 0\right|b_{\vec{p}'}^{r'}b_{\vec{q}'}^{s'}\sqrt{4E_{\vec{p}'}E_{\vec{q}'}}
+        $$
+  \item 因爲 $\{b,c^{\dagger}\}$ 這樣的東西 $=0$，所以交換順序時一定要留意負號——我甚至在這裏卡了一會兒……
+  \item 我看不起費米子，儘管我曾經覺得費米子很酷。我認爲費米子沒有中國傳統精神——它總是不合群、總是特立獨行，更要緊的是，它總是傷害無辜的人。
+  \item 我對費米子的成見與費米先生無關，恰恰相反，我對費米先生的評價和楊振寧先生的一致：他是最後一個理論和實驗都特別强的物理學家。
+\end{itemize}
+
+\subsubsection{爲什麽計算中沒有出現 $c$ 和 $c^{\dagger}$}
+
+\begin{quote}
+  We may ignore the $c^{\dagger}$ pieces in $\psi$ since they give no contribution at order $\lambda^2$.
+\end{quote}
+
+我們正在處理 $\psi\psi\to\psi\psi$，如果數學的過程中有 $c^{\dagger}$ 以及 $c$ 參與，那麽對應的物理過程至少是 $\psi\psi\to\psi\psi\psi\bar{\psi}\to\psi\psi$，這已經不是我們考慮的最低階的情況辣！
+
+\subsubsection{計算 $b_{\vec{k}_1}^mb_{\vec{k}_2}^nb_{\vec{p}}^{s\dagger}b_{\vec{q}}^{r\dagger}\left|0\right\rangle$}
+
+看到這裏我知道這對你來説已經很簡單了，但是我還是打算寫出來，因爲我覺得它很爽 :)
+
+$$
+  \left\{b_{\vec{p}}^r,b_{\vec{q}}^{s\dagger}\right\}=(2\pi)^3\delta^{rs}\delta^{(3)}(\vec{p}-\vec{q})\Rightarrow b_{\vec{p}}^rb_{\vec{q}}^{s\dagger}=-b_{\vec{q}}^{s\dagger}b_{\vec{p}}^r+(2\pi)^3\delta^{rs}\delta^{(3)}(\vec{p}-\vec{q})
+$$
+
+$$
+  \begin{aligned}
+      & b_{\vec{k}_1}^mb_{\vec{k}_2}^nb_{\vec{p}}^{s\dagger}b_{\vec{q}}^{r\dagger}\left|0\right\rangle                                                                                                                                     \\
+    = & b_{\vec{k}_1}^m\left(-b_{\vec{p}}^{s\dagger}b_{\vec{k}_2}^n+(2\pi)^3\delta^{ns}\delta^{(3)}\left(\vec{k}_2-\vec{p}\right)\right)b_{\vec{q}}^{r\dagger}\left|0\right\rangle                                                         \\
+    = & -\left(-b_{\vec{p}}^{s\dagger}b_{\vec{k}_1}^m+(2\pi)^3\delta^{ms}\delta^{(3)}(\vec{k}_1-\vec{p})\right)\left(-b_{\vec{q}}^{r\dagger}b_{\vec{k}_2}^n+(2\pi)^3\delta^{nr}\delta^{(3)}(\vec{k}_2-\vec{q})\right)\left|0\right\rangle  \\
+      & +(2\pi)^3\delta^{ns}\delta^{(3)}\left(\vec{k}_2-\vec{p}\right)\left(-b_{\vec{q}}^{r\dagger}b_{\vec{k}_1}^{m}+(2\pi)^3\delta^{mr}\delta^{(3)}(\vec{q}-\vec{k}_1)\right)\left|0\right\rangle                                         \\
+    = & -(2\pi)^6\delta^{ms}\delta^{nr}\delta^{(3)}(\vec{k}_1-\vec{p})\delta^{(3)}(\vec{k}_2-\vec{q})\left|0\right\rangle+(2\pi)^6\delta^{ns}\delta^{mr}\delta^{(3)}(\vec{k}_2-\vec{p})\delta^{(3)}(\vec{k}_1-\vec{q})\left|0\right\rangle
+  \end{aligned}
+$$
+
+\begin{itemize}
+  \item 個人感覺，推導出來 Feynman 規則之後在應用時最要緊的還是對稱性的要求！
+  \item 然而，在 Feynman 規則推導出之後，似乎理論已經結束了。
+\end{itemize}
+
+\section{量子電動力學}
+
+\subsection{Lorentz 規範無法唯一決定勢}
+
+假設現在已有 $\partial_{\mu}A^{\mu}=f(x)$，慾滿足 Lorentz 規範條件，有：
+
+$$
+  A'_{\mu}=A_{\mu}+\partial_{\mu}\lambda,\ A''_{\mu}=A_{\mu}+\partial_{\mu}\lambda+\partial_{\mu}\lambda'
+$$
+
+其中：
+
+$$
+  \partial_{\mu}\partial^{\mu}\lambda=-f,\ \partial_{\mu}\partial^{\mu}\lambda'=0
+$$
+
+可得到：
+
+$$
+  \partial_{\mu}(A')^{\mu}=0,\ \partial_{\mu}(A'')^{\mu}=0
+$$
+
+都滿足 Lorentz 規範。有需要时可以进一步选择 Coulomb 规范：
+
+$$
+  \nabla\cdot\vec{A}=0
+$$
+
+无源情况下，它进一步导出：$A_0=0$。
+
+\subsection{計算正則動量}
+
+$\pi^0=\frac{\partial\mathcal{L}}{\partial(\partial_0A_0)}=0$ 是顯然的，因爲 $\mathcal{L}$ 中根本沒有出現 $\partial_0A_0$。
+
+$$
+  \begin{aligned}
+    \pi^i= & \frac{\partial\mathcal{L}}{\partial(\partial_0A_i)}=\frac{\partial}{\partial(\partial_0A_i)}\left[-\frac{1}{4}(\partial_{\mu}A_{\nu}-\partial_{\nu}A_{\mu})(\partial^{\mu}A^{\nu}-\partial^{\nu}A^{\mu})\right] \\
+    =      & -\frac{1}{4}\frac{\partial}{\partial(\partial_0A_i)}\left[(\partial_0A_i-\partial_iA_0)(\partial^0A^i-\partial^iA^0)+(\partial_iA_0-\partial_0A_i)(\partial^iA^0-\partial^0A^i)\right]                          \\
+    =      & -\frac{1}{2}\frac{\partial}{\partial(\partial_0A_i)}\left[(\partial_0A_i)(\partial^0A^i)-(\partial_0A_i)(\partial^iA^0)-(\partial_iA_0)(\partial^0A^i)\right]                                                   \\
+    =      & -\frac{1}{2}\frac{\partial}{\partial(\partial_0A_i)}\left[\eta^{00}\eta^{ii}(\partial_0A_i)(\partial_0A_i)-(\partial_0A_i)(\partial^iA^0)-\eta^{00}\eta^{ii}(\partial_iA_0)(\partial_0A_i)\right]               \\
+    =      & -\frac{1}{2}\left[2\eta^{00}\eta^{ii}(\partial_0A_i)-(\partial^iA^0)-\eta^{00}\eta^{ii}(\partial_iA_0)\right]                                                                                                   \\
+    =      & -\frac{1}{2}\left[2(\partial^0A^i)-2(\partial^iA^0)\right]=-(\partial^0A^i-\partial^iA^0)
+  \end{aligned}
+$$
+
+\subsection{不同規範下的量子化}
+
+\begin{itemize}
+  \item Coulomb 規範下給正則坐標和正則動量賦予的對易關係屬實有點怪了噢：\begin{itemize}
+          \item $$
+                  [A_i(\vec{x}),E_j(\vec{y})]=\mathrm{i}(\delta_{ij}-\frac{\partial_i\partial_j}{\nabla^2})\delta^{(3)}(\vec{x}-\vec{y})
+                $$
+          \item 脚注中提到了 Dirac 的那本小書，我還沒來得及去查 :)
+          \item 這將導致極化矢量奇怪的歸一化：$\sum_{r=1}^2\epsilon_r^i(\vec{p})\epsilon_r^j(\vec{p})=\delta^{ij}-\frac{p^ip^j}{|\vec{p}|^2}$
+        \end{itemize}
+  \item 對於 Lorentz 規範的情況，我覺得佟大爲處理的不夠簡潔了~
+\end{itemize}
+
+\subsection{永遠不要忘記分部積分/Leibnitz 法則！}
+
+\subsubsection{一个例子}
+
+$$\int\mathrm{d}^3x\ \frac{1}{2}(\dot{\vec{A}}+\nabla A_0)^2=\int\mathrm{d}^3x\ \frac{1}{2}\dot{\vec{A}}^2+\frac{1}{2}(\nabla A_0)^2$$
+
+因爲：
+
+$$
+  \begin{aligned}
+                                                   & \int\mathrm{d}^3x\ \dot{\vec{A}}\cdot\nabla A_0                                                        \\
+    =                                              & \int\mathrm{d}^3x\ \nabla\cdot(\dot{\vec{A}}A_0)-A_0\frac{\mathrm{d}}{\mathrm{a}t}(\nabla\cdot\vec{A}) \\
+    \xlongequal{Gauss 定理\ +\ \nabla\cdot\vec{A}=0} & 0
+  \end{aligned}
+$$
+
+\subsubsection{另一个例子}
+
+$$\begin{aligned}
+                                   & \int\mathrm{d}^3x\ (\nabla A_0)\cdot(\nabla A_0)                                                   \\
+    =                              & \int\mathrm{d}^3x\ \nabla\cdot(A_0\nabla A_0)-A_0\nabla\cdot(\nabla A_0)                           \\
+    \xlongequal{Gauss 定理}          & -\int\mathrm{d}^3x\ A_0\nabla^2 A_0                                                                \\
+    \xlongequal{\nabla^2A_0=-ej_0} & \int\mathrm{d}^3x\ A_0\cdot ej^0                                                                   \\
+    =                              & e^2\int\mathrm{d}^3x\ \int\mathrm{d}^3x'\ \frac{j_0(\vec{x})j_0(\vec{x}')}{4\pi|\vec{x}-\vec{x}'|}
+  \end{aligned}$$
+
+有個東西呢，它看起來有點眼花繚亂，但是其實很好記，立即推!：（張宇語氣 \emoji{grin}
+
+$$
+  \nabla^2\varphi=\frac{\rho}{\varepsilon_0}\Leftrightarrow\varphi(\vec{x},t)=\int\mathrm{d}^3x'\ \frac{\rho(\vec{x}',t)}{4\pi\varepsilon_0|\vec{x}-\vec{x}'|}
+$$
+
+\subsection{求解 Compton 散射時的一步化簡}
+
+\begin{enumerate}
+  \item $q$ 是光子的動量，則有：$\cancel{q}\cancel{q}=q_{\mu}\gamma^{\mu}q_{\nu}\gamma^{\nu}=q_{\mu}q_{\nu}\eta^{\mu\nu}=q_{\mu}q^{\mu}=0$
+  \item $(\cancel{p}+m)u^s(\vec{p})=[2\cancel{p}-(\cancel{p}-m)]u^s(\vec{p})\xlongequal{(\cancel{p}-m)u(\vec{p})=0}2\cancel{p}u^s(\vec{p})$
+  \item $\cancel{p}\cancel{q}=p\cdot q$
+  \item $(p+q)^2-m^2=(p^2-m^2)+q^2+p\cdot q\xlongequal{p^2=m^2,\ q^2}2p\cdot q$
+\end{enumerate}
+
+\subsection{譯：後記}
+
+\begin{itemize}
+  \item 是這樣的，由於上午時間不夠了，我只好在食堂一邊吃午飯一邊看完這本講義的最後三頁，看完這篇後記時，不禁潸然淚下，感慨良多，特此意譯做紀。
+\end{itemize}
+
+在這門課程中，我們學習了量子場論的基本框架。我們所見的大部分都是十九世紀三十年代中期就已經被那些偉大的先驅發展出了。
+
+然而到了三十年代末期，物理學家們準備放棄量子場論。原因在於微擾理論中的下一項——我們在課程中沒有去計算他們——都與 Feynman 圖中的圈有關，而這通常給出發散的結果。十年的奮鬥和失敗之後，人們都覺得應該轉投其他理論。Dirac 在 1937 年說：
+
+\begin{quote}
+  由於其異常的複雜性，大多數物理學家都很樂意看到 QED 的終結。
+\end{quote}
+
+當時的領袖人物都放棄得太快了。新的一代戰後的物理學家再次轉向量子場論，並馴服了無限——這段故事我們將在下個學期的課程中講述……
+
+\begin{itemize}
+  \item 我寫完這段翻譯，再次淚流滿面：永遠不要放棄自己，永遠不要放棄自己，永遠不要放棄自己……
+\end{itemize}
+\end{document}
