@@ -82,7 +82,7 @@
 \begin{framed}
     根据第一定律证明两条绝热线不可能相交。
 
-    若相交，可构造不吸放热、仅做功的循环。
+    若相交，可构造不吸放热、只做功的循环，违反开尔文表述。
 \end{framed}
 
 \subsection{热力学第二定律}
@@ -90,7 +90,7 @@
 \begin{framed}
     根据第二定律证明两条绝热线不可能相交。
 
-    若相交，取一条等温线与它们交于此交点上方，则可构造不放热只做功的循环，违反开尔文表述。
+    若相交，取一条等温线与它们交于此交点上方，则可构造不吸放热、只做功的循环，违反开尔文表述。
 \end{framed}
 
 热力学第二定律的数学表述：
@@ -152,7 +152,7 @@
 \]
 
 还可以利用\[
-    \frac{\partial x \partial y}{\partial f(x, y)} = \frac{\partial y \partial x}{\partial f(x, y)}
+    \frac{\partial x \partial y}{\partial^2 f(x, y)} = \frac{\partial y \partial x}{\partial^2 f(x, y)}
 \]得到四个倒过来的关系。
 
 \subsection{Maxwell 关系的典型应用}
@@ -220,11 +220,12 @@
 \end{framed}
 
 \begin{framed}
-    求范式气体的内能和熵。
-    \begin{align*}
-        \dd{U} & = C_V \dd{T} + \frac{a}{V_m^2} \dd{V_m}               \\
-        \dd{S} & = \frac{C_V}{T} \dd{T} + \frac{R T}{V_m - b} \dd{V_m}
-    \end{align*}
+    求van de Waals气体的内能和熵。
+    \[
+        \dd{U(T, V_m)} = C_{Vm} \dd{T} + \left[T \left.\pdv{p}{T}\right|_{V_m} - p\right] \dd{V_m} = C_{Vm} \dd{T} + \left[T \frac{R}{V_m - b} - p\right] \dd{V_m} = C_{Vm} \dd{T} + \frac{a}{V_m^2} \dd{V_m}
+    \]\[
+        \dd{S(T, V_m)} = \frac{C_{Vm}}{T} \dd{T} + \frac{R}{V_m - b} \dd{V_m}
+    \]
 \end{framed}
 
 \subsection{特性函数}
@@ -241,22 +242,13 @@
 \end{align*}
 
 \begin{framed}
-    求van de Waals气体的内能和熵。
-    \[
-        \dd{U(T, V_m)} = C_{Vm} \dd{T} + \left[T \left.\pdv{p}{T}\right|_{V_m} - p\right] \dd{V_m} = C_{Vm} \dd{T} + \left[T \frac{R}{V_m - b} - p\right] \dd{V_m} = C_{Vm} \dd{T} + \frac{a}{V_m^2} \dd{V_m}
-    \]\[
-        \dd{S(T, V_m)} = \frac{C_{Vm}}{T} \dd{T} + \frac{R}{V_m - b} \dd{V_m}
-    \]
-\end{framed}
-
-\begin{framed}
     已知某固体物态方程为：$V(T, p) = V(T_0, 0) \left[1 + \alpha (T - T_0) - \kappa_T p\right]$。证明其等压热容只与温度有关，与压强无关。设等压热容为 $C_p$，求焓和熵。
     \[
         \left.\pdv{C_p}{p}\right|_T = - T \left.\pdv[2]{V}{T}\right|_p = 0
     \]
     \begin{align*}
         \dd{H(T, p)} & = C_p \dd{T} + \left[- T V(T_0, 0) \alpha + V\right] \dd{p} = C_p \dd{T} + V(T_0, 0) \left(1 - \alpha T_0 - \kappa_T p\right) \dd{p} \\
-        \dd{S(T, p)} & = \frac{C_p}{T} \dd{T} - V(T_0, 0) \alpha \dd{p}                                                                                     \\
+        \dd{S(T, p)} & = \frac{C_p}{T} \dd{T} - V(T_0, 0) \alpha \dd{p}
     \end{align*}
 \end{framed}
 
