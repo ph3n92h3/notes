@@ -47,11 +47,12 @@
 
 \begin{itemize}
     \item 留数定理：$\oint_lf(z)\mathrm{d}z=2\pi\mathrm{i}\sum^n_{j=1}\mathrm{Res}f(b_j)$
-    \item 求留数：$\begin{cases}\text{单极点}:&\mathrm{Res}f(z_0)=a_1=\lim_{z\to z_0}(z-z_0)f(z)\\ m \text{阶极点}:&\mathrm{Res}f(z_0)=a_1=\lim_{z\to z_0}\frac{1}{(m-1)!}\{\frac{\mathrm{d}^{m-1}}{\mathrm{d}z^{m-1}}[(z-z_0)^mf(z)]\}\end{cases}$
+    \item 求留数：$\begin{cases}\text{单极点}:&\mathrm{Res}f(z_0)=a_1=\lim_{z\to z_0}(z-z_0)f(z)\\ m \text{ 阶极点}:&\mathrm{Res}f(z_0)=a_1=\lim_{z\to z_0}\frac{1}{(m-1)!}\{\frac{\mathrm{d}^{m-1}}{\mathrm{d}z^{m-1}}[(z-z_0)^mf(z)]\}\end{cases}$
     \item 计算实变函数定积分：\begin{enumerate}
               \item $\int^{\infty}_{-\infty}f(x)\mathrm{d}x=2\pi\mathrm{i}\{f(z) \text{在上半平面所有奇点的留数之和}\}$
               \item $\int^{2\pi}_0R(\cos\theta,\sin\theta)\mathrm{d}\theta=\oint_{\|z\|=1}R(\frac{z+z^{-1}}{2}, \frac{z-z^{-1}}{2\mathrm{i}})\frac{\mathrm{d}z}{\mathrm{i}z}$
-              \item $\begin{cases}偶函数：\int^\infty_0F(x)\cos mx\mathrm{d}x=\pi\mathrm{i} \times \{F(z)\mathrm{e}^{\mathrm{i}mz}\text{在上半平面所有奇点的留数之和}\}\\ 奇函数：\int^\infty_0G(x)\sin mx\mathrm{d}x=\pi \times \{G(z)\mathrm{e}^{\mathrm{i}mz}\text{在上半平面所有奇点的留数之和}\}\end{cases}$
+              \item $\begin{cases}\text{偶函数：}\int^\infty_0 F(x)\cos mx\mathrm{d}x=\pi\mathrm{i} \times \{F(z)\mathrm{e}^{\mathrm{i}mz}\text{在上半平面所有奇点的留数之和}\}\\
+              \text{奇函数：}\int^\infty_0 G(x)\sin mx\mathrm{d}x=\pi \times \{G(z)\mathrm{e}^{\mathrm{i}mz}\text{在上半平面所有奇点的留数之和}\}\end{cases}$
               \item 实轴上有单极点：$+\pi\mathrm{i}\cdot$ 实轴上奇点留数之和
           \end{enumerate}
 \end{itemize}
