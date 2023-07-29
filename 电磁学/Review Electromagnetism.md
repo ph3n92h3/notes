@@ -1,13 +1,13 @@
 # Review: Electromagnetism
 
-# 电偶极子
+## 电偶极子
 
 - 势：$V({\mathbf  {r}})={\frac  {1}{4\pi \epsilon _{0}}}{\frac  {{\mathbf  {p}}\cdot {\hat  {{\mathbf  {r}}}}}{r^{2}}}$
 - 场：${\mathbf  {E}}=-\nabla V ={\frac  {1}{4\pi \epsilon _{0}r^{3}}}\left(3({\mathbf  {p}}\cdot {\hat  {{\mathbf  {r}}}}){\hat  {{\mathbf  {r}}}}-{\mathbf  {p}}\right)-{\frac  {{\mathbf  {p}}}{3\epsilon _{0}}}\delta ^{3}({\mathbf  {r}})={\frac  {p}{4\pi \epsilon _{0}r^{3}}}(2\cos \theta {\hat  {{\mathbf  {r}}}}+\sin \theta {\hat  {{\boldsymbol  {\theta }}}})-{\frac  {{\mathbf  {p}}}{3\epsilon _{0}}}\delta ^{3}({\mathbf  {r}})$
 - 受力：$\mathbf{F}=(\mathbf{p}\cdot\nabla)\mathbf{E}$
 - 受力矩：$\mathbf{L}=\bf{p}\times\bf{E}$
 
-# 几个磁场公式
+## 几个磁场公式
 
 1. 载流直导线
     - 有限长：$B=\frac{\mu_0I}{4\pi a}(\cos\alpha_1-\cos\alpha_2)$
@@ -22,7 +22,7 @@
     - 半无限长：$B=\frac{1}{2}\mu_0nI$
     - 无限长：$B=\mu_0nI$
 
-# vector analysis formula
+## vector analysis formula
 
 - Cartesian coordinates $(x, y, z)$
     - $\nabla f={\partial f \over \partial x}\hat{\mathbf x} + {\partial f \over \partial y}\hat{\mathbf y} + {\partial f \over \partial z}\hat{\mathbf z}$

@@ -1,39 +1,30 @@
 \documentclass{beamer}
-\usepackage[space, hyperref, UTF8]{ctex}
-\usepackage{amsmath, esint, physics}
-\usepackage{multicol}   %目录分栏
-\usepackage{physics}
-\usepackage{upgreek}    %直立的希腊字母 \upalpha
-\usepackage{extarrows}  %长等号上写字
-\usepackage{graphicx}   %插入图片的宏包
-\usepackage{float}      %设置图片浮动位置的宏包
-\usepackage{subfigure}  %插入多图时用子图显示的宏包
-
-%插入 emoji 表情：使用 \LuaLaTeX，\Memoji{🎄}
-\usepackage{metalogo}
-\usepackage{fontspec}
-\setmainfont{Comic Sans MS}
-\newfontfamily\emojifont{Segoe UI Emoji}[Renderer=Harfbuzz]
-\newcommand{\emoji}[1]{\emojifont #1}
-\newcommand{\Memoji}[1]{\ifmmode \text{\emoji{#1}} \else \emoji{#1}\fi}
 
 \usetheme{Goettingen}
-\usecolortheme{default}
+\usecolortheme{crane}
+\usefonttheme{professionalfonts}
+\setbeamercolor{item}{fg=black}
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{footline}[frame number]
+
+\usepackage{ctex}
+\usepackage{esint}
+\usepackage{emoji}
+\usepackage{physics}
+\usepackage{extarrows}
 
 \title{电磁学期末梳理}
 \author{冯哲}
 \date{2021 年 12 月 25 日}
 \institute{河海大学 理学院}
-%\titlegraphic{\includegraphics[width=0.17\textwidth]{ias.pdf}}
 
 \begin{document}
+
 \frame{\titlepage}
 
 \begin{frame}
     \frametitle{目录}
-    
     \tableofcontents
-    
 \end{frame}
 
 \section{静电场}
@@ -42,92 +33,87 @@
 
 \begin{frame}[c]
     \frametitle{库仑定律}
-    
+
     $$\vec{F} =\frac{1}{4\pi\varepsilon_0}\frac{q_1q_2}{r^2}\hat{r}$$
-    
+
     \begin{description}
         \item[成立条件] 真空，点电荷，静止
         \item[库仑力的叠加原理] 分立电荷的叠加，连续电荷的叠加
     \end{description}
-    
 \end{frame}
 
 \subsection{电场强度、电势}
 
 \begin{frame}[c]
     \frametitle{电场强度、电势}
-    
+
     电场强度：
     \begin{description}
         \item[定义] $\vec{E}=\frac{\vec{F}}{q_0}$
         \item[求] $\vec{E}=\frac{1}{4\pi\varepsilon_0}\cdot[\sum_i\frac{q_i}{r_i^2}\hat{r}_i\text{ or }\int_{V\text{ or }S\text{ or }L}\frac{\dd q}{r^2}\hat{r}]$
     \end{description}
-    
+
     \begin{description}
         \item[电场的叠加原理] 分立电荷的叠加，连续电荷的叠加
     \end{description}
-    
 \end{frame}
 
 \begin{frame}[c]
     \frametitle{电场强度、电势}
-    
+
     电势：
     \begin{description}
         \item[定义] $V=\frac{W}{q}=\int^{\vec{r}}_{\text{电势零点}}\vec{E}\cdot\dd\vec{l}$
         \item[求] $V=\frac{1}{4\pi\varepsilon_0}\cdot[\sum_i\frac{q_i}{r_i}\text{ or }\int_{V\text{ or }S\text{ or }L}\frac{\dd q}{r}]$
     \end{description}
-    
+
     \begin{itemize}
         \item $\vec{E}=-\nabla V$，注意曲线坐标系下的 $\nabla$ 的形式！
     \end{itemize}
-    
+
     \begin{description}
         \item[电势的叠加原理] 分立电荷的叠加，连续电荷的叠加
         \item[电偶极子] 求场、求势、求受力、求力矩
     \end{description}
-    
 \end{frame}
 
 \subsection{静电场的高斯定理、环路定理}
 
 \begin{frame}[c]
     \frametitle{静电场的高斯定理、环路定理}
-    
+
     \begin{itemize}
         \item 电通量、电力线的概念
     \end{itemize}
-    
+
     静电场的高斯定理：
     \begin{description}
         \item[积分式] $\varoiint_S\vec{E}\cdot\dd\vec{s}=\Phi_{\vec{E}}=\frac{Q_{\text{内}}}{\varepsilon_0}$
         \item[微分式] $\nabla\cdot\vec{E}=\frac{\rho}{\varepsilon_0}$
     \end{description}
-    
+
     求解电场：
     \begin{itemize}
         \item 注意利用对称性选取高斯面：球面、柱面……
         \item 注意利用基本模型：球、平面、直线
     \end{itemize}
-    
 \end{frame}
 
 \begin{frame}[c]
     \frametitle{静电场的高斯定理、环路定理}
-    
+
     静电场的环路定理：
     \begin{description}
         \item[积分式] $\oint_L\vec{E}\cdot\dd\vec{l}=0$
         \item[微分式] $\nabla\times\vec{E}=0$
     \end{description}
-    
 \end{frame}
 
 \subsection{导体、电介质}
 
 \begin{frame}[c]
     \frametitle{导体、电介质}
-    
+
     导体：电荷可以自由移动
     \begin{itemize}
         \item 电荷只分布在外表面
@@ -140,30 +126,28 @@
         \item 求解：假设电荷 $\pm Q\Rightarrow \vec{E}\Rightarrow V\Rightarrow C$
         \item 串并联
     \end{itemize}
-    
 \end{frame}
 
 \begin{frame}[c]
     \frametitle{导体、电介质}
-    
+
     电介质：电场强度、电极化强度、电位移矢量、自由电荷、极化电荷
-    
+
     定义：
     \begin{description}
         \item[电极化强度] $\vec{P}=\sum_i\vec{p}_i/\Delta V$
         \item[电位移矢量] $\vec{D}=\varepsilon_0\vec{E}+\vec{P}$
     \end{description}
-    
+
     关系：
     \begin{itemize}
         \item $\vec{P}\xlongequal{\chi_e=\varepsilon_r-1}\chi_e\varepsilon_0\vec{E}, \vec{D}=\varepsilon_0\vec{E}+\vec{P}=\varepsilon_r\varepsilon_0\vec{E}$
         \item $\sigma_{\text{极化}}=\vec{P}\cdot\hat{n}=P_n, \rho_{\text{极化}}=-\nabla\cdot\vec{P}$，注意曲线坐标系下 $\nabla$ 的形式！
         \item $\oiint_S\vec{E}\cdot\dd\vec{s}=Q_{\text{自由}}+Q_{\text{极化}}, \oiint_S\vec{D}\cdot\dd\vec{s}=Q_{\text{自由}}, \oint_L\vec{E}\cdot\dd\vec{l}=0$
     \end{itemize}
-    
+
     求解：
     $$q_{\text{自由}}\xLongrightarrow{\vec{D}\text{' Guass}}\vec{D}\xLongrightarrow{\vec{D}=\varepsilon_r\varepsilon_0\vec{E}}\vec{E}\xLongrightarrow{\vec{P}=\chi_e\varepsilon_0\vec{E}}\vec{P}\xLongrightarrow{\sigma_{\text{极化}}=\vec{P}\cdot\hat{n}=P_n, \rho_{\text{极化}}=-\nabla\cdot\vec{P}} q_{\text{极化}}$$
-    
 \end{frame}
 
 \section{恒磁场}
@@ -172,70 +156,65 @@
 
 \begin{frame}
     \frametitle{安培定律}
-    
+
     $$\dd\vec{F}_{12}=\frac{\mu_0}{4\pi}\frac{I_2\dd\vec{l}_2\times(I_1\dd\vec{l}_1\times\hat{r}_{12})}{r_{12}^2}$$
-    
+
     $$\vec{F}_{12}=\frac{\mu_0}{4\pi}\int_{L_1}\int_{L_2}\frac{I_2\dd\vec{l}_2\times(I_1\dd\vec{l}_1\times\hat{r}_{12})}{r_{12}^2}$$
-    
+
     \begin{itemize}
         \item 两个电流元之间的相互作用不满足牛顿第三定律
     \end{itemize}
-    
 \end{frame}
 
 \begin{frame}
     \frametitle{毕奥-萨伐尔定律}
-    
+
     $$\dd\vec{B}=\frac{\mu_0}{4\pi}\frac{I\dd\vec{l}\times\hat{r}}{r^2}$$
-    
+
     $$\vec{B}=\frac{\mu_0}{4\pi}\int_L\frac{I\dd\vec{l}\times\hat{r}}{r^2}$$
-    
+
     \begin{itemize}
         \item $\dd\vec{F}_{12}=I_2\dd\vec{l}_2\times\vec{B}$
         \item 求解简单但是对称性不高的电流分布的磁场：有限长直电流、圆环电流轴线、有限长螺线管
     \end{itemize}
-    
+
     对于运动电荷：$\int I\dd\vec{l}=\bar{I}\bar{\vec{L}}=\frac{q}{t}\bar{\vec{L}}=q\vec{v}$
-    
+
     $\Rightarrow$ 关于电流元的公式怎么换成关于运动电荷的？：$I\dd\vec{l}\rightarrow q\vec{v}$，并把积分号去掉
-    
+
     $$\vec{B}=\frac{\mu_0}{4\pi}\frac{q\vec{v}\times\hat{r}}{r^2}, v\ll c$$
-    
 \end{frame}
 
 \subsection{静磁场的高斯定理和安培环路定理}
 
 \begin{frame}
     \frametitle{静磁场的高斯定理}
-    
+
     $$\oiint_S\vec{B}\cdot\dd\vec{s}=\Phi_{\vec{B}}=0$$
     $$\nabla\cdot\vec{B}=0$$
-    
 \end{frame}
 
 \begin{frame}
     \frametitle{静磁场的安培环路定理}
-    
+
     $$\oint_L\vec{B}\cdot\dd\vec{l}=\mu_0\sum_iI_i$$
     $$\nabla\times\vec{B}=\mu_0\vec{j}$$
-    
+
     \begin{itemize}
         \item 利用对称性求解磁场：无限长直导线、无限长载流圆柱、长直螺线管、无限大载流导体板
     \end{itemize}
-    
 \end{frame}
 
 \begin{frame}
     \frametitle{磁矢势}
-    
+
     定义：（不唯一）
     \begin{itemize}
         \item $\vec{B}=\nabla\times\vec{A}$
         \item $\oint_L\vec{A}\cdot\dd\vec{l}=\oiint_S\vec{B}\cdot\dd\vec{s}$
     \end{itemize}
-    
+
     求解：$$\vec{A}(\vec{r})=\frac{\mu_0}{4\pi}\oint_L\frac{I\dd\vec{l}}{r}$$
-    
 \end{frame}
 
 
@@ -243,57 +222,53 @@
 
 \begin{frame}
     \frametitle{磁场对电流、运动电荷的作用}
-    
+
     为什么静电场没有这样一个类似的内容呢？
-    
+
     静电场对应的内容就是：$\vec{F}=q\vec{E}$
-    
+
     只不过是在磁场的情况下对应的式子是包含了矢量之间的运算，单独写出以示强调
-    
 \end{frame}
 
 \begin{frame}
     \frametitle{安培力公式}
-    
+
     安培力公式 = 安培定律 - 毕奥-萨伐尔定律：$$\dd\vec{F}=I\dd\vec{l}\times\vec{B}$$
-    
+
     磁偶极子：定义、在外磁场中受力矩（$\vec{L}=\vec{m}\times\vec{B}$）
-    
 \end{frame}
 
 \begin{frame}
     \frametitle{洛伦兹力公式}
-    
+
     $I\dd\vec{l}\rightarrow q\vec{v}$，并把积分号去掉：
     $$\vec{F}=q\vec{v}\times\vec{B}$$
-    
+
     后面有一系列关于这个公式的应用
-    
 \end{frame}
 
 \subsection{磁介质}
 
 \begin{frame}
     \frametitle{磁介质}
-    
+
     一些概念：顺磁介质、抗磁介质、铁磁介质
-    
+
     定义：
     \begin{description}
         \item[磁化强度矢量] $\vec{M}=\frac{\sum\vec{m}_{\text{分子}}}{\Delta V}$
         \item[磁场强度] $\vec{H}=\frac{\vec{B}}{\mu_0}-\vec{M}$
     \end{description}
-    
+
     关系：
     \begin{itemize}
         \item $\vec{M}\xlongequal{\chi_m=\mu_r-1}\chi_m\vec{H}, \vec{B}=\mu_0(\vec{H}+\vec{M})=\mu_0\mu_r\vec{H}$
         \item 磁化电流体密度：$\vec{j}_{\text{磁化}}=\nabla\times\vec{M}$，磁化电流面密度：$\vec{\kappa}_{\text{磁化}}=\vec{M}\times\vec{n}$
         \item $\oint_L\vec{B}\cdot\dd\vec{l}=\mu_0(\sum I_{\text{自由}}+\sum I_{\text{磁化}}), \oint_L\vec{H}\cdot\dd\vec{l}=\sum I_{\text{自由}}, \oiint_S\vec{B}\cdot\dd\vec{s}=0$
     \end{itemize}
-    
+
     求解：
     $$I_{\text{自由}}\xLongrightarrow{\vec{H}\text{'s 环路}}\vec{H}\xLongrightarrow{\vec{B}=\mu_0\mu_r\vec{H}}\vec{B}\xLongrightarrow{\vec{M}=\chi_m\vec{H}}\vec{M}\xLongrightarrow{\vec{j}_{\text{磁化}}=\nabla\times\vec{M}, \vec{\kappa}_{\text{磁化}}=\vec{M}\times\vec{n}}\vec{I}_{\text{磁化}}$$
-    
 \end{frame}
 
 \section{电磁感应}
@@ -302,50 +277,47 @@
 
 \begin{frame}[c]
     \frametitle{电磁感应定律、动生电动势}
-    
+
     电磁感应定律：
     $$\mathcal{E}=-\frac{\dd\Psi}{\dd t}=-N\frac{\dd\Phi}{\dd t}=-N\frac{\dd(\vec{B}\cdot\vec{S})}{\dd t}=-N(\frac{\dd\vec{B}}{\dd t}\cdot\vec{S}+\vec{B}\cdot\frac{\dd \vec{S}}{\dd t})=\text{感生}+\text{动生}$$
-    
+
     \begin{itemize}
         \item 楞次定律判断感应电动势方向
     \end{itemize}
-    
+
     动生电动势：
     $$\mathcal{E}_{\text{动生}}=\int_L(\vec{v}\times\vec{B})\cdot\dd\vec{l}$$
-    
+
     \begin{itemize}
         \item 平动的、转动的……
     \end{itemize}
-    
 \end{frame}
 
 \begin{frame}[c]
     \frametitle{感生电动势、感生电场}
-    
+
     感生电动势：
     $$\begin{aligned}
             \mathcal{E}_{\text{感生}} & =-\frac{\dd}{\dd t}\iint_S\vec{B}\cdot\dd\vec{s}=\iint_S(-\frac{\partial\vec{B}}{\partial t})\cdot\dd\vec{s}                                                \\
                                     & =-\frac{\dd}{\dd t}\oint_L\vec{A}\cdot\dd\vec{l}=\oint_L(-\frac{\partial\vec{A}}{\partial t})\cdot\dd\vec{l}\equiv\oint_L\vec{E}_{\text{感生}}\cdot\dd\vec{l}
         \end{aligned}$$
-    
+
     感生电场：$\vec{E}_{\text{感生}}=-\frac{\partial \vec{A}}{\partial t}$
-    
+
     求感生电场：$\oint_L\vec{E}_{\text{感生}}\cdot\dd\vec{l}=\iint_S(-\frac{\partial\vec{B}}{\partial t})\cdot\dd\vec{s}$
-    
+
     \begin{itemize}
         \item 静电场、感生电场、电场、恒磁场的比较
     \end{itemize}
-    
-    
 \end{frame}
 
 \subsection{自感、互感}
 
 \begin{frame}[c]
     \frametitle{自感、互感}
-    
+
     对应于静电学当中的电容
-    
+
     \begin{description}
         \item[自感] $L=\frac{\Phi_m}{I}$
         \item[自感电动势] $\mathcal{E}_L=-L\frac{\dd I}{\dd t}$
@@ -354,7 +326,6 @@
     \end{description}
     计算自感、互感：
     $$\text{设一个电流}I\Rightarrow\vec{B}\Rightarrow\Phi\Rightarrow L/M$$
-    
 \end{frame}
 
 \section{电磁场}
@@ -363,46 +334,43 @@
 
 \begin{frame}[c]
     \frametitle{电磁场的能量}
-    
+
     \begin{description}
         \item[只有电荷] $W_e=\frac{1}{2}\int\rho_eU\dd v=\frac{1}{2}\sigma_eU\dd s$
         \item[能量密度] $w=w_e+w_m=\frac{1}{2}\varepsilon_0 E^2+\frac{1}{2}\frac{B^2}{\mu_0}$
         \item[元件] 电容：$W_e=\frac{1}{2}\frac{Q^2}{C}=\frac{1}{2}CU^2$\\电感：$W_m=\frac{1}{2}\sum^k_{i=1}L_iI_i^2+\frac{1}{2}\sum^k_{i=1, j\neq i}M_{ij}I_iI_j$
     \end{description}
-    
 \end{frame}
 
 \subsection{全文背诵环节}
 
 \begin{frame}[c]
     \frametitle{麦克斯韦方程组：积分形式}
-    
+
     $$\begin{aligned}
              & \oiint_S\vec{E}\cdot\dd\vec{s}=\frac{Q}{\varepsilon}=\frac{1}{\varepsilon}\iiint\rho\dd v                                                                                                                                    \\
              & \oiint_S\vec{B}\cdot\dd\vec{s}=0                                                                                                                                                                                             \\
              & \oint_L\vec{E}\cdot\dd\vec{l}=-\iint_S\frac{\partial\vec{B}}{\partial t}\cdot\dd\vec{s}                                                                                                                                      \\
              & \oint_L\vec{B}\cdot\dd\vec{l}=\mu_0\iint_S\vec{j}\cdot\dd\vec{s}+\mu_0\varepsilon_0\iint\frac{\partial\vec{E}}{\partial t}\cdot\dd\vec{s}=\mu_0\iint(\vec{j}+\varepsilon_0\frac{\partial\vec{E}}{\partial t})\cdot\dd\vec{s}
         \end{aligned}$$
-    
 \end{frame}
 
 \begin{frame}[c]
     \frametitle{麦克斯韦方程组：微分形式}
-    
+
     $$\begin{aligned}
              & \nabla\cdot\vec{E}=\frac{\rho}{\varepsilon_0}                                         \\
              & \nabla\cdot\vec{B}=0                                                                  \\
              & \nabla\times\vec{E}=-\frac{\partial \vec{B}}{\partial t}                              \\
              & \nabla\times\vec{B}=\mu_0\vec{j}+\mu_0\varepsilon_0\frac{\partial\vec{E}}{\partial t}
         \end{aligned}$$
-    
 \end{frame}
 
 \subsection{电磁波}
 
 \begin{frame}[c]
     \frametitle{电磁波}
-    
+
     无源空间：
     $$\begin{aligned}
              & \nabla\cdot\vec{E}=0                                                     \\
@@ -410,29 +378,27 @@
              & \nabla\times\vec{E}=-\frac{\partial \vec{B}}{\partial t}                 \\
              & \nabla\times\vec{B}=\mu_0\varepsilon_0\frac{\partial\vec{E}}{\partial t}
         \end{aligned}\Rightarrow\begin{aligned}
-             & \nabla^2\vec{E}-\frac{1}{c^2}\frac{\partial^2\vec{E}}{\partial t}=0  \\
+             & \nabla^2\vec{E}-\frac{1}{c^2}\frac{\partial^2\vec{E}}{\partial t}=0 \\
              & \nabla^2\vec{B}-\frac{1}{c^2}\frac{\partial^2\vec{B}}{\partial t}=0
         \end{aligned}, c=\frac{1}{\sqrt{\mu_0\varepsilon_0}}$$
-    
+
     横波：$\vec{B}\propto\vec{k}\times\vec{E}$
-    
 \end{frame}
 
 \begin{frame}[c]
     \frametitle{电磁波}
-    
+
     \begin{description}
         \item[能量密度] $w=\frac{1}{2}\vec{D}\cdot\vec{E}+\frac{1}{2}\vec{B}\cdot\vec{H}$
         \item[能流密度] （坡印廷矢量）$\vec{S}=\vec{E}\times\vec{H}$
         \item[光强] $I=\frac{1}{2}\sqrt{\frac{\varepsilon}{\mu}}E_0^2$
         \item[动量密度] $\vec{g}=\vec{S}/c=\vec{E}\times\vec{H}/c$
     \end{description}
-    
 \end{frame}
 
 \begin{frame}[c]
     \frametitle{End}
-    Merry Christmas!\Memoji{🎄}
+    Merry Christmas!\emoji{christmas-tree}
 \end{frame}
 
 \end{document}
