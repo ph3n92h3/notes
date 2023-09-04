@@ -1,6 +1,6 @@
 \documentclass{article}
 
-\usepackage[a4paper,landscape,scale=0.8]{geometry}
+\usepackage[a4paper,scale=0.8]{geometry}
 
 \usepackage{ctex}
 \setCJKmainfont{Noto Serif CJK SC}
@@ -8,15 +8,15 @@
 \setCJKmonofont{Noto Sans Mono CJK SC}
 
 % \usepackage{algorithm2e}
-\usepackage{amsfonts}
+% \usepackage{amsfonts}
 % \usepackage{amsmath}
 % \usepackage{amssymb}
 % \usepackage{cancel}
 % \usepackage{emoji}
 \usepackage{extarrows}
 % \usepackage{float}
-\usepackage{framed}
-\usepackage[colorlinks]{hyperref}
+% \usepackage{framed}
+% \usepackage[colorlinks]{hyperref}
 % \usepackage{mathrsfs}
 \usepackage{mathtools}
 % \usepackage{minted}
@@ -25,7 +25,7 @@
 % \usepackage{pifont}
 % \usepackage{unicode-math}
 % \usepackage{upgreek}
-\usepackage{xcolor}
+% \usepackage{xcolor}
 
 \newcommand{\rme}{\mathrm{e}}
 \newcommand{\rmi}{\mathrm{i}}
@@ -52,13 +52,32 @@
 
 \[ \tilde{t} = t + \delta t, \tilde{q} = q + \delta q \]
 
-\[ \delta_s \colonq \tilde{t} - t, \delta_s q(t) \coloneq \tilde{q}(t) - q(t) \Rightarrow \delta_s \dot{q} = (\delta_s q)^{\cdot} \]
+\[ \delta_s \coloneqq \tilde{t} - t, \delta_s q(t) \coloneqq \tilde{q}(t) - q(t) \Rightarrow \delta_s \dot{q} = (\delta_s q)^{\cdot} \]
+
+\[ \Delta q(t) \coloneqq \tilde{q}(\tilde{t}) - q(t) \xlongequal{\delta_s \coloneqq \tilde{t} - t}  \tilde{q}(t + \delta_s t) - q(t) \xlongequal{Taylor} \tilde{q}(t) + \delta_s t \dot{\tilde{q}}(t) - q(t) \xlongequal{\delta_s q(t) \coloneqq \tilde{q}(t) - q(t) \Rightarrow \dot{\tilde{q}} = \dot{q} + (\delta_s q)^{\cdot}} \delta_s q + \delta_s t \dot{q} \]
+
+\[ \Delta \dot{q}(t) \coloneqq \dv{\tilde{q}(\tilde{t})}{\tilde{t}} - \dv{q(t)}{t} = \qty(\delta_s q)^{\cdot} - \delta_s t \ddot{q} \neq (\Delta q(t))^{\cdot} \]
+
+\[ \Delta L = \cdots = \dv{t} \qty[\pdv{L}{\dot{q}} \delta_s q + L \delta_s t] \equiv \dv{F}{t} \]
+
+\[ Q \coloneqq \qty[\pdv{L}{\dot{q}} \delta_s q + L \delta_s t] - F = p \delta_s q + L \delta_s t - F \Rightarrow \dv{Q}{t} = 0 \]
+
+\textit{Quantum Field Theory by Mark Srednicki} Section 22 中对作用量变分的写法更简洁。
+
+\section{量子场论}
+
+\subsection{Mark Srednicki notation}
+
+\[ \qty[\varepsilon_{ab}] = \qty[\varepsilon_{\dot{a} \dot{b}}] = \mqty[0 & -1 \\ +1 & 0], \qty[\varepsilon^{ab}] = \qty[\varepsilon^{\dot{a} \dot{b}}] = \mqty[0 & +1 \\ -1 & 0], \sigma^{\mu}_{a \dot{a}} = (I, \vec{\sigma}), \bar{\sigma}^{\mu a \dot{a}} = (I, - \vec{\sigma}) \]
+
+\[ g_{\mu\nu} \sigma^{\mu}_{a \dot{a}} \sigma^{\nu}_{b \dot{b}} = - 2 \varepsilon_{ab} \varepsilon_{\dot{a} \dot{b}}, \varepsilon^{ab} \varepsilon^{\dot{a} \dot{b}} \sigma^{\mu}_{a \dot{a}} \sigma^{\nu}_{b \dot{b}} = - 2 g^{\mu \nu} \]
+
+\subsubsection{Supersymmetry}
 
 \begin{align*}
-    \Delta q(t) \coloneq                                                                                                 & \tilde{q}(\tilde{t}) - q(t)                         \\
-    =                                                                                                                    & \tilde{q}(t + \delta_s t) - q(t)                    \\
-    =                                                                                                                    & \tilde{q}(t) + \delta_s t \dot{\tilde{q}}(t) - q(t) \\
-    \xlongequal{\delta_s q(t) \coloneq \tilde{q}(t) - q(t) \Rightarrow \dot{\tilde{q}} = \dot{q} + (\delta_s q)^{\cdot}} & \delta_s q + \delta_s t \dot{q}
+    \qty[Q_{aA}, P^{\mu}] = 0, & \qty[Q_{\dot{a}A}^{\dagger}, P^{\mu}] = 0 \\
+    \qty[Q_{aA}, M^{\mu\nu}] = \qty(S_{L}^{\mu\nu})_{a}^{\ c} Q_{cA}, & \qty[Q_{\dot{a}A}^{\dagger}, M^{\mu\nu}] = \qty(S_{R}^{\mu\nu})_{\dot{a}}^{\ \dot{c}} Q_{cA} \\
+    \qty{Q_{aA}, Q_{bB}} = Z_{AB} \varepsilon_{ab}, & \qty{Q_{aA}, Q_{\dot{a}B}^{\dagger}} = - 2 \delta_{AB} \sigma_{a\dot{a}}^{\mu} P_{\mu}, Z_{AB} + Z_{BA} = 0; \mathcal{N} = 1 \Rightarrow Z_{AB} = 0
 \end{align*}
 
 \end{document}
