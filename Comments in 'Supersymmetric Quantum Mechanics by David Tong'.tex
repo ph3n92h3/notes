@@ -1,0 +1,314 @@
+\documentclass{article}
+
+\usepackage[a4paper,scale=0.85]{geometry}
+
+\usepackage{ctex}
+\setCJKmainfont{Noto Serif CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\setCJKmonofont{Noto Sans Mono CJK SC}
+
+\usepackage{amsmath}\DeclareMathOperator{\Tr}{Tr}
+\usepackage{amssymb}
+\usepackage{derivative}
+\usepackage{emoji}
+\usepackage[colorlinks]{hyperref}
+\usepackage{physics2}\usephysicsmodule{ab, braket}
+
+\newcommand{\rme}{\mathrm{e}}
+\newcommand{\SakuraiYukiko}{\emoji{cherry-blossom}\emoji{snowflake}}
+
+\title{Comments in \textit{Supersymmetric Quantum Mechanics} by David Tong \\ David Tong 《超对称量子力学》中的评论}
+\author{桜井\ 雪子}
+\date{}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\paragraph{翻译工具}\url{https://pot-app.com} \& \url{https://translate.google.com/}
+
+\setcounter{section}{-1}
+\section{Introduction}
+
+It will come as no surprise to hear that there is a close relationship between mathematics and physics. Yet, for many centuries, the relationship was more than a little one sided. There was, in the language of marriage counsellors, a lack of equitable reciprocity. Physicists took, but gave little in return. Admittedly there were exceptions, some of them rather important like Newton's development of calculus. Nonetheless, it remains true that mathematics is a tool that us physicists cannot live without, while many mathematicians have no more use of physics than they do of chemistry or botany.
+听到数学和物理学之间存在密切的关系也就不足为奇了。然而，几个世纪以来，这种关系不仅仅是一点点片面的。用婚姻顾问的话说，缺乏公平的互惠。物理学家索取了，但几乎没有给予任何回报。诚然，也有例外，其中一些相当重要，比如牛顿对微积分的发展。尽管如此，数学仍然是我们物理学家离不开的工具，而许多数学家对物理学的使用并不比对化学或植物学的使用更多。
+
+In the last few decades, this narrative has started to change. Physicists have been giving back. As our understanding of quantum field theories has grown, we have un- covered increasingly sophisticated mathematical structures lurking within. These are largely, but not exclusively, the structures that arise in geometry and topology. Using physicist's methods and techniques to solve quantum fields theories has revealed connections to these mathematical ideas. Initially this gave new ways of deriving results well known to mathematicians. But, as the quantum field theories became more in- volved, so too did the mathematics until physicists were able to discover new results that came as a complete surprise to mathematicians. Prominent among these is an idea called mirror symmetry, a novel relationship between different manifolds.
+在过去的几十年里，这种说法开始发生变化。物理学家一直在回馈。随着我们对量子场理论理解的加深，我们发现了潜伏在其中的日益复杂的数学结构。这些主要但不完全是几何和拓扑中出现的结构。使用物理学家的方法和技术来解决量子场理论已经揭示了与这些数学思想的联系。最初，这为数学家提供了推导结果的新方法。但是，随着量子场理论变得越来越复杂，数学也变得越来越复杂，直到物理学家能够发现令数学家完全惊讶的新结果。其中最突出的是一种称为镜像对称的想法，这是不同流形之间的一种新颖关系。
+
+You might reasonably wonder what advantage physicists have over mathematicians in this game. After all, we're certainly not smarter. (At least, not most of us.) And yet, there are times when we are able to leapfrog mathematicians and then turn around and present them with new results that sit firmly within their area of expertise. This seems unfair, like physicists have some kind of secret weapon that mathematicians are unable to wield. And we do. In fact, we have two. The first is the path integral. The second, a wilful disregard for rigour.
+您可能有理由想知道在这个游戏中物理学家比数学家有什么优势。毕竟，我们当然并不聪明。（至少，我们大多数人不是。）然而，有时我们能够超越数学家，然后转身向他们展示完全属于他们专业领域的新结果。这似乎不公平，就像物理学家拥有某种数学家无法使用的秘密武器一样。我们确实这么做了。事实上，我们有两个。第一个是路径积分。第二，故意无视严格性。
+
+These two weapons are not unrelated. The path integral approach to quantum field theory has so far evaded attempts to be placed on a rigorous footing, at least beyond quantum mechanics. This means that most often the physicist's approach to these questions does not meet the mathematician's bar for proof. Physics is perhaps better thought of as an idea generating machine, giving new insights into areas of mathematics that can subsequently be proven using more traditional methods. Happily, in most cases, these subsequent proofs have turned out to be much more than an exercise in dotting i's and crossing $\hbar$'s. Mathematicians take their own path to a problem, developing new ideas along the way, and these then feed back into our understanding of quantum field theory. Over the past few decades this process has resulted in a harmonious and extraordinarily fruitful relationship between communities of physicists and mathematicians.
+这两种武器并非毫无关联。迄今为止，量子场论的路径积分方法还没有被建立在严格的基础上，至少超出了量子力学的范围。这意味着物理学家解决这些问题的方法通常不符合数学家的证明标准。物理学也许更适合被认为是一种想法产生机器，它为数学领域提供了新的见解，随后可以使用更传统的方法来证明。令人高兴的是，在大多数情况下，这些后续的证明不仅仅是给 i 加点和给 $\hbar$ 画叉的练习。数学家们走自己的路来解决问题，一路上提出新的想法，然后这些想法反馈到我们对量子场论的理解中。在过去的几十年里，这一过程在物理学家和数学家群体之间建立了和谐且卓有成效的关系。
+
+This interaction has revolutionised certain areas of mathematics. For example, it's difficult to envisage a thriving field of symplectic geometry without mirror symmetry. But it has also changed what we mean by "mathematical physics". Towards the end of the 20th century, this was viewed as a rather a dry subject and mostly involved bringing a mathematician's level of pedantry to bear on problems that physicists care about, but with little insight flowing back into the underlying physics. Now, this situation has been reversed, with interesting and exciting ideas flowing in both directions. To emphasise the shift of focus, this new activity is sometimes rebranded "physical mathematics".
+这种相互作用彻底改变了数学的某些领域。例如，如果没有镜像对称性，就很难想象辛几何领域会蓬勃发展。但它也改变了我们所说的“数学物理”的含义。到了 20 世纪末，这被认为是一门相当枯燥的学科，主要涉及用数学家的迂腐水平来解决物理学家关心的问题，但很少有洞察力回到底层物理学。现在，这种情况已经发生了逆转，有趣且令人兴奋的想法在两个方向流动。为了强调焦点的转移，这项新活动有时被重新命名为“物理数学”。
+
+Much of this interplay between physics and mathematics takes place in the arena of supersymmetric field theories. (There are important exceptions, Witten's Fields medal winning work on knot polynomials in Chern Simons theory among them.) Supersymmetric theories are a class of quantum field theories that have a symmetry relating bosons and fermions. There is, so far, no experimental evidence that supersymmetry is a symmetry of our world. But supersymmetric theories have a number of special prop- erties that allow us to make much more progress in solving them than would otherwise be possible. It is often in these solutions to supersymmetric field theories that we find results of interest to mathematicians.
+物理学和数学之间的这种相互作用大部分发生在超对称场论领域。（有一些重要的例外，其中包括陈西蒙斯理论中关于结多项式的威滕菲尔兹奖获奖作品。超对称理论是一类量子场论，具有与玻色子和费米子相关的对称性。到目前为止，还没有实验证据表明超对称性是我们世界的对称性。但是超对称理论有许多特殊的属性，使我们能够在解决它们方面取得比其他方式更多的进展。通常，在这些超对称场论的解中，我们发现了数学家感兴趣的结果。
+
+The purpose of these lectures is to take the first first few steps along this journey. Sadly we will not reach the heights of the subject like mirror symmetry or knot invariants, both of which require quantum field theories in higher dimensions ($d = 1 + 1$ and $d = 2 + 1$ respectively). Instead, we will restrict ourselves to $d = 0 + 1$ dimensional quantum field theories, also known as quantum mechanics. We will study a number of examples of supersymmetric quantum mechanics and, in solving them, recover some of the highlights of 20th century geometry, including ideas of de Rham, Hodge, Morse, Atiyah and Singer.
+这些讲座的目的是在这一旅程中迈出最初的几步。遗憾的是，我们无法达到镜像对称或扭结不变量那样的高度，这两者都需要更高维度的量子场论（分别为 $d = 1 + 1$ 和 $d = 2 + 1$）。相反，我们将把自己限制在 $d = 0 + 1$ 维量子场理论，也称为量子力学。我们将研究一些超对称量子力学的例子，并在解决它们的过程中恢复 20 世纪几何学的一些亮点，包括德拉姆、霍奇、莫尔斯、阿蒂亚和辛格的思想。
+
+I should warn you that the level of rigour when addressing the more mathematical aspect of these lectures will be mediocre at best. Anyone with a real interest in these ideas is encouraged to learn both the underlying mathematics and physics to truly appreciate how the two connect. But that is not the path we will take here. Instead, these lectures will assume only a basic knowledge in differential geometry (at the level, say, of my lectures on General Relativity.) We will then use supersymmetric quantum mechanics as a vehicle to take us deeper into the mathematician's territory, allowing us to take a peek at some of the beautiful vistas that await.
+我应该警告你，这些讲座中涉及数学方面的严谨程度充其量也只是平庸。我们鼓励任何对这些想法真正感兴趣的人学习基础数学和物理，以真正理解两者之间的联系。但这不是我们在这里要走的道路。相反，这些讲座将仅假设微分几何的基础知识（例如，在我关于广义相对论的讲座的水平上）。然后，我们将使用超对称量子力学作为工具，带我们更深入地进入数学家的领域，使我们能够欣赏一些等待着的美丽景色。
+
+\section{Introducing Supersymmetric Quantum Mechanics \SakuraiYukiko Introducing 超对称量子力学}
+
+\subsection{Supersymmetry Algebra \SakuraiYukiko 超对称代数}
+
+\subsubsection{A First Look at the Energy Spectrum \SakuraiYukiko 能谱初探}
+
+In this section, we discuss some basic facts about supersymmetric quantum mechanics. Our focus will be on a simple class of quantum mechanical systems that, while they have a certain elegance, won't exhibit any deep mathematics. Instead, we will treat them as a proving ground, allowing us to build some intuition for supersymmetry while developing a number of useful calculational techniques. We'll then bring these to bear on problems with a deeper mathematical pedigree in Section 3.
+在本节中，我们讨论有关超对称量子力学的一些基本事实。我们的重点将是一类简单的量子力学系统，虽然它们具有一定的优雅性，但不会表现出任何深奥的数学。相反，我们会将它们视为试验场，使我们能够对超对称性建立一些直觉，同时开发一些有用的计算技术。然后，我们将在第 3 节中将这些内容应用于具有更深入数学谱系的问题。
+
+As an aside: there's only one other place in physics where we care about the over- all value of the ground state energy, and that's the cosmological constant in general relativity. So far, sadly, no plausible link has been found between the value of the cosmological constant and the supersymmetry algebra.
+顺便说一句：物理学中只有另一个地方我们关心基态能量的整体价值，那就是广义相对论中的宇宙常数。遗憾的是，到目前为止，我们还没有发现宇宙常数的值和超对称代数之间存在合理的联系。
+
+Finally, one last piece of terminology. If a ground state with energy $E = 0$ exists, then we say that supersymmetry is unbroken. If the ground state has energy $E > 0$ then we say that supersymmetry is broken. This language is really adopted from higher dimensions where symmetries that do not leave the vacuum invariant are said to be "spontaneously broken". In the present context we say that supersymmetry is broken if the vacuum is not annihilated by the supercharges: the connection to symmetries will become clearer as we proceed.
+最后，最后一个术语。如果存在能量 $E = 0$ 的基态，则我们说超对称性未破缺。如果基态的能量 $E > 0$，则我们说超对称性被破坏。这种语言实际上是从更高维度采用的，在更高维度中，不保持真空不变量的对称性被称为“自发破缺”。在目前的情况下，我们说如果真空没有被超电荷湮灭，超对称性就会被打破：随着我们的继续，与对称性的联系将变得更加清晰。
+
+\subsection{A Particle in a Potential \SakuraiYukiko 势中的单粒子}
+
+\subsubsection{Ground States \SakuraiYukiko 基态}
+
+The magic of supersymmetry means that, at least for the ground state, the Schrödinger equation has morphed from a challenging second order differential equation into a pair of decoupled, first order differential equations. Note that this same trick doesn't work to figure out the excited states of the theory. We can't solve for the whole spectrum. But we can solve for the ground state.
+超对称的魔力意味着，至少对于基态，Schrödinger 方程已经从一个具有挑战性的二阶微分方程变成了一对解耦的一阶微分方程。请注意，同样的技巧无法弄清楚理论的激发状态。我们无法解决整个频谱。但是我们可以解决基态。
+
+Usually in a double well potential, the particle can lower its energy by tunnelling through the barrier and sitting in a superposition of both states. But that's not the case here because the two wavefunctions live in different components of spin space. This kills the possibility for tunnelling. Instead, the supersymmetric set-up is closer to our naive, classical guess of the ground states, with a Gaussian around each minima giving a good approximation to the ground state. Our arguments above tell us that the energy of this two-fold degenerate ground state is necessarily $E > 0$ We will say more about tunnelling in this system and how to compute the actual energy in Section 2.2.
+通常在双势阱中，粒子可以通过隧道穿过势垒并处于两种状态的叠加来降低其能量。但这里的情况并非如此，因为这两个波函数位于自旋空间的不同组成部分。这消除了隧道效应的可能性。相反，超对称设置更接近于我们对基态的朴素经典猜测，每个最小值周围都有一个高斯分布，可以很好地近似基态。我们上面的论点告诉我们，这个两倍简并基态的能量必然是 $E > 0$ 我们将在第 2.2 节中详细介绍该系统中的隧道效应以及如何计算实际能量。
+
+We started with three states that we thought had the smallest energy - one for each minima - but only one survives as the true $E = 0$ ground state. The other two states must have some small, but non-zero energy. These states are the Gaussian localised in the middle vacuum, and the combination of states localised on the outside minima that is orthogonal to the ground state. Although it is far from obvious from staring at the potential, supersymmetry tells us that the energies of these states must be degenerate.
+我们从我们认为能量最小的三种状态开始——每个极小值对应一种状态——但只有一种状态能够作为真正的 $E = 0$ 基态存在。其他两个状态必须具有一些小但非零的能量。这些状态是位于中真空的高斯状态，以及位于与基态正交的外部最小值上的状态组合。尽管从盯着势来看还远不明显，但超对称性告诉我们这些状态的能量一定是简并的。
+
+\subsubsection{The Witten Index \SakuraiYukiko Witten 指标}
+
+Before we proceed, a few comments. Since $\mathcal{I}$ doesn't depend on $\beta$, you might wonder why we don't just set $\beta = 0$ and consider $\mathrm{Tr} (-1)^F$. Indeed, often the Witten index is written in this way as shorthand, but it's a dangerous thing to do. The quantity $\mathrm{Tr} (-1)^F$ is an infinite series of $+ 1$ and $- 1$ and by pairing terms together in various ways you can get any answer that you like. Including $\rme^{- \beta H}$ in the definition acts as a regulator for this sum, rendering it finite. Of course, it's a familiar regulator because it also appears in the partition function in statistical mechanics.
+在我们继续之前，先发表一些评论。由于 $\mathcal{I}$ 不依赖于 $\beta$，你可能想知道为什么我们不直接设置 $\beta = 0$ 并考虑 $\mathrm{Tr} (-1)^F$。事实上，Witten 指数经常以这种方式写成速记，但这是一件危险的事情。数量 $\Tr (-1)^F$ 是 $+ 1$ 和 $- 1$ 的无限级数，通过以各种方式将术语配对在一起，您可以获得您喜欢的任何答案。定义中包含 $\rme^{- \beta H}$ 作为该总和的调节器，使其成为有限的。当然，它是一个熟悉的调节器，因为它也出现在统计力学的配分函数中。
+
+The same arguments that show $\odv*{\mathcal{I}}{\beta} = 0$ also show that $\mathcal{I}$ is independent of the parameters of the Hamiltonian $H$. This was demonstrated in the examples above although, as we also saw, it comes with a caveat: if you change the Hamiltonian too dramatically then you can lose states in your Hilbert space and this will change $\mathcal{I}$. This happens for the particle on a line whenever we change the power of the leading term in $h(x)$.
+显示 $\odv*{\mathcal{I}}{\beta} = 0$ 的相同论证也表明 $\mathcal{I}$ 独立于哈密顿量 $H$ 的参数。这在上面的示例中得到了证明，但正如我们也看到的那样，它带有一个警告：如果您将哈密顿量更改得太大，那么您可能会丢失希尔伯特空间中的状态，这将改变 $\mathcal{I}$。每当我们改变 $h(x)$ 中首项的幂时，这条线上的粒子就会发生这种情况。
+
+The Witten index counts the difference between the bosonic and fermionic $E = 0$ states. However, in the simple examples considered above, it actually counts the number of $E = 0$ states, positive if they're bosonic, negative if they're fermionic. One might wonder if, in practice, it always does this. Indeed, there's is some intuition that suggests this is the case. If there's no good reason for pairs of states to be stuck at $E = 0$ then, as you vary parameters in the potential, it's tempting to think that they will be lifted to $E > 0$.
+Witten 指数计算了玻色子和费米子 $E = 0$ 状态之间的差异。然而，在上面考虑的简单示例中，它实际上计算 $E = 0$ 状态的数量，如果它们是玻色子，则为正，如果它们是费米子，则为负。人们可能想知道，在实践中，它是否总是这样做。事实上，有一些直觉表明情况确实如此。如果没有充分的理由让状态对停留在 $E = 0$，那么当你改变势能参数时，很容易认为它们会被提升到 $E > 0$。
+
+However, it's not diﬃcult to exhibit examples where, for example, $\mathcal{I} = 0$ but there are a pair of bosonic and fermionic $E = 0$ states. A particularly simple example arises from particle moving on a circle $\mathrm{S}^1$ of radius $R$. The supercharge (1.5) and Hamiltonian (1.7) take the same form as before and are characterised by a periodic function $h(x) = h(x + 2 \pi R)$. We can follow our earlier footsteps to find a two parameter family of ground states labelled by $\alpha, \beta \in \mathbb{C}$
+然而，展示例子并不困难，例如，$\mathcal{I} = 0$，但存在一对玻色子和费米子 $E = 0$ 状态。一个特别简单的例子是粒子在半径为 $R$ 的圆 $\mathrm{S}^1$ 上移动。增压 (1.5) 和哈密顿量 (1.7) 采用与之前相同的形式，并以周期函数 $h(x) = h(x + 2 \pi R)$ 为特征。我们可以按照之前的脚步找到一个由 $\alpha, \beta \in \mathbb{C}$ 标记的二参数基态族
+\[ \Psi(x) = \alpha \begin{pmatrix}
+        \rme^{- h} \\ 0
+    \end{pmatrix} + \beta \begin{pmatrix}
+        0 \\ \rme^{+ h}
+    \end{pmatrix} \]
+This time, because the particle lives on a circle, there is no issue with the normalisability of the wavefunction. We see that the system has two linearly independent $E = 0$ ground states for any choice of $h$. Yet, because one ground states lives in $\mathcal{H}_B$ and the other in $\mathcal{H}_F$ , the Witten index of this system is $\mathcal{I} = 0$. The potential (in blue) and wavefunctions (in orange and green) for $h(x) = \sin(x / R)$ are shown in Figure 4.
+这次，因为粒子生活在一个圆上，所以波函数的归一化性不存在问题。我们看到，对于 $h$ 的任何选择，系统都有两个线性独立的 $E = 0$ 基态。然而，由于一个基态位于 $\mathcal{H}_B$ 中，另一个基态位于 $\mathcal{H}_F$ 中，因此该系统的 Witten 指数为 $\mathcal{I} = 0$。 $h(x) = \sin(x / R)$ 的势（蓝色）和波函数（橙色和绿色）如图 4 所示。
+
+For this particle on the circle, the pair of states sticks at $E = 0$ as we change the parameters of $h$, even though these ground states are not protected by the Witten index. One might wonder if there's a deeper reason for this. There is and it's related to the deeper mathematical concept of cohomology. We'll look at this further in Section 3.
+对于圆上的这个粒子，当我们改变 $h$ 的参数时，这对状态保持在 $E = 0$，即使这些基态不受 Witten 指数的保护。人们可能想知道这是否有更深层次的原因。确实存在，并且它与更深层的上同调数学概念有关。我们将在第 3 节中进一步讨论这一点。
+
+Finally, one last comment before we move on. The manipulations of the Witten index rely on the discreteness of the energy spectrum. There are more subtle situations, where a particle moves on a non-compact space without a potential, where the energy spectrum is continuous and, despite the bose-fermi degeneracy in the spectrum, strange things can happen that mean that $\mathcal{I}$ does, in fact, depend on $\beta$. We will not encounter situations of this kind in these lectures.
+最后，在我们继续之前，还有最后一条评论。Witten 指数的操纵依赖于能谱的离散性。还有更微妙的情况，其中粒子在没有势能的非紧空间上移动，能量谱是连续的，尽管谱中存在玻色费米简并性，但可能会发生奇怪的事情，这意味着 $\mathcal{I}$ 事实上，依赖于 $\beta$。在这些讲座中我们不会遇到这种情况。
+
+\subsection{The Supersymmetric Action \SakuraiYukiko 超对称作用量}
+
+There is one fairly large omission in our discussion so far. As presented above, super- symmetric Hamiltonians have a nice algebraic structure. But we have no inkling of why supersymmetry has anything to do with symmetry!
+到目前为止，我们的讨论中有一个相当大的遗漏。如上所述，超对称哈密顿量具有良好的代数结构。但我们不知道为什么超对称性与对称性有任何关系！
+
+Usually in quantum mechanics, Hermitian operators that commute with the Hamiltonian correspond to conserved quantities and conserved quantities come, via Noether's theorem, from symmetries. This suggests that perhaps $Q + Q^{\dagger}$ is somehow the conserved charge associated to a symmetry. But what symmetry?
+通常在量子力学中，与哈密顿量交换的厄米算子对应于守恒量，而守恒量通过 Noether 定理来自对称性。这表明 $Q + Q^{\dagger}$ 可能是与对称性相关的守恒电荷。但什么是对称性呢？
+
+Often the Lagrangian framework is a better starting point when looking for symmetries. To this end, we would like to introduce a Lagrangian for our supersymmetric theory of a particle on a line. We know well how to think of position and momentum in the Lagrangian setting. But how do we incorporate the discrete $\mathbb{C}^2$ factor in the Hilbert space that gave us the all-important $\mathbb{Z}^2$ grading?
+在寻找对称性时，Lagrangian 框架通常是一个更好的起点。为此，我们想为直线上粒子的超对称理论引入拉格朗日。我们很清楚如何考虑 Lagrangian 设置中的位置和动量。但是我们如何将离散的 $\mathbb{C}^2$ 因子合并到希尔伯特空间中，从而为我们提供最重要的 $\mathbb{Z}^2$ 分类呢？
+
+The answer is that we should turn to fermions. In higher dimensions, adding a fermion to a Lagrangian gives another field. But in quantum mechanics, fermions simply offer a different way of describing some discrete aspect of the physics.
+答案是我们应该转向费米子。在更高维度中，将费米子添加到拉格朗日量中会产生另一个场。但在量子力学中，费米子只是提供了一种不同的方式来描述物理学的某些离散方面。
+
+Note that their kinetic terms are first order, like the Dirac action that we met in Quantum Field Theory, albeit without the intricacies of gamma matrices. We will first show that this action is equivalent to the supersymmetric Hamiltonian (1.7) describing a particle with an internal degree of freedom moving on a line. We'll then understand how to think of the supercharges $Q$ in the Lagrangian formulation.
+请注意，它们的动力学项是一阶的，就像我们在量子场论中遇到的 Dirac 作用一样，尽管没有 gamma 矩阵的复杂性。我们将首先证明这个作用相当于描述具有内部自由度的沿直线运动的粒子的超对称哈密顿量（1.7）。然后我们将了解如何考虑 Lagrangian 公式中的超荷 $Q$。
+
+There is, however, a small subtlety awaiting us. We think of the Lagrangian as a classical object in which $x$ and $\dot{x} = p$ be placed in any order. Relatedly, $\psi$ and $\psi^{\dagger}$ are viewed as "classical Grassmann variables" in the action, which means that if one moves past the other then we just pick up a minus sign. But in the Hamiltionian, these are all to be thought of as quantum operators and, because of the commutation relations (1.15), ordering matters. Which ordering should we take?
+然而，有一个小微妙之处等待着我们。我们将拉格朗日函数视为一个经典对象，其中 $x$ 和 $\dot{x} = p$ 可以按任意顺序放置。相关地，$\psi$ 和 $\psi^{\dagger}$ 在动作中被视为“经典格拉斯曼变量”，这意味着如果一个移动超过另一个，那么我们只会拾取一个负号。但在哈密尔顿量纲中，这些都被视为量子算子，并且由于交换关系 (1.15)，排序很重要。我们应该采取哪种顺序？
+
+In most other contexts, there is no way to fix this ambiguity and it reflects the fact that there are different ways to quantise a classical theory. However, for us, we do have a way to fix the ambiguity since the resulting Hamiltonian should be supersymmetric.
+在大多数其他情况下，没有办法解决这种歧义，它反映了一个事实，即有不同的方法来量化经典理论。然而，对我们来说，我们确实有办法解决歧义，因为所得的哈密顿量应该是超对称的。
+
+\subsubsection{Supersymmetry as a Fermionic Symmetry \SakuraiYukiko 超对称性作为费米子对称性}
+
+Note that these swap bosonic fields $x$ for fermionic fields $\psi$. This is the characteristic feature of supersymmetry that distinguishes it from other symmetries. For this to make sense, the infinitesimal transformation parameter $\epsilon$ must be a Grassmann valued object.
+请注意，这些将玻色子场 $x$ 交换为费米子场 $\psi$。这是超对称性区别于其他对称性的特征。为了使这一点有意义，无穷小变换参数 $\epsilon$ 必须是 Grassmann 值对象。
+
+\subsection*{The Supercharge is a Noether Charge \SakuraiYukiko 超荷是 Noether 荷}
+
+Finally, we can make good on our promise and see that the supercharges $Q$ and $Q^{\dagger}$ are indeed Noether charges for supersymmetry. Usually when the action has a symmetry, we can construct the Noether charge by allowing the transformation parameter to depend on time. Things are no different here. We vary the action with $\epsilon = \epsilon(t)$. There are two steps where things differ from our previous calculation: first when we vary the kinetic terms, and again at the last where we see that the variation of the Lagrangian is a total derivative which requires an integration by parts.
+最后，我们可以兑现我们的承诺，看到超级电荷 $Q$ 和 $Q^{\dagger}$ 确实是超对称性的 Noether 荷。通常当作用具有对称性时，我们可以通过允许变换参数依赖于时间来构造诺特电荷。这里的情况并没有什么不同。我们用 $\epsilon = \epsilon(t)$ 来改变操作。有两个步骤与我们之前的计算有所不同：首先，我们改变了动力学项；最后，我们看到 Lagrangian 的变化是全导数，需要分部分积分。
+
+It's slightly odd that the variation of the action involves $\dot{\epsilon}^{\dagger}$ but not $\dot{\epsilon}$. We can trace this to our choice of fermion kinetic term $\psi^{\dagger} \dot{\psi}$, which is asymmetric between $\psi$ and $\psi^{\dagger}$. We could instead start with the more symmetric choice
+有点奇怪的是，动作的变化涉及 $\dot{\epsilon}^{\dagger}$ 而不是 $\dot{\epsilon}$。我们可以将其追溯到我们对费米子动力学项 $\psi^{\dagger} \dot{\psi}$ 的选择，它在 $\psi$ 和 $\psi^{\dagger}$ 之间是不对称的。我们可以从更对称的选择开始
+
+We can now go full circle. In the operator framework of quantum mechanics, the Noether charges generate the symmetry. Again, supersymmetry is no different.
+现在我们可以回到原点了。在量子力学算子框架中，诺特电荷产生对称性。同样，超对称性也不例外。
+
+\subsection{A Particle Moving in Higher Dimensions \SakuraiYukiko 在更高维度中运动的单粒子}
+
+\subsubsection{A First Look at Morse Theory \SakuraiYukiko Morse 理论初探}
+
+This means that our supersymmetric quantum mechanics will describe a particle moving in $\mathrm{R}^n$ with $2^n$ internal states.
+这意味着我们的超对称量子力学将描述一个在 $\mathrm{R}^n$ 中运动且内部状态为 $2^n$ 的粒子。
+
+There's a useful geometrical way to think about these states. At the top of the pyramid depicted above we have wavefunctions that look like $\phi(x) \ket{0}$: these are just functions over $\mathrm{R}^n$.
+有一种有用的几何方法来思考这些状态。在上面描述的金字塔顶部，我们有看起来像 $\phi(x) \ket{0}$ 的波函数：这些只是 $\mathrm{R}^n$ 上的函数。
+
+At the next level, the wavefunctions look like $\phi(x) \psi(x)^{\dagger i} \ket{0}$ and come with an internal index $i = 1, \dots, n$. We usually think of objects on $\mathrm{R}^n$ that carry such an index as vectors. However, as we now explain, the anti-symmetric nature of the Grassmann variable means that it's much more natural to think about these states as one-forms on $\mathrm{R}^n$.
+在下一个级别，波函数看起来像 $\phi(x) \psi(x)^{\dagger i} \ket{0}$ 并带有内部索引 $i = 1, \dots, n$。我们通常将 $\mathrm{R}^n$ 上带有此类索引的对象视为向量。然而，正如我们现在所解释的，格拉斯曼变量的反对称性质意味着将这些状态视为 $\mathrm{R}^n$ 上的一种形式更为自然。
+
+All of this suggests that we should make the identiﬁcation between Grassmann variables and forms
+所有这些都表明我们应该对格拉斯曼变量和形式进行认同
+\[ \psi^{\dagger i} \longleftrightarrow \odif{x^i}\wedge \]
+
+\subsubsection*{The Supersymmetric Hamiltonian \SakuraiYukiko 超对称 Hamiltonian}
+
+The generalisation of the story above is now the following: for each negative eigenvalue $\lambda_k < 0$, we should excite the corresponding collection of fermions $e^j_k \psi^{\dagger j}$. Meanwhile, for each positive eigenvalue $\lambda_k > 0$, we should just leave well alone: we're better oﬀ in the unexcited state. At a given critical point $x = X$, the semi-classical ground state then sits in the part of the Hilbert space given by
+上述故事的概括如下：对于每个负特征值 $\lambda_k < 0$，我们应该激发相应的费米子集合 $e^j_k \psi^{\dagger j}$。同时，对于每个正特征值 $\lambda_k > 0$，我们应该不管它：我们在非激励状态下会更好。在给定的临界点 $x = X$ 处，半经典基态位于由下式给出的希尔伯特空间部分
+
+In the geometrical language, this means that the ground state wavefunction is a $p$-form, where $p = \mu(X)$ is the Morse index.
+在几何语言中，这意味着基态波函数是 $p$ 形式，其中 $p = \mu(X)$ 是 Morse 指数。
+
+Note that we're not assuming that all critical points of $h$ correspond to true $E = 0$ ground states of the theory. It may well be that some get lifted to non-zero energy and, later in these lectures, we'll put in some eﬀort to understand when this happens. But that's not relevant for computing the Witten index since any such states must get lifted in pairs and so cancel out.
+请注意，我们并不假设 $h$ 的所有临界点都对应于理论的真实 $E = 0$ 基态。很可能有些能量会被提升到非零能量，在这些讲座的后面，我们将努力理解这种情况何时发生。但这与计算 Witten 指数无关，因为任何此类状态都必须成对提升，从而抵消。
+
+The same formula (1.29) also holds for our earlier model with a single $x$ and $\psi$. There a maximum of $h$ was necessarily followed by a minimum, so the sum over critical points could never exceed $+ 1$ or drop below $- 1$. Now, however, we could have multiple ground states. For example, we could have a situation where all the critical points $X$ have $\mu(X)$ even. In this case, they all contribute $+ 1$ to the Witten index and each of them must correspond to a true, $E = 0$ ground state of the system.
+相同的公式 (1.29) 也适用于我们之前具有单个 $x$ 和 $\psi$ 的模型。$h$ 的最大值后面必然有最小值，因此临界点的总和永远不会超过 $+ 1$ 或低于 $- 1$。然而，现在我们可以有多个基态。例如，我们可能会遇到这样一种情况，即所有临界点 $X$ 都有 $\mu(X)$ 为偶数。在这种情况下，它们都为 Witten 指数贡献了 $+ 1$，并且它们中的每一个都必须对应于系统的真实 $E = 0$ 基态。
+
+\subsubsection{More Supersymmetry and Holomorphy \SakuraiYukiko 更多超对称和全纯}
+
+Hamiltonian that can be written in this form is said to have $N = 2 q$ supersymmetries, with the $2$ because each $Q$ is complex. In this convention, the kind of quantum mechanics that we considered up until now is said to have $N = 2$ supersymmetry. (I should warn you that the nomenclature for counting supersymmetry generators in quantum mechanics is not completely standard: things settle down once we go to higher dimensional quantum field theories.)
+可以写成这种形式的哈密顿量据说具有 $N = 2 q$ 超对称性，其中 $2$ 是因为每个 $Q$ 都是复数。在这个惯例中，我们到目前为止所考虑的量子力学被认为具有 $N = 2$ 超对称性。 （我应该警告你，量子力学中计算超对称发生器的术语并不完全标准：一旦我们进入更高维的量子场论，事情就会稳定下来。）
+
+At ﬁrst glance, it looks like these are simply diﬀerent Hamiltonians. However, all is not lost: these two Hamiltonians coincide if the function $h(x, y)$ obeys
+乍一看，这些似乎只是不同的哈密顿量。然而，一切并没有丢失：如果函数 $h(x, y)$ 服从（以下条件），这两个 Hamiltonian 重合
+\[ \pdv{h}{x^i, x^j} = - \pdv{h}{y^i, y^j} \text{ and } \pdv{h}{x^i, y^j} = \pdv{h}{y^i, x^j} \]
+There's a much nicer way of writing these conditions: as we will now see, they are telling us that $h(x, y)$ is related to a holomorphic function.
+有一种更好的方式来编写这些条件：正如我们现在所看到的，它们告诉我们 $h(x, y)$ 与全纯函数相关。
+
+\subsubsection*{Complex Variables \SakuraiYukiko 复数变量}
+
+Here the word “complex” is in inverted com- mas because our original Grassmann variables were already complex; we just introduce different linear combinations
+这里“复数”这个词用引号引起来，因为我们最初的格拉斯曼变量已经是复数了；我们只是引入不同的线性组合
+
+Supersymmetric Lagrangians of this kind, involving complex scalar ﬁelds and fermions, are usually referred to as Landau-Ginzburg theories. This is a nod to the Landau-Ginzburg theories that we met when discussing phase transitions in Statistical Physics. But it's not a very good nod. In particular, the theory (1.25) with just a single supersymmetry is just as much related to the kinds of models that Landau and Ginzburg considered but is never given this name in the context of supersymmetry. It's best to think of the name “Landau-Ginzburg” for the Lagrangian (1.33) as merely a quirk of history and forget that the term is also used elsewhere in physics.
+这种涉及复标量场和费米子的超对称拉格朗日量通常被称为朗道-金兹堡理论。这是对我们在讨论统计物理学中的相变时遇到的朗道-金兹堡理论的认可。但这并不是一个很好的点头。特别是，只有一个超对称性的理论（1.25）与兰道和金兹堡考虑的模型类型同样相关，但在超对称性的背景下从未被赋予这个名称。最好将拉格朗日量 (1.33) 的名称“Landau-Ginzburg”视为历史的一个巧合，而忘记该术语在物理学的其他领域也有使用。
+
+The Landau-Ginzburg Lagrangian depends on a single holomorphic function $W (z)$. This is known as the superpotential. The fact that extended supersymmetry comes hand in hand with holomorphy and associated ideas in complex analysis is extremely important. We will not discuss quantum mechanics with $N = 4$ supersymmetry in these lectures, but it's not for want of interesting content. In particular, there is a beautiful relationship to a form of complex geometry known as “Kähler geometry” that underlies many of the most interesting results in this subject.
+Landau-Ginzburg Lagrangian 依赖于单个全纯函数 $W (z)$。这被称为超潜力。扩展的超对称性与复分析中的全纯性和相关思想齐头并进，这一事实极其重要。在这些讲座中，我们不会讨论具有 $N = 4$ 超对称性的量子力学，但这并不是因为缺乏有趣的内容。特别是，它与一种被称为“Kähler 几何”的复杂几何形式有着美妙的关系，它是该学科中许多最有趣的结果的基础。
+
+Furthermore, when we go to higher dimensional field theories, supersymmetry generators are associated to spinors and these necessarily have more than one component. This means that in, for example, $d = 3 + 1$ dimensions, the simplest supersymmetric theories have the form (1.33) and are based on complex, rather than real variables. In that context, the holomorphy of the superpotential goes a long way towards allowing us to solve some complicated features of supersymmetric quantum ﬁeld theories. This is covered in some detail in the lectures on Supersymmetric Field Theory.
+此外，当我们研究高维场论时，超对称发生器与旋量相关联，并且它们必然具有多个分量。这意味着，例如，在 $d = 3 + 1$ 维度中，最简单的超对称理论具有 (1.33) 的形式，并且基于复变量而不是实变量。在这种情况下，超势的全纯性对于让我们解决超对称量子场理论的一些复杂特征大有帮助。超对称场论讲座对此进行了详细介绍。
+
+\subsubsection*{The Ground States \SakuraiYukiko 基态}
+
+We know from our discussion in Section 1.4.1 what we should do next: we compute the Morse index for each critical point, meaning the number of positive eigenvalues of the Hessian of $h$. But this is trivial for a holomorphic function $W (z)$.
+从第 1.4.1 节的讨论中我们知道下一步应该做什么：我们计算每个临界点的 Morse 指数，即 $h$ 的 Hessian 矩阵的正特征值的数量。但这对于全纯函数 $W (z)$ 来说是微不足道的。
+
+We learn that in theories with $N = 4$ supersymmetry, every critical point of $W$ is a true $E = 0$ ground state of the quantum theory.
+我们了解到，在具有 $N = 4$ 超对称性的理论中，$W$ 的每个临界点都是量子理论的真正 $E = 0$ 基态。
+
+\subsubsection{Less Supersymmetry and Spinors \SakuraiYukiko 更少超对称和旋量}
+
+It's also possible to consider theories with less supersymmetry than our starting point. In fact, this is easy to achieve. We return to our theory with $N = 2$ supersymmetry and impose a reality condition on the Grassmann variables
+也可以考虑比我们的起点具有更少超对称性的理论。事实上，这很容易实现。我们回到 $N = 2$ 超对称性的理论，并对 Grassmann 变量施加现实条件
+\[ \psi^{\dagger i} = \psi^{i} \]
+Real quantum mechanical Grassmann variables like this are called Majorana modes or Majorana fermions.
+像这样的真正的量子力学格拉斯曼变量被称为 Majorana 模式或 Majorana 费米子。
+
+This is usually referred to as $N = 1$ supersymmetry. (You will sometimes see the terminology $N = 1 / 2$ supersymmetry in the literature, counting complex supercharges rather than real.)
+这通常称为 $N = 1$ 超对称性。（有时您会在文献中看到术语 $N = 1 / 2$ 超对称性，计算的是复杂的增压而不是真实的。）
+
+Here our interest lies in a very specific property of these theories: how should we think of the internal degrees of freedom generated by the real fermions $\psi^{i}$?
+这里我们的兴趣在于这些理论的一个非常具体的属性：我们应该如何思考由实费米子 $\psi^{i}$ 生成的内部自由度？
+
+This means that the fermions in this theory should be viewed as gamma matrices! The Cliﬀord algebra has a unique irreducible representation of dimension $2^{n / 2}$ if $n$ is even and $2^{(n - 1) / 2}$ if $n$ is odd. This strongly suggests that the internal degrees of freedom of the particle described by the action (1.34) have something to do with spinors on $\mathbb{R}^n$.
+这意味着该理论中的费米子应该被视为 gamma 矩阵！如果 $n$ 为偶数，则 Cliﬀord 代数具有维度 $2^{n / 2}$ 的唯一不可约表示；如果 $n$ 为奇数，则具有 $2^{(n - 1) / 2}$。这强烈表明由作用 (1.34) 描述的粒子的内部自由度与 $\mathbb{R}^n$ 上的旋量有关。
+
+This is precisely the dimension of a Dirac spinor on $\mathrm{R}^{n}$.
+这正是 $\mathrm{R}^{n}$ 上狄拉克旋量的维数。
+
+There is more to say about these spinors. Under a rotation in $\mathrm{R}^{n}$, the Dirac spinor transforms in the representation generated by $\Sigma^{ij} = \frac{1}{4} \ab[\gamma^i, \gamma^j]$. (See the lectures on Quantum Field Theory for more details of this.) However, in even dimension, as we have here, this is not an irreducible representation. It is composed of two smaller representations known as chiral spinors or Weyl spinors.
+关于这些旋量还有更多要说的。在 $\mathrm{R}^{n}$ 的旋转下，Dirac 旋量变换为 $\Sigma^{ij} = \frac{1}{4} \ab[\gamma^i, \gamma^j]$。 （有关更多详细信息，请参阅量子场论讲座。）然而，在偶数维中，正如我们在这里所看到的，这不是一个不可约的表示。它由两个较小的表示形式组成，称为手性旋量或 Weyl 旋量。
+
+These arise because we can always construct an operator $\hat{\gamma}$ that is analogous to $\gamma^5$ in four dimensions.
+出现这些问题是因为我们总是可以构造一个类似于四个维度中的 $\gamma^5$ 的运算符 $\hat{\gamma}$ 。
+
+In the context of our supersymmetric quantum mechanics, this $\hat{\gamma}$ operator has a very natural meaning. The eigenvalues are simply states with an even or odd number of $c^{\dagger}$ operators excited. In other words, this plays the role of our fermion number.
+在超对称量子力学的背景下，这个 $\hat{\gamma}$ 运算符具有非常自然的含义。特征值只是由偶数或奇数个 $c^{\dagger}$ 运算符激发的状态。换句话说，这扮演了我们的费米子数的角色。
+
+This means that $\hat{\gamma}$ determines whether states live in $\mathcal{H}_B$ or $\mathcal{H}_F$.
+这意味着 $\hat{\gamma}$ 决定状态是否位于 $\mathcal{H}_B$ 或 $\mathcal{H}_F$ 中。
+
+The punchline of this argument is that quantising real fermions, appropriate for $N = 1$ supersymmetry, gives Dirac spinors on $\mathbb{R}^{n}$, at least for $n$ even. These have dimension $2^{n/2}$. Meanwhile, while quantising complex fermions, appropriate for $N = 2$ supersymmetry, gives forms on $\mathbb{R}^{n}$. These have dimension $2^n$. We'll have use for quantum mechanics with $N = 1$ supersymmetry in Section 3.3 where we discuss the Atiyah-Singer index theorem.
+这个论点的要点是，量子化实费米子，适用于 $N = 1$ 超对称性，给出 $\mathbb{R}^{n}$ 上的 Dirac 旋量，至​​少对于 $n$ 偶数。它们的维度为 $2^{n/2}$。同时，在量子化复费米子时，适用于 $N = 2$ 超对称性，给出了 $\mathbb{R}^{n}$ 上的形式。它们的维度为 $2^n$。我们将在第 3.3 节中讨论 Atiyah-Singer 指数定理，使用具有 $N = 1$ 超对称性的量子力学。
+
+As an aside, clearly the construction of spinors and forms on $\mathbb{R}^{n}$ from Grassmann degrees of freedom is closely related. This also suggests that you can take $2^{n/2}$ different Dirac spinors and bundle them together to look like forms. Such a construction is called Kähler-Dirac fermions. It won't play a role in these lectures, but arises in a number of other areas of physics including topological twisting of field theories and lattice gauge theory where it goes by the name of staggered fermions.
+顺便说一句，显然，来自 Grassmann 自由度 的 $\mathbb{R}^{n}$ 上的形式和旋量的构造是密切相关的。这也表明您可以采用 $2^{n/2}$ 不同的 Dirac 旋量并将它们捆绑在一起以看起来像形式。这种结构称为 Kähler-Dirac 费米子。它不会在这些讲座中发挥作用，但会出现在物理学的许多其他领域，包括场论的拓扑扭曲和晶格规范理论，其名称为交错费米子。
+
+\subsubsection*{The Case of $n$ Odd: A Subtle Anomaly \SakuraiYukiko $n$ 为奇数的情况：微妙的异常}
+
+We still have to understand the case of $n$ odd. Here there is a surprise. Quantum mechanical theories with an odd number of Majorana modes don't make any sense! They are an example of what is sometimes called an \textit{anomalous} quantum theory: a seemingly sensible classical theory that cannot be quantised.
+我们仍然需要理解 $n$ 奇数的情况。这里有一个惊喜。具有奇数个 Majorana 模式的量子力学理论没有任何意义！它们是有时被称为\textit{异常}量子理论的一个例子：一种看似合理但无法量子化的经典理论。
+
+For us, this means that theories with $N = 1$ supersymmetry are restricted to describe a particle moving in an even dimensional space, like $\mathbb{R}^n$ with $n$ even.
+对我们来说，这意味着具有 $N = 1$ 超对称性的理论仅限于描述在偶数维空间中移动的粒子，例如 $\mathbb{R}^n$ 和 $n$ 偶数。
+
+\section{Supersymmetry and the Path Integral \SakuraiYukiko 超对称和路径积分}
+
+\subsection{The Partition Function and the Index \SakuraiYukiko 配分函数和指标}
+
+\subsubsection{An Example: The Harmonic Oscillator \SakuraiYukiko 例子：谐振子}
+
+\subsubsection{Fermions: Periodic or Anti-Periodic? \SakuraiYukiko 费米子：周期性还是反周期性？}
+
+\subsubsection{The Witten Index Revisited \SakuraiYukiko 重新审视 Witten 指标}
+
+\subsection{Instantons \SakuraiYukiko 瞬子}
+
+\subsubsection{Tunnelling \SakuraiYukiko 隧穿}
+
+\subsubsection{The Dilute Gas Approximation \SakuraiYukiko 稀薄气体近似}
+
+\subsection{Instantons and Supersymmetry \SakuraiYukiko 瞬子和超对称}
+
+\subsubsection{Fermi Zero Modes \SakuraiYukiko Fermi 零模}
+
+\subsubsection{Computing Determinants \SakuraiYukiko 计算行列式}
+
+\subsubsection{Computing the Ground State Energy \SakuraiYukiko 计算基态能量}
+
+\subsubsection{One Last Example: A Particle on a Circle \SakuraiYukiko 最后一个例子：圆上的粒子}
+
+\section{Supersymmetry and Geometry \SakuraiYukiko 超对称和几何}
+
+\subsection{The Supersymmetric Sigma Model \SakuraiYukiko 超对称 Sigma 模型}
+
+\subsubsection{Quantisation: Filling in Forms \SakuraiYukiko 量子化：填写表格}
+
+\subsubsection{Ground States and de Rham Cohomology \SakuraiYukiko 基态和 de Rham 上同调}
+
+\subsubsection{The Witten Index and the Chern-Gauss-Bonnet Theorem \SakuraiYukiko Witten 指标和 Chern-Gauss-Bonnet 定理}
+
+\subsection{Morse Theory \SakuraiYukiko Morse 模型}
+
+\subsubsection{Instantons Again \SakuraiYukiko 再次瞬子}
+
+\subsubsection{The Morse-Witten Complex \SakuraiYukiko Morse-Witten 复合体}
+
+\subsection{The Atiyah-Singer Index Theorem \SakuraiYukiko Atiyah-Singer 指标定理}
+
+\subsubsection{The $N = 1$ Sigma Model \SakuraiYukiko $N = 1$ Sigma 模型}
+
+\subsubsection{The Path Integral Again \SakuraiYukiko 再次路径积分}
+
+\subsubsection{Adding a Gauge Field \SakuraiYukiko 添加规范场}
+
+\subsection{What Comes Next? \SakuraiYukiko 接下来是什么？}
+
+\end{document}

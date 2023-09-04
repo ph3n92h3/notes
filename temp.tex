@@ -2,33 +2,68 @@
 
 \usepackage[a4paper,scale=0.8]{geometry}
 
-\usepackage{ctex}
+\usepackage{xeCJK}
 \setCJKmainfont{Noto Serif CJK SC}
 \setCJKsansfont{Noto Sans CJK SC}
 \setCJKmonofont{Noto Sans Mono CJK SC}
 
 % \usepackage{algorithm2e}
 % \usepackage{amsfonts}
+<<<<<<< Updated upstream
 % \usepackage{amsmath}
+=======
+\usepackage{amsmath}\DeclareMathOperator{\Tr}{Tr}
+>>>>>>> Stashed changes
 % \usepackage{amssymb}
 % \usepackage{cancel}
+\usepackage{derivative}
 % \usepackage{emoji}
 \usepackage{extarrows}
 % \usepackage{float}
 % \usepackage{framed}
+<<<<<<< Updated upstream
 % \usepackage[colorlinks]{hyperref}
+=======
+\usepackage[colorlinks]{hyperref}
+>>>>>>> Stashed changes
 % \usepackage{mathrsfs}
 \usepackage{mathtools}
-% \usepackage{minted}
+\usepackage{minted}
 % \usepackage{multicol}
-\usepackage{physics}
+\usepackage{physics2}\usephysicsmodule{ab, braket}
 % \usepackage{pifont}
+\usepackage{slashed}
 % \usepackage{unicode-math}
 % \usepackage{upgreek}
 % \usepackage{xcolor}
 
+\newcommand{\bmat}[1]{\begin{bmatrix}#1\end{bmatrix}}
+\newcommand{\calC}{\mathcal{C}}
+\newcommand{\calL}{\mathcal{L}}
+\newcommand{\calP}{\mathcal{P}}
+\newcommand{\calT}{\mathcal{T}}
+\newcommand{\gammafive}{\gamma_5}
+\newcommand{\gammamu}{\gamma^{\mu}}
+\newcommand{\gammanu}{\gamma^{\nu}}
+\newcommand{\gammarho}{\gamma^{\rho}}
+\newcommand{\gammasigma}{\gamma^{\sigma}}
+\newcommand{\gmunu}{g^{\mu\nu}}
 \newcommand{\rme}{\mathrm{e}}
 \newcommand{\rmi}{\mathrm{i}}
+\newcommand{\rmR}{\mathrm{R}}
+\newcommand{\rmT}{\mathrm{T}}
+\newcommand{\slasheda}{\slashed{a}}
+\newcommand{\slashedb}{\slashed{b}}
+\newcommand{\slashedc}{\slashed{c}}
+\newcommand{\slashedd}{\slashed{d}}
+\newcommand{\slashedp}{\slashed{p}}
+\newcommand{\slashedq}{\slashed{q}}
+\newcommand{\slashedr}{\slashed{r}}
+\newcommand{\slasheds}{\slashed{s}}
+\newcommand{\Smunu}{S^{\mu\nu}}
+\newcommand{\veck}{\vec{k}}
+\newcommand{\vecp}{\vec{p}}
+\newcommand{\xleq}{\xlongequal}
 
 \title{temp}
 \author{桜井\ 雪子}
@@ -37,21 +72,26 @@
 \begin{document}
 
 \maketitle
+\tableofcontents
 
-\section{力学}
+\section{Mechanics}
 
-\subsection{最小作用量原理导出运动方程}
+\subsection{action principle \& EoM}
 
-\[ S[q(t)] = \int_{t_1}^{t_2} \dd{t} L(t, q, \dot{q}) \]
+\[ S[q(t)] = \int_{t_1}^{t_2} \odif{t} L(t, q, \dot{q}) \]
+\[ \delta S \simeq - \int_{t_1}^{t_2} \odif{t} \ab[\odv{}{t} \ab(\pdv{L}{\dot(q)}) - \pdv{L}{q}] \]
+\[ \odv{}{t} \ab(\pdv{L}{\dot(q)}) - \pdv{L}{q} = 0 \]
 
-\[ \delta S \simeq - \int_{t_1}^{t_2} \dd{t} \qty[\dv{t} \qty(\pdv{L}{\dot(q)}) - \pdv{L}{q}] \]
-
-\[ \dv{t} \qty(\pdv{L}{\dot(q)}) - \pdv{L}{q} = 0 \]
-
-\subsection{诺特定理}
+\subsection{Noether's theorem}
 
 \[ \tilde{t} = t + \delta t, \tilde{q} = q + \delta q \]
+\[ \delta_s \coloneqq \tilde{t} - t, \delta_s q(t) \coloneqq \tilde{q}(t) - q(t) \Rightarrow \delta_s \dot{q} = (\delta_s q)^{\cdot} \]
+\[ \Delta q(t) \coloneqq \tilde{q}(\tilde{t}) - q(t) \xleq{\delta_s \coloneqq \tilde{t} - t}  \tilde{q}(t + \delta_s t) - q(t) \xleq{Taylor} \tilde{q}(t) + \delta_s t \dot{\tilde{q}}(t) - q(t) \xleq{\delta_s q(t) \coloneqq \tilde{q}(t) - q(t) \Rightarrow \dot{\tilde{q}} = \dot{q} + (\delta_s q)^{\cdot}} \delta_s q + \delta_s t \dot{q} \]
+\[ \Delta \dot{q}(t) \coloneqq \odv{\tilde{q}(\tilde{t})}{\tilde{t}} - \odv{q(t)}{t} = \ab(\delta_s q)^{\cdot} - \delta_s t \ddot{q} \neq (\Delta q(t))^{\cdot} \]
+\[ \Delta L = \cdots = \odv{}{t} \ab[\pdv{L}{\dot{q}} \delta_s q + L \delta_s t] \equiv \odv{F}{t} \]
+\[ Q \coloneqq \ab[\pdv{L}{\dot{q}} \delta_s q + L \delta_s t] - F = p \delta_s q + L \delta_s t - F \Rightarrow \odv{Q}{t} = 0 \]
 
+<<<<<<< Updated upstream
 \[ \delta_s \coloneqq \tilde{t} - t, \delta_s q(t) \coloneqq \tilde{q}(t) - q(t) \Rightarrow \delta_s \dot{q} = (\delta_s q)^{\cdot} \]
 
 \[ \Delta q(t) \coloneqq \tilde{q}(\tilde{t}) - q(t) \xlongequal{\delta_s \coloneqq \tilde{t} - t}  \tilde{q}(t + \delta_s t) - q(t) \xlongequal{Taylor} \tilde{q}(t) + \delta_s t \dot{\tilde{q}}(t) - q(t) \xlongequal{\delta_s q(t) \coloneqq \tilde{q}(t) - q(t) \Rightarrow \dot{\tilde{q}} = \dot{q} + (\delta_s q)^{\cdot}} \delta_s q + \delta_s t \dot{q} \]
@@ -78,6 +118,363 @@
     \qty[Q_{aA}, P^{\mu}] = 0, & \qty[Q_{\dot{a}A}^{\dagger}, P^{\mu}] = 0 \\
     \qty[Q_{aA}, M^{\mu\nu}] = \qty(S_{L}^{\mu\nu})_{a}^{\ c} Q_{cA}, & \qty[Q_{\dot{a}A}^{\dagger}, M^{\mu\nu}] = \qty(S_{R}^{\mu\nu})_{\dot{a}}^{\ \dot{c}} Q_{cA} \\
     \qty{Q_{aA}, Q_{bB}} = Z_{AB} \varepsilon_{ab}, & \qty{Q_{aA}, Q_{\dot{a}B}^{\dagger}} = - 2 \delta_{AB} \sigma_{a\dot{a}}^{\mu} P_{\mu}, Z_{AB} + Z_{BA} = 0; \mathcal{N} = 1 \Rightarrow Z_{AB} = 0
+=======
+\textit{Quantum Field Theory by Mark Srednicki} Section 22 中对作用量变分的写法更简洁。
+
+\section{Quantum Field Theory}
+
+\subsection{LSZ}
+
+\subsubsection{Scalar Field}
+
+\[ a^{\dagger}_1 = \int \odif[order=3]{k} \delta(\veck - \veck_1) a^{\dagger}(\veck) \]
+\begin{align*}
+    a^{\dagger}_1(+ \infty) - a^{\dagger}_1(- \infty) = & \int_{- \infty}^{+ \infty} \odif{t} \partial_0 a_1^{\dagger}                                                                                                                               \\
+    =                                                   & - \rmi \int \odif[order=3]{k} \delta(\veck - \veck_1) \int \odif[order=4]{x} \partial_0 \ab[\rme^{\rmi k x} \overset{\leftrightarrow}{\partial_0} \varphi_1(x)]                            \\
+    =                                                   & - \rmi \int \odif[order=3]{k} \delta(\veck - \veck_1) \int \odif[order=4]{x} \rme^{\rmi k x} \ab(\partial_0^2 + \omega^2) \varphi_1(x)                                                     \\
+    =                                                   & - \rmi \int \odif[order=3]{k} \delta(\veck - \veck_1) \int \odif[order=4]{x} \rme^{\rmi k x} \ab(\partial_0^2 + \veck^2 + m^2) \varphi_1(x)                                                \\
+    =                                                   & - \rmi \int \odif[order=3]{k} \delta(\veck - \veck_1) \int \odif[order=4]{x} \rme^{\rmi k x} \ab(\partial_0^2 + m^2) \varphi_1(x) + \varphi_1(x) \ab(- \vec{\nabla}^2) \rme^{\rmi k x}     \\
+    =                                                   & - \rmi \int \odif[order=3]{k} \delta(\veck - \veck_1) \int \odif[order=4]{x} \rme^{\rmi k x} \ab(\partial_0^2 + m^2) \varphi_1(x) + \vec{\nabla} \rme^{\rmi k x} \vec{\nabla} \varphi_1(x) \\
+    =                                                   & - \rmi \int \odif[order=3]{k} \delta(\veck - \veck_1) \int \odif[order=4]{x} \rme^{\rmi k x} \ab(\partial_0^2 + m^2) \varphi_1(x) - \rme^{\rmi k x} \ab(\vec{\nabla}^2) \varphi_1(x)       \\
+    =                                                   & - \rmi \int \odif[order=3]{k} \delta(\veck - \veck_1) \int \odif[order=4]{x} \rme^{\rmi k x} \ab(\partial_0^2 - \vec{\nabla}^2 + m^2) \varphi_1(x)                                         \\
+    =                                                   & - \rmi \int \odif[order=3]{k} \delta(\veck - \veck_1) \int \odif[order=4]{x} \rme^{\rmi k x} \ab(- \partial^2 + m^2) \varphi_1(x)                                                          \\
+    =                                                   & - \rmi \int \odif[order=4]{x} \rme^{+ \rmi k_1 x} \ab(- \partial_1^2 + m^2) \varphi_1(x)                                                                                                   \\
+    \Rightarrow a_{1'}(+ \infty) - a_{1'}(- \infty) =   & + \rmi \int \odif[order=4]{x} \rme^{- \rmi k_{1'} x} \ab(- \partial_{1'}^2 + m^2) \varphi_{1'}(x)
+\end{align*}
+\begin{align*}
+    \ket{i} = & a_1^{\dagger}(- \infty) \cdots \ket{0} \\
+    \bra{f} = & \bra{0} a_{1'}(+ \infty) \cdots
+\end{align*}
+\begin{align*}
+    \braket{f}{i} = & \braket[3]{0}{a_{1'}(+ \infty) \cdots a_1(- \infty) \cdots}{0}                                                                                                                                                                                              \\
+    =               & \braket[3]{0}{\rmT a_{1'}(+ \infty) \cdots a_1^{\dagger}(- \infty) \cdots}{0}                                                                                                                                                                               \\
+    =               & \braket[3]{0}{\rmT \ab[a_{1'}(+ \infty) - a_{1'}(- \infty)] \cdots \ab[a_1^{\dagger}(- \infty) - a_1^{\dagger}(+ \infty)] \cdots}{0}                                                                                                                        \\
+    =               & \braket[3]{0}{\rmT \ab[\rmi \int \odif[order=4]{x_{1'}} \rme^{- \rmi k_{1'} x_{1'}} (- \partial_{1'}^2 + m^2) \varphi(x_{1'})] \cdots \ab[\rmi \int \odif[order=4]{x_1} \rme^{- \rmi k_1 x_1} (- \partial_1^2 + m^2) \varphi(x_1)] \cdots}{0}               \\
+    =               & \ab[\rmi \int \odif[order=4]{x_{1'}} \rme^{- \rmi k_{1'} x_{1'}} (- \partial_{1'}^2 + m^2)] \cdots \ab[\rmi \int \odif[order=4]{x_1} \rme^{- \rmi k_1 x_1} (- \partial_1^2 + m^2)] \cdots \braket[3]{0}{\rmT \varphi(x_{1'}) \cdots \varphi(x_1) \cdots}{0} \\
+\end{align*}
+
+\subsection{Symmetry}
+
+\subsubsection{Discrete Symmetry}
+
+\textit{Notes on Quantum Field Theory by Yuchen Wang} 的处理更加严谨。
+
+\paragraph{Scalar Field}
+
+\[ \calP^{\mu}_{\ \ \nu} = \ab(\calP^{-1})^{\mu}_{\ \ \nu} = \mathrm{diag}(+1, -1, -1, -1) \]
+\[ U(\calP)^{-1} \varphi(x) U(\calP) \xleq{P \equiv U(\calP)} P^{-1} \varphi(x) P \xleq{U(\Lambda)^{-1} \varphi(x) U(\Lambda) = \varphi(\Lambda^{-1} x)} \pm \varphi(\calP^{-1} x) \xleq{\calP = \calP^{-1}} \pm \varphi(\calP x) \]
+\[ \calT^{\mu}_{\ \ \nu} = \ab(\calT^{-1})^{\mu}_{\ \ \nu} = \mathrm{diag}(-1, +1, +1, +1) \]
+\[ U(\calT)^{-1} \varphi(x) U(\calT) \xleq{T \equiv U(\calT)} T^{-1} \varphi(x) T \xleq{U(\Lambda)^{-1} \varphi(x) U(\Lambda) = \varphi(\Lambda^{-1} x)} \pm \varphi(\calT^{-1} x) \xleq{\calT = \calT^{-1}} \pm \varphi(\calT x) \]
+\[ P^{-2} \varphi(x) P^2 = T^{-2} \varphi(x) T^2 = \varphi(x) \]
+\[ P^{-1} \calL(x) P = + \calL(\calP x), T^{-1} \calL(x) T = + \calL(\calT x) \]
+\[ P^{-1} P^{\mu} P = \calP^{\mu}_{\ \ \nu} P^{\nu}, T^{-1} P^{\mu} T = - \calT^{\mu}_{\ \ \nu} P^{\nu}, T^{-1} \rmi T = - \rmi \]
+
+\[Z^{-1} \varphi_a(x) Z = \eta_a \varphi_a(x), \eta_a = \pm 1 \Rightarrow Z^2 = 1\]
+$C$ is a $Z_2$ operator.
+\[ C^{-1} \varphi(x) C = \varphi^{\dagger}(x) \xlongrightarrow{\varphi = \ab(\varphi_1 + \rmi \varphi_x) / \sqrt{2}} \begin{cases}
+        C^{-1} \varphi_1(x) C = + \varphi_1(x) \\
+        C^{-1} \varphi_2(x) C = - \varphi_2(x)
+    \end{cases} \Rightarrow C^{-1} \calL(x) C = \calL(x) \]
+
+\paragraph{Spinor Field}
+
+\subparagraph{Dirac / Majorana Field $\Psi(x)$}
+
+\[ U(\Lambda)^{-1} \Psi(x) U(\Lambda) = D(\Lambda) \Psi(\Lambda^{-1}x), D(\Lambda^{\mu}_{\ \ \nu} = \delta^{\mu}_{\ \ \nu} + \delta\omega^{\mu}_{\ \ \nu}) = 1_{4 \times 4} + \frac{\rmi}{2} \delta\omega_{\mu\nu} \Smunu, \Smunu = \frac{\rmi}{4} \ab[\gammamu, \gammanu] \]
+
+\[ P^{-2} \Psi(x) P^2 = D(\calP)^2 \Psi(\calP^2 x) = \pm \Psi(x) \]
+\[ P^{-1} \vecp P = - \vecp, P^{-1} \vec{J} P = + \vec{J} \Rightarrow P^{-1} b_s^{\dagger}(\vecp) P = \eta b_s^{\dagger}(- \vecp), P^{-1} d_s^{\dagger}(\vecp) P = \eta d_s^{\dagger}(- \vecp), \eta^2 = 1 \]
+\[ P^{-1} \Psi(x) P = \cdots \Rightarrow \begin{cases}
+        \eta = - \rmi \Rightarrow D(\calP) = + \rmi \beta \\
+        \eta = + \rmi \Rightarrow D(\calP) = - \rmi \beta
+    \end{cases} ,\beta = \bmat{0 & 1_{2 \times 2} \\ 1_{2 \times 2} & 0} \]
+
+\[ T^{-2} \Psi(x) T^2 = D(\calT)^2 \Psi(\calP^2 x) = \pm \Psi(x) \]
+\[ T^{-1} \vecp T = - \vecp, T^{-1} \vec{J} T = - \vec{J} \Rightarrow T^{-1} b_s^{\dagger}(\vecp) T = \zeta_s b_{-s}^{\dagger}(- \vecp), T^{-1} d_s^{\dagger}(\vecp) T = \zeta_s d_{-s}^{\dagger}(- \vecp) \]
+\[ T^{-1} \Psi(x) T = \cdots \Rightarrow \begin{cases}
+        \zeta_s = + s \Rightarrow D(\calT) = + \calC \gammafive \\
+        \zeta_s = - s \Rightarrow D(\calT) = - \calC \gammafive
+    \end{cases}, \calC = \bmat{- \varepsilon^{ab} & 0 \\ 0 & - \varepsilon_{\dot{a}\dot{b}}}, \gammafive = \bmat{- \delta_a^{\ c} & 0 \\ 0 & + \delta^{\dot{a}}_{\ \dot{c}}} \]
+
+\subparagraph{Weyl Field}
+
+\[ \Psi = \bmat{\chi_a \\ \xi^{\dagger \dot{a}}} \Rightarrow \left\{\begin{alignedat}{3}
+        P^{-1} & \chi_a(x)                 & P & = \rmi \xi^{\dagger \dot{a}}(\calP x)  \\
+        P^{-1} & \xi^{\dagger \dot{a}}(x)  & P & = \rmi \chi_a(x) (\calP x)             \\
+        P^{-1} & \chi^{\dagger \dot{a}}(x) & P & = \rmi \xi_a(x) (\calP x)              \\
+        P^{-1} & \xi_a(x)                  & P & = \rmi \chi^{\dagger \dot{a}}(\calP x)
+    \end{alignedat}\right. \left\{\begin{alignedat}{3}
+        T^{-1} & \chi_a(x)                 & T & = + \chi^a (\calT x)  \\
+        T^{-1} & \xi^{\dagger \dot{a}}(x)  & T & = - \xi_{\dot{a}}^{\dagger} (\calT x)             \\
+        T^{-1} & \chi^{\dagger \dot{a}}(x) & T & = - \chi_{\dot{a}}^{\dagger} (\calT x)              \\
+        T^{-1} & \xi_a(x)                  & T & = + \xi^a (\calT x)
+    \end{alignedat}\right. \]
+
+\subparagraph{Fermion Bilinear}
+
+\[ P^{-1} \Psi(x) P = \rmi \beta \Psi(\calP x) \Rightarrow P^{-1} \bar{\Psi}(x) P = - \rmi \bar{\Psi}(\calP x) \beta \Rightarrow P^{-1} \ab[\bar{\Psi} A \Psi] P = \bar{\Psi} \ab[\beta A \beta] \Psi \]
+\[ \begin{aligned}
+        \beta 1 \beta =                   & +1                    \\
+        \beta \rmi \gammafive \beta =     & - \rmi \gammafive     \\
+        \beta \gamma_0 \beta =            & + \gamma^0            \\
+        \beta \gamma^i \beta =            & - \gamma^i            \\
+        \beta \gamma^0 \gammafive \beta = & - \gamma^0 \gammafive \\
+        \beta \gamma^i \gammafive \beta = & + \gamma^0 \gammafive
+    \end{aligned} \Rightarrow \begin{aligned}
+        P^{-1} \ab[\bar{\Psi} \Psi] P =                     & + \ab[\bar{\Psi} \Psi]                                           \\
+        P^{-1} \ab[\bar{\Psi} \rmi \gammafive \Psi] P =     & - \ab[\bar{\Psi} \rmi \gammafive \Psi]                           \\
+        P^{-1} \ab[\bar{\Psi} \gammamu \Psi] P =            & + \calP^{\mu}_{\ \ \nu} \ab[\bar{\Psi} \gammanu \Psi]            \\
+        P^{-1} \ab[\bar{\Psi} \gammamu \gammafive \Psi] P = & - \calP^{\mu}_{\ \ \nu} \ab[\bar{\Psi} \gammanu \gammafive \Psi]
+    \end{aligned} \]
+
+\[ T^{-1} \Psi(x) T = \calP \gammafive \Psi(\calT x) \Rightarrow T^{-1} \bar{\Psi}(x) T = \bar{\Psi}(\calT x) \gammafive \calC^{-1} \xLongrightarrow{T^{-1} A T = A^*} T^{-1} \ab[\bar{\Psi} A \Psi] T = \bar{\Psi} \ab[\gammafive \calC^{-1} A^* \calC \gammafive] \Psi \]
+\[ \begin{aligned}
+        \gammafive \calC^{-1} \ab[1]^* =                                    & +1                    \\
+        \gammafive \calC^{-1} \ab[\rmi \gammafive]^* \calC \gammafive =     & - \rmi \gammafive     \\
+        \gammafive \calC^{-1} \ab[\gamma_0]^* \calC \gammafive =            & + \gamma^0            \\
+        \gammafive \calC^{-1} \ab[\gamma^i]^* \calC \gammafive =            & - \gamma^i            \\
+        \gammafive \calC^{-1} \ab[\gamma^0 \gammafive]^* \calC \gammafive = & + \gamma^0 \gammafive \\
+        \gammafive \calC^{-1} \ab[\gamma^i \gammafive]^* \calC \gammafive = & - \gamma^0 \gammafive
+    \end{aligned} \Rightarrow \begin{aligned}
+        T^{-1} \ab[\bar{\Psi} \Psi] T =                     & + \ab[\bar{\Psi} \Psi]                                           \\
+        T^{-1} \ab[\bar{\Psi} \rmi \gammafive \Psi] T =     & - \ab[\bar{\Psi} \rmi \gammafive \Psi]                           \\
+        T^{-1} \ab[\bar{\Psi} \gammamu \Psi] T =            & - \calT^{\mu}_{\ \ \nu} \ab[\bar{\Psi} \gammanu \Psi]            \\
+        T^{-1} \ab[\bar{\Psi} \gammamu \gammafive \Psi] T = & - \calT^{\mu}_{\ \ \nu} \ab[\bar{\Psi} \gammanu \gammafive \Psi]
+    \end{aligned} \]
+
+\[ C^{-1} \Psi(x) C = \calC \bar{\Psi}^{\rmT}(x) \Rightarrow C^{-1} \bar{\Psi}(x) C = \Psi^{\rmT}(x) \calC \Rightarrow C^{-1} \ab[\bar{\Psi} A \Psi] C = \Psi^{\rmT} \calC A \calC \bar{\Psi}^{\rmT} = - \bar{\Psi} \ab[\calC^{\rmT} A^{\rmT} \calC^{\rmT}] \Psi = - \bar{\Psi} \ab[\calC^{-1} A^{\rmT} \calC] \Psi \]
+\[ \begin{aligned}
+        \calC^{-1} \ab[1]^\rmT \calC =                   & +1                    \\
+        \calC^{-1} \ab[\rmi \gammafive]^\rmT \calC =     & + \rmi \gammafive     \\
+        \calC^{-1} \ab[\gammamu]^\rmT \calC =            & - \gammamu            \\
+        \calC^{-1} \ab[\gammamu \gammafive]^\rmT \calC = & + \gammamu \gammafive
+    \end{aligned} \Rightarrow \begin{aligned}
+        C^{-1} \ab[\bar{\Psi} \Psi] C =                     & + \bar{\Psi} \Psi                     \\
+        C^{-1} \ab[\bar{\Psi} \rmi \gammafive \Psi] C =     & + \bar{\Psi} \rmi \gammafive \Psi     \\
+        C^{-1} \ab[\bar{\Psi} \gammamu \Psi] C =            & - \bar{\Psi} \gammamu \Psi            \\
+        C^{-1} \ab[\bar{\Psi} \gammamu \gammafive \Psi] C = & + \bar{\Psi} \gammamu \gammafive \Psi
+    \end{aligned} \]
+\[ (\calP\calT)^{\mu}_{\ \ \nu} = - 1_{4 \times 4} \Rightarrow \begin{aligned}
+        (CPT)^{-1} \ab[\bar{\Psi} \Psi] (CPT) =                     & + \ab[\bar{\Psi} \Psi]                     \\
+        (CPT)^{-1} \ab[\bar{\Psi} \rmi \gammafive \Psi] (CPT) =     & + \ab[\bar{\Psi} \rmi \gammafive \Psi]     \\
+        (CPT)^{-1} \ab[\bar{\Psi} \gammamu \Psi] (CPT) =            & - \ab[\bar{\Psi} \gammamu \Psi]            \\
+        (CPT)^{-1} \ab[\bar{\Psi} \gammamu \gammafive \Psi] (CPT) = & - \ab[\bar{\Psi} \gammamu \gammafive \Psi]
+    \end{aligned} \]
+
+\paragraph{Vector Field}
+
+\[ P^{-1} \vecp P = - \vecp, P^{-1} \vec{J} P = + \vec{J} \Rightarrow P^{-1} a_\lambda^{\dagger}(\veck) P = \eta_{\lambda} a_\lambda^{\dagger}(- \veck) \]
+\[ P^{-1} A^{\mu}(x) P = \cdots \Rightarrow P^{-1} A^{\mu}(x) P = - \eta \calP^{\mu}_{\ \ \nu} A^{\nu}(\calP x) \]
+
+\[ T^{-1} \vecp T = - \vecp, T^{-1} \vec{J} T = - \vec{J} \Rightarrow T^{-1} a_\lambda^{\dagger}(\veck) T = \zeta_{\lambda} a_{- \lambda}^{\dagger}(- \veck) \]
+\[ T^{-1} A^{\mu}(x) T = \cdots \Rightarrow T^{-1} A^{\mu}(x) T = \zeta \calT^{\mu}_{\ \ \nu} A^{\nu}(\calT x) \]
+
+\subsection{Mark Srednicki's Spinor Notation}
+
+\[ \ab[\varepsilon_{ab}] = \ab[\varepsilon_{\dot{a} \dot{b}}] = \bmat{0 & -1 \\ +1 & 0}, \ab[\varepsilon^{ab}] = \ab[\varepsilon^{\dot{a} \dot{b}}] = \bmat{0 & +1 \\ -1 & 0}, \sigma^{\mu}_{a \dot{a}} = (I, \vec{\sigma}), \bar{\sigma}^{\mu a \dot{a}} = (I, - \vec{\sigma}) \]
+\begin{minted}{mathematica}
+In := PauliMatrix@Range[0,3]
+Out = {{{1,0},{0,1}},{{0,1},{1,0}},{{0,-I},{I,0}},{{1,0},{0,-1}}}
+\end{minted}
+\[ g_{\mu\nu} \sigma^{\mu}_{a \dot{a}} \sigma^{\nu}_{b \dot{b}} = - 2 \varepsilon_{ab} \varepsilon_{\dot{a} \dot{b}}, \varepsilon^{ab} \varepsilon^{\dot{a} \dot{b}} \sigma^{\mu}_{a \dot{a}} \sigma^{\nu}_{b \dot{b}} = - 2 g^{\mu \nu} \]
+
+\subsection{Scattering Amplitude in Spinor Field}
+
+\begin{enumerate}
+    \item Feynman diagram
+    \item Spinor technology
+    \item Gamma matrix technology
+    \item Average over initial spins and Sum over final spins
+\end{enumerate}
+
+\subsubsection{Spinor Technology}
+
+\paragraph{Dirac Equation}
+
+\[ \begin{aligned}
+        \ab(+ \slashedp + m) u_s(\vecp) = 0 \\
+        \ab(- \slashedp + m) v_s(\vecp) = 0
+    \end{aligned} \Rightarrow \begin{aligned}
+        \bar{u}_s(\vecp) \ab(+ \slashedp + m) = 0 \\
+        \bar{v}_s(\vecp) \ab(- \slashedp + m) = 0
+    \end{aligned} \]
+\begin{alignat*}{4}
+    \bar{u}_{s'}(\vecp) u_{s}(\vecp) & = & \bar{u}_{s'}(\vec{0}) u_{s}(\vec{0}) & = & + 2 m \delta_{s's} \\
+    \bar{v}_{s'}(\vecp) v_{s}(\vecp) & = & \bar{v}_{s'}(\vec{0}) v_{s}(\vec{0}) & = & - 2 m \delta_{s's} \\
+    \bar{u}_{s'}(\vecp) v_{s}(\vecp) & = & \bar{u}_{s'}(\vec{0}) v_{s}(\vec{0}) & = & 0                  \\
+    \bar{v}_{s'}(\vecp) u_{s}(\vecp) & = & \bar{v}_{s'}(\vec{0}) u_{s}(\vec{0}) & = & 0
+\end{alignat*}
+
+\paragraph{Gordon Identity}
+
+\[ \begin{alignedat}{3}
+        + 2 m \bar{u}_{s'}(\vecp') \gammamu u_{s}(\vecp) & = & \bar{u}_{s'}(\vecp') & \ab[(p' + p)^{\mu} - 2 \rmi \Smunu (p' - p)_{\nu}] u_{s}(\vecp)            \\
+        - 2 m \bar{v}_{s'}(\vecp') \gammamu v_{s}(\vecp) & = & \bar{v}_{s'}(\vecp') & \ab[(p' + p)^{\mu} - 2 \rmi \Smunu (p' - p)_{\nu}] v_{s}(\vecp)            \\
+        + 2 m \bar{u}_{s'}(\vecp') \gammamu v_{s}(\vecp) & = & \bar{u}_{s'}(\vecp') & \ab[(p' - p)^{\mu} + 2 \rmi \Smunu (p' + p)_{\nu}] v_{s}(\vecp)            \\
+        - 2 m \bar{v}_{s'}(\vecp') \gammamu u_{s}(\vecp) & = & \bar{v}_{s'}(\vecp') & \ab[(p' - p)^{\mu} + 2 \rmi \Smunu (p' + p)_{\nu}] u_{s}(\vecp)            \\
+        0                                                    & = & \bar{u}_{s'}(\vecp') & \ab[(p' + p)^{\mu} - 2 \rmi \Smunu (p' - p)_{\nu}] \gammafive u_{s}(\vecp) \\
+        0                                                    & = & \bar{v}_{s'}(\vecp') & \ab[(p' + p)^{\mu} - 2 \rmi \Smunu (p' - p)_{\nu}] \gammafive v_{s}(\vecp)
+    \end{alignedat} \Rightarrow \begin{alignedat}{8}
+        \bar{u}_{s'}(\vecp) \gammamu u_s(\vecp)   & = & \bar{v}_{s'}(\vecp) \gammamu v_s(\vecp) & = & 2 p^{\mu} \delta_{s's} \\
+        \bar{u}_{s'}(\vecp) \gamma^0 v_s(- \vecp) & = & \bar{v}_{s'}(\vecp) \gamma^0 u_s(- \vecp) & = & 0
+    \end{alignedat} \]
+
+\begin{framed}
+    \begin{alignat*}{9}
+        \gammamu \slashedp  & = & \frac{1}{2} \ab\{\gammamu, \slashedp\}  & + & \frac{1}{2} \ab[\gammamu, \slashedp]  & = & - & p^{\mu}  & - & 2 \rmi \Smunu p_{\nu}  \\
+        \slashedp' \gammamu & = & \frac{1}{2} \ab\{\gammamu, \slashedp'\} & - & \frac{1}{2} \ab[\gammamu, \slashedp'] & = & - & p'^{\mu} & - & 2 \rmi \Smunu p'_{\nu}
+    \end{alignat*}
+    plus or minus, times $\gammafive$ or not, sandwich them with $\bar{u} \& u$ or $\bar{u} \& v$ or $\bar{v} \& u$ or $\bar{v} \& v$, 16 scenarios in total
+\end{framed}
+
+\paragraph{Spin Sum}
+
+\begin{alignat*}{6}
+    u_s(\vecp) \bar{u}_s(\vecp) & = & \frac{1}{2} \ab(1 - s \gammafive \slashed{z}) \ab(- \slashedp + m) & \Rightarrow & \sum_{s = \pm} u_s(\vecp) \bar{u}_s(\vecp) & = & - \slashedp + m \\
+    v_s(\vecp) \bar{v}_s(\vecp) & = & \frac{1}{2} \ab(1 - s \gammafive \slashed{z}) \ab(- \slashedp - m) & \Rightarrow & \sum_{s = \pm} v_s(\vecp) \bar{v}_s(\vecp) & = & - \slashedp - m
+\end{alignat*}
+
+\paragraph{CPT}
+
+\subparagraph{C}
+
+\[ \calC = \bmat{0 & -1 & 0 & 0 \\ +1 & 0 & 0 & 0 \\ 0 & 0 & 0 & -1 \\ 0 & 0 & +1 & 0} \Rightarrow \begin{cases}
+        \calC^{T} = \calC^{\dagger} = \calC^{-1} = - \calC \\
+        \beta \calC + \calC \beta = 0                      \\
+        \calC^{-1} \gammamu \calC = - \ab(\gammamu)^{\rmT} \Rightarrow \calC^{-1} K^{j} \calC = - \ab(K^{j})^{\rmT}
+    \end{cases} \]
+\begin{alignat*}{6}
+                & \calC \bar{u}_s(0)^\rmT     & = & v_s(0),                 & \calC \bar{v}_s(0)^\rmT     & = & u_s(0)                 \\
+    \Rightarrow & \calC \bar{u}_s(\vecp)^\rmT & = & v_s(\vecp),             & \calC \bar{v}_s(\vecp)^\rmT & = & u_s(\vecp)             \\
+    \Rightarrow & u^*_s(\vecp)                & = & \calC \beta v_s(\vecp), & v^*_s(\vecp)                & = & \calC \beta u_s(\vecp)
+\end{alignat*}
+
+\subparagraph{P}
+
+\begin{alignat*}{7}
+                & \beta u_s(0) & = & + u_s(0),           & \beta v_s(0) & = & - v_s(0)           & , \beta K^i + K^i \beta = 0 \\
+    \Rightarrow & u_s(- \vecp) & = & + \beta u_s(\vecp), & v_s(- \vecp) & = & - \beta v_s(\vecp) &
+\end{alignat*}
+
+\subparagraph{T}
+
+\begin{alignat*}{8}
+                & \gammafive u_s(0)     & = & + s v_{-s}(0),                   & \gammafive v_s(0)     & = & - & s u_{-s}(0),                  & \gammafive K^i = K^i \gammafive \\
+    \Rightarrow & \gammafive u_s(\vecp) & = & + s v_{-s}(\vecp),               & \gammafive v_s(\vecp) & = & - & s u_{-s}(\vecp)               &                                 \\
+    \Rightarrow & u^*_{-s}(- \vecp)     & = & - s \calC \gammafive u_s(\vecp), & v^*_{-s}(- \vecp)     & = & - & s \calC \gammafive v_s(\vecp) &
+\end{alignat*}
+
+\subsubsection{Gamma Matrix Technology}
+
+\paragraph{Introduction}
+
+\[ \ab\{\gammamu, \gammanu\} = - 2 \gmunu 1_{4\times 4}, \gammafive^2 = 1_{4\times 4}, \ab\{\gammamu, \gammafive\} = 0, \Tr_{1_{4\times 4}} = 4 \]
+\[ \Tr\ab[\text{odd \# of } \gammamu] = 0, \Tr\ab[\gammafive \text{ odd \# of } \gammamu] = 0 \]
+
+\paragraph{$\Tr$}
+
+\[ \Tr\ab[\gammamu \gammanu] \xleq{\Tr\ab[AB] = \Tr\ab[BA]} \Tr\ab[\gammanu \gammamu] \xleq{\Tr A + \Tr B = \Tr \ab[A + B]} \frac{1}{2} \Tr\ab[\gammamu \gammanu + \gammanu \gammamu] \xleq{\ab\{\gammamu, \gammanu\} = - 2 \gmunu 1_{4\times 4}} - \gmunu \Tr 1_{4 \times 4} = - 4 \gmunu \]
+\[ \Rightarrow \Tr\ab[\slasheda \slashedb] = - 4 (a b) \]
+\[ \slasheda \slashedb + \slashedb \slasheda = a_{\mu} b_{\nu} \ab\{\gamma^{\mu}, \gamma^{\nu}\} = - 2 (a b) \]
+\[ \Rightarrow \Tr\ab[\slasheda \slashedb \slashedc \slashedd] = 4 \ab[(ad) (bc) - (ac) (bd) + (ab) (cd)] \]
+
+\paragraph{$\gammafive$}
+
+\[ \gammafive = \rmi \gamma^0 \gamma^1 \gamma^2 \gamma^3 = - \frac{\rmi}{24} \varepsilon_{\mu\nu\rho\sigma} \gammamu \gammanu \gammarho \gammasigma \]
+\begin{align*}
+     & \Tr\ab[\gammafive] = 0                                                                               \\
+     & \Tr\ab[\gammafive \gammamu \gammanu] = 0                                                             \\
+     & \Tr\ab[\gammafive \gammamu \gammanu \gammarho \gammasigma] = - 4 \rmi \varepsilon^{\mu\nu\rho\sigma}
+\end{align*}
+
+\paragraph{Sandwich}
+
+\begin{align*}
+     & \gammamu \gamma_{\mu} = - d                                                                                                   \\
+     & \gammamu \slasheda \gamma_{\mu} = (d - 2) \slasheda                                                                           \\
+     & \gammamu \slasheda \slashedb \gamma_{\mu} = 4 (a b) - (d - 4) \slasheda \slashedb                                             \\
+     & \gammamu \slasheda \slashedb \slashedc \gamma_{\mu} = 2 \slashedc \slashedb \slasheda - (d - 4) \slasheda \slashedb \slashedc \\
+\end{align*}
+
+\subsection{Spinor Helicity}
+
+\paragraph{massless $=$ all Mandelstam variables $\gg m^2$}
+
+\begin{align*}
+    u_s(\vecp) \bar{u}_s(\vecp) = & \frac{1}{2} \ab(1 + s \gammafive) \ab(- \slashedp) \\
+    v_s(\vecp) \bar{v}_s(\vecp) = & \frac{1}{2} \ab(1 - s \gammafive) \ab(- \slashedp)
+\end{align*}
+\[ v_s(\vecp) = u_{-s}(\vecp) \]
+\[ u_{-} \bar{u}_{-}(\vec{p}) = \frac{1}{2} \ab(1- \gammafive) \ab(- \slashedp) \xleq[p_{a\dot{a}} \equiv p_{\mu} \sigma^{\mu}_{a\dot{a}}, p^{a\dot{a}} = \varepsilon^{ac} \varepsilon^{\dot{a}\dot{c}} p_{c\dot{c}} = p_{\mu} \bar{\sigma}^{\mu \dot{a} a}]{\frac{1}{2} \ab(1- \gammafive) = \bmat{1 & 0 \\ 0 & 0}, \gammamu = \bmat{0 & \sigma^{\mu} \\ \bar{\sigma}^{\mu} & 0}} \bmat{0 & - p_{a\dot{a}} \\ 0 & 0} \]
+
+\paragraph{twistor = commuting spinor $\phi_a$}
+
+\begin{align*}
+    u_{-}(\vec{p}) = \bmat{\phi_a                                                                                  \\ 0} & \Rightarrow \bar{u}_{-}(\vec{p}) \xleq{\varphi^*_{\dot{a}} \equiv \ab(\phi_{\dot{a}})^*} \bmat{0 & \phi^*_{\dot{a}}}, u_{-}(\vec{p}) \bar{u}_{-}(\vec{p}) = \bmat{0 & \phi_a \phi^*_{\dot{a}} \\ 0 & 0} \Rightarrow p_{a\dot{a}} = - \phi_a \phi^*_{\dot{a}} \\
+     & \xLongrightarrow{\phi^{* \dot{a}} = \varepsilon^{\dot{a}\dot{c}} \phi^*_{\dot{c}}} u_{+}(\vec{p}) = \bmat{0 \\ \phi^{* \dot{a}}}, \bar{u}_{+}(\vec{p}) = \bmat{\phi^a & 0}
+\end{align*}
+\[ \begin{alignedat}{6}
+        \left| p \right]& = & u_-(\vec{p}) &=& v_+(\vec{p}) &=& \phi_a             \\
+        \ket{p} &=          & u_+(\vec{p}) &=& v_-(\vec{p}) &=& \phi^{* \dot{a}}            \\
+        \left[ p \right| &= & \bar{u}_+(\vec{p})&=& \bar{v}_-(\vec{p})& = &\phi^a\\
+        \bra{p} &=          & \bar{u}_-(\vec{p})&=& \bar{v}_+(\vec{p}) &=& \phi^*_{\dot{a}}
+    \end{alignedat} \Rightarrow \begin{aligned}
+        \bra{k} \ket{p} =                   & \braket[1]{k p} \\
+        \left[ k \right| \left| p \right] = & \ab[k p]        \\
+        \bra{k} \left| p \right] =          & 0               \\
+        \left[ k \right| \ket{p}=           & 0
+    \end{aligned} \Rightarrow \begin{alignedat}{7}
+        \ab[p k] & = & \phi^a \kappa_a,                            & \ab[k p] &+& \ab[p k] &=& 0               \\
+        \braket[1]{p k} &=& \phi^*_{\dot{a}} \kappa^{* \dot{a}}, & \braket[1]{k p} &+ &\braket[1]{p k} &=& 0
+    \end{alignedat},  \braket[1]{p k} = \ab[p k]^* \]
+\[ \braket[1]{p k} \ab[k p] = \ab(\phi^*_{\dot{a}} \kappa^{*\dot{a}}) \ab(\kappa^a \phi_a) = \ab(\phi^*_{\dot{a}} \phi_a) \ab(\kappa^a \kappa^{*\dot{a}}) = p_{\dot{a}a} k^{a\dot{a}} \xleq{\bar{\sigma}^{\mu\dot{a}a} \sigma^{\nu}_{a\dot{a}} = - 2 \gmunu} - 2 p^{\mu} k_{\mu} = - 2 p \cdot k = - \ab(p + k)^2 \]
+\[ - \slashedp = \sum_{s = \pm}u_s(\vec{p})\bar{u}_s(\vec{p}) = u_+(\vec{p})\bar{u}_+(\vec{p}) + u_-(\vec{p})\bar{u}_-(\vec{p}) = \ket{p} \left[p\right| + \left|p\right]\bra{p} = \bmat{0 & \phi_a\phi^*_{\dot{a}} \\ \phi^{*\dot{a}}\phi^a & 0} \]
+
+\subparagraph{Schouten Identity}
+
+\[ \braket[1]{p q} \braket[1]{r s} + \braket[1]{p r} \braket[1]{s q} + \braket[1]{p s} \braket[1]{q r} = 0 \]
+
+\[ \braket[1]{p q} \ab[q r] \braket[1]{r s} \ab[s p] = \Tr \ab[\frac{1}{2} \ab(1 - \gammafive) \slashedp \slashedq \slashedr \slasheds] = 2 \ab[(pq) (rs) - (p r)(q s) + (p s)(q r)] + 2 \rmi \varepsilon^{\mu\nu\rho\sigma} p_\mu q_\nu r_\rho s_\sigma \]
+\[ \bra{p}\gammamu\left|k\right] = \left[k\right|\gammamu\ket{p}, \bra{p}\gammamu\left|k\right]^* = \bra{k}\gammamu\left|p\right], \bra{p}\gammamu\left|p\right] = 2 p^{\mu}, \braket[3]{p}{\gammamu}{k} = [p|\gammamu|k] = 0 \]
+
+\subparagraph{Fierz Identity}
+
+\begin{align*}
+    - \frac{1}{2} \bra{p}\gamma_{\mu}\left|q\right] \gammamu = & \left|q\right] \bra{p} + \ket{p} \left[q\right|                                                                                                          \\
+    - \frac{1}{2} \left[p\right|\gamma_{\mu}\ket{q} \gammamu = & \ket{q} \left[p\right| + \left|p\right] \bra{q} \Rightarrow \left[p\right|\gammamu\ket{q} \bra{r}\gamma_{\mu}\left|s\right] = 2 \ab[p s] \braket[1]{q r}
+\end{align*}
+
+\paragraph{in Spinor Electrodynamics}
+
+\subsection{Scattering Amplitude in QED}
+
+\[ \sum_{\lambda = \pm} \varepsilon_{\lambda}^{\mu}{\veck} \varepsilon_{\lambda}^{\nu *}(\veck) \to \gmunu \]
+
+\subsection{Anomaly}
+
+\subsubsection{Chiral Gauge Theories and Anomaly}
+
+a single left-handed Weyl field $\psi$ in a complex representation $\rmR$:
+\[ \calL = \rmi \psi^{\dagger} \bar{\sigma}^{\mu} D_{\mu} \psi - \frac{1}{4} F^{a\mu\nu} F^a_{\mu\nu}, D_{\mu} = \partial_{\mu} - \rmi g A^a_{\mu} T^a_\rmR \]
+
+\begin{itemize}
+    \item $\psi$ is massless: $\rmR \otimes \rmR$ does not contain a singlet
+    \item Lorentz invariance, gauge invariance
+    \item charge and spin are correlated
+    \item regularization \begin{itemize}
+              \item dimensional regularization: gamma matrices aren't well-define
+              \item Pauli–Villars regularization: is equivalent to adding an extra fermion field with mass: not be gauge invariance
+          \end{itemize}
+    \item \textit{Quantum Field Theory by Mark Srednicki}: 计算三光子单圈图时，无法使振幅 $\mathrm{U}(1)$ gauge invariance，存在多个左手 Weyl 场时可能恰好抵消，存在 nonabelian gauge 时，要看表示的 anomaly coefficient
+\end{itemize}
+
+\subsection{Supersymmetry}
+
+\begin{align*}
+    \ab[Q_{aA}, P^{\mu}] = 0,                                       & \ab[Q_{\dot{a}A}^{\dagger}, P^{\mu}] = 0                                                                                                             \\
+    \ab[Q_{aA}, M^{\mu\nu}] = \ab(S_{L}^{\mu\nu})_{a}^{\ c} Q_{cA}, & \ab[Q_{\dot{a}A}^{\dagger}, M^{\mu\nu}] = \ab(S_{R}^{\mu\nu})_{\dot{a}}^{\ \dot{c}} Q_{cA}                                                           \\
+    \ab\{Q_{aA}, Q_{bB}\} = Z_{AB} \varepsilon_{ab},                & \ab\{Q_{aA}, Q_{\dot{a}B}^{\dagger}\} = - 2 \delta_{AB} \sigma_{a\dot{a}}^{\mu} P_{\mu}, Z_{AB} + Z_{BA} = 0; \mathcal{N} = 1 \Rightarrow Z_{AB} = 0
+>>>>>>> Stashed changes
 \end{align*}
 
 \end{document}
