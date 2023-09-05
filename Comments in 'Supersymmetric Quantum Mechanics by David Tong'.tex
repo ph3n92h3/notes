@@ -261,11 +261,33 @@ For us, this means that theories with $N = 1$ supersymmetry are restricted to de
 
 \section{Supersymmetry and the Path Integral \SakuraiYukiko 超对称和路径积分}
 
+In addition to making the symmetry aspect of supersymmetry manifest, the Lagrangian description of the quantum mechanics has one additional advantage: it allows us to bring the path integral to bear on the problem.
+除了使超对称性的对称性变得明显之外，量子力学的 Lagrangian 描述还有一个额外的优点：它允许我们用路径积分来解决问题。
+
+We’ll make plenty of use of the path integral in later studies of supersymmetric systems. The purpose of this section is to understand some of the basic properties of the quantum mechanical path integral and how we can use it to compute quantities of interest in supersymmetric theories.
+我们将在以后的超对称系统研究中大量使用路径积分。本节的目的是了解量子力学路径积分的一些基本属性，以及如何使用它来计算超对称理论中感兴趣的量。
+
 \subsection{The Partition Function and the Index \SakuraiYukiko 配分函数和指标}
+
+Our goal now is to manipulate (2.2) so that the left-hand-side looks like the partition function $Z$. There are a number of differences that we need to fix.
+我们现在的目标是操纵 (2.2)，使左侧看起来像配分函数 $Z$。我们需要修复许多差异。
+
+where now the boundary conditions just tell us that we should integrate over all possible closed paths. Equivalently, we can implement this condition by insisting that we work in periodic Euclidean time, so that $\tau$ is a coordinate on a circle $S^1$, with
+现在边界条件只是告诉我们应该整合所有可能的闭合路径。等价地，我们可以通过坚持在 Euclidean 周期时间内工作来实现这个条件，因此 $\tau$ 是圆 $S^1$ 上的坐标，其中
+\[ \tau \equiv \tau + \beta \]
+
+Although we’ve derived this punchline in the context of quantum mechanics, it also works in quantum ﬁeld theory. If you want to compute the thermal partition function of any quantum ﬁeld theory, you simply need to work in periodic, Euclidean time. This will tell you information about the equilibrium properties of the system at temperature $T = 1 / \beta$.
+尽管我们是在量子力学的背景下得出这个妙语的，但它也适用于量子场理论。如果你想计算任何量子场理论的热配分函数，你只需要在周期性的 Euclidean 时间中工作。这将告诉您有关系统在温度 $T = 1 / \beta$ 时的平衡特性的信息。
 
 \subsubsection{An Example: The Harmonic Oscillator \SakuraiYukiko 例子：谐振子}
 
-\subsubsection{Fermions: Periodic or Anti-Periodic? \SakuraiYukiko 费米子：周期性还是反周期性？}
+That leaves us with the ﬁrst inﬁnite product in (2.5) to deal with. And that’s more tricky because it diverges. To better understand such terms, we should really go back and dissect the path integral to ﬁgure out where it came from. (For example, the partition function should be dimensionless but this term has dimension of $[\text{Energy}]^{2 \infty}$ which is a hint that we didn’t deﬁne our measure very well.) However, in the spirit of this course we’re going to treat this term as blithely as possible. And, for those physicists of a blithe disposition, there are few tools more useful than zeta function regularisation.
+这让我们需要处理 (2.5) 中的第一个无限乘积。这更加棘手，因为它存在发散。为了更好地理解这些项，我们真的应该回顾并剖析路径积分以找出它的来源。（例如，配分函数应该是无量纲的，但这项的维数为 $[\text{Energy}]^{2 \infty}$，这暗示我们没有很好地定义我们的度量。）但是，本着本课程的精神，我们将尽可能轻松地对待这个术语。而且，对于那些性格开朗的物理学家来说，没有什么工具比 zeta 函数正则化更有用了。
+
+However, $\zeta(s)$ is deﬁned for all values of $s$. The idea is that we use this to give meaning to divergent sums. For example, we could think of the sum of all positive integers as $\zeta(- 1) = - 1 / 12$. Although these zeta function games seem rather inane when you ﬁrst meet them, the magic is that they tend to give the right answers when used to regulate divergences in quantum ﬁeld theory. (For example, in the lectures on String Theory we ﬁrst invoked the unconvincing $\zeta(- 1) = - 1 / 12$ argument to compute the critical dimension of the string, and then spent a signiﬁcant amount of time rederiving this using conformal ﬁeld theory techniques where the divergences were absent.)
+然而，$\zeta(s)$ 是为 $s$ 的所有值定义的。我们的想法是，我们用它来赋予发散的总和意义。例如，我们可以将所有正整数的总和视为 $\zeta(- 1) = - 1 / 12$。尽管这些 zeta 函数游戏在你第一次见到时看起来相当愚蠢，但神奇的是，当它们用于调节量子场论中的发散时，它们往往会给出正确的答案。（例如，在弦理论讲座中，我们首先调用了令人难以置信的 $\zeta(- 1) = - 1 / 12$ 参数来计算弦的临界尺寸，然后花费大量时间使用不存在发散的共形场论技术重新推导它。）
+
+\subsubsection{Fermions: Periodic or Anti-Periodic? \SakuraiYukiko 费米子：周期还是反周期？}
 
 \subsubsection{The Witten Index Revisited \SakuraiYukiko 重新审视 Witten 指标}
 
