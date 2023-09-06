@@ -594,7 +594,7 @@ Now we’re in business. Because the Witten index is independent of $\lambda$, w
 \[ x(\tau) = X \text{s.t.} h'(X) = 0 \]
 
 \begin{paracol}{2}
-There are the critical points of $h$. The phenomenon of an integral – in this case an inﬁnite dimensional functional integral – receiving contributions from just a handful of points is known as \textit{localisation}. It is a property of supersymmetric path integrals that is not shared by most other quantum systems.
+There are the critical points of $h$. The phenomenon of an integral - in this case an inﬁnite dimensional functional integral - receiving contributions from just a handful of points is known as \textit{localisation}. It is a property of supersymmetric path integrals that is not shared by most other quantum systems.
 \switchcolumn
 $h$ 存在临界点。积分（在本例中为无限维泛函积分）仅从少数点接收贡献的现象称为\textit{局部化}。这是大多数其他量子系统所不具备的超对称路径积分的性质。
 \switchcolumn*
@@ -609,46 +609,261 @@ Indeed, taking the $\lambda \to \infty$ limit should be viewed as suppressing th
 \subsection*{瞬子}
 \switchcolumn*
 
+Much of our story so far has revolved around understanding the structure of ground states in supersymmetric systems. A common theme - one familiar from other quantum mechanical models - is that the existence of multiple classical ground states does not necessarily mean that there are multiple quantum ground states.
+\switchcolumn
+到目前为止，我们的大部分故事都是围绕着理解超对称系统中的基态结构展开的。一个常见的主题（在其他量子力学模型中很常见）是多个经典基态的存在并不一定意味着存在多个量子基态。
+\switchcolumn*
+
+In this section, we develop a more hands-on understanding of how ground states are lifted. Once again, our tool of choice will be the path integral and, as we will see, this provides a particularly direct way to think about quantum tunnelling and related phenomena. We will explore how this works in some detail, first in ordinary quantum mechanical systems and then in those that exhibit supersymmetry.
+\switchcolumn
+在本节中，我们将更深入地了解基态是如何提升的。我们选择的工具将再次是路径积分，正如我们将看到的，这提供了一种特别直接的方式来思考量子隧道效应和相关现象。我们将首先在普通量子力学系统中，然后在表现出超对称性的系统中，详细探讨它是如何工作的。
+\switchcolumn*
+
+Tunnelling is particularly easy to understand from the path integral perspective. It arises from paths that start at one minima and end up at another. If the parameters in the potential are such that we can do a semi-classical analysis, then the amplitude for tunnelling is dominated by the classical paths that minimise $S_E$. There is a rather cute way of ﬁnding these paths.
+\switchcolumn
+从路径积分的角度来看，隧道特别容易理解。它产生于从一个最小值开始并以另一个最小值结束的路径。如果势能中的参数使得我们可以进行半经典分析，那么隧道效应的幅度将由最小化 $S_E$ 的经典路径主导。有一种相当可爱的方法可以找到这些路径。
+\switchcolumn*
+
+We write the action (2.18) by completing the square
+\switchcolumn
+我们通过配平方来写出作用量（2.18）
+\switchcolumn*
+
+If we ﬁx the end points $x_i$ and $x_f$ to be two distinct minima, then the action is minimised when this inequality is saturated with the most stringent $\pm$ sign. This means that if $h(x_f) > h(x_i)$, we should solve the equation
+\switchcolumn
+如果我们将端点 $x_i$ 和 $x_f$ 固定为两个不同的最小值，那么当这个不等式用最严格的 $\pm$ 符号饱和时，动作就会最小化。这意味着如果 $h(x_f) > h(x_i)$，我们应该求解方程
 \end{paracol}
 
-\subsubsection{Tunnelling \SakuraiYukiko 隧穿}
+\[ \odv{x}{\tau} = \odv{h}{x} \]
 
-\subsubsection{The Dilute Gas Approximation \SakuraiYukiko 稀薄气体近似}
+\begin{paracol}{2}
+Solutions to this equation are known as \textit{instantons}. The name is chosen (by 't Hooft) to mimic the names give to particles but, as will see, these solutions are not localised in space but in (Euclidean) time and so occur just for an instant. If $h(x_f) < h(x_i)$, we should solve the other equation
+\switchcolumn
+该方程的解称为 \textit{瞬子}。这个名称（由 't Hooft 命名）选择是为了模仿粒子的名称，但是，正如我们将看到的，这些解决方案并不局限于空间，而是局限于（Euclidean）时间，因此只发生一瞬间。如果 $h(x_f) < h(x_i)$，我们应该解另一个方程
+\end{paracol}
 
-\subsection{Instantons and Supersymmetry \SakuraiYukiko 瞬子和超对称}
+\[ \odv{x}{\tau} = - \odv{h}{x} \]
 
-\subsubsection{Fermi Zero Modes \SakuraiYukiko Fermi 零模}
+\begin{paracol}{2}
+Solutions to this equations are called \textit{anti-instantons}. They interpolate between the two vacua in the opposite direction to instantons.
+\switchcolumn
+该方程的解称为\textit{反瞬子}。它们以与瞬子相反的方向在两个真空之间进行插值。
+\switchcolumn*
 
-\subsubsection{Computing Determinants \SakuraiYukiko 计算行列式}
+For more general $h(x)$ the exact solution of the instanton may be harder to come by but its simple to get an intuitive feel for its properties. Viewed from the usual perspective of Lagrangian dynamics, the Euclidean action (2.18) describes a particle moving in a potential $- V(x)$. This is shown on the right-hand side of Figure 6 for the double well potential. The instanton (or anti-instanton) describes a particle that starts at one maximum of $- V(x)$ at $\tau \to - \infty$ and then rolls down and up to another maximum, reaching the peak only at $\tau \to + \infty$.
+\switchcolumn
+对于更一般的 $h(x)$ 来说，瞬子的精确解可能更难获得，但对其属性有一个直观的感受很简单。从拉格朗日动力学的通常角度来看，欧几里得作用（2.18）描述了一个粒子在势$-V(x)$中运动。这显示在图 6 右侧的双阱电势中。瞬子（或反瞬子）描述了一个粒子，它从 $- V(x)$ 的一个最大值开始，在 $\tau \to - \infty$ 处，然后向下和向上滚动到另一个最大值，仅在 $\tau \to - \infty$ 处达到峰值 $\tau \to + \infty$。
+\switchcolumn*
 
-\subsubsection{Computing the Ground State Energy \SakuraiYukiko 计算基态能量}
+If $V(x)$ has multiple minima, then we can only ﬁnd solutions to the instanton equations (2.20) and (2.21) that interpolate between \textit{neighbouring} minima. This is because these are ﬁrst order equations of motion, and once you sit at a critical point of $h$ you have necessarily stopped. That doesn’t mean that there is no tunnelling between multiple vacua: indeed, as we’ll see shortly, in non-supersymmetric quantum mechanics it is usually approximate solutions to the classical equations of motion that dominate proceedings.
+\switchcolumn
+如果 $V(x)$ 有多个最小值，那么我们只能找到在 \textit{邻近} 最小值之间插值的瞬子方程 (2.20) 和 (2.21) 的解。这是因为这些是一阶运动方程，一旦到达 $h$ 的临界点，您就必然会停止。这并不意味着多个真空之间不存在隧道效应：事实上，正如我们很快就会看到的，在非超对称量子力学中，通常是主导过程的经典运动方程的近似解。
+\switchcolumn*
 
-\subsubsection{One Last Example: A Particle on a Circle \SakuraiYukiko 最后一个例子：圆上的粒子}
+\subsubsection{Tunnelling}
+\switchcolumn
+\subsubsection*{隧穿}
+\switchcolumn*
 
-\section{Supersymmetry and Geometry \SakuraiYukiko 超对称和几何}
+Let’s first remind ourselves what we qualitatively expect from the ground states. Around each minima, the potential looks like a harmonic oscillator (2.23) and we can then construct approximations to the ground states as Gaussian wavefunctions, localised around each of the minima
+\switchcolumn
+让我们首先提醒自己，我们对基态的定性期望是什么。在每个最小值周围，势看起来像一个谐振子 (2.23)，然后我们可以将基态近似构造为高斯波函数，位于每个最小值周围
+\switchcolumn*
 
-\subsection{The Supersymmetric Sigma Model \SakuraiYukiko 超对称 Sigma 模型}
+For any even potential $V(x) = V(- x)$, the energy eigenstates are also eigenstates of the parity operator, meaning that they are either even or odd functions. A better approximation to the low-lying energy eigenstates must therefore be
+\switchcolumn
+对于任何偶势 $V(x) = V(- x)$，能量本征态也是奇偶算子的本征态，这意味着它们要么是偶函数，要么是奇函数。因此，对低位能量本征态更好的近似是
+\switchcolumn*
 
-\subsubsection{Quantisation: Filling in Forms \SakuraiYukiko 量子化：填写表格}
+But the true ground state of any quantum system has no node, meaning that $\psi(x) \neq 0$ for any ﬁnite $x$. (Given a wavefunction $\psi(x)$ with a node, we can consider $\ab|\psi(x)|$ and then smooth out the cusp to lower the expected energy.) So it must be that $\psi_{+}(x)$ is an approximation to the ground state, while $\psi_{-}(x)$ is an approximation to the ﬁrst excited state.
+\switchcolumn
+但任何量子系统的真实基态都没有节点，这意味着对于任何有限的$x$，$\psi(x)\neq 0$。 （给定一个带有节点的波函数 $\psi(x)$，我们可以考虑 $\ab|\psi(x)|$，然后平滑尖点以降低预期能量。）所以它一定是 $\psi_ {+}(x)$ 是基态的近似值，而 $\psi_{-}(x)$ 是第一激发态的近似值。
+\switchcolumn*
 
-\subsubsection{Ground States and de Rham Cohomology \SakuraiYukiko 基态和 de Rham 上同调}
+So to determine the ground state energy, we just need to compute the path integral and extract the large $T$ behaviour. We can then find the ground state energy in the exponent.
+\switchcolumn
+因此，为了确定基态能量，我们只需要计算路径积分并提取大 $T$ 行为。然后我们可以找到指数中的基态能量。
+\switchcolumn*
 
-\subsubsection{The Witten Index and the Chern-Gauss-Bonnet Theorem \SakuraiYukiko Witten 指标和 Chern-Gauss-Bonnet 定理}
+It should be thought of as a measure of the diﬃculty in getting up and over (or, more precisely, through) the barrier between the two minima.
+\switchcolumn
+它应该被视为衡量站起来并越过（或更准确地说，穿过）两个最小值之间障碍的难度的指标。
+\switchcolumn*
 
-\subsection{Morse Theory \SakuraiYukiko Morse 模型}
+The semi-classical approximation is valid whenever we can ignore the $\mathcal{O}(\delta x^3)$ contributions relative to the $\delta x^2$ contributions in the path integral. To understand the circumstances under which this holds, we should look more closely at the action and identify a dimensionless coupling constant $g$ which multiplies all higher order terms. Perturbation theory is then valid when $g \ll 1$. A simpler way to view things is to rescale the potential $h(x) \to \lambda h(x)$. Then the semi-classical approximation is valid in the limit $\lambda \gg 1$ where we have a steep potential, with deep minima. Under this rescaling, the action of the instanton (2.26) becomes
+\switchcolumn
+只要我们可以忽略路径积分中相对于 $\delta x^2$ 贡献的 $\mathcal{O}(\delta x^3)$ 贡献，半经典近似就有效。为了理解这种情况成立的情况，我们应该更仔细地观察该作用，并确定一个无量纲耦合常数 $g$，它乘以所有高阶项。当 $g \ll 1$ 时，微扰理论有效。一种更简单的看待事物的方法是将势 $h(x) \ 重新调整为 \lambda h(x)$。那么半经典近似在极限 $\lambda \gg 1$ 中是有效的，其中我们有一个陡峭的潜力，具有深的最小值。在这种重新调整下，瞬子 (2.26) 的作用变为
+\switchcolumn*
 
-\subsubsection{Instantons Again \SakuraiYukiko 再次瞬子}
+This is the requirement that we will use for the semi-classical approximation to be valid. The results that we will get below will receive corrections of order $1 / S_{\text{inst}}$.
+\switchcolumn
+这是我们要使半经典近似有效的要求。我们将在下面得到的结果将得到阶为 $1 / S_{\text{inst}}$ 的修正。
+\switchcolumn*
 
-\subsubsection{The Morse-Witten Complex \SakuraiYukiko Morse-Witten 复合体}
+In the language of quantum ﬁeld theory, neglecting the higher order $\delta x^3$ terms is tantamount to computing one-loop diagrams but not two-loop or higher. In normal circumstances, we would be doing perturbation theory around the classical vacuum $x(\tau) = \pm a$, in which case we would have $V'' = \omega^2$, a constant. The diﬀerence here is that we’re now doing perturbation theory around the background of the instanton proﬁle.
+\switchcolumn
+在量子场论的语言中，忽略高阶 $\delta x^3$ 项相当于计算单环图，但不能计算双环或更高阶。在正常情况下，我们将围绕经典真空 $x(\tau) = \pm a$ 进行微扰理论，在这种情况下，我们将有 $V'' = \omega^2$，一个常数。这里的区别在于，我们现在正在围绕瞬子轮廓的背景进行微扰理论。
+\switchcolumn*
 
-\subsection{The Atiyah-Singer Index Theorem \SakuraiYukiko Atiyah-Singer 指标定理}
+The kind of instanton calculations that we’re performing here are often referred to as \textit{non-perturbative}. This refers to the fact that tunnelling phenomena of this kind can’t be captured by perturbation theory around any single vacuum. However, the phrase "non-perturbative" is also a little misleading: we’re still doing perturbation theory, just around a non-trivial solution.
+\switchcolumn
+我们在这里执行的瞬子计算通常称为 \textit{非微扰}。这是指这样的事实：这种隧道现象无法通过任何单一真空周围的微扰理论来捕获。然而，“非微扰”这个词也有点误导：我们仍在研究微扰理论，只是围绕着一个不平凡的解。
+\switchcolumn*
 
-\subsubsection{The $N = 1$ Sigma Model \SakuraiYukiko $N = 1$ Sigma 模型}
+On the left-hand side, we've taken the tunnelling to happen over a time $T$; ultimately we will be interested in taking $T \to \infty$. We have also stressed that we’re computing the contribution to the tunnelling from a single instanton and we’ll subsequently see that this is just part of the story.
+\switchcolumn
+在左侧，我们假设隧道发生的时间为$T$；最终我们会对将 $T \to \infty$ 感兴趣。我们还强调，我们正在计算单个瞬子对隧道效应的贡献，随后我们将看到这只是故事的一部分。
+\switchcolumn*
 
-\subsubsection{The Path Integral Again \SakuraiYukiko 再次路径积分}
+There is, however, a catch. In the background of the instanton, there is always one eigenvalue that is zero. Viewed naively, this would seem to tell us that the determinant vanishes, giving an inﬁnite amplitude for tunnelling. This, it turns out, is not an inﬁnity that we should try to regulate away, but instead an inﬁnity that’s means we should think more carefully about what we’re calculating. Our ﬁrst task, therefore, is to understand the physics behind this zero eigenvalue.
+\switchcolumn
+然而，有一个问题。在瞬子的背景中，总是有一个特征值为零。单纯地看，这似乎告诉我们行列式消失了，为隧道效应提供了无限的振幅。事实证明，这并不是一个我们应该试图调节掉的无穷大，而是一个意味着我们应该更仔细地思考我们正在计算的东西的无穷大。因此，我们的首要任务是理解零特征值背后的物理原理。
+\switchcolumn*
 
-\subsubsection{Adding a Gauge Field \SakuraiYukiko 添加规范场}
+Understanding zero modes is an important part of any instanton computation. They typically arise, as in the present case, because the instanton solution is not unique, but labelled by a number of parameters known as \textit{collective coordinates}. For us, the instanton proﬁle has a single collective coordinate, $\tau_1$. Any ﬂuctuation, like (2.29), that can be thought of as a variation of a collective coordinate necessarily has zero eigenvalue. These ﬂuctuations are called \textit{zero modes}.
+\switchcolumn
+了解零模式是任何瞬子计算的重要组成部分。它们通常会出现，就像在本例中一样，因为瞬子解不是唯一的，而是由许多称为 \textit{集体坐标} 的参数标记。对于我们来说，瞬子轮廓有一个集体坐标，$\tau_1$。任何波动，如（2.29），可以被认为是集体坐标的变化，必然具有零特征值。这些波动称为 \textit{零模式}。
+\switchcolumn*
 
-\subsection{What Comes Next? \SakuraiYukiko 接下来是什么？}
+In the present case, the existence of the zero mode can be traced to the fact that the underling quantum mechanics enjoys time translation symmetry, while any particular instanton proﬁle does not. In quantum ﬁeld theory (or statistical ﬁeld theory), we would refer to the zero mode as a "Goldstone boson" for time translational symmetry.
+\switchcolumn
+在目前的情况下，零模式的存在可以追溯到以下事实：基础量子力学具有时间平移对称性，而任何特定的瞬子解则不然。在量子场论（或统计场论）中，我们将零模式称为时间平移对称性的““Goldstone 玻色子”。
+\switchcolumn*
+
+There are three things to take away from this. First, there are some slightly messy pre-factors that we’ve absorbed into $K$, which now include a ratio of the harmonic oscillator and instanton determinants. The exact expression for this ratio will not be particularly important in what follows and we won’t make any attempt to compute it. However, the advantage of writing this as a ratio of determinants is that it makes it clear that it diﬀers from $1$ only due to physics in a region of width $1 / \omega$ where the instanton proﬁle is non-trivial, and $V''(x_{\text{inst}})$ diﬀers from $\omega^2$. We’ll see the utility of this shortly.
+\switchcolumn
+从中可以得出三件事。首先，我们将一些稍微混乱的前置因素吸收到 $K$ 中，其中现在包括谐振子和瞬子决定因素的比率。这个比率的确切表达式在接下来的内容中不会特别重要，我们不会尝试计算它。然而，将其写为行列式之比的优点在于，它清楚地表明它与 $1$ 的不同仅是由于宽度为 $1 / omega$ 的区域中的物理现象，其中瞬时子解是非平凡的，并且 $V ''(x_{\text{inst}})$ 与 $\omega^2$ 不同。我们很快就会看到它的用处。
+\switchcolumn*
+
+Second, the amplitude is suppressed by a factor of $\rme^{- S_{\text{inst}}}$ . This is a characteristic feature of tunnelling in quantum mechanics. Finally, we see that the tunnelling amplitude from a single instanton has the slightly odd $T \rme^{- T}$ behaviour. It turns out that the correct interpretation of this comes by considering not a lone instanton, but a whole slew of them.
+\switchcolumn
+其次，振幅被 $\rme^{- S_{\text{inst}}}$ 因子抑制。这是量子力学中隧道效应的一个特征。最后，我们看到单个瞬子的隧道振幅具有稍微奇怪的 $T \rme^{- T}$ 行为。事实证明，对此的正确解释不是考虑单个瞬子，而是考虑整个瞬子。
+\switchcolumn*
+
+\subsubsection{The Dilute Gas Approximation}
+\switchcolumn
+\subsubsection*{稀薄气体近似}
+\switchcolumn*
+
+In the calculation above, we restricted to a single instanton solution that interpolates from one classical ground state to the other. However, we know that the interesting part of this instanton proﬁle takes place over a region that is exponentially localised within a width $\sim 1 / \omega$. That means that if we take an instanton, followed a long time later, by an anti-instanton, followed some time later still by another instanton, then this \textit{almost} solves the classical equation of motion. It’s not an exact solution because there are no exact classical solution with these properties. But, if the instantons and anti-instantons are separated by a distance $L \gg 1 / \omega$, then the action of a string of $n$ such objects is roughly
+\switchcolumn
+在上面的计算中，我们限制为从一个经典基态插值到另一个经典基态的单个瞬子解。然而，我们知道这个瞬子分布的有趣部分发生在宽度 $\sim 1 / \omega$ 内呈指数局部化的区域。这意味着，如果我们采用一个瞬子，很长一段时间后是一个反瞬子，再过一段时间又是另一个瞬子，那么这个 \textit{几乎} 就是经典运动方程的解。这不是一个精确解，因为没有具有这些性质的精确的经典解。但是，如果瞬子和反瞬子之间的距离为 $L \gg 1 / \omega$，那么一串 $n$ 这样的物体的作用大致为
+\switchcolumn*
+
+In computing the amplitude $\braket[3]{- a}{\rme^{- H T}}{a}$, we should sum over all possible numbers of instantons and anti-instantons. We just need one more instanton than anti-instanton to ensure that we end up in the opposite vacuum from where we started. In other words, $n$ should be odd in (2.34).
+\switchcolumn
+在计算幅度 $\braket[3]{- a}{\rme^{- H T}}{a}$ 时，我们应该对所有可能的瞬子和反瞬子数量进行求和。我们只需要比反瞬子多一个瞬子，以确保我们最终处于与开始位置相反的真空中。换句话说，(2.34) 中的 $n$ 应该是奇数。
+\switchcolumn*
+
+We see the effect of summing over the dilute gas is to exponentiate the one-instanton contribution $K T \rme^{- S_{\text{inst}}}$.
+\switchcolumn
+我们看到对稀气体求和的效果是对单瞬时贡献 $K T \rme^{- S_{\text{inst}}}$ 求幂。
+\switchcolumn*
+
+We can also do a similar calculation to evaluate the amplitude $\braket[3]{+ a}{\rme^{- H T}}{+ a} = \braket[3]{- a}{\rme^{- H T}}{- a}$ for returning to our original vacuum. Everything is the same, except that we should now take the number $n$ of instantons and anti-instantons to be even. Of course, $n = 0$ is allowed.
+\switchcolumn
+我们也可以进行类似的计算来评估幅度 $\braket[3]{+ a}{\rme^{- H T}}{+ a} = \braket[3]{- a}{\rme^{- H T}}{- a}$ 返回我们原来的真空。一切都是一样的，只是我们现在应该将瞬子和反瞬子的数量 $n$ 取为偶数。当然，$n = 0$ 是允许的。
+\switchcolumn*
+
+We see the promised energy splitting, proportional to the characteristic tunnelling amplitude $\rme^{- S_{\text{inst}}}$.
+\switchcolumn
+我们看到所承诺的能量分裂，与特征隧道振幅 $\rme^{- S_{\text{inst}}}$ 成正比。
+\switchcolumn*
+
+Of course, if we really want to do a good job then we should roll up our sleeves and compute the ratio of determinants that sits in $K$. But we can see the key piece of physics without doing this: the splitting of energy levels scales as $\rme^{- S_{\text{inst}}}$.
+\switchcolumn
+当然，如果我们真的想做好工作，那么我们应该卷起袖子计算 $K$ 中的决定因素的比率。但我们无需这样做就可以看到物理的关键部分：能级分裂的尺度为 $\rme^{- S_{\text{inst}}}$。
+\switchcolumn*
+
+\subsection{Instantons and Supersymmetry}
+\switchcolumn
+\subsection*{瞬子和超对称}
+\switchcolumn*
+
+\subsubsection{Fermi Zero Modes}
+\switchcolumn
+\subsubsection*{Fermi 零模}
+\switchcolumn*
+
+\subsubsection{Computing Determinants}
+\switchcolumn
+\subsubsection*{计算行列式}
+\switchcolumn*
+
+\subsubsection{Computing the Ground State Energy}
+\switchcolumn
+\subsubsection*{计算基态能量}
+\switchcolumn*
+
+\subsubsection{One Last Example: A Particle on a Circle}
+\switchcolumn
+\subsubsection*{最后一个例子：圆上的粒子}
+\switchcolumn*
+
+\section{Supersymmetry and Geometry}
+\switchcolumn
+\section*{超对称和几何}
+\switchcolumn*
+
+\subsection{The Supersymmetric Sigma Model}
+\switchcolumn
+\subsection*{超对称 Sigma 模型}
+\switchcolumn*
+
+\subsubsection{Quantisation: Filling in Forms}
+\switchcolumn
+\subsubsection*{量子化：填写表格}
+\switchcolumn*
+
+\subsubsection{Ground States and de Rham Cohomology}
+\switchcolumn
+\subsubsection*{基态和 de Rham 上同调}
+\switchcolumn*
+
+\subsubsection{The Witten Index and the Chern-Gauss-Bonnet Theorem}
+\switchcolumn
+\subsubsection*{Witten 指标和 Chern-Gauss-Bonnet 定理}
+\switchcolumn*
+
+\subsection{Morse Theory}
+\switchcolumn
+\subsection*{Morse 模型}
+\switchcolumn*
+
+\subsubsection{Instantons Again}
+\switchcolumn
+\subsubsection*{再次瞬子}
+\switchcolumn*
+
+\subsubsection{The Morse-Witten Complex}
+\switchcolumn
+\subsubsection*{Morse-Witten 复合体}
+\switchcolumn*
+
+\subsection{The Atiyah-Singer Index Theorem}
+\switchcolumn
+\subsection*{Atiyah-Singer 指标定理}
+\switchcolumn*
+
+\subsubsection{The $N = 1$ Sigma Model}
+\switchcolumn
+\subsubsection*{$N = 1$ Sigma 模型}
+\switchcolumn*
+
+\subsubsection{The Path Integral Again}
+\switchcolumn
+\subsubsection*{再次路径积分}
+\switchcolumn*
+
+\subsubsection{Adding a Gauge Field}
+\switchcolumn
+\subsubsection*{添加规范场}
+\switchcolumn*
+
+\subsection{What Comes Next?}
+\switchcolumn
+\subsection*{接下来是什么？}
+\switchcolumn*
+\end{paracol}
 
 \end{document}
