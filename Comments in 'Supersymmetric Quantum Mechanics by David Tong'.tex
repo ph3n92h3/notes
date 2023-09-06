@@ -10,13 +10,14 @@
 \usepackage{amsmath}\DeclareMathOperator{\Tr}{Tr}
 \usepackage{amssymb}
 \usepackage{derivative}
-\usepackage{emoji}
+% \usepackage{emoji}
 \usepackage[colorlinks]{hyperref}
 \usepackage{paracol}\columnratio{0.6}
 \usepackage{physics2}\usephysicsmodule{ab, braket}
 
 \newcommand{\rme}{\mathrm{e}}
-\newcommand{\SakuraiYukiko}{\emoji{cherry-blossom}\emoji{snowflake}}
+% \newcommand{\SakuraiYukiko}{\emoji{cherry-blossom}\emoji{snowflake}}
+\newcommand{\SakuraiYukiko}{}
 
 \title{Comments in \textit{Supersymmetric Quantum Mechanics} by David Tong \\ David Tong 《超对称量子力学》中的评论}
 \author{桜井\ 雪子}
@@ -331,17 +332,17 @@ There's a much nicer way of writing these conditions: as we will now see, they a
 \subsubsection*{复数变量}
 \switchcolumn*
 
-Here the word “complex” is in inverted com- mas because our original Grassmann variables were already complex; we just introduce different linear combinations
+Here the word "complex" is in inverted com- mas because our original Grassmann variables were already complex; we just introduce different linear combinations
 \switchcolumn
 这里“复数”这个词用引号引起来，因为我们最初的格拉斯曼变量已经是复数了；我们只是引入不同的线性组合
 \switchcolumn*
 
-Supersymmetric Lagrangians of this kind, involving complex scalar ﬁelds and fermions, are usually referred to as Landau-Ginzburg theories. This is a nod to the Landau-Ginzburg theories that we met when discussing phase transitions in Statistical Physics. But it's not a very good nod. In particular, the theory (1.25) with just a single supersymmetry is just as much related to the kinds of models that Landau and Ginzburg considered but is never given this name in the context of supersymmetry. It's best to think of the name “Landau-Ginzburg” for the Lagrangian (1.33) as merely a quirk of history and forget that the term is also used elsewhere in physics.
+Supersymmetric Lagrangians of this kind, involving complex scalar ﬁelds and fermions, are usually referred to as Landau-Ginzburg theories. This is a nod to the Landau-Ginzburg theories that we met when discussing phase transitions in Statistical Physics. But it's not a very good nod. In particular, the theory (1.25) with just a single supersymmetry is just as much related to the kinds of models that Landau and Ginzburg considered but is never given this name in the context of supersymmetry. It's best to think of the name "Landau-Ginzburg" for the Lagrangian (1.33) as merely a quirk of history and forget that the term is also used elsewhere in physics.
 \switchcolumn
 这种涉及复标量场和费米子的超对称拉格朗日量通常被称为 Landau-Ginzburg 理论。这是对我们在讨论统计物理学中的相变时遇到的 Landau-Ginzburg 理论的认可。但这并不是一个很好的点头。特别是，只有一个超对称性的理论（1.25）与 Landau 和 Ginzburg 考虑的模型类型同样相关，但在超对称性的背景下从未被赋予这个名称。最好将拉格朗日量 (1.33) 的名称“Landau-Ginzburg”视为历史的一个巧合，而忘记该术语在物理学的其他领域也有使用。
 \switchcolumn*
 
-The Landau-Ginzburg Lagrangian depends on a single holomorphic function $W (z)$. This is known as the superpotential. The fact that extended supersymmetry comes hand in hand with holomorphy and associated ideas in complex analysis is extremely important. We will not discuss quantum mechanics with $N = 4$ supersymmetry in these lectures, but it's not for want of interesting content. In particular, there is a beautiful relationship to a form of complex geometry known as “Kähler geometry” that underlies many of the most interesting results in this subject.
+The Landau-Ginzburg Lagrangian depends on a single holomorphic function $W (z)$. This is known as the superpotential. The fact that extended supersymmetry comes hand in hand with holomorphy and associated ideas in complex analysis is extremely important. We will not discuss quantum mechanics with $N = 4$ supersymmetry in these lectures, but it's not for want of interesting content. In particular, there is a beautiful relationship to a form of complex geometry known as "Kähler geometry" that underlies many of the most interesting results in this subject.
 \switchcolumn
 Landau-Ginzburg Lagrangian 依赖于单个全纯函数 $W (z)$。这被称为超潜力。扩展的超对称性与复分析中的全纯性和相关思想齐头并进，这一事实极其重要。在这些讲座中，我们不会讨论具有 $N = 4$ 超对称性的量子力学，但这并不是因为缺乏有趣的内容。特别是，它与一种被称为“Kähler 几何”的复杂几何形式有着美妙的关系，它是该学科中许多最有趣的结果的基础。
 \switchcolumn*
@@ -459,7 +460,7 @@ In addition to making the symmetry aspect of supersymmetry manifest, the Lagrang
 除了使超对称性的对称性变得明显之外，量子力学的 Lagrangian 描述还有一个额外的优点：它允许我们用路径积分来解决问题。
 \switchcolumn*
 
-We’ll make plenty of use of the path integral in later studies of supersymmetric systems. The purpose of this section is to understand some of the basic properties of the quantum mechanical path integral and how we can use it to compute quantities of interest in supersymmetric theories.
+We'll make plenty of use of the path integral in later studies of supersymmetric systems. The purpose of this section is to understand some of the basic properties of the quantum mechanical path integral and how we can use it to compute quantities of interest in supersymmetric theories.
 \switchcolumn
 我们将在以后的超对称系统研究中大量使用路径积分。本节的目的是了解量子力学路径积分的一些基本属性，以及如何使用它来计算超对称理论中感兴趣的量。
 \switchcolumn*
@@ -482,7 +483,7 @@ where now the boundary conditions just tell us that we should integrate over all
 \[ \tau \equiv \tau + \beta \]
 
 \begin{paracol}{2}
-Although we’ve derived this punchline in the context of quantum mechanics, it also works in quantum ﬁeld theory. If you want to compute the thermal partition function of any quantum ﬁeld theory, you simply need to work in periodic, Euclidean time. This will tell you information about the equilibrium properties of the system at temperature $T = 1 / \beta$.
+Although we've derived this punchline in the context of quantum mechanics, it also works in quantum ﬁeld theory. If you want to compute the thermal partition function of any quantum ﬁeld theory, you simply need to work in periodic, Euclidean time. This will tell you information about the equilibrium properties of the system at temperature $T = 1 / \beta$.
 \switchcolumn
 尽管我们是在量子力学的背景下得出这个妙语的，但它也适用于量子场理论。如果你想计算任何量子场理论的热配分函数，你只需要在周期性的 Euclidean 时间中工作。这将告诉您有关系统在温度 $T = 1 / \beta$ 时的平衡特性的信息。
 \switchcolumn*
@@ -492,7 +493,7 @@ Although we’ve derived this punchline in the context of quantum mechanics, it 
 \subsubsection*{例子：谐振子}
 \switchcolumn*
 
-That leaves us with the ﬁrst inﬁnite product in (2.5) to deal with. And that’s more tricky because it diverges. To better understand such terms, we should really go back and dissect the path integral to ﬁgure out where it came from. (For example, the partition function should be dimensionless but this term has dimension of $[\text{Energy}]^{2 \infty}$ which is a hint that we didn’t deﬁne our measure very well.) However, in the spirit of this course we’re going to treat this term as blithely as possible. And, for those physicists of a blithe disposition, there are few tools more useful than zeta function regularisation.
+That leaves us with the ﬁrst inﬁnite product in (2.5) to deal with. And that's more tricky because it diverges. To better understand such terms, we should really go back and dissect the path integral to ﬁgure out where it came from. (For example, the partition function should be dimensionless but this term has dimension of $[\text{Energy}]^{2 \infty}$ which is a hint that we didn't deﬁne our measure very well.) However, in the spirit of this course we're going to treat this term as blithely as possible. And, for those physicists of a blithe disposition, there are few tools more useful than zeta function regularisation.
 \switchcolumn
 这让我们需要处理 (2.5) 中的第一个无限乘积。这更加棘手，因为它存在发散。为了更好地理解这些项，我们真的应该回顾并剖析路径积分以找出它的来源。（例如，配分函数应该是无量纲的，但这项的维数为 $[\text{Energy}]^{2 \infty}$，这暗示我们没有很好地定义我们的度量。）但是，本着本课程的精神，我们将尽可能轻松地对待这个术语。而且，对于那些性格开朗的物理学家来说，没有什么工具比 zeta 函数正则化更有用了。
 \switchcolumn*
@@ -507,7 +508,7 @@ However, $\zeta(s)$ is deﬁned for all values of $s$. The idea is that we use t
 \subsubsection*{费米子：周期还是反周期？}
 \switchcolumn*
 
-Relatedly, there are two natural partition functions that we could construct for fermions. In addition to the thermal partition function $\Tr \rme^{- \beta H}$ , we could also consider the quantity $\Tr (-1)^F \rme^{- \beta H}$. In supersymmetric quantum mechanics, $\Tr (-1)^F \rme^{- \beta H}$ is the Witten index and is necessarily an integer. But, for a general fermionic system it is just a different way to sum the states, weighted by an extra minus sign. I’ll refer to the quantity $\Tr (-1)^F \rme^{- \beta H}$ as an “index” in both supersymmetric and non-supersymmetric theories, although strictly this terminology should be reserved for the former case.
+Relatedly, there are two natural partition functions that we could construct for fermions. In addition to the thermal partition function $\Tr \rme^{- \beta H}$ , we could also consider the quantity $\Tr (-1)^F \rme^{- \beta H}$. In supersymmetric quantum mechanics, $\Tr (-1)^F \rme^{- \beta H}$ is the Witten index and is necessarily an integer. But, for a general fermionic system it is just a different way to sum the states, weighted by an extra minus sign. I'll refer to the quantity $\Tr (-1)^F \rme^{- \beta H}$ as an "index" in both supersymmetric and non-supersymmetric theories, although strictly this terminology should be reserved for the former case.
 \switchcolumn
 相关地，我们可以为费米子构造两个自然配分函数。除了热分配函数 $\Tr \rme^{- \beta H}$ 之外，我们还可以考虑数量 $\Tr (-1)^F \rme^{- \beta H}$。在超对称量子力学中，$\Tr (-1)^F \rme^{- \beta H}$ 是 Witten 指标，并且必然是整数。但是，对于一般的费米子系统来说，这只是一种不同的状态求和方式，由一个额外的负号加权。我将把数量 $\Tr (-1)^F \rme^{- \beta H}$ 称为超对称和非超对称理论中的“指标”，尽管严格来说这个术语应该保留给前者的情况。
 \switchcolumn*
@@ -520,13 +521,95 @@ It seems plausible that inserting a factor of $(-1)^F$ in the trace would ﬂip 
 As always, the right answer can be found by going back to ﬁrst principles and looking at how one constructs the path integral from small, but ﬁnite, time steps.
 \switchcolumn
 与往常一样，通过回到第一原理并研究如何从小而有限的时间步构建路径积分，可以找到正确的答案。
+\switchcolumn*
+
+\subsubsection*{The Fermionic Oscillator}
+\switchcolumn
+\subsubsection*{费米子谐振子}
+\switchcolumn*
+
+Clearly the index isn’t independent of $\beta$ for this simple model: that is only true for supersymmetric systems.
+\switchcolumn
+显然，对于这个简单模型，该指数并不独立于 $\beta$：这只适用于超对称系统。
+\switchcolumn*
+
+It will not have escaped your attention that the path integral calculation was a lot of work to get the partition function for a two state system. However, as we come to consider more complicated quantum mechanical models, including higher dimensional ﬁeld theories, the path integral starts to come into its own and, ultimately, is much more convenient than canonical quantisation.
+\switchcolumn
+您一定会注意到，为了获得二态系统的配分函数，路径积分计算需要大量工作。然而，当我们开始考虑更复杂的量子力学模型，包括高维场论时，路径积分开始发挥作用，并且最终比规范量子化方便得多。
+\switchcolumn*
+
+\subsubsection{The Witten Index Revisited}
+\switchcolumn
+\subsubsection*{重新审视 Witten 指标}
+\switchcolumn*
+
+It’s useful to understand why, from the path integral perspective, the Witten index is always an integer for supersymmetric theories. After all, something magical must happen where we do an inﬁnite dimensional integral but, regardless of the parameters in the integrand, we always get an integer. How does this come about? The answer is a rather special property of supersymmetric path integrals known as localisation.
+\switchcolumn
+从路径积分的角度来看，理解为什么 Witten 指数对于超对称理论总是整数是有用的。毕竟，当我们进行无限维积分时，一定会发生一些神奇的事情，但无论被积函数中的参数如何，我们总是得到一个整数。这是怎么发生的？答案是超对称路径积分的一个相当特殊的属性，称为局域化。
+\switchcolumn*
+
+The bosonic ﬁeld $x(\tau)$ is always periodic: $x(\tau) = x(\tau + \beta)$. But that means that the supersymmetry transformations (2.14) only hold if $\psi$ is also periodic: $\psi(\tau) = \psi(\tau + \beta)$.
+\switchcolumn
+玻色子场 $x(\tau)$ 始终是周期性的：$x(\tau) = x(\tau + \beta)$。但这意味着超对称变换（2.14）仅在 $\psi$ 也是周期性的情况下成立：$\psi(\tau) = \psi(\tau + \beta)$。
+\switchcolumn*
+
+As we’ve seen, if we wish to compute the thermal partition function $Z = \Tr \rme^{- \beta H}$ using the path integral then we must give the fermions anti-periodic boundary conditions. But, in doing so, we break supersymmetry. In contrast, if we wish to compute the Witten index $\Tr (-1)^{F} \rme^{- \beta H}$ then the path integral enjoys supersymmetry. This makes intuitive sense. In general, the full partition function $Z$ is no easier to compute for a supersymmetric theory than a non-supersymmetric theory. But the Witten index is much easier. And, from the path integral perspective, this manifests itself because of the transformations (2.14).
+\switchcolumn
+正如我们所看到的，如果我们希望使用路径积分计算热配分函数 $Z = \Tr \rme^{- \beta H}$，那么我们必须给出费米子反周期边界条件。但是，这样做就打破了超对称性。相反，如果我们希望计算 Witten 指标 $\Tr (-1)^{F} \rme^{- \beta H}$ 则路径积分具有超对称性。这很直观。一般来说，超对称理论的完整配分函数 $Z$ 并不比非超对称理论更容易计算。但 Witten 指标要容易得多。并且，从路径积分的角度来看，这由于变换而显现出来（2.14）。
+\switchcolumn*
+
+The extra term in the integrand has a special form because it is itself a supersymmetry variation. To see this, it’s useful to use the supersymmetry generators that we introduced in (1.21). With a rescaled potential $\lambda h$ and Euclidean time, these become
+\switchcolumn
+被积函数中的额外项具有特殊形式，因为它本身就是超对称变体。为了看到这一点，使用我们在 (1.21) 中引入的超对称生成器很有用。通过重新调整势 $\lambda h$ 和欧几里得时间，这些变为
+\switchcolumn*
+
+(Note that there’s no danger of a boundary term here because $\tau$ parameterises a circle and all ﬁelds are periodic.)
+\switchcolumn
+（请注意，这里不存在边界项的危险，因为 $\tau$ 参数化了一个圆，并且所有域都是周期性的。）
+\switchcolumn*
+
+But we also know that the action is invariant under supersymmetry and, as we showed in (1.22), this can be written as $\mathcal{Q}^{\dagger}_{\lambda} S_E = 0$. This means that our ﬁnal expression is a path integral of a total supersymmetry variation,
+\switchcolumn
+但我们也知道，作用在超对称性下是不变的，正如我们在 (1.22) 中所示，这可以写成 $\mathcal{Q}^{\dagger}_{\lambda} S_E = 0$。这意味着我们的最终表达式是总超对称性变化的路径积分，
 \end{paracol}
 
-\subsubsection*{The Fermionic Oscillator \SakuraiYukiko 费米子谐振子}
+\[ \odv{\mathcal{I}}{\lambda} = \int \mathcal{D} x \mathcal{D} \psi \mathcal{D} \psi^{\dagger} \mathcal{Q}^{\dagger}_{\lambda} \ab(- \rme^{- S_E} \oint \odif{\tau} h' \psi) \]
 
-\subsubsection{The Witten Index Revisited \SakuraiYukiko 重新审视 Witten 指标}
+\begin{paracol}{2}
+The integrand is said to be $Q$-exact. The all-important point is that the integral of any $Q$-exact quantity always vanishes.
+\switchcolumn
+据说该被积函数是 $Q$ 精确的。最重要的一点是任何 $Q$ 精确数量的积分总是消失。
+\switchcolumn*
 
-\subsection{Instantons \SakuraiYukiko 瞬子}
+We’re left with the bosonic functional derivatives $\fdv{}/{x(t)}$. Here we have a total derivative, albeit of a functional kind and we would expect such an integral to be given by the boundary term. The question is: what should we consider to be the boundary of this functional space? Large $x(t)$? Wildly varying $x(t)$? Either way, the boundary term vanishes. This is because there is an exponential suppression from the action $\rme^{- S_E}$ that asymptotes quickly to zero for anything that you might reasonably consider to be the boundary. The upshot of these arguments is that
+\switchcolumn
+我们剩下玻色子泛函导数 $\fdv{}/{x(t)}$。这里我们有一个全导数，尽管是函数类型，并且我们期望这样的积分由边界项给出。问题是：我们应该将什么视为这个功能空间的边界？$x(t)$ 很大？$x(t)$ 变化很大？无论哪种方式，边界项都会消失。这是因为 $\rme^{- S_E}$ 操作存在指数抑制，对于您可能合理地认为是边界的任何内容，它都会快速渐近到零。这些争论的结果是
+\switchcolumn*
+
+Now we’re in business. Because the Witten index is independent of $\lambda$, we can calculate it in the limit $\lambda \to \infty$. Here the potential term in the action suppresses all contribution except for the a finite number of constant maps,
+\switchcolumn
+现在我们开始做生意了。因为 Witten 指标与 $\lambda$ 无关，所以我们可以在 $\lambda \to \infty$ 的极限下计算它。这里，动作中的势项抑制了除了有限数量的常量映射之外的所有贡献，
+\end{paracol}
+
+\[ x(\tau) = X \text{s.t.} h'(X) = 0 \]
+
+\begin{paracol}{2}
+There are the critical points of $h$. The phenomenon of an integral – in this case an inﬁnite dimensional functional integral – receiving contributions from just a handful of points is known as \textit{localisation}. It is a property of supersymmetric path integrals that is not shared by most other quantum systems.
+\switchcolumn
+$h$ 存在临界点。积分（在本例中为无限维泛函积分）仅从少数点接收贡献的现象称为\textit{局部化}。这是大多数其他量子系统所不具备的超对称路径积分的性质。
+\switchcolumn*
+
+Indeed, taking the $\lambda \to \infty$ limit should be viewed as suppressing the non-linear inter- actions in the potential. The statement that the Witten index is independent of $\lambda$ is equivalently to saying that the one-loop approximation is, in fact, exact.
+\switchcolumn
+事实上，采用 $\lambda \to \infty$ 限制应该被视为抑制势能中的非线性相互作用。Witten 指标独立于 $\lambda$ 的说法相当于说单圈近似实际上是精确的。
+\switchcolumn*
+
+\subsection{Instantons}
+\switchcolumn
+\subsection*{瞬子}
+\switchcolumn*
+
+\end{paracol}
 
 \subsubsection{Tunnelling \SakuraiYukiko 隧穿}
 
