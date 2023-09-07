@@ -15,6 +15,7 @@
 \usepackage{paracol}\columnratio{0.6}
 \usepackage{physics2}\usephysicsmodule{ab, braket}
 
+\newcommand{\rmi}{\mathrm{i}}
 \newcommand{\rme}{\mathrm{e}}
 % \newcommand{\SakuraiYukiko}{\emoji{cherry-blossom}\emoji{snowflake}}
 \newcommand{\SakuraiYukiko}{}
@@ -284,7 +285,7 @@ All of this suggests that we should make the identiﬁcation between Grassmann v
 \subsubsection*{超对称 Hamiltonian}
 \switchcolumn*
 
-The generalisation of the story above is now the following: for each negative eigenvalue $\lambda_k < 0$, we should excite the corresponding collection of fermions $e^j_k \psi^{\dagger j}$. Meanwhile, for each positive eigenvalue $\lambda_k > 0$, we should just leave well alone: we're better oﬀ in the unexcited state. At a given critical point $x = X$, the semi-classical ground state then sits in the part of the Hilbert space given by
+The generalisation of the story above is now the following: for each negative eigenvalue $\lambda_k < 0$, we should excite the corresponding collection of fermions $e^j_k \psi^{\dagger j}$. Meanwhile, for each positive eigenvalue $\lambda_k > 0$, we should just leave well alone: we're better off in the unexcited state. At a given critical point $x = X$, the semi-classical ground state then sits in the part of the Hilbert space given by
 \switchcolumn
 上述故事的概括如下：对于每个负特征值 $\lambda_k < 0$，我们应该激发相应的费米子集合 $e^j_k \psi^{\dagger j}$。同时，对于每个正特征值 $\lambda_k > 0$，我们应该不管它：我们在非激励状态下会更好。在给定的临界点 $x = X$ 处，半经典基态位于由下式给出的希尔伯特空间部分
 \switchcolumn*
@@ -294,7 +295,7 @@ In the geometrical language, this means that the ground state wavefunction is a 
 在几何语言中，这意味着基态波函数是 $p$ 形式，其中 $p = \mu(X)$ 是 Morse 指数。
 \switchcolumn*
 
-Note that we're not assuming that all critical points of $h$ correspond to true $E = 0$ ground states of the theory. It may well be that some get lifted to non-zero energy and, later in these lectures, we'll put in some eﬀort to understand when this happens. But that's not relevant for computing the Witten index since any such states must get lifted in pairs and so cancel out.
+Note that we're not assuming that all critical points of $h$ correspond to true $E = 0$ ground states of the theory. It may well be that some get lifted to non-zero energy and, later in these lectures, we'll put in some effort to understand when this happens. But that's not relevant for computing the Witten index since any such states must get lifted in pairs and so cancel out.
 \switchcolumn
 请注意，我们并不假设 $h$ 的所有临界点都对应于理论的真实 $E = 0$ 基态。很可能有些能量会被提升到非零能量，在这些讲座的后面，我们将努力理解这种情况何时发生。但这与计算 Witten 指数无关，因为任何此类状态都必须成对提升，从而抵消。
 \switchcolumn*
@@ -314,7 +315,7 @@ Hamiltonian that can be written in this form is said to have $N = 2 q$ supersymm
 可以写成这种形式的哈密顿量据说具有 $N = 2 q$ 超对称性，其中 $2$ 是因为每个 $Q$ 都是复数。在这个惯例中，我们到目前为止所考虑的量子力学被认为具有 $N = 2$ 超对称性。 （我应该警告你，量子力学中计算超对称发生器的术语并不完全标准：一旦我们进入更高维的量子场论，事情就会稳定下来。）
 \switchcolumn*
 
-At ﬁrst glance, it looks like these are simply diﬀerent Hamiltonians. However, all is not lost: these two Hamiltonians coincide if the function $h(x, y)$ obeys
+At ﬁrst glance, it looks like these are simply different Hamiltonians. However, all is not lost: these two Hamiltonians coincide if the function $h(x, y)$ obeys
 \switchcolumn
 乍一看，这些似乎只是不同的哈密顿量。然而，一切并没有丢失：如果函数 $h(x, y)$ 服从（以下条件），这两个 Hamiltonian 重合
 \end{paracol}
@@ -395,9 +396,9 @@ Here our interest lies in a very specific property of these theories: how should
 这里我们的兴趣在于这些理论的一个非常具体的属性：我们应该如何思考由实费米子 $\psi^{i}$ 生成的内部自由度？
 \switchcolumn*
 
-This means that the fermions in this theory should be viewed as gamma matrices! The Cliﬀord algebra has a unique irreducible representation of dimension $2^{n / 2}$ if $n$ is even and $2^{(n - 1) / 2}$ if $n$ is odd. This strongly suggests that the internal degrees of freedom of the particle described by the action (1.34) have something to do with spinors on $\mathbb{R}^n$.
+This means that the fermions in this theory should be viewed as gamma matrices! The Clifford algebra has a unique irreducible representation of dimension $2^{n / 2}$ if $n$ is even and $2^{(n - 1) / 2}$ if $n$ is odd. This strongly suggests that the internal degrees of freedom of the particle described by the action (1.34) have something to do with spinors on $\mathbb{R}^n$.
 \switchcolumn
-这意味着该理论中的费米子应该被视为 gamma 矩阵！如果 $n$ 为偶数，则 Cliﬀord 代数具有维度 $2^{n / 2}$ 的唯一不可约表示；如果 $n$ 为奇数，则具有 $2^{(n - 1) / 2}$。这强烈表明由作用 (1.34) 描述的粒子的内部自由度与 $\mathbb{R}^n$ 上的旋量有关。
+这意味着该理论中的费米子应该被视为 gamma 矩阵！如果 $n$ 为偶数，则 Clifford 代数具有维度 $2^{n / 2}$ 的唯一不可约表示；如果 $n$ 为奇数，则具有 $2^{(n - 1) / 2}$。这强烈表明由作用 (1.34) 描述的粒子的内部自由度与 $\mathbb{R}^n$ 上的旋量有关。
 \switchcolumn*
 
 This is precisely the dimension of a Dirac spinor on $\mathrm{R}^{n}$.
@@ -513,7 +514,7 @@ Relatedly, there are two natural partition functions that we could construct for
 相关地，我们可以为费米子构造两个自然配分函数。除了热分配函数 $\Tr \rme^{- \beta H}$ 之外，我们还可以考虑数量 $\Tr (-1)^F \rme^{- \beta H}$。在超对称量子力学中，$\Tr (-1)^F \rme^{- \beta H}$ 是 Witten 指标，并且必然是整数。但是，对于一般的费米子系统来说，这只是一种不同的状态求和方式，由一个额外的负号加权。我将把数量 $\Tr (-1)^F \rme^{- \beta H}$ 称为超对称和非超对称理论中的“指标”，尽管严格来说这个术语应该保留给前者的情况。
 \switchcolumn*
 
-It seems plausible that inserting a factor of $(-1)^F$ in the trace would ﬂip the sign of the fermion as we go around the Euclidean temporal circle. But which boundary condition corresponds to the thermal partition function, and which to the index?
+It seems plausible that inserting a factor of $(-1)^F$ in the trace would flip the sign of the fermion as we go around the Euclidean temporal circle. But which boundary condition corresponds to the thermal partition function, and which to the index?
 \switchcolumn
 当我们绕 Euclidean 时间圆运行时，在迹中插入一个因子 $(-1)^F$ 会翻转费米子的符号，这似乎是合理的。但是哪个边界条件对应于热分配函数，哪个边界条件对应于指标呢？
 \switchcolumn*
@@ -700,7 +701,7 @@ This is the requirement that we will use for the semi-classical approximation to
 这是我们要使半经典近似有效的要求。我们将在下面得到的结果将得到阶为 $1 / S_{\text{inst}}$ 的修正。
 \switchcolumn*
 
-In the language of quantum ﬁeld theory, neglecting the higher order $\delta x^3$ terms is tantamount to computing one-loop diagrams but not two-loop or higher. In normal circumstances, we would be doing perturbation theory around the classical vacuum $x(\tau) = \pm a$, in which case we would have $V'' = \omega^2$, a constant. The diﬀerence here is that we’re now doing perturbation theory around the background of the instanton proﬁle.
+In the language of quantum ﬁeld theory, neglecting the higher order $\delta x^3$ terms is tantamount to computing one-loop diagrams but not two-loop or higher. In normal circumstances, we would be doing perturbation theory around the classical vacuum $x(\tau) = \pm a$, in which case we would have $V'' = \omega^2$, a constant. The difference here is that we’re now doing perturbation theory around the background of the instanton proﬁle.
 \switchcolumn
 在量子场论的语言中，忽略高阶 $\delta x^3$ 项相当于计算单环图，但不能计算双环或更高阶。在正常情况下，我们将围绕经典真空 $x(\tau) = \pm a$ 进行微扰理论，在这种情况下，我们将有 $V'' = \omega^2$，一个常数。这里的区别在于，我们现在正在围绕瞬子轮廓的背景进行微扰理论。
 \switchcolumn*
@@ -720,7 +721,7 @@ There is, however, a catch. In the background of the instanton, there is always 
 然而，有一个问题。在瞬子的背景中，总是有一个特征值为零。单纯地看，这似乎告诉我们行列式消失了，为隧道效应提供了无限的振幅。事实证明，这并不是一个我们应该试图调节掉的无穷大，而是一个意味着我们应该更仔细地思考我们正在计算的东西的无穷大。因此，我们的首要任务是理解零特征值背后的物理原理。
 \switchcolumn*
 
-Understanding zero modes is an important part of any instanton computation. They typically arise, as in the present case, because the instanton solution is not unique, but labelled by a number of parameters known as \textit{collective coordinates}. For us, the instanton proﬁle has a single collective coordinate, $\tau_1$. Any ﬂuctuation, like (2.29), that can be thought of as a variation of a collective coordinate necessarily has zero eigenvalue. These ﬂuctuations are called \textit{zero modes}.
+Understanding zero modes is an important part of any instanton computation. They typically arise, as in the present case, because the instanton solution is not unique, but labelled by a number of parameters known as \textit{collective coordinates}. For us, the instanton proﬁle has a single collective coordinate, $\tau_1$. Any fluctuation, like (2.29), that can be thought of as a variation of a collective coordinate necessarily has zero eigenvalue. These fluctuations are called \textit{zero modes}.
 \switchcolumn
 了解零模式是任何瞬子计算的重要组成部分。它们通常会出现，就像在本例中一样，因为瞬子解不是唯一的，而是由许多称为 \textit{集体坐标} 的参数标记。对于我们来说，瞬子轮廓有一个集体坐标，$\tau_1$。任何波动，如（2.29），可以被认为是集体坐标的变化，必然具有零特征值。这些波动称为 \textit{零模式}。
 \switchcolumn*
@@ -730,7 +731,7 @@ In the present case, the existence of the zero mode can be traced to the fact th
 在目前的情况下，零模式的存在可以追溯到以下事实：基础量子力学具有时间平移对称性，而任何特定的瞬子解则不然。在量子场论（或统计场论）中，我们将零模式称为时间平移对称性的““Goldstone 玻色子”。
 \switchcolumn*
 
-There are three things to take away from this. First, there are some slightly messy pre-factors that we’ve absorbed into $K$, which now include a ratio of the harmonic oscillator and instanton determinants. The exact expression for this ratio will not be particularly important in what follows and we won’t make any attempt to compute it. However, the advantage of writing this as a ratio of determinants is that it makes it clear that it diﬀers from $1$ only due to physics in a region of width $1 / \omega$ where the instanton proﬁle is non-trivial, and $V''(x_{\text{inst}})$ diﬀers from $\omega^2$. We’ll see the utility of this shortly.
+There are three things to take away from this. First, there are some slightly messy pre-factors that we’ve absorbed into $K$, which now include a ratio of the harmonic oscillator and instanton determinants. The exact expression for this ratio will not be particularly important in what follows and we won’t make any attempt to compute it. However, the advantage of writing this as a ratio of determinants is that it makes it clear that it differs from $1$ only due to physics in a region of width $1 / \omega$ where the instanton proﬁle is non-trivial, and $V''(x_{\text{inst}})$ differs from $\omega^2$. We’ll see the utility of this shortly.
 \switchcolumn
 从中可以得出三件事。首先，我们将一些稍微混乱的前置因素吸收到 $K$ 中，其中现在包括谐振子和瞬子决定因素的比率。这个比率的确切表达式在接下来的内容中不会特别重要，我们不会尝试计算它。然而，将其写为行列式之比的优点在于，它清楚地表明它与 $1$ 的不同仅是由于宽度为 $1 / omega$ 的区域中的物理现象，其中瞬时子解是非平凡的，并且 $V ''(x_{\text{inst}})$ 与 $\omega^2$ 不同。我们很快就会看到它的用处。
 \switchcolumn*
@@ -780,14 +781,76 @@ Of course, if we really want to do a good job then we should roll up our sleeves
 \subsection*{瞬子和超对称}
 \switchcolumn*
 
+It’s now time to return to supersymmetric quantum mechanics. It turns out that there is a deep relationship between instantons and supersymmetry, both in quantum mechanics and in higher dimensional quantum ﬁeld theories. The two make for perfect bedfellows. In this section, we will start to get a hint of where this relationship emerges from. We’ll also see that the existence of fermions brings some important technical differences to the tunnelling calculation that we did in the last section.
+\switchcolumn
+现在是时候回到超对称量子力学了。事实证明，无论是在量子力学还是在高维量子场理论中，瞬子和超对称性之间都存在着深刻的关系。两人堪称完美的同床异梦。在本节中，我们将开始了解这种关系从何而来。我们还将看到费米子的存在给我们在上一节中进行的隧道计算带来了一些重要的技术差异。
+\switchcolumn*
+
+We need to briefly pause to think about what this determinant means because, in contrast to the bosonic fluctuations (2.27), it’s not the determinant of a Hermitian operator. The operator used to be Hermitian, back when we were living in real time, where it was $\ab(+ \rmi \odv{}/{t} - h'')$. But the Wick rotation ruined that property.
+\switchcolumn
+我们需要短暂地停下来思考一下这个行列式的含义，因为与玻色子涨落（2.27）相比，它不是厄米算子的行列式。当我们生活在实时间时，该运算符曾经是 Hermitian 算符，即 $\ab(+ \rmi \odv{}/{t} - h'')$。但 Wick 旋转破坏了这一特性。
+\switchcolumn*
+
 \subsubsection{Fermi Zero Modes}
 \switchcolumn
 \subsubsection*{Fermi 零模}
 \switchcolumn*
 
+We could have anticipated the existence of this fermionic zero mode on symmetry grounds. Recall that we could trace the bosonic collective coordinate $\tau_1$ to time translational symmetry since, while the action is invariant under time translations, any given instanton profile is not. Similarly, the fermionic collective coordinate can be traced to a fermionic symmetry which is, of course, supersymmetry. If we look again at the transformation rules (2.14) for the fermions in Euclidean time, then we see something rather nice:
+\switchcolumn
+我们可以基于对称性预期这种费米子零模式的存在。回想一下，我们可以将玻色子集体坐标 $\tau_1$ 追踪到时间平移对称性，因为虽然作用在时间平移下是不变的，但任何给定的瞬子轮廓却不是。类似地，费米子集体坐标可以追溯到费米子对称性，这当然是超对称性。如果我们再次查看 Euclidean 时间中费米子的变换规则（2.14），那么我们会看到一些相当不错的东西：
+\end{paracol}
+
+\[ \delta \psi = \epsilon \ab(\odv{x}{\tau} + h'), \delta \psi^{\dagger} = \epsilon^{\dagger} \ab(- \odv{x}{\tau} + h') \]
+
+\begin{paracol}{2}
+The supersymmetry transformations have, hidden within them, the instanton and antiinstanton equations (2.20) and (2.21)! This, it turns out, is a beautiful feature of supersymmetry, and one that persists as we look both to more complicated theories and to more complicated instantons and other solitons. For now, we note that if we take an instanton obeying $\dot{x} = h'$ and hit it with a supersymmetry transformation, then $\psi$ will turn on while $\psi^{\dagger}$ will not. But, because supersymmetry is a symmetry, the action of the solution doesn’t change when $\psi$ turns on. This is the fermi zero mode (2.38) that we identiﬁed above.
+\switchcolumn
+超对称变换中隐藏着瞬时方程和反瞬时方程（2.20）和（2.21）！事实证明，这是超对称性的一个美丽特征，并且当我们研究更复杂的理论以及更复杂的瞬子和其他孤子时，这一特征仍然存在。现在，我们注意到，如果我们采用一个服从 $\dot{x} = h'$ 的瞬子，并用超对称变换击中它，那么 $\psi$ 将打开，而 $\psi^{\dagger}$ 将不会打开。但是，由于超对称性是一种对称性，因此当 $\psi$ 打开时，解的作用量不会改变。这就是我们上面确定的费米零模式 (2.38)。
+\switchcolumn*
+
+You might be nervous that we seem to have broken reality. In the background of an instanton, the fermion $\psi$ has a zero mode, but $\psi^{\dagger}$ does not. Indeed, the equation of motion for $\psi^{\dagger}$ is $D^{\dagger} \psi^{\dagger} = 0$ and $D^{\dagger}$ has no zero mode in the background of an instanton. Conversely, in the background of an anti-instanton $\psi^{\dagger}$ has a zero mode, while $\psi$ has none. This issue is commonplace for fermions in Euclidean time (or, more generally, in Euclidean space) and arises because D is not Hermitian. It’s best to think of $\psi$ and $\psi^{\dagger}$ as independent degrees of freedom in Euclidean time. Only when we Wick rotate back to real time (or Minkowski space) do the reality and Hermiticity properties of various operators manifest themselves again.
+\switchcolumn
+你可能会感到紧张，因为我们似乎打破了实性。在瞬子的背景下，费米子 $\psi$ 具有零模式，但 $\psi^{\dagger}$ 没有。事实上，$\psi^{\dagger}$ 的运动方程为 $D^{\dagger} \psi^{\dagger} = 0$ 并且 $D^{\dagger}$ 在背景中没有零模式瞬子。相反，在反瞬子的背景下，$\psi^{\dagger}$ 具有零模式，而 $\psi$ 则没有。这个问题对于 Euclidean 时间（或者更一般地说，在 Euclidean 空间）的费米子来说很常见，并且出现的原因是 D 不是厄米的。最好将 $\psi$ 和 $\psi^{\dagger}$ 视为 Euclidean 时间中的独立自由度。只有当我们 Wick 旋转回实时间（或 Minkowski 空间）时，各种算子的实性和厄米性才会再次显现出来。
+\switchcolumn*
+
+The upshot is that the instanton breaks one half of the supersymmetries: $Q^{\dagger}$ is broken and generates a fermionic zero mode, while $Q$ survives. Objects, like instantons, which have the property of preserving some fraction of the supersymmetry are known as \textit{BPS}. (The initials stand for Bogomolnyi, Prasad and Sommerfeld, but what they actually did was only vaguely related to supersymmetry and the meaning of the initials BPS has evolved over the years.)
+\switchcolumn
+结果是瞬子破坏了一半的超对称性：$Q^{\dagger}$ 被破坏并生成费米子零模式，而 $Q$ 幸存下来。物体，比如瞬子，具有保留部分超对称性的特性，被称为 \textit{BPS}。 （缩写代表 Bogomolnyi、Prasad 和 Sommerfeld，但他们实际上所做的只是与超对称性模糊相关，而且缩写 BPS 的含义多年来一直在演变。）
+\switchcolumn*
+
+Although $Q$ is unbroken, it is not totally redundant. It actually relates the collective coordinates $\tau_1$ and $\eta$ of the instanton, a kind of "zero dimensional" supersymmetry. This interpretation won’t be important for now.
+\switchcolumn
+尽管 $Q$ 没有被破坏，但它也不是完全冗余的。它实际上关联了瞬子的集体坐标 $\tau_1$ 和 $\eta$，这是一种“零维”超对称性。这种解释现在并不重要。
+\switchcolumn*
+
+Let’s now return to our tunnelling computation. We know what to do: rather than integrate over all fermion modes, we isolate the zero mode and treat it separately, choosing instead to integrate over the fermionic collective coordinate $\eta$. As before, we pick up a Jacobian factor which, because the fermion zero mode (2.38) has the same functional form as the bosonic zero mode (2.29), is the same value $J = \sqrt{S_{\text{inst}}}$ that we computed in (2.31). But Jacobians for Grassmann integration come as $1 / J$, rather than $J$ so this actually cancels our original bosonic contribution.
+\switchcolumn
+现在让我们回到隧道计算。我们知道该怎么做：我们不是对所有费米子模式进行积分，而是隔离零模式并单独处理它，选择对费米子集体坐标 $\eta$ 进行积分。和之前一样，我们选取​ Jacobian 因子，因为费米子零模 (2.38) 与玻色子零模 (2.29) 具有相同的函数形式，所以它的值相同 $J = \sqrt{S_{\text{inst} }}$ 我们在 (2.31) 中计算。但是 Grassmann 积分的 Jacobian 行列式是 $1 / J$，而不是 $J$，所以这实际上取消了我们最初的玻色子贡献。
+\switchcolumn*
+
+We now have a ratio of determinants, both with zero eigenvalues omitted. There is no need to do our previous trick of introducing the harmonic oscillator amplitude (2.32). Indeed, part of the reason for doing that previously was to make manifest the $\frac{1}{2} \hbar \omega$ ground state energy but, as we’ve seen, the analogous semi-classical energy in supersymmetric quantum mechanics is exactly zero.
+\switchcolumn
+现在我们有了行列式的比率，两者都省略了零特征值。无需执行我们之前引入谐振子振幅（2.32）的技巧。事实上，之前这样做的部分原因是为了显示 $\frac{1}{2} \hbar \omega$ 基态能量，但是，正如我们所看到的，超对称量子力学中类似的半经典能量正好为零。
+\switchcolumn*
 \subsubsection{Computing Determinants}
 \switchcolumn
 \subsubsection*{计算行列式}
+\switchcolumn*
+
+In non-supersymmetric theories, it can be very challenging to compute the determinants in the background of an instanton. In contrast, in supersymmetric theories it is trivial because the ratio of determinants precisely cancels!
+\switchcolumn
+在非超对称理论中，计算瞬子背景下的行列式可能非常具有挑战性。相反，在超对称理论中，这是微不足道的，因为行列式的比率恰好抵消了！
+\switchcolumn*
+
+This cancellation is entirely analogous to our previous observation that the ground state energy in a supersymmetric vacuum is zero, since the $+ \frac{1}{2} \hbar \omega$ from the harmonic oscillator is precisely cancelled by a $- \frac{1}{2} \hbar \omega$ from the fermions. Here we see a similar cancellation persists about a BPS instanton conﬁguration. This is a lesson that also transfers to higher dimensional quantum ﬁeld theories, where it is often the case that all perturbative contributions cancel between bosons and fermions when evaluated about BPS backgrounds.
+\switchcolumn
+这种抵消完全类似于我们之前的观察，即超对称真空中的基态能量为零，因为来自谐振子的 $+ \frac{1}{2} \hbar \omega$ 被来自费米子的 $- \frac{1}{2} \hbar \omega$。在这里，我们看到 BPS 瞬子配置仍然存在类似的取消。这个教训也适用于更高维的量子场理论，在这种情况下，当评估 BPS 背景时，玻色子和费米子之间的所有微扰贡献通常都会抵消。
+\switchcolumn*
+
+In fact, this is to be expected given our earlier discussion of supersymmetric quantum mechanics. From Section 1.2, we know that the semi-classical ground states $\ket{- a}$ and $\ket{+ a}$ lie in different spin sectors or, equivalently, in different components of the Hilbert space factorisation $\mathcal{H} = \mathcal{H}_B \oplus \mathcal{H}_F$. This means that there can be no tunnelling from one state to another and the path integral realises this by introducing a lone fermion zero mode.
+\switchcolumn
+事实上，考虑到我们之前对超对称量子力学的讨论，这是可以预料到的。从第 1.2 节，我们知道半经典基态 $\ket{- a}$ 和 $\ket{+ a}$ 位于不同的自旋扇区，或者等效地，位于 Hilbert 空间分解 $\mathcal{H} = \mathcal{H}_B \oplus \mathcal{H}_F$ 的不同分量中。这意味着不能存在从一种状态到另一种状态的隧道效应，并且路径积分通过引入孤费米子零模式来实现这一点。
 \switchcolumn*
 
 \subsubsection{Computing the Ground State Energy}
@@ -795,9 +858,65 @@ Of course, if we really want to do a good job then we should roll up our sleeves
 \subsubsection*{计算基态能量}
 \switchcolumn*
 
+The Hamiltonian analysis of Section 1.2 told us more about this system. We know, for example, that the two states localised in different minima remain true ground states of the system but their energy is lifted above zero (i.e. supersymmetry is broken for a cubic $h(x)$). It is possible to see this from the path integral. We just need a small tweak of our previous analysis.
+\switchcolumn
+1.2 节的哈密顿分析告诉我们更多关于这个系统的信息。例如，我们知道，位于不同最小值的两个状态仍然是系统的真实基态，但它们的能量被提升到零以上（即三次 $h(x)$ 的超对称性被打破）。从路径积分中可以看出这一点。我们只需要对之前的分析进行一些小小的调整。
+\switchcolumn*
+
+{\footnotesize This sidesteps an annoying subtlety. If you compute the matrix element for $\braket[3]{L}{Q}{R}$ directly then, at leading order, the result will vanish. This is because, after Wick rotation to Euclidean time, $Q$ is proportional to the instanton equations and so vanishes when evaluated on the instanton. (This follows from the fact that the supersymmetry transformation (2.39) is proportional to the instanton equation.) You then have to work to higher order to ﬁnd the non-vanishing ground state energy. Computing the matrix element of $[Q, h]$ avoids this headache.
+\switchcolumn
+这回避了一个恼人的微妙之处。如果直接计算 $\braket[3]{L}{Q}{R}$ 的矩阵元素，则按前导顺序，结果将消失。这是因为，在威克旋转到欧几里德时间之后，$Q$ 与瞬子方程成正比，因此在对瞬子求值时消失。（这是根据超对称变换 (2.39) 与瞬子方程成正比这一事实得出的。）然后，您必须工作到更高阶才能找到不消失的基态能量。计算 $[Q, h]$ 的矩阵元素可以避免这个令人头疼的问题。
+\switchcolumn*}
+
+There’s another lesson lurking in the calculation above. To compute the energy $E_0$, we didn’t need to invoke the dilute gas approximation; it was suﬃcient to look at a single instanton. Indeed, viewed the right way it was \textit{necessary} to look at just a single instanton. This is because the single instanton is BPS, meaning that it is invariant under one-half of the supersymmetries, and therefore has just a single fermion zero mode. However, a string of instanton-anti-instanton pairs does not have this property: it breaks both $Q$ and $Q^{\dagger}$ and therefore has two fermion zero modes, rather than just one. This is a special property of BPS instantons in supersymmetric theories that is closely related to the localisation of the path integral that we saw previously.
+\switchcolumn
+上面的计算中还隐藏着另一个教训。为了计算能量 $E_0$，我们不需要调用稀气体近似；观察一个瞬子就足够了。事实上，以正确的方式来看，\textit{有必要}只看一个瞬子。这是因为单个瞬子是 BPS，这意味着它在一半超对称性下是不变的，因此只有一个费米子零模式。然而，一串瞬子-反瞬子对不具有此属性：它同时破坏 $Q$ 和 $Q^{\dagger}$，因此具有两个费米子零模式，而不仅仅是一个。这是超对称理论中 BPS 瞬子的一个特殊性质，与我们之前看到的路径积分的局域化密切相关。
+\switchcolumn*
+
+We’ll revisit instanton calculations of this kind in Section 3.2 where we discuss Morse theory. It will turn out that these kind of calculations underlie many of the key ideas in that context.
+\switchcolumn
+我们将在第 3.2 节中讨论莫尔斯理论，重新审视这种瞬子计算。事实证明，此类计算是该背景下许多关键思想的基础。
+\switchcolumn*
+
 \subsubsection{One Last Example: A Particle on a Circle}
 \switchcolumn
 \subsubsection*{最后一个例子：圆上的粒子}
+\switchcolumn*
+
+We briefly discussed this model in Section 1.2.2 where we showed that, despite its similarities to the double well potential, it actually has two zero energy ground states, given by $\rme^{+ h} \ket{0}$ and $\rme^{- h} \psi^{\dagger} \ket{0}$. The puzzle that we’d like to address here is: why aren’t these states lifted from the perspective of the path integral?
+\switchcolumn
+我们在第 1.2.2 节中简要讨论了这个模型，其中我们表明，尽管它与双阱势相似，但它实际上具有两个零能量基态，由 $\rme^{+ h} \ket{0}$ 和$\rme^{- h} \psi^{\dagger} \ket{0}$。我们在这里要解决的难题是：为什么不从路径积分的角度解除这些状态？
+\switchcolumn*
+
+The novelty is that we have two diﬀerent instanton solutions in this case, corresponding to the two diﬀerent ways to go around the circle. The ﬁrst instanton has $\dot{x} > 0$, the second $\dot{x} < 0$.
+\switchcolumn
+新颖之处在于，在这种情况下我们有两种不同的瞬子解决方案，对应于两种不同的绕圈方式。第一个瞬子 $\dot{x} > 0$，第二个 $\dot{x} < 0$。
+\switchcolumn*
+
+So it’s clear what the solution to our puzzle must be. These two instantons must contribute with opposite signs, so that they cancel out in the matrix element
+\switchcolumn
+所以我们的难题的解决方案一定是什么就很清楚了。这两个瞬子必须具有相反的符号，以便它们在矩阵元素中抵消
+\end{paracol}
+
+\[ \braket[3]{+ \frac{\pi R}{2}}{Q}{- \frac{\pi R}{2}} \]
+
+\begin{paracol}{2}
+that we care about, leaving the energy of both states at zero. The question is: how does this minus sign arise in the computation?
+\switchcolumn
+我们关心的，使两种状态的能量都为零。问题是：这个负号在计算中是如何出现的？
+\switchcolumn*
+
+This, it turns out is subtle. A rerun of the calculation above shows that there’s nowhere obvious that this sign could appear. The non-obvious place is, it turns out, in the definition of the determinants. The cancellation that we derived in Section 2.3.2 is really
+\switchcolumn
+事实证明，这一点很微妙。重新运行上面的计算表明，没有明显的地方可以出现这个迹象。事实证明，不明显的地方在于行列式的定义。我们在第 2.3.2 节中导出的取消实际上是
+\end{paracol}
+
+\[ \frac{\det D}{\sqrt{\det D^{\dagger} D}} = \pm 1 \]
+
+\begin{paracol}{2}
+Figuring out which sign we get is not so straightforward. For now, we’ll content ourselves with the observation that, by answer analysis, the signs must be opposite for the two instantons that traverse the circle in diﬀerent directions. We’ll give a prescription for computing this sign in Section 3.2 when we discuss Morse theory.
+\switchcolumn
+弄清楚我们得到的是哪个信号并不那么简单。现在，我们将满足于这样的观察：通过答案分析，对于以不同方向穿过圆的两个瞬子来说，符号必须相反。当我们讨论 Morse 理论时，我们将在 3.2 节中给出计算这个符号的处方。
 \switchcolumn*
 
 \section{Supersymmetry and Geometry}
