@@ -989,6 +989,21 @@ Both of these questions are interesting, although neither is easy. In general, i
 \subsubsection*{如何证明 Sigma 模型是超对称的}
 \switchcolumn*
 
+Conceptually, it’s straightforward to demonstrate the supersymmetricness of the sigma model: you just vary the action, use the transformations (3.7), and show that it vanishes. In practice, you end up with a tsunami of terms. Here’s some help to guide you along the way.
+\switchcolumn
+从概念上讲，证明 sigma 模型的超对称性很简单：您只需改变动作，使用变换（3.7），然后证明它消失了。在实践中，你最终会遇到术语海啸。这里有一些可以指导您前进的帮助。
+\switchcolumn*
+
+First, when implementing the supersymmetry transformation it’s useful to set $\epsilon = 0$ and just keep the $\epsilon^{\dagger}$ terms in the variation. There’s no subtlety here: it’s just means that we only have to keep track of half the terms in the variation. The other half are then fixed by ultimately requiring that the action and its variation are real. In particular, setting $\epsilon$ means that we have $\delta \psi = 0$ while $\delta \psi^{\dagger} \neq 0$.
+\switchcolumn
+首先，在实现超对称变换时，设置 $\epsilon = 0$ 并在变分中保留 $\epsilon^{\dagger}$ 项非常有用。这里没有什么微妙之处：它只是意味着我们只需要跟踪变体中的一半项。然后通过最终要求动作及其变化是真实的来固定另一半。特别是，设置 $\epsilon$ 意味着我们有 $\delta \psi = 0$ 而 $\delta \psi^{\dagger} \neq 0$。
+\switchcolumn*
+
+Second, there’s a familiar trick, described in the lectures on Quantum Field Theory, that is used to compute the conserved charges associated to any symmetry: we do local variations, instead of global variations. To this end we promote $\epsilon^{\dagger} \to \epsilon^{\dagger}(t)$. We will then ﬁnd the supercharges multiplying the $\dot{\epsilon}^{\dagger}$ terms in the variation of the action.
+\switchcolumn
+其次，量子场论讲座中描述了一个熟悉的技巧，用于计算与任何对称性相关的守恒电荷：我们进行局部变化，而不是全局变化。为此，我们提升 $\epsilon^{\dagger} \to \epsilon^{\dagger}(t)$。然后我们会在作用量变分中发现超荷乘以 $\dot{\epsilon}^{\dagger}$ 项。
+\switchcolumn*
+
 \subsubsection{Quantisation: Filling in Forms}
 \switchcolumn
 \subsubsection*{量子化：填写表格}
