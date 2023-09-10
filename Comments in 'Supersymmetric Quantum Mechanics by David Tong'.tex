@@ -2,23 +2,19 @@
 
 \usepackage[a4paper,scale=0.85]{geometry}
 
-\usepackage{ctex}
-\setCJKmainfont{Noto Serif CJK SC}
-\setCJKsansfont{Noto Sans CJK SC}
-\setCJKmonofont{Noto Sans Mono CJK SC}
+\usepackage[fontset=founder]{ctex}
 
 \usepackage{amsmath}\DeclareMathOperator{\Tr}{Tr}
 \usepackage{amssymb}
+\usepackage{bm}
 \usepackage{derivative}
-% \usepackage{emoji}
+\usepackage{extarrows}
 \usepackage[colorlinks]{hyperref}
 \usepackage{paracol}\columnratio{0.6}
 \usepackage{physics2}\usephysicsmodule{ab, braket}
 
 \newcommand{\rmi}{\mathrm{i}}
 \newcommand{\rme}{\mathrm{e}}
-% \newcommand{\SakuraiYukiko}{\emoji{cherry-blossom}\emoji{snowflake}}
-\newcommand{\SakuraiYukiko}{}
 
 \title{Comments in \textit{Supersymmetric Quantum Mechanics} by David Tong \\ David Tong 《超对称量子力学》中的评论}
 \author{桜井\ 雪子}
@@ -1004,14 +1000,171 @@ Second, there’s a familiar trick, described in the lectures on Quantum Field T
 其次，量子场论讲座中描述了一个熟悉的技巧，用于计算与任何对称性相关的守恒电荷：我们进行局部变化，而不是全局变化。为此，我们提升 $\epsilon^{\dagger} \to \epsilon^{\dagger}(t)$。然后我们会在作用量变分中发现超荷乘以 $\dot{\epsilon}^{\dagger}$ 项。
 \switchcolumn*
 
+There are two diﬀerent kinds of terms in this expression. The ﬁrst take the form $\psi^{\dagger} \psi \dot{\psi}$. Gathering them together, we ﬁnd that they come multiplying $\nabla g = 0$. The second take the form $\dot{x} \psi^{\dagger} \psi \psi$. The ﬁrst of these involve combinations of the connection that gather together to give $\partial \Gamma + \Gamma^2$. But this is the deﬁnition of the Riemann tensor and is cancelled by the ﬁnal term above. The upshot is that, for a global variation with $\dot{\epsilon}^{\dagger} = 0$, we have $\delta S = 0$: the action is supersymmetric.
+\switchcolumn
+该表达式中有两种不同类型的项。第一个采用 $\psi^{\dagger} \psi \dot{\psi}$ 形式。将它们聚集在一起，我们发现它们相乘 $\nabla g = 0$。第二个采用 $\dot{x} \psi^{\dagger} \psi \psi$ 形式。第一个涉及连接的组合，这些连接聚集在一起给出 $\partial \Gamma + \Gamma^2$。但这是 Riemann 张量的定义，并被上面的最后一项取消。结果是，对于 $\dot{\epsilon}^{\dagger} = 0$ 的全局变体，我们有 $\delta S = 0$：作用是超对称的。
+\switchcolumn*
+
 \subsubsection{Quantisation: Filling in Forms}
 \switchcolumn
-\subsubsection*{量子化：填写表格}
+\subsubsection*{量子化：填充形式}
+\switchcolumn*
+
+Quantising the sigma model needs a little care due to operator ordering issues.
+\switchcolumn
+由于算符顺序问题，量子化 sigma 模型需要小心一些。
+\switchcolumn*
+
+The tricky commutator is, it turns out, the one between bosons and fermions. This is best described in the terms of the mechanical momentum as opposed to the canonical momentum，
+\switchcolumn
+事实证明，棘手的对易子是玻色子和费米子之间的那个。这可以用机械动量而不是正则动量最好地描述，
+\switchcolumn*
+
+As we already advertised in Section 1.4.1, this is a very familiar structure in geometry: it arises for totally anti-symmetric $(0, p)$ tensor ﬁelds, also known as \textit{p-forms}. This prompts the identiﬁcation
+\switchcolumn
+正如我们在第 1.4.1 节中已经宣传的那样，这是几何中非常熟悉的结构：它出现于完全反对称的 $(0, p)$ 张量场，也称为 \textit{p-forms}。这会提示识别
+\switchcolumn*
+
+States in the Hilbert space of supersymmetric quantum mechanics are no longer just functions over the manifold $M$ , but now all forms over the manifold $M$ . States of the kind $f(x) (\psi^{\dagger})^{p} \ket{0}$ correspond to $p$-forms. We denote the space of $p$-forms over $M$ as $\Lambda^{p}(M)$.
+\switchcolumn
+超对称量子力学希尔伯特空间中的状态不再只是流形 $M$ 上的函数，而是流形 $M$ 上的所有形式。 $f(x) (\psi^{\dagger})^{p} \ket{0}$ 类型的状态对应于 $p$ 形式。我们将 $M$ 上的 $p$ 形式的空间表示为 $\Lambda^{p}(M)$。
+\switchcolumn*
+
+This relation between Grassmann variables and forms, identifying $\psi^{\dagger i} \longleftrightarrow \odif{x}^i \wedge$ provides the key link between supersymmetry and more interesting aspects of geometry. From this, many lovely geometrical facts follow. For example, we can ask: what is the geometrical interpretation of $\psi^i$? From the commutation relation $\ab\{\psi^i, \psi^{\dagger i}\} = g^{ij}$, it clearly acts as a map $\psi^{i}: \Lambda^p(M) \mapsto \Lambda^{p - 1}(M)$.
+\switchcolumn
+Grassmann 变量和形式之间的关系，识别 $\psi^{\dagger i} \longleftrightarrow \odif{x}^i \wedge$ 提供了超对称性和几何学更有趣的方面之间的关键联系。由此，许多可爱的几何事实随之而来。例如，我们可以问：$\psi^i$ 的几何解释是什么？从交换关系 $\ab\{\psi^i, \psi^{\dagger i}\} = g^{ij}$ 来看，它显然相当于一个映射 $\psi^{i}: \Lambda^p (M) \mapsto \Lambda^{p - 1}(M)$。
+\switchcolumn*
+
+The fact that $F$ is conserved means that Hamiltonian evolution doesn’t mix up forms of diﬀerent degrees: energy eigenstates lie in a particular $\Lambda^{p}(M)$. The fermion number $F$ also provides the grading that splits our Hilbert space into bosonic and fermionic pieces: $\mathcal{H} = \mathcal{H}_B \oplus \mathcal{H}_F$. These comprise of even and odd forms respectively.
+\switchcolumn
+$F$ 守恒的事实意味着哈密顿演化不会混合不同程度的形式：能量本征态位于特定的 $\Lambda^{p}(M)$ 中。费米子数 $F$ 还提供了将 Hilbert 空间分为玻色子和费米子部分的分级：$\mathcal{H} = \mathcal{H}_B \oplus \mathcal{H}_F$。它们分别由偶数和奇数形式组成。
+\switchcolumn*
+
+Finally, we come to the supercharges $Q$ and $Q^{\dagger}$ themselves. The presence of the momentum operator means that these act as derivatives, while the fermions ensure that they also map $Q: \Lambda^p(M) \mapsto \Lambda^{p + 1}(M)$. But there is a very natural object in diﬀerential geometry with these properties: it is the exterior derivative
+\switchcolumn
+最后，我们来看看超荷 $Q$ 和 $Q^{\dagger}$ 本身。动量算子的存在意味着它们充当导数，而费米子确保它们也映射 $Q: \Lambda^p(M) \mapsto \Lambda^{p + 1}(M)$。但是微分几何中有一个非常自然的对象具有这些属性：它是外导数
+\switchcolumn*
+
+This adjoint operator annihilates functions $d^{\dagger} f = 0$ for $f \in \Lambda^0(M)$. This is to be expected since it follows from $\psi^i \ket{0} = 0$. Similarly, the exterior derivative itself annihilates top forms, $d\odif{\omega} = 0$ for all $\omega \in \Lambda^n(M)$. Before we go on, note that the correspondence $Q \equiv d$ and $Q^{\dagger} \equiv d^{\dagger}$ is the reason that we chose to deﬁne $Q$ to be the supercharge involving $\psi^{\dagger}$ rather than, as in Section 1, in terms of $\psi$.
+\switchcolumn
+对于 $f \in \Lambda^0(M)$，该伴随运算符消除了函数 $d^{\dagger} f = 0$。这是可以预料的，因为它是从 $\psi^i \ket{0} = 0$ 得出的。类似地，外导数本身消除了顶级形式，对于所有 $\omega \in \Lambda^n(M)$，$d\odif{\omega} = 0$。在我们继续之前，请注意 $Q \equiv d$ 和 $Q^{\dagger} \equiv d^{\dagger}$ 的对应关系是我们选择将 $Q$ 定义为涉及 $\psi^{\dagger}$ 的超荷的原因，而不是如第 1 节中那样，用 $\psi$ 表示。
+\switchcolumn*
+
+This is the \textit{Laplacian} operator in diﬀerential geometry. It is clear from its deﬁnition in terms of $d$ and $d^{\dagger}$ that it is a prime candidate for a supersymmetric Hamiltonian; in some sense everything that we’ve done above is just to realise this possibility in terms of Grassmann variables $\psi$ and $\psi^{\dagger}$.
+\switchcolumn
+这就是微分几何中的 \textit{Laplacian} 算子。从 $d$ 和 $d^{\dagger}$ 的定义可以清楚地看出，它是超对称 Hamiltonian 的主要候选者；从某种意义上说，我们上面所做的一切只是为了通过 Grassmann 变量 $\psi$ 和 $\psi^{\dagger}$ 来实现这种可能性。
+\switchcolumn*
+
+The Laplacian is positive deﬁnite, as beﬁts a supersymmetric Hamiltonian.
+\switchcolumn
+Laplacian 是正定的，适合超对称 Hamiltonian。
+\switchcolumn*
+
+Note, however, that in the absence of supersymmetry there was always the option to add the $\alpha R$ term in (3.3) to the Hamiltonian. Supersymmetry removes this ambiguity.
+\switchcolumn
+但请注意，在不存在超对称性的情况下，始终可以选择将 (3.3) 中的 $\alpha R$ 项添加到 Hamiltonian 中。超对称性消除了这种歧义。
 \switchcolumn*
 
 \subsubsection{Ground States and de Rham Cohomology}
 \switchcolumn
 \subsubsection*{基态和 de Rham 上同调}
+\switchcolumn*
+
+This discussion also tells us that there are three kinds of states in the Hilbert space: those for which $\ket{\phi} = Q \ket{\alpha}$ or $\ket{\phi} = Q^{\dagger} \ket{\beta}$, which sit in supersymmetric pairs. And those for which $Q \ket{\phi} = Q^{\dagger} \ket{\phi} = 0$ which are the supersymmetric ground states. This means that any state $\ket{\phi} \in \mathcal{H}$ has a unique decomposition as
+\switchcolumn
+这个讨论还告诉我们，Hilbert 空间中存在三种状态：$\ket{\phi} = Q \ket{\alpha}$ 或 $\ket{\phi} = Q^{\dagger } \ket{\beta}$，它们位于超对称对中。那些 $Q \ket{\phi} = Q^{\dagger} \ket{\phi} = 0$ 的超对称基态。这意味着任何状态 $\ket{\phi} \in \mathcal{H}$ 都有一个独特的分解：
+\end{paracol}
+
+\[ \ket{\phi} = Q \ket{\alpha} + Q^{\dagger} \ket{\beta} + \ket{\omega} \]
+
+\begin{paracol}{2}
+There is an important comment to make here. The Hodge decomposition theorem is not a trivial statement in mathematics. It took Hodge much of the 1930s to prove and, even then, needed corrections from Weyl and Kodaira. Yet the statement about the decomposition of states in the Hilbert space (3.11) follows trivially from the structure of supersymmetric quantum mechanics! What’s going on?
+\switchcolumn
+这里有一个重要的评论。Hodge 分解定理并不是一个简单的数学陈述。Hodge 花了 20 世纪 30 年代的大部分时间来证明这一点，即便如此，也需要 Weyl 和 Kodaira 的纠正。然而，关于 这个讨论还告诉我们，Hilbert 空间（3.11）中状态分解的陈述是从超对称量子力学的结构中得出的！这是怎么回事？
+\switchcolumn*
+
+Shortly we will “prove” other theorems in geometry where we will make use of the physicist’s secret weapon, the path integral. Here, however, the power of physics comes only from our blatant disregard for anything approaching rigour. In geometry, the space of diﬀerential forms is \textit{not} a Hilbert space because the inner product (3.9) is not complete. In quantum mechanics, we deal with this by restricting attention to $L^2$ forms but then one has to worry whether the exterior derivative acts solely within this space. All of these are subtleties that we sweep under the rug in physics, but present the real challenge behind the proof of the Hodge decomposition theorem.
+\switchcolumn
+很快我们将“证明”几何中的其他定理，其中我们将利用物理学家的秘密武器——路径积分。然而，在这里，物理学的力量仅仅来自于我们对任何接近严谨的事物的公然漠视。在几何中，微分形式的空间 \textit{不是} 希尔伯特空间，因为内积 (3.9) 不完备。在量子力学中，我们通过限制对 $L^2$ 形式的关注来处理这个问题，但随后人们必须担心外导数是否仅在这个空间内起作用。所有这些都是我们在物理学中隐藏起来的微妙之处，但却是 Hodge 分解定理证明背后的真正挑战。
+\switchcolumn*
+
+\subsubsection*{Cohomology}
+\switchcolumn
+\subsubsection*{上同调}
+\switchcolumn*
+
+There is another way to view the ground states in terms of \textit{cohomology}. As we’ve seen, the exterior derivative $d$ (or equivalently the supercharge $Q$) maps us from $d: \Lambda^p(M) \to \Lambda^{p + 1}(M)$. We can depict this in terms of what mathematicians call a \textit{chain complex}
+\switchcolumn
+还有另一种方法可以根据 \textit{上同调} 来查看基态。正如我们所见，外导数 $d$（或等效的超荷 $Q$）给了我们映射 $d: \Lambda^p(M) \to \Lambda^{p + 1}(M)$。我们可以用数学家所说的 \textit{链复合体} 来描述这一点
+\end{paracol}
+
+\[ \Lambda^0(M) \xlongrightarrow{d} \Lambda^1(M) \xlongrightarrow{d} \Lambda^2(M) \xlongrightarrow{d} \Lambda^3(M) \xlongrightarrow{d} \dots \]
+
+\begin{paracol}{2}
+
+Because $d^2 = 0$, the image of one map necessarily lies in the kernel of the next. The idea of cohomology is that it’s interesting to look more closely at the diﬀerence between the kernel and image.
+\switchcolumn
+因为 $d^2 = 0$，一个映射的像必然位于下一个映射的核中。上同调的想法是，更仔细地观察核和像之间的差异是很有趣的。
+\switchcolumn*
+
+There are a number of interesting things about these Betti numbers. First, this counting of cohomology classes is just another way of counting the ground states in quantum mechanics, and the Betti numbers can equally well be viewed as counting harmonic forms.
+\switchcolumn
+关于这些 Betti 数有很多有趣的事情。首先，这种上同调类的计数只是量子力学中计算基态的另一种方式，Betti 数同样可以被视为计数调和形式。
+\switchcolumn*
+
+There’s an analogy here with gauge symmetry that is worth highlighting. In Maxwell theory, the gauge potentials $A$ and $A + \odif{\alpha}$ are physically equivalent as they are related by a gauge transformation. If we want to pick a representative of this equivalence class then we need gauge ﬁxing condition that picks out one particular choice of $A$. For cohomology, the equivalence class $[\omega]$ relates $\omega \sim \omega + \odif{\alpha}$. A representative of this class can be picked by the "gauge ﬁxing condition" $\mathrm{d}^{\dagger} \omega = 0$. This then picks out the harmonic forms as special.
+\switchcolumn
+这里有一个与规范对称性的类比值得强调。在 Maxwell 理论中，规范势 $A$ 和 $A + \odif{\alpha}$ 在物理上是等效的，因为它们通过规范变换相关。如果我们想选择这个等价类的代表，那么我们需要规范固定条件来挑选 $A$ 的一个特定选择。对于上同调，等价类 $[\omega]$ 联系了 $\omega \sim \omega + \odif{\alpha}$。此类的代表可以通过“规范固定条件”$\mathrm{d}^{\dagger} \omega = 0$ 来选取。然后，它会挑选出特殊的调和形式。
+\switchcolumn*
+
+Any manifold $M$ with dimension $\dim(M) = n$ always has $b_0 = 1$ and $b_n = 1$. The zero forms are just functions over the manifold, and any constant function over $M$ is clearly harmonic, but cannot be written as $d(\text{something})$ as there are no$p = - 1$ forms. Similarly, the volume form $\text{Vol} = \star 1$ provides the harmonic top form.
+\switchcolumn
+任何维度为 $\dim(M) = n$ 的流形 $M$ 始终具有 $b_0 = 1$ 和 $b_n = 1$。零形式只是流形上的函数，$M$ 上的任何常数函数显然都是调和的，但不能写成 $d(\text{something})$ 因为没有 $p = - 1$ 形式。类似地，音量形式 $\text{Vol} = \star 1$ 提供了谐波顶部形式。
+\switchcolumn*
+
+Other Betti numbers come in pairs with $b_p = b_{n - p}$, a relationship that follows from Poincaré duality. It turns out that all these higher Betti numbers are non-vanishing only if the manifold $M$ has some interesting topology. To explain this, we need to remove the co in cohomology.
+\switchcolumn
+其他 Betti 数与 $b_p = b_{n - p}$ 成对出现，这种关系源自 Poincaré 对偶性。事实证明，只有当流形 $M$ 具有一些有趣的拓扑时，所有这些较高的 Betti 数才不会消失。为了解释这一点，我们需要去掉“上同调”中的“上”。
+\switchcolumn*
+
+\subsubsection*{Homology}
+\switchcolumn
+\subsubsection*{同调}
+\switchcolumn*
+
+Here we give a brief overview of how the de Rham cohomology, and associated harmonic forms, contain information about the topology of the manifold $M$.
+\switchcolumn
+在这里，我们简要概述 de Rham 上同调以及相关的调和形式如何包含流形 $M$ 的拓扑信息。
+\switchcolumn*
+
+We can see this in two simple examples shown in Figure 9. There we depict two manifolds of dimension two: the sphere $M = \bm{\mathrm{S}}^2$ and the torus $M = \bm{\mathrm{T}}^2$. On each we’ve drawn a one-dimensional submanifold $C$ as a red line. For $C \subset \bm{\mathrm{S}}^2$, this submanifold is the boundary of a disc $C = \partial D$. For $C \subset \bm{\mathrm{T}}^2$ there is no such bounding manifold $D$. This reﬂects the fact that there is interesting topology in the torus, but not in the sphere.
+\switchcolumn
+我们可以在图 9 所示的两个简单示例中看到这一点。其中我们描绘了两个二维流形：球体 $M = \bm{\mathrm{S}}^2$ 和环面 $M = \bm{\mathrm {T}}^2$。在每一个上，我们都绘制了一个一维子流形 $C$ 作为红线。对于$C \subset \bm{\mathrm{S}}^2$，这个子流形是圆盘$C = \partial D$的边界。对于 $C \subset \bm{\mathrm{T}}^2$ 来说，不存在这样的边界流形 $D$。这反映了这样一个事实：环面中有有趣的拓扑，但球体中没有。
+\switchcolumn*
+
+Indeed, there are actually two diﬀerent topo- logically non-trivial submanifolds of the torus: in addition to the circle $C$ shown in Figure 9, there is also the circle $C'$ that winds in the way shown on the right.
+\switchcolumn
+事实上，环面实际上有两个不同的拓扑非平凡子流形：除了图 9 中所示的圆 $C$ 之外，还有按右侧所示方式缠绕的圆 $C'$。
+\switchcolumn*
+
+The algebraic structure of these topologically non-trivial submanifolds is identical to those of forms. In particular, a boundary of a boundary is always vanishing, which we write as $\partial^2 = 0$. This, obviously, is the strikingly reminiscent of the exterior derivative relation $d^2 = 0$. We use this to deﬁne homology groups using $\partial$ analogous to the cohomology groups that we deﬁned previously using $d$. The \textit{homology group} $H_p(M)$ is the equivalence class of closed $p$-dimensional submanifolds that are not themselves the boundary of a ($p+1$)-dimensional manifold. In particular, two submanifolds $C_1$ and $C_2$ lie in the same cohomology class if one can be smoothly deformed into the other. In terms of equations, this mean that diﬀerence is a boundary,
+\switchcolumn
+这些拓扑非平凡子流形的代数结构与形式的代数结构相同。特别是，边界的边界总是消失，我们将其写为$\partial^2 = 0$。显然，这令人震惊地让人想起外导数关系 $d^2 = 0$。我们使用 $\partial$ 来定义同调群，类似于我们之前使用 $d$ 定义的上同调群。\textit{同调群} $H_p(M)$ 是闭合 $p$ 维子流形的等价类，这些子流形本身不是 ($p+1$) 维流形的边界。特别是，如果两个子流形 $C_1$ 和 $C_2$ 可以平滑地变形为另一个，则它们位于同一上同调类中。就方程而言，这意味着差异是一个边界，
+\switchcolumn*
+
+The relationship between homology and cohomology is more than just an analogy. The spaces $H_p(M)$ and $H^p(M)$ are dual to each other, and hence isomorphic. This statement, known as \textit{de Rham’s theorem}, is not straightforward to prove but it’s easy to get some intuition for how it works.
+\switchcolumn
+同调和上同调之间的关系不仅仅是类比。空间 $H_p(M)$ 和 $H^p(M)$ 是对偶的，因此是同构的。这个命题被称为 \textit{de Rham 定理}，并不容易证明，但很容易对其工作原理有一些直觉。
+\switchcolumn*
+
+The upshot of these arguments is that the ground states of the supersymmetric sigma model (3.6) are determined by the topology of the target space $M$. Heuristically, the quantum particle can minimise its energy by spreading its wavefunction over topologically non-trivial submanifolds of $M$.
+\switchcolumn
+这些论点的结果是超对称 sigma 模型 (3.6) 的基态由目标空间 $M$ 的拓扑决定。启发式地，量子粒子可以通过将其波函数分布在 $M$ 的拓扑非平凡子流形上来最小化其能量。
+\switchcolumn*
+
+Finally, I should mention in any logical presentation, homology precedes cohomology. Our physics approach has lead us to introduce these in an inverted order.
+\switchcolumn
+最后，我应该在任何逻辑表达中提到，同调先于上同调。我们的物理方法使我们以相反的顺序引入这些。
 \switchcolumn*
 
 \subsubsection{The Witten Index and the Chern-Gauss-Bonnet Theorem}
