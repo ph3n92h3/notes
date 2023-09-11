@@ -1022,7 +1022,7 @@ The tricky commutator is, it turns out, the one between bosons and fermions. Thi
 
 As we already advertised in Section 1.4.1, this is a very familiar structure in geometry: it arises for totally anti-symmetric $(0, p)$ tensor ﬁelds, also known as \textit{p-forms}. This prompts the identiﬁcation
 \switchcolumn
-正如我们在第 1.4.1 节中已经宣传的那样，这是几何中非常熟悉的结构：它出现于完全反对称的 $(0, p)$ 张量场，也称为 \textit{p-forms}。这会提示识别
+正如我们在第 1.4.1 节中已经宣传的那样，这是几何中非常熟悉的结构：它出现于完全反对称的 $(0, p)$ 张量场，也称为 \textit{p 形式}。这会提示识别
 \switchcolumn*
 
 States in the Hilbert space of supersymmetric quantum mechanics are no longer just functions over the manifold $M$ , but now all forms over the manifold $M$ . States of the kind $f(x) (\psi^{\dagger})^{p} \ket{0}$ correspond to $p$-forms. We denote the space of $p$-forms over $M$ as $\Lambda^{p}(M)$.
@@ -1218,22 +1218,49 @@ Chern-Gauss-Bonnet 定理的神奇之处在于，全局拓扑对象 $\chi(M)$ �
 \switchcolumn*
 
 In the absence of the potential, we know that the ground states of the supersymmetric quantum mechanics spread over cycles of $M$. However, when we add a the potential $h$, the wavefunctions get squeezed and, as the potential gets larger, the wavefunctions are increasingly localised at the minima of the potential. We know that the Witten index can’t change. But, more strongly, the total number of $E = 0$ ground states doesn’t change either and, even in the presence of the potential, is given by the Betti numbers of the manifold.
+\switchcolumn
+在没有势能的情况下，我们知道超对称量子力学的基态分布在 $M$ 的周期内。然而，当我们添加势能 $h$ 时，波函数会受到挤压，并且随着势能变大，波函数会越来越集中在势能的最小值处。我们知道 Witten 指数不能改变。但是，更强烈的是，$E = 0$ 基态的总数也不会改变，即使存在势能，也由流形的 Betti 数给出。
+\switchcolumn*
 
 We saw in Section 3.1.2 that the ground states are determined by the cohomology of $Q$. But the cohomology when $h \neq 0$ is isomorphic to the cohomology when $h = 0$. We simply take the wavefunctions in the latter case and multiply them by $\rme^{- h}$. Indeed, this is the form of the wavefunctions (1.12) that we found back Section 1.2 when considering a particle on a line.
+\switchcolumn
+我们在第 3.1.2 节中看到，基态是由 $Q$ 的上同调决定的。但 $h \neq 0$ 时的上同调与 $h = 0$ 时的上同调同构。我们只需将后一种情况的波函数乘以 $\rme^{- h}$ 即可。事实上，这就是我们在第 1.2 节考虑直线上的粒子时发现的波函数 (1.12) 的形式。
+\switchcolumn*
 
 The fact that the number of supersymmetric ground states is independent of $h$ means that something interesting must be going on. Because if we crank up $h$ to be very large, the ground states are localised around the minima of the potential $V = \ab|\partial_i h|^2$. This means that there must be some relationship between these minima and the topology of the manifold. This relationship goes under the name of \textit{Morse theory}.
+\switchcolumn
+超对称基态的数量与 $h$ 无关这一事实意味着一定正在发生一些有趣的事情。因为如果我们将 $h$ 调到非常大，基态就会集中在势能 $V = \ab|\partial_i h|^2$ 的最小值附近。这意味着这些最小值和流形的拓扑之间必定存在某种关系。这种关系被称为\textit{Morse 理论}。
+\switchcolumn*
 
 Consider the situation where we scale the Morse function $h(x) \to \zeta h(x)$, and subsequently send $\zeta \to \infty$. In this limit, the physics is entirely dominated by the critical points of the potential and, at the semi-classical level, the ground state wavefunction is localised at the critical point $x = X$. That’s not to say that all critical points are necessarily true $E = 0$ ground states; there may well be tunnelling of the kind that we discussed in Section 2.3 that lifts putative ground states in pairs. But the true ground states must be contained within the set of critical points.
+\switchcolumn
+考虑这样的情况：我们缩放 Morse 函数 $h(x) \to \zeta h(x)$，然后取极限 $\zeta \to \infty$。在此限制下，物理学完全由势的临界点主导，并且在半经典水平上，基态波函数局域于临界点 $x = X$。这并不是说所有临界点都必然为真 $E = 0$ 基态；很可能存在我们在 2.3 节中讨论的那种隧道效应，它成对地提升假定的基态。但真正的基态必须包含在临界点集合内。
+\switchcolumn*
 
-We also need to ﬁgure out what’s going on with fermions. This is the same calculation that we already met in Section 1.4.1. There, we learned that we should look at the eigenvalues of the Hessian $\pdv{h}!{i, j} $,
+We also need to ﬁgure out what’s going on with fermions. This is the same calculation that we already met in Section 1.4.1. There, we learned that we should look at the eigenvalues of the Hessian $\partial_i \partial_j h$,
+\switchcolumn
+我们还需要弄清楚费米子发生了什么。这与我们在 1.4.1 节中已经遇到的计算相同。在那里，我们了解到我们应该查看 Hessian $\partial_i \partial_j h$ 的特征值，
+\switchcolumn*
 
 We learn that the semi-classical ground state sits in the sector with $\mu(X)$ fermions excited. In other words, the semi-classical ground state at the critical point $x = X$ is a $p$-form with $p = \mu(X)$.
+\switchcolumn
+我们了解到半经典基态位于 $\mu(X)$ 费米子激发的扇区中。换句话说，临界点 $x = X$ 处的半经典基态是 $p$ 形式，其中 $p = \mu(X)$。
+\switchcolumn*
 
 Already we learn something striking. We can compute the Witten index by simply summing over the critical points $X$, just as we did in (1.24). The novelty is that we know that, for our supersymmetric sigma model, the Witten index tells us the Euler character of the manifold $M$. This means that we can compute the Euler character of $M$ from the critical points of a function over $M$,
+\switchcolumn
+我们已经学到了一些惊人的东西。我们可以通过简单地对关键点 $X$ 求和来计算 Witten 指数，就像我们在 (1.24) 中所做的那样。新颖之处在于，我们知道，对于我们的超对称 sigma 模型，Witten 指数告诉我们流形 $M$ 的 Euler 特征标。这意味着我们可以从 $M$ 上函数的临界点计算 $M$ 的 Euler 特征标，
+\switchcolumn*
 
 In fact, we can say more than this. The total number of critical points may well be more than the total number of $E = 0$ ground states, since states can be lifted in pairs. But the number of critical points can never be smaller than the number of ground states! Suppose that there are $m_p$ critical points $X$ with Morse index $p = \mu(X)$. This can be no less than the number of ground states associated to $p$-forms, so
+\switchcolumn
+事实上，我们可以说的还不止这些。临界点的总数很可能比 $E = 0$ 基态的总数多，因为状态可以成对提升。但临界点的数量永远不能小于基态的数量！假设有 $m_p$ 个临界点 $X$，Morse 指标 $p = \mu(X)$。这不能少于与 $p$-forms 相关的基态数量，所以
+\switchcolumn*
 
 Nice as this is, it’s possible to do better. We can, in fact, recover the original Betti numbers $b_p$ from an understanding of the critical points and the relationships between them. In the rest of this section we explain how.
+\switchcolumn
+尽管这很好，但还可以做得更好。事实上，我们可以通过理解关键点及其之间的关系来恢复原始的贝蒂数 $b_p$。在本节的其余部分中，我们将解释如何进行。
+\switchcolumn*
 
 \subsubsection*{A Simple Example: The Two Sphere}
 \switchcolumn
@@ -1241,12 +1268,24 @@ Nice as this is, it’s possible to do better. We can, in fact, recover the orig
 \switchcolumn*
 
 This is shown in the left-hand side of Figure 10. Clearly there are two critical points of the height function: at the bottom of the sphere where it is a minimum and at the top of the sphere where it is a maximum. The Morse index is $\mu = 0$ and $\mu = 2$ respectively, so from the discussion above we know that these ground states are associated to 0-forms and 2-forms. We also know that ground states localised around these minima must be exact $E = 0$ states.
+\switchcolumn
+如图 10 的左侧所示。显然，高度函数有两个临界点：在球体的底部，它是最小值，在球体的顶部，它是最大值。Morse 指标分别为 $\mu = 0$ 和 $\mu = 2$，因此从上面的讨论我们知道这些基态与 0-形式和 2-形式相关。我们还知道，围绕这些最小值的基态必须是精确的 $E = 0$ 状态。
+\switchcolumn*
 
 Now we deform the system. We could change the Morse function $h$ but, for illustrative purposes, it is simplest if we instead change the metric on the sphere. We’ll turn it into the bean shape shown in the right-hand side of Figure 10, keeping the same height function $h = z$. This time there are four critical points, one with $\mu = 0$, two at the top with $\mu = 2$, and the saddle point in the middle with $\mu = 1$.
+\switchcolumn
+现在我们对系统进行变形。我们可以更改 Morse 函数 $h$，但出于说明目的，如果我们更改球体上的度量，则最简单。我们将其变成图 10 右侧所示的豆形，并保持相同的高度函数 $h = z$。这次有四个临界点，一个$\mu = 0$，顶部两个$\mu = 2$，中间的鞍点$\mu = 1$。
+\switchcolumn*
 
 My wife thought it important to point out that these are not drawn to scale.
+\switchcolumn
+我的妻子认为有必要指出这些并不是按比例绘制的。
+\switchcolumn*
 
 For the bean shaped metric, we know that two of four semi-classical ground states must be lifted to have $E > 0$. Clearly, it should be the 1-form and some combination of the two 2-forms that gets lifted. Our goal now is to understand how this works, both in the case of the kidney bean and more generally. We will see that much of the technology that we will need has already been covered in the supersymmetric instanton calculation of Section 2.3
+\switchcolumn
+对于豆形度规，我们知道必须提升四个半经典基态中的两个才能使 $E > 0$。显然，应该是 1 形式和两个 2 形式的某种组合被提升。我们现在的目标是了解它是如何发挥作用的，无论是在芸豆还是更一般的情况下。我们将看到我们需要的大部分技术已经在第 2.3 节的超对称瞬子计算中涵盖了
+\switchcolumn*
 
 \subsubsection{Instantons Again}
 \switchcolumn
