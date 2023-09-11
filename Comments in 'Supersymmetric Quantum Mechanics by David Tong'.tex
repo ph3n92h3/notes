@@ -1172,10 +1172,81 @@ Finally, I should mention in any logical presentation, homology precedes cohomol
 \subsubsection*{Witten 指标和 Chern-Gauss-Bonnet 定理}
 \switchcolumn*
 
+In Section 1, we learned that there is something special about the Witten index in supersymmetric quantum mechanics. Recall that this is deﬁned by $\Tr (- 1)^{F} \rme^{- \beta H}$ and counts then number of supersymmetric ground states, up to a sign.
+\switchcolumn
+在第一节中，我们了解到超对称量子力学中的 Witten 指数有一些特殊之处。回想一下，这是由 $\Tr (- 1)^{F} \rme^{- \beta H}$ 定义的，然后计算超对称基态的数量，直到一个符号。
+\switchcolumn*
+
+We can see from our discussion of quantum mechanics why this is a topological invariant. We know that the Witten index is robust against any small change of the parameters in the quantum mechanics. In the present case, that means that if we vary the metric $g_{ij}$, at least within reason so that we avoid singularities, then the Witten index should remain unchanged. But that means that object $\chi(M)$ deﬁned in (3.13) must be independent of the the choice of metric: it can be depend only on cruder aspects of $M$, speciﬁcally its topology.
+\switchcolumn
+从我们对量子力学的讨论中我们可以看出为什么这是一个拓扑不变量。我们知道，Witten 指数对于量子力学中参数的任何微小变化都是稳健的。在目前的情况下，这意味着如果我们改变度量 $g_{ij}$，至少在合理范围内以避免奇点，那么 Witten 指数应该保持不变。但这意味着（3.13）中定义的对象 $\chi(M)$ 必须独立于度量的选择：它只能依赖于 $M$ 的更粗略的方面，特别是它的拓扑。
+\switchcolumn*
+
+Finally, note that the sigma models provide many other examples in which the Witten index vanishes but there are, nonetheless, ground states with $E = 0$. For example, the sigma model on $\bm{\mathrm{S}}^3$(or, indeed, any odd dimensional sphere) has $\chi(\bm{\mathrm{S}}^3) = 0$ but there are two ground states, one the constant function corresponding $b_0 = 1$ and the other the volume form corresponding to $b_3 = 1$. These ground states are also protected by topology, this time by the cohomology rather than the cruder Euler character.
+\switchcolumn
+最后，请注意，sigma 模型提供了许多其他示例，其中 Witten 指数消失，但仍然存在 $E = 0$ 的基态。例如，$\bm{\mathrm{S}}^3$（或者实际上任何奇数维球体）上的 sigma 模型有 $\chi(\bm{\mathrm{S}}^3) = 0$ 但有两种基态，一种是对应 $b_0 = 1$ 的常数函数，另一种是对应 $b_3 = 1$ 的体积形式。这些基态也受到拓扑的保护，这次是通过上同调而不是更粗糙的 Euler 特征标。
+\switchcolumn*
+
+\subsubsection{The Path Integral Again}
+\switchcolumn
+\subsubsection*{再次路径积分}
+\switchcolumn*
+
+As we saw in Section 2, there is a straightforward description of the Witten index in terms of the path integral.
+\switchcolumn
+正如我们在第 2 节中看到的，根据路径积分可以直接描述 Witten 指数。
+\switchcolumn*
+
+We know that the Witten index is independent of $\beta$. We will use this to compute the path integral in the limit $\beta \to 0$. The key idea is that, in this limit, any non-trivial excitations around the Euclidean circle costs an increasing amount of action and so we can restrict ourselves to constant conﬁgurations, where the path integral reduces to a normal integral.
+\switchcolumn
+我们知道 Witten 指数与$\beta$无关。我们将用它来计算限制 $\beta \to 0$ 的路径积分。关键思想是，在这个限制下，Euclidean 圆周围的任何非平凡激发都会花费越来越多的作用量，因此我们可以将自己限制在恒定配置，其中路径积分减少到正常积分。
+\switchcolumn*
+
+where we now see explicitly that in the limit $\beta \to 0$, the modes with $\dot{x}$ and $\dot{\psi}$ non-zero are heavily suppressed. The path integral then reduces to the ordinary integral
+\switchcolumn
+我们现在明确地看到，在 $\beta \to 0$ 的限制下，$\dot{x}$ 和 $\dot{\psi}$ 非零的模式被严重抑制。然后路径积分减少为普通积分
+\switchcolumn*
+
+The magic of the Chern-Gauss-Bonnet theorem is that a global topological object, $\chi(M)$, is described in terms of an integral of local data, the Euler density. The magic of supersymmetric quantum mechanics is that it gives a straightforward derivation of this result, with the only real complication the combinatoric factors that arise from Grassmann integration. This is ﬁrst example where a deep mathematical result can derived in a diﬀerent way using the path integral. It won’t be the last.
+\switchcolumn
+Chern-Gauss-Bonnet 定理的神奇之处在于，全局拓扑对象 $\chi(M)$ 是用局部数据的积分（Euler 密度）来描述的。超对称量子力学的神奇之处在于，它给出了这个结果的直接推导，唯一真正复杂的是 Grassmann 积分产生的组合因子。这是第一个使用路径积分以不同方式得出深层数学结果的示例。这不会是最后一次。
+\switchcolumn*
+
 \subsection{Morse Theory}
 \switchcolumn
 \subsection*{Morse 模型}
 \switchcolumn*
+
+In the absence of the potential, we know that the ground states of the supersymmetric quantum mechanics spread over cycles of $M$. However, when we add a the potential $h$, the wavefunctions get squeezed and, as the potential gets larger, the wavefunctions are increasingly localised at the minima of the potential. We know that the Witten index can’t change. But, more strongly, the total number of $E = 0$ ground states doesn’t change either and, even in the presence of the potential, is given by the Betti numbers of the manifold.
+
+We saw in Section 3.1.2 that the ground states are determined by the cohomology of $Q$. But the cohomology when $h \neq 0$ is isomorphic to the cohomology when $h = 0$. We simply take the wavefunctions in the latter case and multiply them by $\rme^{- h}$. Indeed, this is the form of the wavefunctions (1.12) that we found back Section 1.2 when considering a particle on a line.
+
+The fact that the number of supersymmetric ground states is independent of $h$ means that something interesting must be going on. Because if we crank up $h$ to be very large, the ground states are localised around the minima of the potential $V = \ab|\partial_i h|^2$. This means that there must be some relationship between these minima and the topology of the manifold. This relationship goes under the name of \textit{Morse theory}.
+
+Consider the situation where we scale the Morse function $h(x) \to \zeta h(x)$, and subsequently send $\zeta \to \infty$. In this limit, the physics is entirely dominated by the critical points of the potential and, at the semi-classical level, the ground state wavefunction is localised at the critical point $x = X$. That’s not to say that all critical points are necessarily true $E = 0$ ground states; there may well be tunnelling of the kind that we discussed in Section 2.3 that lifts putative ground states in pairs. But the true ground states must be contained within the set of critical points.
+
+We also need to ﬁgure out what’s going on with fermions. This is the same calculation that we already met in Section 1.4.1. There, we learned that we should look at the eigenvalues of the Hessian $\pdv{h}!{i, j} $,
+
+We learn that the semi-classical ground state sits in the sector with $\mu(X)$ fermions excited. In other words, the semi-classical ground state at the critical point $x = X$ is a $p$-form with $p = \mu(X)$.
+
+Already we learn something striking. We can compute the Witten index by simply summing over the critical points $X$, just as we did in (1.24). The novelty is that we know that, for our supersymmetric sigma model, the Witten index tells us the Euler character of the manifold $M$. This means that we can compute the Euler character of $M$ from the critical points of a function over $M$,
+
+In fact, we can say more than this. The total number of critical points may well be more than the total number of $E = 0$ ground states, since states can be lifted in pairs. But the number of critical points can never be smaller than the number of ground states! Suppose that there are $m_p$ critical points $X$ with Morse index $p = \mu(X)$. This can be no less than the number of ground states associated to $p$-forms, so
+
+Nice as this is, it’s possible to do better. We can, in fact, recover the original Betti numbers $b_p$ from an understanding of the critical points and the relationships between them. In the rest of this section we explain how.
+
+\subsubsection*{A Simple Example: The Two Sphere}
+\switchcolumn
+\subsubsection*{一个简单的例子：二维球面}
+\switchcolumn*
+
+This is shown in the left-hand side of Figure 10. Clearly there are two critical points of the height function: at the bottom of the sphere where it is a minimum and at the top of the sphere where it is a maximum. The Morse index is $\mu = 0$ and $\mu = 2$ respectively, so from the discussion above we know that these ground states are associated to 0-forms and 2-forms. We also know that ground states localised around these minima must be exact $E = 0$ states.
+
+Now we deform the system. We could change the Morse function $h$ but, for illustrative purposes, it is simplest if we instead change the metric on the sphere. We’ll turn it into the bean shape shown in the right-hand side of Figure 10, keeping the same height function $h = z$. This time there are four critical points, one with $\mu = 0$, two at the top with $\mu = 2$, and the saddle point in the middle with $\mu = 1$.
+
+My wife thought it important to point out that these are not drawn to scale.
+
+For the bean shaped metric, we know that two of four semi-classical ground states must be lifted to have $E > 0$. Clearly, it should be the 1-form and some combination of the two 2-forms that gets lifted. Our goal now is to understand how this works, both in the case of the kidney bean and more generally. We will see that much of the technology that we will need has already been covered in the supersymmetric instanton calculation of Section 2.3
 
 \subsubsection{Instantons Again}
 \switchcolumn
