@@ -1292,6 +1292,61 @@ For the bean shaped metric, we know that two of four semi-classical ground state
 \subsubsection*{再次瞬子}
 \switchcolumn*
 
+The exact energy eigenstate localised around $x = X_a$ will be denoted as $\ket{\Psi_a}$. Some of these states will persist as zero energy states when all quantum corrections are taken into account. Meanwhile others will be lifted but, as we saw in Section 2.3, will remain as low lying states, with energies of order $\rme^{- S_{\text{inst}}}$. Our goal is to understand this spectrum.
+\switchcolumn
+位于 $x = X_a$ 附近的精确能量本征态将表示为 $\ket{\Psi_a}$。当考虑到所有量子校正时，其中一些状态将持续为零能量状态。与此同时，其他的将被提升，但正如我们在 2.3 节中看到的，将保持为低位状态，其能量为 $\rme^{- S_{\text{inst}}}$。我们的目标是了解这个频谱。
+\switchcolumn*
+
+\subsubsection*{The Instanton Equations}
+\switchcolumn
+\subsubsection*{瞬子方程}
+\switchcolumn*
+
+It’s clear that we are now back in the realm of the quantum tunnelling calculations that we performed in Sections 2.2 and 2.3. To start, we can study the instantons in a sigma model with potential.
+\switchcolumn
+很明显，我们现在回到了第 2.2 节和第 2.3 节中执行的量子隧道计算领域。首先，我们可以研究有势的 sigma 模型中的瞬子。
+\switchcolumn*
+
+From our previous calculation in Section 2.3, we know that the fermion zero modes play a crucial role in supersymmetric instanton calculations. So our next question: how many fermi zero modes does our instanton have? To answer this, we look at the linearised fermion equation of motion. Here "linearised" means that we drop the Riemann tensor term in (3.14), and the connection term in $\nabla t$.
+\switchcolumn
+从我们之前 2.3 节的计算中，我们知道费米子零模在超对称瞬子计算中起着至关重要的作用。所以我们的下一个问题：我们的瞬子有多少个费米零模？为了回答这个问题，我们研究线性化费米子运动方程。这里“线性化”意味着我们去掉（3.14）中的黎曼张量项，以及 $\nabla t$ 中的连接项。
+\switchcolumn*
+
+We want to know how many solutions each of these equations have in the background of an instanton. In fact, we really just want to know the diﬀerence between the number of solutions to these equations. This is because if both $D$ and $D^{\dagger}$ have zero modes then they will most likely be lifted by the non-linear terms in the action. And, indeed, generically, this will happen. However if there are unpaired zero modes of, say $D^{\dagger}$, then these must be saturated in some other way in the path integral.
+\switchcolumn
+我们想知道这些方程在瞬子背景下有多少个解。事实上，我们只是想知道这些方程的解的个数之间的差异。这是因为如果 $D$ 和 $D^{\dagger}$ 都具有零模式，那么它们很可能会被作用量中的非线性项提升。事实上，一般来说，这种情况将会发生。然而，如果存在不成对的零模式，例如 $D^{\dagger}$，那么这些模式必须在路径积分中以某种其他方式饱和。
+\switchcolumn*
+
+\subsubsection*{Instantons and the Relative Morse Index}
+\switchcolumn
+\subsubsection*{瞬子和相对 Morse 指标}
+\switchcolumn*
+
+We've now played the "Grassmann integration" card twice: once in (3.18) to argue that we should get contributions only between vacua that have relative Morse index $1$, and again above to argue that we should only get contributions from instantons with $\mathcal{I}(D^{\dagger}) = 1$. Clearly we need these two diﬀerent arguments to coincide.
+\switchcolumn
+现在，我们已经打了两次“Grassmann 积分”牌：一次是在（3.18）中，认为我们应该只在具有相对 Morse 指标 $1$ 的真空之间获得贡献，而在上面再次论证我们应该只从 $\mathcal{I}(D^{\dagger}) = 1$ 的瞬子中获得贡献。显然，我们需要这两个不同的论点一致。
+\switchcolumn*
+
+The upshot is that the number of bosonic collective coordinates is equal to the number of fermi zero modes, and both are counted by the relative Morse index. A slicker way of saying this is to note that bosonic and fermionic zero modes are related by the unbroken supersymmetry $Q^{\dagger}$ in the background of an instanton.
+\switchcolumn
+结果是玻色子集体坐标的数量等于费米零模的数量，并且两者都是通过相对 Morse 指标来计数的。更巧妙的说法是，玻色子和费米子零模通过瞬子背景中的未破缺的超对称性 $Q^{\dagger}$ 相关。
+\switchcolumn*
+
+For our purposes, we want to consider instantons that interpolate between critical points with relative Morse index $1$. Here the sole bosonic collective coordinate is the obvious one: the time $\tau_1$ at which the instanton does its business of interpolating from one critical point to the other. This is the collective coordinate that we met previously in Section 2.2.
+\switchcolumn
+出于我们的目的，我们希望考虑在相对莫尔斯索引 $1$ 的临界点之间进行插值的瞬子。这里唯一的玻色子集体坐标是显而易见的：瞬时子执行从一个临界点插值到另一个临界点的时间 $\tau_1$ 。这是我们之前在 2.2 节中遇到的集体坐标。
+\switchcolumn*
+
+Although not of immediate utility, we can also get a feel for where the other bosonic col- lective coordinates may come from when $\Delta \mu >1$. Consider the height Morse function on the round sphere $\bm{\mathrm{S}}^2$. We know that there are two critical points at the south and north pole with Morse index $0$ and $2$ respectively. Correspondingly, the instanton that interpolates from the south to the north pole has two collective coordinates: one is the time $\tau_1$ at which the instanton makes the jump, the other is the angle $\phi$ of the trajectory as shown in the ﬁgure. In this example, the second collective coordinate is obvious because it arises due to a symmetry. But the arguments above tell us that, perhaps surprisingly, this second collective coordinate persists even when we deform the sphere, or potential, so that there’s no longer a rotational symmetry.
+\switchcolumn
+虽然没有立即实用性，但我们也可以了解当 $\Delta \mu >1$ 时其他玻色子集体坐标可能来自哪里。考虑圆球 $\bm{\mathrm{S}}^2$ 上的高度 Morse 函数。我们知道，南极和北极有两个临界点，Morse 指数分别为 $0$ 和 $2$。相应地，从南极插值到北极的瞬子有两个集体坐标：一个是瞬子跳跃的时间 $\tau_1$，另一个是轨迹的角度 $\phi$，如图所示图。在这个例子中，第二个集体坐标是显而易见的，因为它是由于对称性而产生的。但上面的论点告诉我们，也许令人惊讶的是，即使我们使球体或势变形，第二个集体坐标仍然存在，因此不再存在旋转对称性。
+\switchcolumn*
+
+\subsubsection{Completing the Instanton Computation}
+\switchcolumn
+\subsubsection*{完成瞬子计算}
+\switchcolumn*
+
 \subsubsection{The Morse-Witten Complex}
 \switchcolumn
 \subsubsection*{Morse-Witten 复合体}
