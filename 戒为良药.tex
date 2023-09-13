@@ -21,7 +21,9 @@
 \begin{document}
 
 \maketitle
-\shorttoc{简化目录}{2}
+\begin{multicols}{2}
+    \shorttoc{简化目录}{2}
+\end{multicols}
 
 \section{卷首篇：我的戒色经验谈}
 
@@ -6731,16 +6733,22 @@ SY 伤性功能，这种症状反馈是极多的，以早泄、勃起不坚、�
 
 \setcounter{tocdepth}{5}
 \renewcommand*{\contentsname}{}
-\tableofcontents
+\begin{multicols}{2}
+    \tableofcontents
+\end{multicols}
 
 \section{案例目录}
 
 \renewcommand*{\listtheoremname}{}
-\listoftheorems[ignoreall, show = case]
+\begin{multicols}{2}
+    \listoftheorems[ignoreall, show = case]
+\end{multicols}
 
 \section{书籍目录}
 
 \renewcommand*{\listtheoremname}{}
-\listoftheorems[ignoreall, show = book]
+\begin{multicols}{2}
+    \listoftheorems[ignoreall, show = book]
+\end{multicols}
 
 \end{document}
