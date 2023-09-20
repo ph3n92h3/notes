@@ -6,6 +6,7 @@
 
 \usepackage{amsmath}\DeclareMathOperator{\Tr}{Tr}
 \usepackage{amssymb}
+\usepackage{bbm}
 \usepackage{bm}
 \usepackage{derivative}
 \usepackage{extarrows}
@@ -884,7 +885,7 @@ We briefly discussed this model in Section 1.2.2 where we showed that, despite i
 我们在第 1.2.2 节中简要讨论了这个模型，其中我们表明，尽管它与双阱势相似，但它实际上具有两个零能量基态，由 $\rme^{+ h} \ket{0}$ 和$\rme^{- h} \psi^{\dagger} \ket{0}$。我们在这里要解决的难题是：为什么不从路径积分的角度解除这些状态？
 \switchcolumn*
 
-The novelty is that we have two diﬀerent instanton solutions in this case, corresponding to the two diﬀerent ways to go around the circle. The first instanton has $\dot{x} > 0$, the second $\dot{x} < 0$.
+The novelty is that we have two different instanton solutions in this case, corresponding to the two different ways to go around the circle. The first instanton has $\dot{x} > 0$, the second $\dot{x} < 0$.
 \switchcolumn
 新颖之处在于，在这种情况下我们有两种不同的瞬子解决方案，对应于两种不同的绕圈方式。第一个瞬子 $\dot{x} > 0$，第二个 $\dot{x} < 0$。
 \switchcolumn*
@@ -910,7 +911,7 @@ This, it turns out is subtle. A rerun of the calculation above shows that there�
 \[ \frac{\det D}{\sqrt{\det D^{\dagger} D}} = \pm 1 \]
 
 \begin{paracol}{2}
-Figuring out which sign we get is not so straightforward. For now, we’ll content ourselves with the observation that, by answer analysis, the signs must be opposite for the two instantons that traverse the circle in diﬀerent directions. We’ll give a prescription for computing this sign in Section 3.2 when we discuss Morse theory.
+Figuring out which sign we get is not so straightforward. For now, we’ll content ourselves with the observation that, by answer analysis, the signs must be opposite for the two instantons that traverse the circle in different directions. We’ll give a prescription for computing this sign in Section 3.2 when we discuss Morse theory.
 \switchcolumn
 弄清楚我们得到的是哪个信号并不那么简单。现在，我们将满足于这样的观察：通过答案分析，对于以不同方向穿过圆的两个瞬子来说，符号必须相反。当我们讨论 Morse 理论时，我们将在 3.2 节中给出计算这个符号的处方。
 \switchcolumn*
@@ -935,7 +936,7 @@ The manifold $M$ is known as the target space. For much of what we do below, the
 流形 $M$ 称为目标空间。对于我们下面所做的大部分工作，如果 $M$ 是一个紧的可定向流形，那么故事将是最简单的，我们将假设接下来的情况就是这种情况。
 \switchcolumn*
 
-Strictly speaking, the metric $g_{ij}(x)$ in the Lagrangian should be viewed as the pull back of the metric from $M$ to $W$. As we saw in earlier courses covering diﬀerential geometry, strictly speaking the sigma model only describes the particle in a patch of the manifold $M$ that is covered by the coordinates $x^i$. One might think that to understand more subtle topological issues, we should be willing to consider overlapping patches. Perhaps surprisingly, it will turn out that this is not necessary, at least in these lectures.
+Strictly speaking, the metric $g_{ij}(x)$ in the Lagrangian should be viewed as the pull back of the metric from $M$ to $W$. As we saw in earlier courses covering differential geometry, strictly speaking the sigma model only describes the particle in a patch of the manifold $M$ that is covered by the coordinates $x^i$. One might think that to understand more subtle topological issues, we should be willing to consider overlapping patches. Perhaps surprisingly, it will turn out that this is not necessary, at least in these lectures.
 \switchcolumn
 严格来说，Lagrangian 中的度规 $g_{ij}(x)$ 应被视为度规从 $M$ 到 $W$ 的拉回。正如我们在之前介绍微分几何的课程中看到的那样，严格来说，sigma 模型仅描述由坐标 $x^i$ 覆盖的流形 $M$ 的补丁中的粒子。人们可能会认为，为了理解更微妙的拓扑问题，我们应该愿意考虑重叠的补丁。也许令人惊讶的是，事实证明这是不必要的，至少在这个讲义中是这样。
 \switchcolumn*
@@ -950,12 +951,12 @@ This can be contrasted with the situation in quantum mechanics. Now the wavefunc
 这可以与量子力学中的情况形成对比。现在波函数分布在流形 $M$ 上，这表明粒子的状态可能很好地了解流形的一些奇怪之处。特别是，量子粒子的状态可能对 $M$ 的拓扑敏感。最终，我们将看到情况确实如此，至少当我们考虑理论的超对称扩展时。但是，现在，让我们继续考虑与非超对称 Lagrangian (3.1) 相关的量子理论。
 \switchcolumn*
 
-Already here, things are not so straightforward because the metric $g_{ij}$ depends on $x^i$ and these don’t commute with $p_i$. Diﬀerent choices of ordering give diﬀerent quantum Hamiltonians and so diﬀerent theories.
+Already here, things are not so straightforward because the metric $g_{ij}$ depends on $x^i$ and these don’t commute with $p_i$. Different choices of ordering give different quantum Hamiltonians and so different theories.
 \switchcolumn
 在这里，事情已经不是那么简单了，因为度规 $g_{ij}$ 取决于 $x^i$ 并且他们不与 $p_i$ 对易。不同的排序选择会产生不同的量子 Hamiltonian，从而产生不同的理论。
 \switchcolumn*
 
-There is no right or wrong choice here. But we can narrow down our options by requiring that the resulting theory has certain desirable properties. Given that we’re interested in the geometry of $M$, it makes sense to search for a Hamiltonian that is covariant with respect to changes of coordinates on $M$. In other words, to stick as closely as possible to diﬀerential geometry. The action of the momentum on the wavefunction is, as usual, $p_i = - \rmi \partial_i$, so the Hamiltonian should be a second order diﬀerential operator with terms that involve no more than two derivatives acting on the metric.
+There is no right or wrong choice here. But we can narrow down our options by requiring that the resulting theory has certain desirable properties. Given that we’re interested in the geometry of $M$, it makes sense to search for a Hamiltonian that is covariant with respect to changes of coordinates on $M$. In other words, to stick as closely as possible to differential geometry. The action of the momentum on the wavefunction is, as usual, $p_i = - \rmi \partial_i$, so the Hamiltonian should be a second order differential operator with terms that involve no more than two derivatives acting on the metric.
 \switchcolumn
 这里没有正确或错误的选择。但我们可以通过要求所得理论具有某些理想的特性来缩小我们的选择范围。鉴于我们对 $M$ 的几何形状感兴趣，搜索与 $M$ 上的坐标变化协变的 Hamiltonian 是有意义的。换句话说，尽可能地遵循微分几何。像往常一样，动量对波函数的作用是 $p_i = - \rmi \partial_i$，因此 Hamiltonian 应该是二阶微分算子，其项涉及不超过两个作用于度规的导数。
 \switchcolumn*
@@ -970,7 +971,7 @@ Now we have our Hamiltonian (3.4) describing a quantum particle roaming around o
 现在我们有了 Hamiltonian (3.4) 来描述在流形 $M$ 上漫游的量子粒子。我们用它做什么？作为物理学家，我们的自然倾向是找到 Hamiltonian 的谱。我们通常期望粒子具有独特的基态，具有无限的激发态塔。这就提出了两个有趣的问题：首先，是否可以计算这个能谱？其次，我们可以用这些信息做什么？
 \switchcolumn*
 
-Both of these questions are interesting, although neither is easy. In general, it is a diﬃcult problem to determine the spectrum of the Hamiltonian (3.4). Which properties of the manifold can be reconstructed from this spectrum is reminiscent of the famous question "can you hear the shape of a drum?". Mathematicians have spent much time on this question. It is known, for example, that two manifolds may have the same spectrum even though they are not isometric. The ﬁrst examples are 16-dimensional tori, but subsequent examples have been found in any dimension $n \geq 2$. In fact, it’s known that two manifolds may share the same spectrum even if they have diﬀerent topology (e.g. their fundamental group may be diﬀerent). All of which is to say that the problem of a quantum particle moving on a manifold $M$ is certainly interesting, but thinking as a physicist provides no particular advantage. We will now see that this situation changes (for the better!) when we introduce supersymmetry.
+Both of these questions are interesting, although neither is easy. In general, it is a diﬃcult problem to determine the spectrum of the Hamiltonian (3.4). Which properties of the manifold can be reconstructed from this spectrum is reminiscent of the famous question "can you hear the shape of a drum?". Mathematicians have spent much time on this question. It is known, for example, that two manifolds may have the same spectrum even though they are not isometric. The first examples are 16-dimensional tori, but subsequent examples have been found in any dimension $n \geq 2$. In fact, it’s known that two manifolds may share the same spectrum even if they have different topology (e.g. their fundamental group may be different). All of which is to say that the problem of a quantum particle moving on a manifold $M$ is certainly interesting, but thinking as a physicist provides no particular advantage. We will now see that this situation changes (for the better!) when we introduce supersymmetry.
 \switchcolumn
 这两个问题都很有趣，但都不容易。一般来说，确定 Hamiltonian（3.4）的谱是一个困难的问题。可以从该频谱中重建流形的哪些属性，这让人想起著名的问题“你能听到鼓的形状吗？”。数学家们在这个问题上花费了很多时间。例如，众所周知，两个流形可能具有相同的频谱，即使它们不是同构的。第一个例子是 16 维环面，但随后的例子已在任何 $n \geq 2$ 维度中找到。事实上，众所周知，两个流形可能共享相同的谱，即使它们具有不同的拓扑（例如，它们的基本群可能不同）。所有这些都表明，量子粒子在流形 $M$ 上运动的问题当然很有趣，但作为物理学家的思考并没有提供特别的优势。现在，当我们引入超对称性时，我们将看到这种情况发生了变化（变得更好！）。
 \switchcolumn*
@@ -995,12 +996,12 @@ First, when implementing the supersymmetry transformation it’s useful to set $
 首先，在实现超对称变换时，设置 $\epsilon = 0$ 并在变分中保留 $\epsilon^{\dagger}$ 项非常有用。这里没有什么微妙之处：它只是意味着我们只需要跟踪变体中的一半项。然后通过最终要求动作及其变化是真实的来固定另一半。特别是，设置 $\epsilon$ 意味着我们有 $\delta \psi = 0$ 而 $\delta \psi^{\dagger} \neq 0$。
 \switchcolumn*
 
-Second, there’s a familiar trick, described in the lectures on Quantum Field Theory, that is used to compute the conserved charges associated to any symmetry: we do local variations, instead of global variations. To this end we promote $\epsilon^{\dagger} \to \epsilon^{\dagger}(t)$. We will then ﬁnd the supercharges multiplying the $\dot{\epsilon}^{\dagger}$ terms in the variation of the action.
+Second, there’s a familiar trick, described in the lectures on Quantum Field Theory, that is used to compute the conserved charges associated to any symmetry: we do local variations, instead of global variations. To this end we promote $\epsilon^{\dagger} \to \epsilon^{\dagger}(t)$. We will then find the supercharges multiplying the $\dot{\epsilon}^{\dagger}$ terms in the variation of the action.
 \switchcolumn
 其次，量子场论讲座中描述了一个熟悉的技巧，用于计算与任何对称性相关的守恒荷：我们进行局部变化，而不是全局变化。为此，我们提升 $\epsilon^{\dagger} \to \epsilon^{\dagger}(t)$。然后我们会在作用量变分中发现超荷乘以 $\dot{\epsilon}^{\dagger}$ 项。
 \switchcolumn*
 
-There are two diﬀerent kinds of terms in this expression. The ﬁrst take the form $\psi^{\dagger} \psi \dot{\psi}$. Gathering them together, we ﬁnd that they come multiplying $\nabla g = 0$. The second take the form $\dot{x} \psi^{\dagger} \psi \psi$. The ﬁrst of these involve combinations of the connection that gather together to give $\partial \Gamma + \Gamma^2$. But this is the deﬁnition of the Riemann tensor and is cancelled by the ﬁnal term above. The upshot is that, for a global variation with $\dot{\epsilon}^{\dagger} = 0$, we have $\delta S = 0$: the action is supersymmetric.
+There are two different kinds of terms in this expression. The first take the form $\psi^{\dagger} \psi \dot{\psi}$. Gathering them together, we find that they come multiplying $\nabla g = 0$. The second take the form $\dot{x} \psi^{\dagger} \psi \psi$. The first of these involve combinations of the connection that gather together to give $\partial \Gamma + \Gamma^2$. But this is the definition of the Riemann tensor and is cancelled by the final term above. The upshot is that, for a global variation with $\dot{\epsilon}^{\dagger} = 0$, we have $\delta S = 0$: the action is supersymmetric.
 \switchcolumn
 该表达式中有两种不同类型的项。第一个采用 $\psi^{\dagger} \psi \dot{\psi}$ 形式。将它们聚集在一起，我们发现它们相乘 $\nabla g = 0$。第二个采用 $\dot{x} \psi^{\dagger} \psi \psi$ 形式。第一个涉及联络的组合，这些联络聚集在一起给出 $\partial \Gamma + \Gamma^2$。但这是 Riemann 张量的定义，并被上面的最后一项取消。结果是，对于 $\dot{\epsilon}^{\dagger} = 0$ 的全局变分，我们有 $\delta S = 0$：作用是超对称的。
 \switchcolumn*
@@ -1020,7 +1021,7 @@ The tricky commutator is, it turns out, the one between bosons and fermions. Thi
 事实证明，棘手的对易子是玻色子和费米子之间的那个。这可以用机械动量而不是正则动量最好地描述，
 \switchcolumn*
 
-As we already advertised in Section 1.4.1, this is a very familiar structure in geometry: it arises for totally anti-symmetric $(0, p)$ tensor ﬁelds, also known as \textit{p-forms}. This prompts the identiﬁcation
+As we already advertised in Section 1.4.1, this is a very familiar structure in geometry: it arises for totally anti-symmetric $(0, p)$ tensor fields, also known as \textit{p-forms}. This prompts the identification
 \switchcolumn
 正如我们在第 1.4.1 节中已经宣传的那样，这是几何中非常熟悉的结构：它出现于完全反对称的 $(0, p)$ 张量场，也称为 \textit{p 形式}。这提示了如下的认同
 \switchcolumn*
@@ -1035,27 +1036,27 @@ This relation between Grassmann variables and forms, identifying $\psi^{\dagger 
 Grassmann 变量和形式之间的关系，认同 $\psi^{\dagger i} \longleftrightarrow \odif{x}^i \wedge$ 提供了超对称性和几何学更有趣的方面之间的关键联系。由此，许多可爱的几何事实随之而来。例如，我们可以问：$\psi^i$ 的几何解释是什么？从交换关系 $\ab\{\psi^i, \psi^{\dagger i}\} = g^{ij}$ 来看，它显然相当于一个映射 $\psi^{i}: \Lambda^p (M) \mapsto \Lambda^{p - 1}(M)$。
 \switchcolumn*
 
-The fact that $F$ is conserved means that Hamiltonian evolution doesn’t mix up forms of diﬀerent degrees: energy eigenstates lie in a particular $\Lambda^{p}(M)$. The fermion number $F$ also provides the grading that splits our Hilbert space into bosonic and fermionic pieces: $\mathcal{H} = \mathcal{H}_B \oplus \mathcal{H}_F$. These comprise of even and odd forms respectively.
+The fact that $F$ is conserved means that Hamiltonian evolution doesn’t mix up forms of different degrees: energy eigenstates lie in a particular $\Lambda^{p}(M)$. The fermion number $F$ also provides the grading that splits our Hilbert space into bosonic and fermionic pieces: $\mathcal{H} = \mathcal{H}_B \oplus \mathcal{H}_F$. These comprise of even and odd forms respectively.
 \switchcolumn
 $F$ 守恒的事实意味着 Hamiltonian 演化不会混合不同程度的形式：能量本征态位于特定的 $\Lambda^{p}(M)$ 中。费米子数 $F$ 还提供了将 Hilbert 空间分为玻色子和费米子部分的分级：$\mathcal{H} = \mathcal{H}_B \oplus \mathcal{H}_F$。它们分别由偶形式和奇形式组成。
 \switchcolumn*
 
-Finally, we come to the supercharges $Q$ and $Q^{\dagger}$ themselves. The presence of the momentum operator means that these act as derivatives, while the fermions ensure that they also map $Q: \Lambda^p(M) \mapsto \Lambda^{p + 1}(M)$. But there is a very natural object in diﬀerential geometry with these properties: it is the exterior derivative
+Finally, we come to the supercharges $Q$ and $Q^{\dagger}$ themselves. The presence of the momentum operator means that these act as derivatives, while the fermions ensure that they also map $Q: \Lambda^p(M) \mapsto \Lambda^{p + 1}(M)$. But there is a very natural object in differential geometry with these properties: it is the exterior derivative
 \switchcolumn
 最后，我们来看看超荷 $Q$ 和 $Q^{\dagger}$ 本身。动量算子的存在意味着它们充当导数，而费米子确保它们也映射 $Q: \Lambda^p(M) \mapsto \Lambda^{p + 1}(M)$。但是微分几何中有一个非常自然的对象具有这些属性：它是外导数
 \switchcolumn*
 
-This adjoint operator annihilates functions $d^{\dagger} f = 0$ for $f \in \Lambda^0(M)$. This is to be expected since it follows from $\psi^i \ket{0} = 0$. Similarly, the exterior derivative itself annihilates top forms, $d\odif{\omega} = 0$ for all $\omega \in \Lambda^n(M)$. Before we go on, note that the correspondence $Q \equiv d$ and $Q^{\dagger} \equiv d^{\dagger}$ is the reason that we chose to deﬁne $Q$ to be the supercharge involving $\psi^{\dagger}$ rather than, as in Section 1, in terms of $\psi$.
+This adjoint operator annihilates functions $d^{\dagger} f = 0$ for $f \in \Lambda^0(M)$. This is to be expected since it follows from $\psi^i \ket{0} = 0$. Similarly, the exterior derivative itself annihilates top forms, $d\odif{\omega} = 0$ for all $\omega \in \Lambda^n(M)$. Before we go on, note that the correspondence $Q \equiv d$ and $Q^{\dagger} \equiv d^{\dagger}$ is the reason that we chose to define $Q$ to be the supercharge involving $\psi^{\dagger}$ rather than, as in Section 1, in terms of $\psi$.
 \switchcolumn
 对于 $f \in \Lambda^0(M)$，伴随运算符湮灭了函数 $d^{\dagger} f = 0$。这是可以预料的，因为它是从 $\psi^i \ket{0} = 0$ 得出的。类似地，外导数本身消除了顶级形式，对于所有 $\omega \in \Lambda^n(M)$，$d\odif{\omega} = 0$。在我们继续之前，请注意 $Q \equiv d$ 和 $Q^{\dagger} \equiv d^{\dagger}$ 的对应关系是我们选择将 $Q$ 定义为涉及 $\psi^{\dagger}$ 的超荷的原因，而不是如第 1 节中那样，用 $\psi$ 表示。
 \switchcolumn*
 
-This is the \textit{Laplacian} operator in diﬀerential geometry. It is clear from its deﬁnition in terms of $d$ and $d^{\dagger}$ that it is a prime candidate for a supersymmetric Hamiltonian; in some sense everything that we’ve done above is just to realise this possibility in terms of Grassmann variables $\psi$ and $\psi^{\dagger}$.
+This is the \textit{Laplacian} operator in differential geometry. It is clear from its definition in terms of $d$ and $d^{\dagger}$ that it is a prime candidate for a supersymmetric Hamiltonian; in some sense everything that we’ve done above is just to realise this possibility in terms of Grassmann variables $\psi$ and $\psi^{\dagger}$.
 \switchcolumn
 这就是微分几何中的 \textit{Laplacian} 算子。从 $d$ 和 $d^{\dagger}$ 的定义可以清楚地看出，它是超对称 Hamiltonian 的主要候选者；从某种意义上说，我们上面所做的一切只是为了通过 Grassmann 变量 $\psi$ 和 $\psi^{\dagger}$ 来实现这种可能性。
 \switchcolumn*
 
-The Laplacian is positive deﬁnite, as beﬁts a supersymmetric Hamiltonian.
+The Laplacian is positive definite, as befits a supersymmetric Hamiltonian.
 \switchcolumn
 Laplacian 是正定的，适合超对称 Hamiltonian。
 \switchcolumn*
@@ -1083,7 +1084,7 @@ There is an important comment to make here. The Hodge decomposition theorem is n
 这里有一个重要的评论。Hodge 分解定理并不是一个简单的数学陈述。Hodge 花了 20 世纪 30 年代的大部分时间来证明这一点，即便如此，也需要 Weyl 和 Kodaira 的纠正。然而，关于 这个讨论还告诉我们，Hilbert 空间（3.11）中状态分解的陈述是从超对称量子力学的结构中得出的！这是怎么回事？
 \switchcolumn*
 
-Shortly we will "prove" other theorems in geometry where we will make use of the physicist’s secret weapon, the path integral. Here, however, the power of physics comes only from our blatant disregard for anything approaching rigour. In geometry, the space of diﬀerential forms is \textit{not} a Hilbert space because the inner product (3.9) is not complete. In quantum mechanics, we deal with this by restricting attention to $L^2$ forms but then one has to worry whether the exterior derivative acts solely within this space. All of these are subtleties that we sweep under the rug in physics, but present the real challenge behind the proof of the Hodge decomposition theorem.
+Shortly we will "prove" other theorems in geometry where we will make use of the physicist’s secret weapon, the path integral. Here, however, the power of physics comes only from our blatant disregard for anything approaching rigour. In geometry, the space of differential forms is \textit{not} a Hilbert space because the inner product (3.9) is not complete. In quantum mechanics, we deal with this by restricting attention to $L^2$ forms but then one has to worry whether the exterior derivative acts solely within this space. All of these are subtleties that we sweep under the rug in physics, but present the real challenge behind the proof of the Hodge decomposition theorem.
 \switchcolumn
 很快我们将“证明”几何中的其他定理，其中我们将利用物理学家的秘密武器——路径积分。然而，在这里，物理学的力量仅仅来自于我们对任何接近严谨的事物的公然漠视。在几何中，微分形式的空间 \textit{不是} Hilbert 空间，因为内积 (3.9) 不完备。在量子力学中，我们通过限制对 $L^2$ 形式的关注来处理这个问题，但随后人们必须担心外导数是否仅在这个空间内起作用。所有这些都是我们在物理学中隐藏起来的微妙之处，但却是 Hodge 分解定理证明背后的真正挑战。
 \switchcolumn*
@@ -1102,7 +1103,7 @@ There is another way to view the ground states in terms of \textit{cohomology}. 
 
 \begin{paracol}{2}
 
-Because $d^2 = 0$, the image of one map necessarily lies in the kernel of the next. The idea of cohomology is that it’s interesting to look more closely at the diﬀerence between the kernel and image.
+Because $d^2 = 0$, the image of one map necessarily lies in the kernel of the next. The idea of cohomology is that it’s interesting to look more closely at the difference between the kernel and image.
 \switchcolumn
 因为 $d^2 = 0$，一个映射的像必然位于下一个映射的核中。上同调的想法是，更仔细地观察核和像之间的差异是很有趣的。
 \switchcolumn*
@@ -1112,7 +1113,7 @@ There are a number of interesting things about these Betti numbers. First, this 
 关于这些 Betti 数有很多有趣的事情。首先，这种上同调类的计数只是量子力学中计算基态的另一种方式，Betti 数同样可以被视为计数调和形式。
 \switchcolumn*
 
-There’s an analogy here with gauge symmetry that is worth highlighting. In Maxwell theory, the gauge potentials $A$ and $A + \odif{\alpha}$ are physically equivalent as they are related by a gauge transformation. If we want to pick a representative of this equivalence class then we need gauge ﬁxing condition that picks out one particular choice of $A$. For cohomology, the equivalence class $[\omega]$ relates $\omega \sim \omega + \odif{\alpha}$. A representative of this class can be picked by the "gauge ﬁxing condition" $\mathrm{d}^{\dagger} \omega = 0$. This then picks out the harmonic forms as special.
+There’s an analogy here with gauge symmetry that is worth highlighting. In Maxwell theory, the gauge potentials $A$ and $A + \odif{\alpha}$ are physically equivalent as they are related by a gauge transformation. If we want to pick a representative of this equivalence class then we need gauge fixing condition that picks out one particular choice of $A$. For cohomology, the equivalence class $[\omega]$ relates $\omega \sim \omega + \odif{\alpha}$. A representative of this class can be picked by the "gauge fixing condition" $\mathrm{d}^{\dagger} \omega = 0$. This then picks out the harmonic forms as special.
 \switchcolumn
 这里有一个与规范对称性的类比值得强调。在 Maxwell 理论中，规范势 $A$ 和 $A + \odif{\alpha}$ 在物理上是等效的，因为它们通过规范变换相关。如果我们想选择这个等价类的代表，那么我们需要规范固定条件来挑选 $A$ 的一个特定选择。对于上同调，等价类 $[\omega]$ 联系了 $\omega \sim \omega + \odif{\alpha}$。此类的代表可以通过“规范固定条件”$\mathrm{d}^{\dagger} \omega = 0$ 来选取。然后，它会挑选出特殊的调和形式。
 \switchcolumn*
@@ -1142,12 +1143,12 @@ We can see this in two simple examples shown in Figure 9. There we depict two ma
 我们可以在图 9 所示的两个简单示例中看到这一点。其中我们描绘了两个二维流形：球体 $M = \bm{\mathrm{S}}^2$ 和环面 $M = \bm{\mathrm {T}}^2$。在每一个上，我们都绘制了一个一维子流形 $C$ 作为红线。对于$C \subset \bm{\mathrm{S}}^2$，这个子流形是圆盘$C = \partial D$的边界。对于 $C \subset \bm{\mathrm{T}}^2$ 来说，不存在这样的边界流形 $D$。这反映了这样一个事实：环面中有有趣的拓扑，但球体中没有。
 \switchcolumn*
 
-Indeed, there are actually two diﬀerent topo- logically non-trivial submanifolds of the torus: in addition to the circle $C$ shown in Figure 9, there is also the circle $C'$ that winds in the way shown on the right.
+Indeed, there are actually two different topo- logically non-trivial submanifolds of the torus: in addition to the circle $C$ shown in Figure 9, there is also the circle $C'$ that winds in the way shown on the right.
 \switchcolumn
 事实上，环面实际上有两个不同的拓扑非平凡子流形：除了图 9 中所示的圆 $C$ 之外，还有按右侧所示方式缠绕的圆 $C'$。
 \switchcolumn*
 
-The algebraic structure of these topologically non-trivial submanifolds is identical to those of forms. In particular, a boundary of a boundary is always vanishing, which we write as $\partial^2 = 0$. This, obviously, is the strikingly reminiscent of the exterior derivative relation $d^2 = 0$. We use this to deﬁne homology groups using $\partial$ analogous to the cohomology groups that we deﬁned previously using $d$. The \textit{homology group} $H_p(M)$ is the equivalence class of closed $p$-dimensional submanifolds that are not themselves the boundary of a ($p+1$)-dimensional manifold. In particular, two submanifolds $C_1$ and $C_2$ lie in the same cohomology class if one can be smoothly deformed into the other. In terms of equations, this mean that diﬀerence is a boundary,
+The algebraic structure of these topologically non-trivial submanifolds is identical to those of forms. In particular, a boundary of a boundary is always vanishing, which we write as $\partial^2 = 0$. This, obviously, is the strikingly reminiscent of the exterior derivative relation $d^2 = 0$. We use this to define homology groups using $\partial$ analogous to the cohomology groups that we defined previously using $d$. The \textit{homology group} $H_p(M)$ is the equivalence class of closed $p$-dimensional submanifolds that are not themselves the boundary of a ($p+1$)-dimensional manifold. In particular, two submanifolds $C_1$ and $C_2$ lie in the same cohomology class if one can be smoothly deformed into the other. In terms of equations, this mean that difference is a boundary,
 \switchcolumn
 这些拓扑非平凡子流形的代数结构与形式的代数结构相同。特别是，边界的边界总是为零，我们将其写为$\partial^2 = 0$。显然，这令人震惊地让人想起外导数关系 $d^2 = 0$。我们使用 $\partial$ 来定义同调群，类似于我们之前使用 $d$ 定义的上同调群。\textit{同调群} $H_p(M)$ 是闭合 $p$ 维子流形的等价类，这些子流形本身不是 ($p+1$) 维流形的边界。特别是，如果两个子流形 $C_1$ 和 $C_2$ 可以平滑地变形为另一个，则它们位于同一上同调类中。就方程而言，这意味着差异是一个边界，
 \switchcolumn*
@@ -1172,12 +1173,12 @@ Finally, I should mention in any logical presentation, homology precedes cohomol
 \subsubsection*{Witten 指标和 Chern-Gauss-Bonnet 定理}
 \switchcolumn*
 
-In Section 1, we learned that there is something special about the Witten index in supersymmetric quantum mechanics. Recall that this is deﬁned by $\Tr (- 1)^{F} \rme^{- \beta H}$ and counts then number of supersymmetric ground states, up to a sign.
+In Section 1, we learned that there is something special about the Witten index in supersymmetric quantum mechanics. Recall that this is defined by $\Tr (- 1)^{F} \rme^{- \beta H}$ and counts then number of supersymmetric ground states, up to a sign.
 \switchcolumn
 在第一节中，我们了解到超对称量子力学中的 Witten 指数有一些特殊之处。回想一下，这是由 $\Tr (- 1)^{F} \rme^{- \beta H}$ 定义的，然后计算超对称基态的数量，直到一个符号。
 \switchcolumn*
 
-We can see from our discussion of quantum mechanics why this is a topological invariant. We know that the Witten index is robust against any small change of the parameters in the quantum mechanics. In the present case, that means that if we vary the metric $g_{ij}$, at least within reason so that we avoid singularities, then the Witten index should remain unchanged. But that means that object $\chi(M)$ deﬁned in (3.13) must be independent of the the choice of metric: it can be depend only on cruder aspects of $M$, speciﬁcally its topology.
+We can see from our discussion of quantum mechanics why this is a topological invariant. We know that the Witten index is robust against any small change of the parameters in the quantum mechanics. In the present case, that means that if we vary the metric $g_{ij}$, at least within reason so that we avoid singularities, then the Witten index should remain unchanged. But that means that object $\chi(M)$ defined in (3.13) must be independent of the the choice of metric: it can be depend only on cruder aspects of $M$, specifically its topology.
 \switchcolumn
 从我们对量子力学的讨论中我们可以看出为什么这是一个拓扑不变量。我们知道，Witten 指数对于量子力学中参数的任何微小变化都是稳定的。在目前的情况下，这意味着如果我们改变度规 $g_{ij}$，至少在合理范围内以避免奇点，那么 Witten 指数应该保持不变。但这意味着（3.13）中定义的对象 $\chi(M)$ 必须独立于度规的选择：它只能依赖于 $M$ 的更粗略的方面，特别是它的拓扑。
 \switchcolumn*
@@ -1197,7 +1198,7 @@ As we saw in Section 2, there is a straightforward description of the Witten ind
 正如我们在第 2 节中看到的，根据路径积分可以直接描述 Witten 指数。
 \switchcolumn*
 
-We know that the Witten index is independent of $\beta$. We will use this to compute the path integral in the limit $\beta \to 0$. The key idea is that, in this limit, any non-trivial excitations around the Euclidean circle costs an increasing amount of action and so we can restrict ourselves to constant conﬁgurations, where the path integral reduces to a normal integral.
+We know that the Witten index is independent of $\beta$. We will use this to compute the path integral in the limit $\beta \to 0$. The key idea is that, in this limit, any non-trivial excitations around the Euclidean circle costs an increasing amount of action and so we can restrict ourselves to constant configurations, where the path integral reduces to a normal integral.
 \switchcolumn
 我们知道 Witten 指数与 $\beta$ 无关。我们将用它来计算限制 $\beta \to 0$ 的路径积分。关键思想是，在这个限制下，Euclidean 圆周围的任何非平凡激发都会花费越来越多的作用量，因此我们可以将自己限制在恒定配置，其中路径积分减少到正常积分。
 \switchcolumn*
@@ -1207,7 +1208,7 @@ where we now see explicitly that in the limit $\beta \to 0$, the modes with $\do
 我们现在明确地看到，在 $\beta \to 0$ 的限制下，$\dot{x}$ 和 $\dot{\psi}$ 非零的模式被严重抑制。然后路径积分减少为普通积分
 \switchcolumn*
 
-The magic of the Chern-Gauss-Bonnet theorem is that a global topological object, $\chi(M)$, is described in terms of an integral of local data, the Euler density. The magic of supersymmetric quantum mechanics is that it gives a straightforward derivation of this result, with the only real complication the combinatoric factors that arise from Grassmann integration. This is ﬁrst example where a deep mathematical result can derived in a diﬀerent way using the path integral. It won’t be the last.
+The magic of the Chern-Gauss-Bonnet theorem is that a global topological object, $\chi(M)$, is described in terms of an integral of local data, the Euler density. The magic of supersymmetric quantum mechanics is that it gives a straightforward derivation of this result, with the only real complication the combinatoric factors that arise from Grassmann integration. This is first example where a deep mathematical result can derived in a different way using the path integral. It won’t be the last.
 \switchcolumn
 Chern-Gauss-Bonnet 定理的神奇之处在于，全局拓扑对象 $\chi(M)$ 是用局部数据的积分（Euler 密度）来描述的。超对称量子力学的神奇之处在于，它给出了这个结果的直接推导，唯一真正复杂的是 Grassmann 积分产生的组合因子。这是第一个使用路径积分以不同方式得出深层数学结果的示例。这不会是最后一次。
 \switchcolumn*
@@ -1242,7 +1243,7 @@ Consider the situation where we scale the Morse function $h(x) \to \zeta h(x)$, 
 考虑这样的情况：我们缩放 Morse 函数 $h(x) \to \zeta h(x)$，然后取极限 $\zeta \to \infty$。在此限制下，物理学完全由势的临界点主导，并且在半经典水平上，基态波函数局域于临界点 $x = X$。这并不是说所有临界点都必然为真 $E = 0$ 基态；很可能存在我们在 2.3 节中讨论的那种隧道效应，它成对地提升假定的基态。但真正的基态必须包含在临界点集合内。
 \switchcolumn*
 
-We also need to ﬁgure out what’s going on with fermions. This is the same calculation that we already met in Section 1.4.1. There, we learned that we should look at the eigenvalues of the Hessian $\partial_i \partial_j h$,
+We also need to figure out what’s going on with fermions. This is the same calculation that we already met in Section 1.4.1. There, we learned that we should look at the eigenvalues of the Hessian $\partial_i \partial_j h$,
 \switchcolumn
 我们还需要弄清楚费米子发生了什么。这与我们在 1.4.1 节中已经遇到的计算相同。在那里，我们了解到我们应该看 Hessian 矩阵 $\partial_i \partial_j h$ 的特征值，
 \switchcolumn*
@@ -1317,7 +1318,7 @@ From our previous calculation in Section 2.3, we know that the fermion zero mode
 从我们之前 2.3 节的计算中，我们知道费米子零模在超对称瞬子计算中起着至关重要的作用。所以我们的下一个问题：我们的瞬子有多少个费米子零模？为了回答这个问题，我们研究线性化费米子运动方程。这里“线性化”意味着我们去掉（3.14）中的 Riemann 张量项，以及 $\nabla t$ 中的联络项。
 \switchcolumn*
 
-We want to know how many solutions each of these equations have in the background of an instanton. In fact, we really just want to know the diﬀerence between the number of solutions to these equations. This is because if both $D$ and $D^{\dagger}$ have zero modes then they will most likely be lifted by the non-linear terms in the action. And, indeed, generically, this will happen. However if there are unpaired zero modes of, say $D^{\dagger}$, then these must be saturated in some other way in the path integral.
+We want to know how many solutions each of these equations have in the background of an instanton. In fact, we really just want to know the difference between the number of solutions to these equations. This is because if both $D$ and $D^{\dagger}$ have zero modes then they will most likely be lifted by the non-linear terms in the action. And, indeed, generically, this will happen. However if there are unpaired zero modes of, say $D^{\dagger}$, then these must be saturated in some other way in the path integral.
 \switchcolumn
 我们想知道这些方程在瞬子背景下有多少个解。事实上，我们只是想知道这些方程的解的个数之间的差异。这是因为如果 $D$ 和 $D^{\dagger}$ 都具有零模式，那么它们很可能会被作用量中的非线性项提升。事实上，一般来说，这种情况将会发生。然而，如果存在不成对的零模式，例如 $D^{\dagger}$，那么这些模式必须在路径积分中以某种其他方式饱和。
 \switchcolumn*
@@ -1327,7 +1328,7 @@ We want to know how many solutions each of these equations have in the backgroun
 \subsubsection*{瞬子和相对 Morse 指标}
 \switchcolumn*
 
-We've now played the "Grassmann integration" card twice: once in (3.18) to argue that we should get contributions only between vacua that have relative Morse index $1$, and again above to argue that we should only get contributions from instantons with $\mathcal{I}(D^{\dagger}) = 1$. Clearly we need these two diﬀerent arguments to coincide.
+We've now played the "Grassmann integration" card twice: once in (3.18) to argue that we should get contributions only between vacua that have relative Morse index $1$, and again above to argue that we should only get contributions from instantons with $\mathcal{I}(D^{\dagger}) = 1$. Clearly we need these two different arguments to coincide.
 \switchcolumn
 现在，我们已经打了两次“Grassmann 积分”牌：一次是在（3.18）中，认为我们应该只在具有相对 Morse 指标 $1$ 的真空之间获得贡献，而在上面再次论证我们应该只从 $\mathcal{I}(D^{\dagger}) = 1$ 的瞬子中获得贡献。显然，我们需要这两个不同的论点一致。
 \switchcolumn*
@@ -1342,7 +1343,7 @@ For our purposes, we want to consider instantons that interpolate between critic
 出于我们的目的，我们希望考虑在相对 Morse 指标为 $1$ 的临界点之间进行插值的瞬子。这里唯一的玻色子集体坐标是显而易见的：瞬时子执行从一个临界点插值到另一个临界点的时间 $\tau_1$ 。这是我们之前在 2.2 节中遇到的集体坐标。
 \switchcolumn*
 
-Although not of immediate utility, we can also get a feel for where the other bosonic col- lective coordinates may come from when $\Delta \mu >1$. Consider the height Morse function on the round sphere $\bm{\mathrm{S}}^2$. We know that there are two critical points at the south and north pole with Morse index $0$ and $2$ respectively. Correspondingly, the instanton that interpolates from the south to the north pole has two collective coordinates: one is the time $\tau_1$ at which the instanton makes the jump, the other is the angle $\phi$ of the trajectory as shown in the ﬁgure. In this example, the second collective coordinate is obvious because it arises due to a symmetry. But the arguments above tell us that, perhaps surprisingly, this second collective coordinate persists even when we deform the sphere, or potential, so that there’s no longer a rotational symmetry.
+Although not of immediate utility, we can also get a feel for where the other bosonic col- lective coordinates may come from when $\Delta \mu >1$. Consider the height Morse function on the round sphere $\bm{\mathrm{S}}^2$. We know that there are two critical points at the south and north pole with Morse index $0$ and $2$ respectively. Correspondingly, the instanton that interpolates from the south to the north pole has two collective coordinates: one is the time $\tau_1$ at which the instanton makes the jump, the other is the angle $\phi$ of the trajectory as shown in the figure. In this example, the second collective coordinate is obvious because it arises due to a symmetry. But the arguments above tell us that, perhaps surprisingly, this second collective coordinate persists even when we deform the sphere, or potential, so that there’s no longer a rotational symmetry.
 \switchcolumn
 虽然没有立即实用性，但我们也可以了解当 $\Delta \mu >1$ 时其他玻色子集体坐标可能来自哪里。考虑圆球 $\bm{\mathrm{S}}^2$ 上的高度 Morse 函数。我们知道，南极和北极有两个临界点，Morse 指数分别为 $0$ 和 $2$。相应地，从南极插值到北极的瞬子有两个集体坐标：一个是瞬子跳跃的时间 $\tau_1$，另一个是轨迹的角度 $\phi$，如图所示图。在这个例子中，第二个集体坐标是显而易见的，因为它是由于对称性而产生的。但上面的论点告诉我们，也许令人惊讶的是，即使我们使球体或势变形，第二个集体坐标仍然存在，因此不再存在旋转对称性。
 \switchcolumn*
@@ -1362,7 +1363,7 @@ The tangent to the instanton trajectory at $X_a$ lies in the space $V_a$ of nega
 $X_a$ 处瞬子轨迹的切矢位于负特征向量的空间 $V_a$ 中。我们称这个切矢为 $v$。一般来说，$v$ 将与具有最大负特征值 $\lambda_k$（或最小的 $\ab|\lambda_k|$）的特征向量一致，因为这通常是当我们在底部到达 $X_b$ 时特征值翻转符号的唯一方向。我们将与 $v$ 正交的 $V_a$ 子空间表示为 $\tilde{V}_a$。$\tilde{V}_a$ 上有一个自然的方向，它来自于内积 $\iota_v \Psi_a$。
 \switchcolumn*
 
-For example, consider again the deformed bean-shaped sphere shown in Figure 12. There are two instanton trajectories that interpolate from the minimum $X_b$ at the bottom to the saddle point $X_a$ in the middle. At $X_a$, the tangent vectors to the two diﬀerent instanton trajectories point in diﬀerent directions, and that means that each instanton trajectory induces opposite orientations $\iota_v \Psi_a$ on $\tilde{V}_a$. Correspondingly, one instanton will have $n_{\gamma} = + 1$ and the other $n_{\gamma} = - 1$, and the two cancel out in (3.23). This same argument explains why the ground states are not lifted for the double well on a circle that we discussed in Section 2.3.4.
+For example, consider again the deformed bean-shaped sphere shown in Figure 12. There are two instanton trajectories that interpolate from the minimum $X_b$ at the bottom to the saddle point $X_a$ in the middle. At $X_a$, the tangent vectors to the two different instanton trajectories point in different directions, and that means that each instanton trajectory induces opposite orientations $\iota_v \Psi_a$ on $\tilde{V}_a$. Correspondingly, one instanton will have $n_{\gamma} = + 1$ and the other $n_{\gamma} = - 1$, and the two cancel out in (3.23). This same argument explains why the ground states are not lifted for the double well on a circle that we discussed in Section 2.3.4.
 \switchcolumn
 例如，再次考虑图 12 中所示的变形豆形球体。有两个瞬子轨迹从底部的最小值 $X_b$ 插值到中间的鞍点 $X_a$。在 $X_a$ 处，两个不同瞬子轨迹的切矢指向不同的方向，这意味着每个瞬子轨迹在 $\tilde{V}_a$ 上产生相反的方向 $\iota_v \Psi_a$。相应地，一个瞬子的 $n_{\gamma} = + 1$ 而另一个 $n_{\gamma} = - 1$，并且两者在 (3.23) 中抵消。同样的论点解释了为什么我们在 2.3.4 节中讨论的圆上的双阱的基态没有被提升。
 \switchcolumn*
@@ -1377,12 +1378,12 @@ Let’s recap. A Morse function gives us a collection of critical points. There 
 让我们回顾一下。Morse 函数为我们提供了临界点的集合。有 $m_p$ 个临界点 $X$，Morse 索引 $p = \mu(X)$，每个临界点相关联一个能量本征态 $\ket{\Psi_a}$ 和一个相关的 $p$-形式。这些可以被认为是一个 $m_p$ 维空间的基，我们将其称为 $C^p$。
 \switchcolumn*
 
-Here the "almost resolution" of $\mathbb{1}$ is because we've neglected all higher energy states. But their overlap with the low lying states $\ket{\Psi_a}$ is exponentially suppressed and can be ignored. This means that we're left with an expression for the action of $Q$ among the critical points. Neither the factor of $\sqrt{2 \pi}$, nor the instanton action, are important for our present purposes and can be absorbed into the normalisation of the states.
+Here the "almost resolution" of $\mathbbm{1}$ is because we've neglected all higher energy states. But their overlap with the low lying states $\ket{\Psi_a}$ is exponentially suppressed and can be ignored. This means that we're left with an expression for the action of $Q$ among the critical points. Neither the factor of $\sqrt{2 \pi}$, nor the instanton action, are important for our present purposes and can be absorbed into the normalisation of the states.
 \switchcolumn
-这里“几乎归一化”为 $\mathbb{1}$ 是因为我们忽略了所有更高的能态。但它们与低能的态 $\ket{\Psi_a}$ 的重叠受到指数压低，可以忽略不计。这意味着我们留下了临界点中 $Q$ 的作用的表达式。 $\sqrt{2 \pi}$ 因子和瞬子作用对于我们当前的目的来说都不重要，并且可以被吸收到状态的标准化中。
+这里“几乎归一化”为 $\mathbbm{1}$ 是因为我们忽略了所有更高的能态。但它们与低能的态 $\ket{\Psi_a}$ 的重叠受到指数压低，可以忽略不计。这意味着我们留下了临界点中 $Q$ 的作用的表达式。 $\sqrt{2 \pi}$ 因子和瞬子作用对于我们当前的目的来说都不重要，并且可以被吸收到状态的标准化中。
 \switchcolumn*
 
-This is a map $Q: C^p \to C^{p + 1}$. More abstractly, it can be viewed as a map between spaces of critical points. And, importantly, it satisﬁes $Q^2 = 0$. This means that we can deﬁne a chain complex (strictly a cochain complex), known as the \textit{Morse-Witten complex}, or sometimes the \textit{Morse-Smale-Witten complex}
+This is a map $Q: C^p \to C^{p + 1}$. More abstractly, it can be viewed as a map between spaces of critical points. And, importantly, it satisfies $Q^2 = 0$. This means that we can define a chain complex (strictly a cochain complex), known as the \textit{Morse-Witten complex}, or sometimes the \textit{Morse-Smale-Witten complex}
 \switchcolumn
 这是一个映射 $Q: C^p \to C^{p + 1}$。更抽象地说，它可以被视为临界点空间之间的映射。而且，重要的是，它满足 $Q^2 = 0$。这意味着我们可以定义一个链复合体（严格来说是一个上链复合体），称为 \textit{Morse-Witten 复合体}，有时也称为 \textit{Morse-Smale-Witten 复合体}
 \end{paracol}
@@ -1401,9 +1402,49 @@ $Q$ 的上同调描述了系统的 $E = 0$ 基态，或者等效地，Betti 数�
 \subsection*{Atiyah-Singer 指标定理}
 \switchcolumn*
 
+We now turn to a second application of supersymmetric quantum mechanics. We will study a version of supersymmetric quantum mechanics that yields the \textit{Atiyah-Singer index theorem}. Before introducing the physics, we first explain what problem the index theorem addresses.
+\switchcolumn
+我们现在转向超对称量子力学的第二个应用。我们将研究超对称量子力学的一个版本，它产生 \textit{Atiyah-Singer 指标定理}。在介绍物理之前，我们首先解释指标定理解决的问题。
+\switchcolumn*
+
+The only solutions to (3.24) are constant spinors. That’s a bit boring and, in $\mathbb{R}^n$, more than a bit non-normalisable. Things get more interesting when the fermion lives on a curved manifold $M$.
+\switchcolumn
+(3.24) 的唯一解是常数旋量。这有点无聊，而且在 $\mathbb{R}^n$ 中，有点不可归一化。当费米子生活在弯曲流形 $M$ 上时，事情会变得更加有趣。
+\switchcolumn*
+
+We can then ask: how many solutions there are to the Dirac equation (3.26)? This is where the Atiyah-Singer index theorem comes in. It relates the number of solutions to the Dirac equation to the topology of the underlying manifold. The purpose of this section is to give a physics derivation of the index theorem from supersymmetric quantum mechanics.
+\switchcolumn
+那么我们可以问：Dirac 方程（3.26）有多少个解？这就是 Atiyah-Singer 指标定理的用武之地。它将 Dirac 方程的解数与基础流形的拓扑联系起来。本节的目的是从超对称量子力学中给出指标定理的物理推导。
+\switchcolumn*
+
 \subsubsection{The $N = 1$ Sigma Model}
 \switchcolumn
 \subsubsection*{$N = 1$ Sigma 模型}
+\switchcolumn*
+
+Our quantum mechanics of choice has half the supersymmetry of the models that we’ve considered until now in this section. That is, we will have $N = 1$ supersymmetry with a single real supercharge $Q$. We met some simple theories of this kind already in Section 1.4.3.
+\switchcolumn
+我们选择的量子力学具有本节到目前为止我们所考虑的模型的一半超对称性。也就是说，我们将拥有 $N = 1$ 超对称性和单个实超荷 $Q$。我们已经在 1.4.3 节中遇到了一些此类简单的理论。
+\switchcolumn*
+
+The key difference is that the Grassmann variables are now Majorana modes
+\switchcolumn
+主要区别在于 Grassmann 变量现在是 Majorana 模
+\switchcolumn*
+
+Although the action (3.28) has fewer interaction terms, it also has less symmetry. In particular, because the fermions are real we no longer have the $U(1)$ symmetry that rotated the phase of the fermions. For our $N = 2$ sigma model (3.6), this symmetry ensured that the energy eigenstates had a fixed number, $p$ of excited fermions. Now that we no longer have this symmetry, we expect the energy eigenstates to involve a mixture of different fermions. The only protection we have comes from the $(- 1)^F$ symmetry that categorises states into $\mathcal{H}_B$ with an even number of fermions and $\mathcal{H}_F$ with an odd number.
+\switchcolumn
+尽管作用量 (3.28) 的相互作用项较少，但它的对称性也较低。特别是，因为费米子是实的，所以我们不再具有旋转费米子相位的 $U(1)$ 对称性。对于我们的 $N = 2$ sigma 模型 (3.6)，这种对称性确保能量本征态具有固定数量 $p$ 的受激费米子。现在我们不再具有这种对称性，我们期望能量本征态涉及不同费米子的混合物。我们唯一的保护来自 $(- 1)^F$ 对称性，它将状态分类为具有偶数个费米子的 $\mathcal{H}_B$ 和具有奇数个费米子的 $\mathcal{H}_F$。
+\switchcolumn*
+
+which is closely related to the Clifford algebra (3.25): the relationship between the fermions and gamma matrices involves a vielbein to accommodate the presence of the metric: $\psi^i = e_{a}^{\ \ i} \gamma^a$. This is telling us that, upon quantisation, the fermions will give $2^{n/2}$ states which can be viewed as a Dirac spinor $\chi$ living on the manifold $M$. While quantisation of the $N = 2$ sigma model (3.6) gave us $p$-forms over the manifold, now we have a spinor.
+\switchcolumn
+与 Clifford 代数 (3.25) 密切相关：费米子和 gamma 矩阵之间的关系涉及一个 vielbein 来适应度规的存在： $\psi^i = e_{a}^{\ \ i} \gamma^a$。这告诉我们，在量子化时，费米子将给出 $2^{n/2}$ 状态，可以将其视为存在于流形 $M$ 上的 Dirac 旋量 $\chi$。虽然 $N = 2$ sigma 模型 (3.6) 的量化为我们提供了流形上的 $p$ 形式，但现在我们有了一个旋量。
+\switchcolumn*
+
+We can now see why this quantum mechanics is of interest. The ground states are specified by solutions to the Dirac equation which is exactly what we want to count. Moreover, we know how to count ground states in supersymmetric quantum mechanics, at least up to sign: we use the Witten index.
+\switchcolumn
+我们现在可以明白为什么这种量子力学令人感兴趣了。基态由 Dirac 方程的解指定，这正是我们想要计算的。此外，我们知道如何计算超对称量子力学中的基态，至少精确到符号：我们使用 Witten 指数。
 \switchcolumn*
 
 \subsubsection{The Path Integral Again}
