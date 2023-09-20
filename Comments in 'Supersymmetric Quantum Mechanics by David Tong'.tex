@@ -1352,9 +1352,48 @@ Although not of immediate utility, we can also get a feel for where the other bo
 \subsubsection*{完成瞬子计算}
 \switchcolumn*
 
+Let’s start in the vacuum $\ket{\Psi_a}$ localised at the end of the instanton trajectory at $X_a$. There are $\mu(X_a)$ negative eigenvalues of the Hessian and their eigenvectors span a $\mu(X_a)$-dimensional space that we call $V_a$. The ground state $\ket{\Psi_a}$ is associated to a $\mu(X_a)$-form and this induces an orientation on $V_a$.
+\switchcolumn
+让我们从位于 $X_a$ 瞬子轨迹末端的真空 $\ket{\Psi_a}$ 开始。Hessian 矩阵有 $\mu(X_a)$ 负特征值，它们的特征向量跨越 $\mu(X_a)$ 维空间，我们称之为 $V_a$。基态 $\ket{\Psi_a}$ 与 $\mu(X_a)$ 形式相关联，这会导致 $V_a$ 上的定向。
+\switchcolumn*
+
+The tangent to the instanton trajectory at $X_a$ lies in the space $V_a$ of negative eigenvectors. Let us call this tangent vector $v$. Generically, $v$ will coincide with the eigenvector with largest negative eigenvalue $\lambda_k$ (or smallest $\ab|\lambda_k|$) since this is usually the unique direction for which the eigenvalue ﬂips sign by the time we reach $X_b$ at the bottom. We denote the subspace of $V_a$ that is orthogonal to $v$ as $\tilde{V}_a$. There is a natural orientation on $\tilde{V}_a$ that comes from taking the interior product $\iota_v \Psi_a$.
+\switchcolumn
+$X_a$ 处瞬子轨迹的切矢位于负特征向量的空间 $V_a$ 中。我们称这个切矢为 $v$。一般来说，$v$ 将与具有最大负特征值 $\lambda_k$（或最小的 $\ab|\lambda_k|$）的特征向量一致，因为这通常是当我们在底部到达 $X_b$ 时特征值翻转符号的唯一方向。我们将与 $v$ 正交的 $V_a$ 子空间表示为 $\tilde{V}_a$。$\tilde{V}_a$ 上有一个自然的方向，它来自于内积 $\iota_v \Psi_a$。
+\switchcolumn*
+
+For example, consider again the deformed bean-shaped sphere shown in Figure 12. There are two instanton trajectories that interpolate from the minimum $X_b$ at the bottom to the saddle point $X_a$ in the middle. At $X_a$, the tangent vectors to the two diﬀerent instanton trajectories point in diﬀerent directions, and that means that each instanton trajectory induces opposite orientations $\iota_v \Psi_a$ on $\tilde{V}_a$. Correspondingly, one instanton will have $n_{\gamma} = + 1$ and the other $n_{\gamma} = - 1$, and the two cancel out in (3.23). This same argument explains why the ground states are not lifted for the double well on a circle that we discussed in Section 2.3.4.
+\switchcolumn
+例如，再次考虑图 12 中所示的变形豆形球体。有两个瞬子轨迹从底部的最小值 $X_b$ 插值到中间的鞍点 $X_a$。在 $X_a$ 处，两个不同瞬子轨迹的切矢指向不同的方向，这意味着每个瞬子轨迹在 $\tilde{V}_a$ 上产生相反的方向 $\iota_v \Psi_a$。相应地，一个瞬子的 $n_{\gamma} = + 1$ 而另一个 $n_{\gamma} = - 1$，并且两者在 (3.23) 中抵消。同样的论点解释了为什么我们在 2.3.4 节中讨论的圆上的双阱的基态没有被提升。
+\switchcolumn*
+
 \subsubsection{The Morse-Witten Complex}
 \switchcolumn
 \subsubsection*{Morse-Witten 复合体}
+\switchcolumn*
+
+Let’s recap. A Morse function gives us a collection of critical points. There are $m_p$ critical points $X$ with Morse index $p = \mu(X)$ and, associated to each, there is an energy eigenstate $\ket{\Psi_a}$ and an associated $p$-form. These can be thought of as a basis for an $m_p$-dimensional space that we will call $C^p$.
+\switchcolumn
+让我们回顾一下。Morse 函数为我们提供了临界点的集合。有 $m_p$ 个临界点 $X$，Morse 索引 $p = \mu(X)$，每个临界点相关联一个能量本征态 $\ket{\Psi_a}$ 和一个相关的 $p$-形式。这些可以被认为是一个 $m_p$ 维空间的基，我们将其称为 $C^p$。
+\switchcolumn*
+
+Here the "almost resolution" of $\mathbb{1}$ is because we've neglected all higher energy states. But their overlap with the low lying states $\ket{\Psi_a}$ is exponentially suppressed and can be ignored. This means that we're left with an expression for the action of $Q$ among the critical points. Neither the factor of $\sqrt{2 \pi}$, nor the instanton action, are important for our present purposes and can be absorbed into the normalisation of the states.
+\switchcolumn
+这里“几乎归一化”为 $\mathbb{1}$ 是因为我们忽略了所有更高的能态。但它们与低能的态 $\ket{\Psi_a}$ 的重叠受到指数压低，可以忽略不计。这意味着我们留下了临界点中 $Q$ 的作用的表达式。 $\sqrt{2 \pi}$ 因子和瞬子作用对于我们当前的目的来说都不重要，并且可以被吸收到状态的标准化中。
+\switchcolumn*
+
+This is a map $Q: C^p \to C^{p + 1}$. More abstractly, it can be viewed as a map between spaces of critical points. And, importantly, it satisﬁes $Q^2 = 0$. This means that we can deﬁne a chain complex (strictly a cochain complex), known as the \textit{Morse-Witten complex}, or sometimes the \textit{Morse-Smale-Witten complex}
+\switchcolumn
+这是一个映射 $Q: C^p \to C^{p + 1}$。更抽象地说，它可以被视为临界点空间之间的映射。而且，重要的是，它满足 $Q^2 = 0$。这意味着我们可以定义一个链复合体（严格来说是一个上链复合体），称为 \textit{Morse-Witten 复合体}，有时也称为 \textit{Morse-Smale-Witten 复合体}
+\end{paracol}
+
+\[ 0 \longrightarrow C^0 \xlongrightarrow{Q} C^1 \xlongrightarrow{Q} \dots \xlongrightarrow{Q} C^n \xlongrightarrow{Q} 0 \]
+
+\begin{paracol}{2}
+
+The cohomology of $Q$ describes the $E = 0$ ground states of the system or, equivalently, the Betti numbers.
+\switchcolumn
+$Q$ 的上同调描述了系统的 $E = 0$ 基态，或者等效地，Betti 数。
 \switchcolumn*
 
 \subsection{The Atiyah-Singer Index Theorem}
