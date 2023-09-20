@@ -71,7 +71,7 @@ jobs:
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
-          name: CV-PS
+          name: notes_ph3n92h3
           path: |
             《微分几何入门与广义相对论》附录G“李群和李代数”习题解答/《微分幾何入門與廣義相對論》附錄G“李群和李代數”習題解答.pdf
             光学/main.pdf
