@@ -48,13 +48,13 @@ jobs:
           latexmk_use_lualatex: true
           root_file: main.tex
           working_directory: 电动力学
-      - name: 电磁学
-        uses: xu-cheng/latex-action@v2
-        with:
-          latexmk_shell_escape: true
-          latexmk_use_lualatex: true
-          root_file: main.tex
-          working_directory: 电磁学
+      # - name: 电磁学
+      #   uses: xu-cheng/latex-action@v2
+      #   with:
+      #     latexmk_shell_escape: true
+      #     latexmk_use_lualatex: true
+      #     root_file: main.tex
+      #     working_directory: 电磁学
       - name: others
         uses: xu-cheng/latex-action@v2
         with:
@@ -79,7 +79,7 @@ jobs:
             数学物理方法/main.pdf
             热力学与统计物理学/main.pdf
             电动力学/main.pdf
-            电磁学/main.pdf
+            # 电磁学/main.pdf
             Comments in 'Supersymmetric Quantum Mechanics by David Tong'.pdf
             temp.pdf
             小狗钱钱2.pdf
