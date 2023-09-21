@@ -1,0 +1,60 @@
+\documentclass{ctexart}
+
+\usepackage[a4paper,scale=0.8]{geometry}
+
+\usepackage{amsthm}
+\usepackage{booktabs}
+\usepackage{changepage}
+\usepackage[colorlinks]{hyperref}
+\usepackage{multicol}
+\usepackage{paracol}
+\usepackage{shorttoc}
+\usepackage{siunitx}
+\usepackage{syntonly}
+\usepackage{thmtools}
+
+% \syntaxonly
+
+\newtheorem{book}{书籍}
+\newtheorem{case}{案例}
+
+\title{戒为良药}
+\author{飞翔}
+\date{}
+
+\begin{document}
+
+\maketitle
+\begin{multicols}{2}
+    \shorttoc{简化目录}{2}
+\end{multicols}\clearpage
+
+\input{old}
+
+\input{76. 飞翔经验：50 种破戒心理的研究}
+
+\clearpage\appendix
+
+\section{详细目录}
+
+\setcounter{tocdepth}{5}
+\renewcommand*{\contentsname}{}
+\begin{multicols}{2}
+    \tableofcontents
+\end{multicols}
+
+\section{案例目录}
+
+\renewcommand*{\listtheoremname}{}
+\begin{multicols}{2}
+    \listoftheorems[ignoreall, show = case]
+\end{multicols}
+
+\section{书籍目录}
+
+\renewcommand*{\listtheoremname}{}
+\begin{multicols}{2}
+    \listoftheorems[ignoreall, show = book]
+\end{multicols}
+
+\end{document}
