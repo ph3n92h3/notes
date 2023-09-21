@@ -1,8 +1,6 @@
-\documentclass{article}
+\documentclass{ctexart}
 
 \usepackage[a4paper,scale=0.85]{geometry}
-
-\usepackage{ctex}
 
 \usepackage{amsmath}\DeclareMathOperator{\Tr}{Tr}
 \usepackage{amssymb}
@@ -926,7 +924,7 @@ In this section, we will begin our journey into the territory of mathematicians.
 在本节中，我们将开始进入数学家的领域。我们的策略是考虑粒子在流形上运动的物理原理。随着本节的进展，我们将了解到该粒子的量子基态编码了有关流形的一些宝贵信息。
 \switchcolumn*
 
-Lagrangians of the form (3.1) are commonplace in physics, both in quantum mechan- ics and in higher dimensional quantum field theories. They often go by the unhelpful name of a \textit{sigma model}. Sometimes they are called non-linear sigma models to reﬂect the fact that, unless $g_{ij}$ is constant, the equations of motion will be non-linear. The name "sigma model" is utterly unilluminating; it dates from one of the first such models written down by Gell-Mann and Levy to describe the dynamics of mesons. (Somewhat comically, Gell-Mann and Levy were building on an earlier model that described both pions and an extra meson known as the "sigma". They then wrote down an improved model that described just the mesons but chose to name it after the missing particle. And the name stuck.)
+Lagrangians of the form (3.1) are commonplace in physics, both in quantum mechan- ics and in higher dimensional quantum field theories. They often go by the unhelpful name of a \textit{sigma model}. Sometimes they are called non-linear sigma models to reflect the fact that, unless $g_{ij}$ is constant, the equations of motion will be non-linear. The name "sigma model" is utterly unilluminating; it dates from one of the first such models written down by Gell-Mann and Levy to describe the dynamics of mesons. (Somewhat comically, Gell-Mann and Levy were building on an earlier model that described both pions and an extra meson known as the "sigma". They then wrote down an improved model that described just the mesons but chose to name it after the missing particle. And the name stuck.)
 \switchcolumn
 (3.1) 形式的 Lagrangian 在物理学中很常见，无论是在量子力学还是在高维量子场理论中。它们通常使用无用的名称 \textit{sigma 模型}。有时它们被称为非线性 sigma 模型，以反映这样一个事实：除非 $g_{ij}$ 恒定，否则运动方程将是非线性的。“sigma 模型”这个名字完全没有启发性。它可以追溯到 Gell-Mann 和 Levy 为描述介子动力学而编写的第一个此类模型。（有点滑稽的是，Gell-Mann 和 Levy 正在建立一个早期模型，该模型描述了介子和一个称为“sigma”的额外介子。然后他们写下了一个改进的模型，该模型仅描述了介子，但选择以缺失的名称命名它粒子。这个名字就这样被保留下来了。）
 \switchcolumn*
@@ -1138,7 +1136,7 @@ Here we give a brief overview of how the de Rham cohomology, and associated harm
 在这里，我们简要概述 de Rham 上同调以及相关的调和形式如何包含流形 $M$ 的拓扑信息。
 \switchcolumn*
 
-We can see this in two simple examples shown in Figure 9. There we depict two manifolds of dimension two: the sphere $M = \bm{\mathrm{S}}^2$ and the torus $M = \bm{\mathrm{T}}^2$. On each we’ve drawn a one-dimensional submanifold $C$ as a red line. For $C \subset \bm{\mathrm{S}}^2$, this submanifold is the boundary of a disc $C = \partial D$. For $C \subset \bm{\mathrm{T}}^2$ there is no such bounding manifold $D$. This reﬂects the fact that there is interesting topology in the torus, but not in the sphere.
+We can see this in two simple examples shown in Figure 9. There we depict two manifolds of dimension two: the sphere $M = \bm{\mathrm{S}}^2$ and the torus $M = \bm{\mathrm{T}}^2$. On each we’ve drawn a one-dimensional submanifold $C$ as a red line. For $C \subset \bm{\mathrm{S}}^2$, this submanifold is the boundary of a disc $C = \partial D$. For $C \subset \bm{\mathrm{T}}^2$ there is no such bounding manifold $D$. This reflects the fact that there is interesting topology in the torus, but not in the sphere.
 \switchcolumn
 我们可以在图 9 所示的两个简单示例中看到这一点。其中我们描绘了两个二维流形：球体 $M = \bm{\mathrm{S}}^2$ 和环面 $M = \bm{\mathrm {T}}^2$。在每一个上，我们都绘制了一个一维子流形 $C$ 作为红线。对于$C \subset \bm{\mathrm{S}}^2$，这个子流形是圆盘$C = \partial D$的边界。对于 $C \subset \bm{\mathrm{T}}^2$ 来说，不存在这样的边界流形 $D$。这反映了这样一个事实：环面中有有趣的拓扑，但球体中没有。
 \switchcolumn*
@@ -1358,7 +1356,7 @@ Let’s start in the vacuum $\ket{\Psi_a}$ localised at the end of the instanton
 让我们从位于 $X_a$ 瞬子轨迹末端的真空 $\ket{\Psi_a}$ 开始。Hessian 矩阵有 $\mu(X_a)$ 负特征值，它们的特征向量跨越 $\mu(X_a)$ 维空间，我们称之为 $V_a$。基态 $\ket{\Psi_a}$ 与 $\mu(X_a)$ 形式相关联，这会导致 $V_a$ 上的定向。
 \switchcolumn*
 
-The tangent to the instanton trajectory at $X_a$ lies in the space $V_a$ of negative eigenvectors. Let us call this tangent vector $v$. Generically, $v$ will coincide with the eigenvector with largest negative eigenvalue $\lambda_k$ (or smallest $\ab|\lambda_k|$) since this is usually the unique direction for which the eigenvalue ﬂips sign by the time we reach $X_b$ at the bottom. We denote the subspace of $V_a$ that is orthogonal to $v$ as $\tilde{V}_a$. There is a natural orientation on $\tilde{V}_a$ that comes from taking the interior product $\iota_v \Psi_a$.
+The tangent to the instanton trajectory at $X_a$ lies in the space $V_a$ of negative eigenvectors. Let us call this tangent vector $v$. Generically, $v$ will coincide with the eigenvector with largest negative eigenvalue $\lambda_k$ (or smallest $\ab|\lambda_k|$) since this is usually the unique direction for which the eigenvalue flips sign by the time we reach $X_b$ at the bottom. We denote the subspace of $V_a$ that is orthogonal to $v$ as $\tilde{V}_a$. There is a natural orientation on $\tilde{V}_a$ that comes from taking the interior product $\iota_v \Psi_a$.
 \switchcolumn
 $X_a$ 处瞬子轨迹的切矢位于负特征向量的空间 $V_a$ 中。我们称这个切矢为 $v$。一般来说，$v$ 将与具有最大负特征值 $\lambda_k$（或最小的 $\ab|\lambda_k|$）的特征向量一致，因为这通常是当我们在底部到达 $X_b$ 时特征值翻转符号的唯一方向。我们将与 $v$ 正交的 $V_a$ 子空间表示为 $\tilde{V}_a$。$\tilde{V}_a$ 上有一个自然的方向，它来自于内积 $\iota_v \Psi_a$。
 \switchcolumn*
@@ -1467,7 +1465,7 @@ The factor of 1 / 24 in (3.34) is telling us something interesting. Because the 
 (3.34) 中的因子 1 / 24 告诉我们一些有趣的事情。因为左边正在计算一些东西，所以右边必须是一个整数。这表明积分 $p_1$ 必须是 24 的倍数。事实上，事情有点微妙。我们计算的是狄拉克方程的解数，要提出这个问题，我们必须能够将狄拉克旋量放在流形 $M$ 上。事实证明，这对于所有流形来说都是不可能的。那些可能的称为 \textit{自旋流形}。对于任何可定向自旋流形，$p_1$ 总是能被 48 整除。
 \switchcolumn*
 
-The canonical example of a non-spin 4-manifold is complex projective space $\mathbf{CP}^2$. It’s not possible to consistently patch spinor ﬁelds over this space, and so the question of counting solutions to the Dirac equation is irrelevant. It turns out that $p_1(\mathbf{CP}^2) = 3$. Moreover, one can show that for any orientable 4-manifold, $p_1$ is always divisible by 3.
+The canonical example of a non-spin 4-manifold is complex projective space $\mathbf{CP}^2$. It’s not possible to consistently patch spinor fields over this space, and so the question of counting solutions to the Dirac equation is irrelevant. It turns out that $p_1(\mathbf{CP}^2) = 3$. Moreover, one can show that for any orientable 4-manifold, $p_1$ is always divisible by 3.
 \switchcolumn
 非自旋 4 流形的典型例子是复射影空间 $\mathbf{CP}^2$。在这个空间上一致地修补旋量场是不可能的，因此计算狄拉克方程的解的问题是无关紧要的。事实证明 $p_1(\mathbf{CP}^2) = 3$。此外，可以证明对于任何可定向 4 流形，$p_1$ 总是能被 3 整除。
 \switchcolumn*
@@ -1477,10 +1475,96 @@ The canonical example of a non-spin 4-manifold is complex projective space $\mat
 \subsubsection*{添加规范场}
 \switchcolumn*
 
+We should think of $A_i$ as a $U(r)$ gauge connection over the manifold $M$. Just as the metric $g_{ij}$ is something fixed, so too is this gauge field. In more mathematical language, we should think of $A$ as a connection of a vector bundle $E$. In the action (3.35) $F$ is the associated field strength
+\switchcolumn
+我们应该将 $A_i$ 视为流形 $M$ 上的 $U(r)$ 规范联络。正如度规 $g_{ij}$ 是固定的一样，这个规范字段也是固定的。用更数学的语言来说，我们应该将 $A$ 视为向量丛 $E$ 的联络。在作用量 (3.35) 中，$F$ 是相关的场强
+\switchcolumn*
+
+Note that the four-fermion term involves $F$, which is the curvature of $A$. This entirely analogous to the situation in $N = 2$ supersymmetric quantum mechanics where the four-fermion term involves the Riemann tensor, which is the curvature of the spin connection.
+\switchcolumn
+请注意，四费米子项涉及 $F$，它是 $A$ 的曲率。这完全类似于 $N = 2$ 超对称量子力学中的情况，其中四费米子项涉及 Riemann 张量，即自旋联络的曲率。
+\switchcolumn*
+
+At first glance, it is surprising that the action (3.35) admits supersymmetry. Until now, all our examples of supersymmetry involve a matching between bosonic and fermionic degrees of freedom. But here we have introduced additional fermionic degrees of freedom $\eta^{\alpha}$ without the corresponding bosonic partners. Nonetheless, you can check that the action is invariant under the following $N = 1$ supersymmetry
+\switchcolumn
+乍一看，令人惊讶的是作用（3.35）承认超对称性。到目前为止，我们所有的超对称例子都涉及玻色子和费米子自由度之间的匹配。但在这里我们引入了额外的费米子自由度 $\eta^{\alpha}$，而没有相应的玻色子伙伴。尽管如此，您可以检查该作用在以下 $N = 1$ 超对称性下是不变的
+\switchcolumn*
+
+It turns out that adding extra fermions, without bosonic counterparts, is an option only for supersymmetric theories in $d = 0 + 1$ and $d = 1 + 1$ dimensions.
+\switchcolumn
+事实证明，添加额外的费米子（没有玻色子对应物）仅适用于 $d = 0 + 1$ 和 $d = 1 + 1$ 维的超对称理论。
+\switchcolumn*
+
+How should we think about the theory (3.35). Quantising the real fermions $\psi_i$ gives us a spinor over $M$ as before. Quantising the complex fermions $η^{\alpha}$ gives us forms, but they’re not forms over the manifold $M$ since they don’t carry the $i = 1, \dots, n$ index. Instead, they are forms over the gauge bundle $E$. In more mundane language, this simply means that the states transform in different representations of the $U(r)$ gauge connection.
+\switchcolumn
+我们应该如何思考这个理论（3.35）。量子化真正的费米子 $\psi_i$ 给我们一个 $M$ 上的旋量，就像以前一样。量子化复费米子 $η^{\alpha}$ 给出了形式，但它们不是流形 $M$ 上的形式，因为它们不带有 $i = 1, \dots, n$ 索引。相反，它们是规范丛 $E$ 上的表格。用更通俗的语言来说，这仅仅意味着状态以 $U(r)$ 规范联络的不同表示进行变换。
+\switchcolumn*
+
+There are close connections here to the physics of solitons. In particular, the integral of the first Chern number counts the number of vortices in a gauge theory. The integral of the second Chern number counts the number of Yang-Mills instantons. Both of these have an interesting zero mode structure, even in flat spacetime, as follows from the Atiyah-Singer index theorem (3.36).
+\switchcolumn
+这与孤子物理学有着密切的联系。特别是，第一个陈数的积分计算了规范理论中的涡旋数量。第二个陈数的积分计算了 Yang-Mills 瞬子的数量。即使在平坦时空中，这两者也具有有趣的零模式结构，如 Atiyah-Singer 指标定理 (3.36) 所示。
+\switchcolumn*
+
 \subsection{What Comes Next?}
 \switchcolumn
 \subsection*{接下来是什么？}
 \switchcolumn*
+
+We have barely scratched the surface of supersymmetric theories and their connection to mathematics. In this final section we give a brief sketch of the next steps. Roughly speaking, there are two directions that are particularly rich: increase the number of supersymmetries, and increase the spacetime dimension of the quantum theory.
+\switchcolumn
+我们仅仅触及了超对称理论及其与数学的联系的表面。在最后一节中，我们简要概述了后续步骤。粗略来说，有两个方向特别丰富：增加超对称的数量，增加量子理论的时空维度。
+\switchcolumn*
+
+First the supersymmetries. The stories we told above revolved around $N = 2$ supersymmetry (for Morse theory) and $N = 1$ supersymmetry (for the index theorem). We briefly met theories with $N = 4$ supersymmetry in Section 1.4.2 where we saw that they naturally come with complex fields and a holomorphic superpotential. This suggests that a sigma model with $N = 4$ supersymmetry should have a target space $M$ that is, in some sense, a complex manifold.
+\switchcolumn
+首先是超对称性。我们上面讲的故事围绕 $N = 2$ 超对称性（对于 Morse 理论）和 $N = 1$ 超对称性（对于指标定理）。我们在第 1.4.2 节中简要介绍了具有 $N = 4$ 超对称性的理论，我们看到它们自然地带有复数场和全纯超势。这表明具有 $N = 4$ 超对称性的 sigma 模型应该具有目标空间 $M$，即在某种意义上是一个复流形。
+\switchcolumn*
+
+This is indeed what happens. Sigma models with $N = 4$ supersymmetry have target spaces that are \textit{Kähler}. These target spaces necessarily have even dimension, with coordinates that can be paired together into complex numbers consistently over the entire manifold. This structure is best seen through the introduction of superfields, where the kinetic terms in the Lagrangian are written directly in terms of a function known as the \textit{Kähler potential} $K(\phi, \bar{\phi})$ that is related to the metric by
+\switchcolumn
+这确实是发生的事情。具有 $N = 4$ 超对称性的 Sigma 模型的目标空间为 \textit{Kähler}。这些目标空间必须具有偶数维度，其坐标可以在整个流形上一致地配对成复数。这种结构可以通过超场的引入得到最好的体现，其中 Lagrangian 中的动力学项直接用称为 \textit{Kähler 势} $K(\phi, \bar{\phi})$ 的与度规相关的函数来表示
+\switchcolumn*
+
+More supersymmetry brings yet more structure to the geometry, at least to a point. There are theories with $N = 8$ supersymmetry whose target spaces are \textit{hyperKähler}. Such manifolds have a dimension that is a multiple of four, with three inequivalent ways of pairing coordinates together into complex numbers. It’s a little like having a quaternionic structure on the manifold (although beware that there is a different kind of object in mathematics known as a "quaternionic manifold"). However, the interesting things don’t keep happening forever and by the time we get to $N = 16$ supersymmetry the restriction becomes too strong and the target space is obliged to be ﬂat and largely boring.
+\switchcolumn
+更多的超对称性给几何带来了更多的结构，至少在某种程度上是这样。有些理论具有 $N = 8$ 超对称性，其目标空间是 \textit{hyperKähler}。这种流形的维数是四的倍数，具有三种将坐标配对成复数的不等价方式。这有点像流形上有一个四元数结构（尽管要注意数学中有一种不同类型的对象，称为“四元流形”）。然而，有趣的事情不会永远发生，当我们达到 $N = 16$ 超对称性时，限制变得太强，目标空间被迫平坦且基本无聊。
+\switchcolumn*
+
+The full riches of supersymmetry really come when we consider theories in higher dimensions, meaning quantum ﬁeld theories rather than quantum mechanics. While there are interesting stories for ﬁeld theories in any spacetime dimension $d \leq 6$ (and, if you include gravitational theories, for $d \leq 11$) there is, as I now explain, a reason why QFTs in $d = 1 + 1$ dimensions are special.
+\switchcolumn
+当我们考虑更高维度的理论时，即量子场理论而不是量子力学，超对称性的全部丰富性才真正出现。虽然任何时空维度 $d \leq 6$ 中的场论都有有趣的故事（并且，如果包括引力理论，$d \leq 11$），但正如我现在所解释的，$d = 1 + 1$ 维的量子场论的特别之处是有原因的。
+\switchcolumn*
+
+Note that there are two conceptually diﬀerent spaces in this action. The spacetime of the quantum ﬁeld theory has dimension $d$, while the target space $M$ has dimension $\dim M = n$.
+\switchcolumn
+请注意，此操作中有两个概念上不同的空间。量子场论的时空维度为 $d$，而目标空间 $M$ 的维度为 $\dim M = n$。
+\switchcolumn*
+
+With no potential $V(\phi)$ to preference one point on the manifold $M$ from another, this theory has many classical ground states: each point on $M$ or, equivalently, each constant value of $\phi^i$ should be viewed as a diﬀerent classical ground state of the system.
+\switchcolumn
+由于没有势 $V(\phi)$ 会优先选择流形 $M$ 上的某个点，因此该理论有许多经典基态：$M$ 上的每个点，或者等效地，$\phi^i$ 的每个常量值应该被视为系统的一个不同的经典基态。
+\switchcolumn*
+
+But what happens in the quantum theory? We've already seen that for $d = 1$, which is just quantum mechanics, the ground state wavefunction spreads over $M$. This is important as it means that the ground state knows something about the entire manifold $M$ and may therefore encode some information about its topology. We've seen examples of this throughout these lectures.
+\switchcolumn
+但量子理论中会发生什么呢？我们已经看到，对于 $d = 1$（这只是量子力学），基态波函数分布在 $M$ 上。这很重要，因为它意味着基态了解整个流形 $M$ 的一些信息，因此可以编码有关其拓扑的一些信息。我们在这个讲义中已经看到了这样的例子。
+\switchcolumn*
+
+What happens in higher dimensions with $d > 1$? It turns out that $d = 2$ is just like quantum mechanics: the ground state wavefunction spreads over the whole manifold $M$. Meanwhile, at least in this respect, quantum theories in dimensions $d \leq 3$ behave like the classical theory: each point on $M$ deﬁnes a diﬀerent ground state.
+\switchcolumn
+在 $d > 1$ 的更高维度中会发生什么？事实证明，$d = 2$ 就像量子力学一样：基态波函数分布在整个流形 $M$ 上。同时，至少在这方面，$d \leq 3$ 维度的量子理论表现得像经典理论：$M$ 上的每个点定义了一个不同的基态。
+\switchcolumn*
+
+This means that if we want to ﬁnd some interesting physics that captures topological properties of $M$, we should ﬁrst look at $d = 1$ and $d = 2$. We’ve now spent over 100 pages studying supersymmetric quantum mechanics. So the next step is to look at supersymmetric sigma models of the form (3.38) in $d = 1 + 1$.
+\switchcolumn
+这意味着，如果我们想找到一些有趣的物理学来捕捉 $M$ 的拓扑性质，我们应该首先看看 $d = 1$ 和 $d = 2$。我们现在已经花了 100 多页来研究超对称量子力学。因此，下一步是研究 $d = 1 + 1$ 中 (3.38) 形式的超对称 sigma 模型。
+\switchcolumn*
+
+There is a rather special feature of quantum ﬁeld theories in $d \leq 2$ dimensions that distinguishes them from quantum mechanics in $d = 1$: renormalisation. This means that the coupling constants that characterise a theory are not, in fact, constant. Instead they change with scale. Sigma models in $d = 1 + 1$ dimensions are no exception. Here, the couplings of the theory are encoded in the metric $g_{ij}(\phi)$. Under renormalisation, this metric changes and depends on the scale $\mu$ at which you look.
+\switchcolumn
+$d \leq 2$ 维度中的量子场论有一个相当特殊的特征，将其与 $d = 1$ 中的量子力学区分开来：重整化。这意味着表征理论的耦合常数实际上并不是恒定的。相反，它们会随着尺度而变化。$d = 1 + 1$ 维度的 Sigma 模型也不例外。这里，理论的耦合被编码在度规 $g_{ij}(\phi)$ 中。在重整化下，该指标会发生变化，并取决于您所查看的尺度 $\mu$。
+\switchcolumn*
+
 \end{paracol}
 
 \end{document}
