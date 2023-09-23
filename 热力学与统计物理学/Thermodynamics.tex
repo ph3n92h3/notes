@@ -169,7 +169,7 @@
               \item $\left.\pdv{H}{p}\right|_T = \left.\pdv{H(T, p)}{p}\right|_T = \left.\pdv{H[S(T, p), p]}{p}\right|_T = \left.\pdv{H}{S}\right|_p \left.\pdv{S}{p}\right|_T + \left.\pdv{H}{p}\right|_S = - T \left.\pdv{V}{T}\right|_p + V$
           \end{itemize}
     \item 迈耶公式\begin{itemize}
-              \item $S(T, p) = S[T, V(T, p)] \Rightarrow \left.\pdv{S}{T}\right|_p = \left.\pdv{S}{T}\right|_V + \left.\pdv{S}{V}\right|_T \left.\pdv{V}{T}\right|_p$
+              \item $S(T, p) = S[T, V(T, p)] \Rightarrow \left.\pdv{S}{T}\right|_p = \left.\pdv{S}{T}\right|_V + \left.\pdv{S}{V}\right|_T \left.\pdv{V}{T}\right|_p = \left.\pdv{S}{T}\right|_V + \left.\pdv{p}{T}\right|_V \left.\pdv{V}{T}\right|_p$
               \item $C_p - C_V = T \left[\left.\pdv{S}{T}\right|_p - \left.\pdv{S}{T}\right|_V\right] = T \left.\pdv{S}{V}\right|_T \left.\pdv{V}{T}\right|_p = T \left.\pdv{p}{T}\right|_V \left.\pdv{V}{T}\right|_p = \alpha \beta p V T = - T \frac{\left(\left.\pdv{p}{T}\right|_V\right)^2}{\left.\pdv{p}{V}\right|_T}$
           \end{itemize}
 \end{enumerate}
@@ -256,21 +256,22 @@
 
 特性函数是联系热力学和统计物理学的桥梁。
 
-$F(T, V)$:
-\begin{itemize}
-    \item $S(T, V) = -\pdv{F}{T},\ p(T, V) = - \pdv{F}{V}$
-    \item $U = F + T S = F - T \pdv{F}{T} = - T^2 \pdv{}{T} \left(\frac{F}{T}\right)$
-    \item $H = U + p V = F - T \pdv{F}{T} - V \pdv{F}{V}$
-    \item $G = F + p V = F - V \pdv{F}{V}$
-\end{itemize}
-
-$G(T, p)$:
-\begin{itemize}
-    \item $S(T, p) = - \pdv{G}{T},\ V(T, p) = \pdv{G}{p}$
-    \item $H = G + T S = G - T \pdv{G}{T} = - T^2 \pdv{}{T} \left(\frac{G}{T}\right)$
-    \item $U = H - p V = G - T \pdv{G}{T} - p \pdv{G}{p}$
-    \item $F = G - p V = G - p \pdv{G}{p}$
-\end{itemize}
+\begin{multicols}{2}
+    $F(T, V)$:
+    \begin{itemize}
+        \item $S(T, V) = -\pdv{F}{T},\ p(T, V) = - \pdv{F}{V}$
+        \item $U = F + T S = F - T \pdv{F}{T} = - T^2 \pdv{}{T} \left(\frac{F}{T}\right)$
+        \item $H = U + p V = F - T \pdv{F}{T} - V \pdv{F}{V}$
+        \item $G = F + p V = F - V \pdv{F}{V}$
+    \end{itemize}
+    $G(T, p)$:
+    \begin{itemize}
+        \item $S(T, p) = - \pdv{G}{T},\ V(T, p) = \pdv{G}{p}$
+        \item $H = G + T S = G - T \pdv{G}{T} = - T^2 \pdv{}{T} \left(\frac{G}{T}\right)$
+        \item $U = H - p V = G - T \pdv{G}{T} - p \pdv{G}{p}$
+        \item $F = G - p V = G - p \pdv{G}{p}$
+    \end{itemize}
+\end{multicols}
 
 \subsection{绝热降温与节流降温}
 
