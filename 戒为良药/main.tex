@@ -17,6 +17,7 @@
 
 \newtheorem{book}{书籍}
 \newtheorem{case}{案例}
+\newtheorem{poem}{诗歌}
 
 \title{戒为良药}
 \author{飞翔}
@@ -41,6 +42,7 @@
 \input{83. 飞翔经验：冬季戒色养生之五大要点}
 \input{84. 飞翔经验：从入门到精通之断念实战}
 \input{85. 飞翔经验：戒色往事之失败激励篇}
+\input{86. 飞翔经验：SY 导致的心理性格的异变}
 
 \clearpage\appendix
 
@@ -52,18 +54,22 @@
     \tableofcontents
 \end{multicols}
 
-\section{案例目录}
+\section{书籍目录}
+\renewcommand*{\listtheoremname}{}
+\begin{multicols}{2}
+    \listoftheorems[ignoreall, show = book]
+\end{multicols}
 
+\section{案例目录}
 \renewcommand*{\listtheoremname}{}
 \begin{multicols}{2}
     \listoftheorems[ignoreall, show = case]
 \end{multicols}
 
-\section{书籍目录}
-
+\section{诗歌目录}
 \renewcommand*{\listtheoremname}{}
 \begin{multicols}{2}
-    \listoftheorems[ignoreall, show = book]
+    \listoftheorems[ignoreall, show = poem]
 \end{multicols}
 
 \end{document}
