@@ -80,25 +80,25 @@ jobs:
             小狗钱钱2.tex
             微积分.tex
             量子场论 by David Tong.tex
-          working_directory:
-      - name: Upload PDF file
-        uses: actions/upload-artifact@v3
-        with:
-          name: notes_ph3n92h3
-          path: |
-            《微分几何入门与广义相对论》附录G“李群和李代数”习题解答/《微分幾何入門與廣義相對論》附錄G“李群和李代數”習題解答.pdf
-            光学/main.pdf
-            固体物理/main.pdf
-            戒为良药/main.pdf
-            数学物理方法/main.pdf
-            热力学与统计物理学/main.pdf
-            电动力学/main.pdf
-            # 电磁学/main.pdf
-            黄帝内经/main.pdf
-            Comments in 'Supersymmetric Quantum Mechanics by David Tong'.pdf
-            temp.pdf
-            宇宙学微扰理论 by Hannu Kurki-Suonio.pdf
-            小狗钱钱2.pdf
-            微积分.pdf
-            群论和表示论 by Andre Lukas and Hannah Tillim.pdf
-            量子场论 by David Tong.pdf
+          working_directory: .
+      # - name: Upload PDF file
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: notes_ph3n92h3
+      #     path: |
+      #       《微分几何入门与广义相对论》附录G“李群和李代数”习题解答/《微分幾何入門與廣義相對論》附錄G“李群和李代數”習題解答.pdf
+      #       光学/main.pdf
+      #       固体物理/main.pdf
+      #       戒为良药/main.pdf
+      #       数学物理方法/main.pdf
+      #       热力学与统计物理学/main.pdf
+      #       电动力学/main.pdf
+      #       # 电磁学/main.pdf
+      #       黄帝内经/main.pdf
+      #       Comments in 'Supersymmetric Quantum Mechanics by David Tong'.pdf
+      #       temp.pdf
+      #       宇宙学微扰理论 by Hannu Kurki-Suonio.pdf
+      #       小狗钱钱2.pdf
+      #       微积分.pdf
+      #       群论和表示论 by Andre Lukas and Hannah Tillim.pdf
+      #       量子场论 by David Tong.pdf
