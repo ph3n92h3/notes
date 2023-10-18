@@ -80,6 +80,7 @@ jobs:
             小狗钱钱2.tex
             微积分.tex
             量子场论 by David Tong.tex
+          working_directory: others
       # - name: Upload PDF file
       #   uses: actions/upload-artifact@v3
       #   with:
