@@ -75,11 +75,12 @@ jobs:
           latexmk_shell_escape: true
           latexmk_use_lualatex: true
           root_file: |
-            Comments_in_'Supersymmetric_Quantum_Mechanics_by_David_Tong'.tex
+            Comments in 'Supersymmetric Quantum Mechanics by David Tong'.tex
             temp.tex
             小狗钱钱2.tex
             微积分.tex
-            量子场论_by_David_Tong.tex
+            量子场论 by David Tong.tex
+          working_directory: \
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
@@ -94,10 +95,10 @@ jobs:
             电动力学/main.pdf
             # 电磁学/main.pdf
             黄帝内经/main.pdf
-            Comments_in_'Supersymmetric_Quantum_Mechanics_by_David_Tong'.pdf
+            Comments in 'Supersymmetric Quantum Mechanics by David Tong'.pdf
             temp.pdf
             宇宙学微扰理论 by Hannu Kurki-Suonio.pdf
             小狗钱钱2.pdf
             微积分.pdf
             群论和表示论 by Andre Lukas and Hannah Tillim.pdf
-            量子场论_by_David_Tong.pdf
+            量子场论 by David Tong.pdf
