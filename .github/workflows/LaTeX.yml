@@ -75,11 +75,11 @@ jobs:
           latexmk_shell_escape: true
           latexmk_use_lualatex: true
           root_file: |
-            Comments in 'Supersymmetric Quantum Mechanics by David Tong'.tex
+            Comments_in_'Supersymmetric_Quantum_Mechanics_by_David_Tong'.tex
             temp.tex
             小狗钱钱2.tex
             微积分.tex
-            量子场论 by David Tong.tex
+            量子场论_by_David_Tong.tex
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
