@@ -6,55 +6,55 @@ jobs:
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v3
-      - name: 《微分几何入门与广义相对论》附录G“李群和李代数”习题解答
-        uses: xu-cheng/latex-action@v3
-        with:
-          latexmk_shell_escape: true
-          latexmk_use_lualatex: true
-          root_file: 《微分幾何入門與廣義相對論》附錄G“李群和李代數”習題解答.tex
-          working_directory: 《微分几何入门与广义相对论》附录G“李群和李代数”习题解答
-      - name: 光学
-        uses: xu-cheng/latex-action@v3
-        with:
-          latexmk_shell_escape: true
-          latexmk_use_lualatex: true
-          root_file: main.tex
-          working_directory: 光学
-      - name: 固体物理
-        uses: xu-cheng/latex-action@v3
-        with:
-          latexmk_shell_escape: true
-          latexmk_use_lualatex: true
-          root_file: main.tex
-          working_directory: 固体物理
-      - name: 戒为良药
-        uses: xu-cheng/latex-action@v3
-        with:
-          latexmk_shell_escape: true
-          latexmk_use_lualatex: true
-          root_file: main.tex
-          working_directory: 戒为良药
-      - name: 数学物理方法
-        uses: xu-cheng/latex-action@v3
-        with:
-          latexmk_shell_escape: true
-          latexmk_use_lualatex: true
-          root_file: main.tex
-          working_directory: 数学物理方法
-      - name: 热力学与统计物理学
-        uses: xu-cheng/latex-action@v3
-        with:
-          latexmk_shell_escape: true
-          latexmk_use_lualatex: true
-          root_file: main.tex
-          working_directory: 热力学与统计物理学
-      - name: 电动力学
-        uses: xu-cheng/latex-action@v3
-        with:
-          latexmk_shell_escape: true
-          latexmk_use_lualatex: true
-          root_file: main.tex
-          working_directory: 电动力学
+      # - name: 《微分几何入门与广义相对论》附录G“李群和李代数”习题解答
+      #   uses: xu-cheng/latex-action@v3
+      #   with:
+      #     latexmk_shell_escape: true
+      #     latexmk_use_lualatex: true
+      #     root_file: 《微分幾何入門與廣義相對論》附錄G“李群和李代數”習題解答.tex
+      #     working_directory: 《微分几何入门与广义相对论》附录G“李群和李代数”习题解答
+      # - name: 光学
+      #   uses: xu-cheng/latex-action@v3
+      #   with:
+      #     latexmk_shell_escape: true
+      #     latexmk_use_lualatex: true
+      #     root_file: main.tex
+      #     working_directory: 光学
+      # - name: 固体物理
+      #   uses: xu-cheng/latex-action@v3
+      #   with:
+      #     latexmk_shell_escape: true
+      #     latexmk_use_lualatex: true
+      #     root_file: main.tex
+      #     working_directory: 固体物理
+      # - name: 戒为良药
+      #   uses: xu-cheng/latex-action@v3
+      #   with:
+      #     latexmk_shell_escape: true
+      #     latexmk_use_lualatex: true
+      #     root_file: main.tex
+      #     working_directory: 戒为良药
+      # - name: 数学物理方法
+      #   uses: xu-cheng/latex-action@v3
+      #   with:
+      #     latexmk_shell_escape: true
+      #     latexmk_use_lualatex: true
+      #     root_file: main.tex
+      #     working_directory: 数学物理方法
+      # - name: 热力学与统计物理学
+      #   uses: xu-cheng/latex-action@v3
+      #   with:
+      #     latexmk_shell_escape: true
+      #     latexmk_use_lualatex: true
+      #     root_file: main.tex
+      #     working_directory: 热力学与统计物理学
+      # - name: 电动力学
+      #   uses: xu-cheng/latex-action@v3
+      #   with:
+      #     latexmk_shell_escape: true
+      #     latexmk_use_lualatex: true
+      #     root_file: main.tex
+      #     working_directory: 电动力学
       # - name: 电磁学
       #   uses: xu-cheng/latex-action@v3
       #   with:
@@ -62,13 +62,13 @@ jobs:
       #     latexmk_use_lualatex: true
       #     root_file: main.tex
       #     working_directory: 电磁学
-      - name: 黄帝内经
-        uses: xu-cheng/latex-action@v3
-        with:
-          latexmk_shell_escape: true
-          latexmk_use_lualatex: true
-          root_file: main.tex
-          working_directory: 黄帝内经
+      # - name: 黄帝内经
+      #   uses: xu-cheng/latex-action@v3
+      #   with:
+      #     latexmk_shell_escape: true
+      #     latexmk_use_lualatex: true
+      #     root_file: main.tex
+      #     working_directory: 黄帝内经
       - name: others
         uses: xu-cheng/latex-action@v3
         with:
@@ -80,7 +80,7 @@ jobs:
             小狗钱钱2.tex
             微积分.tex
             量子场论 by David Tong.tex
-          working_directory: \
+          working_directory:
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
