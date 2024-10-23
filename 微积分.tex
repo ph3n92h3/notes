@@ -1,31 +1,9 @@
-\documentclass{article}
+\documentclass{ctexart}
 
 \usepackage[a4paper,scale=0.8]{geometry}
 
-\usepackage{ctex}
-
-% \usepackage{algorithm2e}
-% \usepackage{amsfonts}
-% \usepackage{amsmath}
-% \usepackage{amssymb}
-% \usepackage{cancel}
-% \usepackage{emoji}
 \usepackage{extarrows}
-% \usepackage{float}
-% \usepackage{framed}
-% \usepackage[colorlinks]{hyperref}
-% \usepackage{mathrsfs}
-% \usepackage{mathtools}
-% \usepackage{minted}
-% \usepackage{multicol}
-% \usepackage{physics}
-% \usepackage{pifont}
-% \usepackage{unicode-math}
-% \usepackage{upgreek}
 \usepackage{xcolor}
-
-\newcommand{\rme}{\mathrm{e}}
-\newcommand{\rmi}{\mathrm{i}}
 
 \title{微积分}
 \author{桜井\ 雪子}
@@ -36,7 +14,6 @@
 \maketitle
 
 为快速准备高数比赛而作。
-
 
 \section{极限}
 
@@ -55,7 +32,7 @@
 \subsection{Stirling 公式}
 
 \begin{equation}
-    n! = \sqrt{2 \pi n} \left(\frac{n}{e}\right)^n + \frac{\theta_n}{12 n}, \theta \in (0, 1)
+    n! = \sqrt{2 \pi n} \left(\frac{n}{e}\right)^n + \frac{\theta_n}{12 n}, \theta \in (0, 1) \Rightarrow \ln n! = n \ln n - n
 \end{equation}
 
 \subsection{Stolz 公式}
@@ -82,12 +59,12 @@
 \subsection{高阶导数公式}
 
 \begin{align}
-    \left[\frac{1}{x + a}\right]^{(n)}   & = (-1)^n n! \frac{1}{(x + a)^{n+1}}             \\
+    \left[\frac{1}{x + a}\right]^{(n)}     & = (-1)^n n! \cdot \frac{1}{(x + a)^{n+1}}           \\
     \left[\begin{aligned}
                   \sin \\ \cos
-              \end{aligned} (a x + b)\right]^{(n)} & = a^n \begin{aligned}
-                                                           \sin \\ \cos
-                                                       \end{aligned} (a x + b + n \pi / 2)
+              \end{aligned} \ (a x + b)\right]^{(n)} & = a^n \ \begin{aligned}
+                                                               \sin \\ \cos
+                                                           \end{aligned} \ (a x + b + n \pi / 2)
 \end{align}
 
 找微分中值定理的本质方法是微分方程法
@@ -224,7 +201,7 @@
 \begin{align}
     \iint_D u \frac{\partial v}{\partial x} \mathrm{d} x \mathrm{d} y =                                                          & \oint_{\partial D} u v \mathrm{d} y - \iint_D v \frac{\partial u}{\partial x} \mathrm{d} x \mathrm{d} y                                                                    \\
     \iint_D u \frac{\partial v}{\partial y} \mathrm{d} x \mathrm{d} y =                                                          & - \oint_{\partial D} u v \mathrm{d} x - \iint_D v \frac{\partial u}{\partial y} \mathrm{d} x \mathrm{d} y                                                                  \\
-    \Rightarrow \iint_D \left(x \frac{\partial f}{\partial x} + y \frac{\partial f}{\partial y}\right) \mathrm{d}x \mathrm{d}y = & \frac{1}{2} \iint_D \left[f'_x \frac{\partial (x^2 + y^2)}{\partial x} + f'_y \frac{\partial (x^2 + y^2)}{\partial y} \mathrm{d}x \mathrm{d}y\right]                       \\
+    \Rightarrow \iint_D \left(x \frac{\partial f}{\partial x} + y \frac{\partial f}{\partial y}\right) \mathrm{d}x \mathrm{d}y = & \frac{1}{2} \iint_D \left[f'_x \frac{\partial (x^2 + y^2)}{\partial x} + f'_y \frac{\partial (x^2 + y^2)}{\partial y}\right] \mathrm{d}x \mathrm{d}y                       \\
     \xlongequal{\text{分部积分}}                                                                                                     & \frac{1}{2} \oint_{\partial D} (x^2 + y^2) f'_x \mathrm{d}y - (x^2 + y^2) f'_y \mathrm{d}x - \frac{1}{2} \iint_D (x^2 + y^2) (f''_{xx} + f''_{yy}) \mathrm{d}x \mathrm{d}y \\
     \xlongequal{x^2 + y^2 = a^2}                                                                                                 & \frac{a^2}{2} \oint_{\partial D} f'_x \mathrm{d}y - f'_y \mathrm{d}x - \frac{1}{2} \iint_D (x^2 + y^2) (f''_{xx} + f''_{yy}) \mathrm{d}x \mathrm{d}y                       \\
     =                                                                                                                            & \frac{a^2}{2} \iint_D (f''_{xx} + f''_{yy}) \mathrm{d}x \mathrm{d}y - \frac{1}{2} \iint_D (x^2 + y^2) (f''_{xx} + f''_{yy}) \mathrm{d}x \mathrm{d}y                        \\
