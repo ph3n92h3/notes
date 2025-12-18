@@ -399,3 +399,160 @@
   - Sec. 8.6.4 Particle-Vortex Duality Revisited. 这小节继续加背景规范场 CS、提升背景场的操作，得到了两个结论：一是在耦合到 $U(1)_\frac{1}{2}$ CS 的无质量费米子理论具有时间反转不变性，这个离散对称性在量子化的过程中涌现出来；二是构造出了两个玻色子理论对偶于同一个费米子理论，因此这两个玻色子理论应该一致，观察发现这实际上就是 Abelian-Higgs 模型到 XY 模型的粒子-涡旋对偶，因此在这里两次玻色化等价于一次粒子-涡旋对偶。
   - Sec. 8.6.5 Fermionic Particle-Vortex Duality. 这小节类似地得到了费米子到费米子的对偶。跟上一小节的操作类似，但是这里要先考虑 $U(1)_\frac{1}{2}$ CS 来自于费米子的正规化，因此不能随意在对偶两侧移动。处方是将规范场缩小成原来的一半，相当于带两个单位电荷的费米子耦合到 $k = 1$ 的 CS. 移项、加背景规范场、提升背景场利用运动方程、再利用前面已经得到的某个玻色化对偶，最终得到了费米子版本的粒子-涡旋对偶，一侧是耦合到背景场 CS 的无质量 Dirac 费米子和 $U(1)_2$ 动力学场 CS, 另一侧是带两个单位电荷的 Dirac 费米子。
 - Sec. 8.7 Further Reading. 看来这节有这么三个重点：粒子-涡旋对偶、CS 和玻色化。
+
+## 2025-09 Note on Gauge Theory by David Tong.typ
+
+```Typst
+#import "@local/article:0.0.0": *
+#show: article
+
+#let starF = $attach(F, tl: star)$
+
+#align(center)[
+  #text(font: "Smiley Sans", size: 1.8em)[Review of Gauge Theory by David Tong]
+  #v(1.5em)
+  #text(size: 1.2em)[Zhe Feng]
+  #v(1em)
+  #text(size: 1.2em)[#datetime.today().display("[weekday repr:short], [day padding:none] [month repr:short] [year]")]
+  #v(1.5em)
+]
+
+#outline(depth: 2)
+
+= Topics in Electromagnetism
+
+== Magnetic Monopoles
+
+Magnetic monopole and magnetic charge $ bold(B) = (g hat(bold(r))) / (4 pi r^2), quad integral_(SS^2) dif bold(S) dot bold(B) = integral_(SS^2) r^2 dif Omega_2 hat(bold(r)) dot (g hat(bold(r))) / (4 pi r^2) = g $
+
+=== Dirac Quantisation
+
+$ psi -> upright(e)^(upright(i) e alpha \/ planck) psi $ $
+  alpha = integral.cont_C A dot dif bold(x) & = integral.cont_(partial S) A dot dif bold(x) = integral_S dif bold(S) dot (nabla times A) = integral_S dif bold(S) dot bold(B) = integral_S r^2 dif Omega_2 hat(bold(r)) dot (g hat(bold(r))) / (4 pi r^2) = (Omega g) / (4 pi) \
+  & = - integral.cont_(partial (SS^2 \\ S)) A dot dif bold(x) = - integral_(SS^2 \\ S) dif bold(S) dot (nabla times A) = - integral_(SS^2 \\ S) dif bold(S) dot bold(B) = - integral_(SS^2 \\ S) r^2 dif Omega_2 hat(bold(r)) dot (g hat(bold(r))) / (4 pi r^2) = - ((4 pi - Omega) g) / (4 pi)
+$ $
+  => [(Omega g) / (4 pi) - (- ((4 pi - Omega) g) / (4 pi))] dot e / planck in 2 pi ZZ => e g in 2 pi planck ZZ
+$
+
+=== A Patchwork of Gauge Fields
+
+$
+  cases(A^N_phi.alt = g / (4 pi r) (1 - cos theta) / (sin theta), A^S_phi.alt = - g / (4 pi r) (1 + cos theta) / (sin theta)) => bold(B) = (g hat(bold(r))) / (4 pi r^2)
+$ $ A^N_phi.alt = A^S_phi.alt + 1 / (r sin theta) partial_phi.alt omega, quad omega = (g phi.alt) / (2 pi) $ $
+  e lr(omega|)_(phi.alt = 2 pi) \/ planck in 2 pi ZZ => e g in 2 pi planck ZZ
+$
+
+=== Monopoles and Angular Momentum
+
+$ dv(bold(p), t) = e dot(bold(r)) times bold(B), quad bold(B) = g / (4 pi) bold(r) / r^3 $ $ dv((bold(r) times bold(p)), t) = dv(, t) ((e g) / (4 pi) hat(bold(r))) => dv(, t) bold(L) := dv(, t) (bold(r) times bold(p) - (e g) / (4 pi) hat(bold(r))) $ For $bold(r) = (0, 0, z), dot(r) = (0, 0, v_z)$ $ L_z = - (e g) / (4 pi) #Red[$stretch(in)^?$] 1 / 2 planck ZZ => e g in 2 pi planck ZZ $
+
+== The Theta Term
+
+$
+  S_theta & = (theta e^2) / (4 pi^2 planck) integral dif^4 x 1 / 4 starF^(mu nu) F_(mu nu), quad starF^(mu nu) = 1 / 2 epsilon.alt^(mu nu rho sigma) F_(rho sigma) \
+  = & (theta e^2) / (4 pi^2 planck) integral dif^4 x 1 / 8 epsilon.alt^(mu nu rho sigma) F_(rho sigma) F_(mu nu) \
+  = & (theta e^2) / (8 pi^2 planck) integral (1 / 2 F_(mu nu) dif x^mu and dif x^nu) and (1 / 2 F_(rho sigma) dif x^rho and dif x^sigma) = (theta e^2) / (8 pi^2 planck) integral F and F \
+  = & (theta e^2) / (8 pi^2 planck) integral dif A and F = (theta e^2) / (8 pi^2 planck) integral dif (A and F)
+$
+
+= Yang-Mills Theory
+
+== Introducing Yang-Mills
+
+$
+  cal(D)_mu psi^i = partial_mu psi^i - upright(i) A_mu^a tensor(T^a (R), i, -j) psi^j #Blue[$=>$] cal(D)_mu phi.alt = partial_mu phi.alt - upright(i) [A_mu, phi.alt], quad phi.alt = phi.alt^a T^a
+$
+$
+  cases(cal(D)_mu psi^i = partial_mu psi^i - upright(i) A_mu^a tensor(T^a (R), i, -j) psi^j, F_(mu nu) = partial_mu A_nu - partial_nu A_mu - upright(i) [A_mu, A_nu]) => [cal(D)_mu, cal(D)_nu] psi = - upright(i) F_(mu nu) psi
+$
+$
+  cases(cal(D)_mu phi.alt = partial_mu phi.alt - upright(i) [A_mu, phi.alt], F_(mu nu) = partial_mu A_nu - partial_nu A_mu - upright(i) [A_mu, A_nu]) => [cal(D)_mu, cal(D)_nu] phi.alt = - upright(i) [F_(mu nu), phi.alt]
+$
+
+=== The Action
+
+$ S_"YM" = - 1 / (2 g^2) integral dif^4 x tr F^(mu nu) F_(mu nu) = - 1 / g^2 integral tr(F and star F) $ $
+  F_(mu nu) & = partial_mu A_nu - partial_nu A_mu - upright(i) [A_mu, A_nu] = partial_mu A_nu - partial_nu A_mu - upright(i) (A_mu A_nu - A_nu A_mu) \
+  => F & = "" dif A - upright(i) / 2 [A, A] = dif A - upright(i) A and A \
+  delta F & = "" dif delta A - upright(i) [A, delta A] = dif delta A - upright(i) delta A and A - upright(i) A and delta A
+$
+
+#framed[$ [A, delta A] = A and delta A + delta A and A $ $
+    cal(D) delta A = dif delta A - upright(i) [A, delta A] = dif delta A - upright(i) (A and delta A + delta A and A)
+  $]
+
+- EOM $ 0 = delta S_"YM" = & - 2 / g^2 integral tr(delta F and star F) \
+  = & - 2 / g^2 integral tr[(dif delta A - upright(i) delta A and A - upright(i) A and delta A) and starF] \
+  = & - 2 / g^2 integral tr[dif (delta A and starF) + delta A and dif starF - upright(i) delta A and A and starF + upright(i) delta A and starF and A] \
+  => 0 = & "" dif starF - upright(i) A and starF + upright(i) starF and A = cal(D) starF $ #framed[$ [A, F] = A and F - F and A $ $ cal(D) F = dif F - upright(i) [A, F] = dif F - upright(i) A and F + upright(i) F and A $]
+- Bianchi $ cal(D) F = & "" dif F - upright(i) A and F + upright(i) F and A \
+  = & "" dif (dif A - upright(i) A and A) -upright(i) A and (dif A - upright(i) A and A) + upright(i) (dif A - upright(i) A and A) and A \
+  = & (dif dif A - upright(i) dif A and A + upright(i) A and dif A) - (upright(i) A and dif A + A and A and A) + (upright(i) dif A and A + A and A and A) \
+  = & 0 $
+
+=== Gauge Symmetry
+
+$
+  A |-> & Omega A Omega^(-1) + upright(i) Omega dif Omega^(-1) \
+  F |-> & "" dif (Omega A Omega^(-1) + upright(i) Omega dif Omega^(-1)) - upright(i) (Omega A Omega^(-1) + upright(i) Omega dif Omega^(-1)) and (Omega A Omega^(-1) + upright(i) Omega dif Omega^(-1)) \
+  = & "" dif Omega and A Omega^(-1) + Omega dif A Omega^(-1) - Omega A and dif Omega^(-1) + upright(i) dif Omega and dif Omega^(-1) \
+  & - upright(i) [Omega A and A Omega^(-1) + upright(i) Omega A and dif Omega^(-1) + upright(i) Omega dif Omega^(-1) and Omega A Omega^(-1)] \
+  = & "" Omega F Omega^(-1)
+$
+
+#framed[$ dif Omega^(-1) = - Omega^(-1) dif Omega Omega^(-1) $]
+
+== The Theta Term
+
+$
+  S_theta = & theta / (16 pi^2) integral dif^4 x tr starF^(mu nu) F_(mu nu), quad starF^(mu nu) = 1 / 2 epsilon.alt^(mu nu rho sigma) F_(rho sigma) \
+  = & theta / (8 pi^2) integral tr (F and F) \
+  = & theta / (8 pi^2) integral tr [(dif A - upright(i) A and A) and (dif A - upright(i) A and A)] \
+  = & theta / (8 pi^2) integral tr (dif A and dif A - 2 upright(i) dif A and A and A) \
+  = & theta / (8 pi^2) integral dif tr (A and dif A - (2 upright(i)) / 3 A and A and A) = theta / (8 pi^2) integral dif tr (A and F + upright(i) / 3 A and A and A)
+$
+
+#framed[$
+    tr (dif A and A and A) = & "" dif A^a and A^b and A^c tr (T^a T^b T^c) \
+                           = & A^c and dif A^a and A^b tr (T^c T^a T^b) = tr (A and dif A and A) \
+                           = & A^b and A^c and dif A^a tr (T^b T^c T^a) = tr (A and A and dif A)
+  $ $
+    tr (A and A and A and A) = & tr (A_mu A_nu A_rho A_sigma) dif x^mu and dif x^nu and dif x^rho and dif x^sigma \
+                             = & tr (A_nu A_rho A_sigma A_mu) (- dif x^nu and dif x^rho and dif x^sigma and dif x^mu) \
+                             = & - tr (A and A and A and A) = 0
+  $]
+
+=== Canonical Quantisation of Yang-Mills
+
+$ A_0 = 0 $ $ cal(D)_i E_i ket("phys") = 0 $
+
+=== The Wavefunction and the Chern-Simons Functional
+
+$
+  K^0 = & epsilon.alt^(0 i j k) tr (A_i partial_j A_k - (2 upright(i)) / 3 A_i A_j A_k) \
+      = & epsilon.alt^(i j k) tr (1 / 2 A_i (partial_j A_k - partial_k A_j) - (2 upright(i)) / 3 A_i A_j A_k) \
+      = & epsilon.alt^(i j k) tr (1 / 2 A_i (F_(j k) + upright(i) (A_j A_k - A_k A_j)) - (2 upright(i)) / 3 A_i A_j A_k) \
+      = & 1 / 2 epsilon.alt^(i j k) tr (F_(i j) A_k + (2 upright(i)) / 3 A_i A_j A_k) = 4 pi^2 W
+$ $
+  delta W = & 1 / (4 pi^2) integral dif^3 x epsilon.alt^(i j k) tr (delta A_i partial_j A_k + A_i partial_j delta A_k - 2 upright(i) delta A_i A_j A_k) \
+  = & 1 / (4 pi^2) integral dif^3 x epsilon.alt^(i j k) tr (delta A_i partial_j A_k - A_i partial_k delta A_j - 2 upright(i) delta A_i A_j A_k) \
+  = & 1 / (4 pi^2) integral dif^3 x epsilon.alt^(i j k) tr (delta A_i F_(j k))
+$
+#cutoff
+$
+  - upright(i) dv(Psi, A_i, d: delta) = - upright(i) dv(, A_i, d: delta) (upright(e)^(upright(i) theta W) Psi_0) = - upright(i) upright(e)^(upright(i) theta W) dv(, A_i, d: delta) Psi_0 + theta / (4 pi^2) B_i Psi = upright(e)^(upright(i) theta W) (- upright(i) dv(, A_i, d: delta) Psi_0 + theta / (4 pi^2) B_i Psi_0)
+$ $
+  (- upright(i) dv(, A_i, d: delta))^2 (upright(e)^(upright(i) theta W) Psi_0) = & - upright(i) dv(, A_i, d: delta) [upright(e)^(upright(i) theta W) (- upright(i) dv(, A_i, d: delta) Psi_0 + theta / (4 pi^2) B_i Psi_0)] \
+  = & theta / (4 pi^2) B_i upright(e)^(upright(i) theta W) (- upright(i) dv(, A_i, d: delta) Psi_0 + theta / (4 pi^2) B_i Psi_0) + upright(e)^(upright(i) theta W) [(- upright(i) dv(, A_i, d: delta))^2 Psi_0 + theta / (4 pi^2) B_i (- upright(i) dv(, A_i, d: delta)) Psi_0] \
+$ $
+  => (- upright(i) dv(, bold(A), d: delta) - theta / (4 pi^2) bold(B))^2 Psi = upright(e)^(upright(i) theta W) (- upright(i) dv(, bold(A), d: delta))^2 Psi_0
+$
+#cutoff
+$
+  1 / (8 pi^2) (2 upright(i)) / 3 tr (A'_i A'_j A'_k) in.rev & 1 / (8 pi^2) (2 upright(i)) / 3 tr ((upright(i) Omega partial_i Omega^(-1)) (upright(i) Omega partial_j Omega^(-1)) (upright(i) Omega partial_k Omega^(-1))) \
+  = & 1 / (4 pi^2) 1 / 3 tr ((- partial_i Omega Omega^(-1)) (- partial_j Omega Omega^(-1)) (- partial_k Omega Omega^(-1))) \
+  = & - 1 / (4 pi^2) 1 / 3 tr (Omega^(-1) partial_i Omega Omega^(-1) partial_j Omega Omega^(-1) partial_k Omega)
+$
+
+== Instantons
+```
